@@ -24,7 +24,7 @@ env: submodules $(ENV_PATH)
 distclean: clean clean-schema
 	@echo "Cleaning environment..."
 	@rm -fr$(RM_FLAGS) $(ENV_PATH)
-	@rm -fr$(RM_FLAGS) bloombox/services/descriptor.py
+	@rm -fr$(RM_FLAGS) bloombox/schema/services/descriptor.py
 
 clean-schema:
 	@echo "Cleaning embedded schema..."
@@ -59,21 +59,23 @@ schema/languages/python:
 
 bloombox/schema/__init__.py:
 	@echo "Installing Schema..."
-	@mkdir -p bloombox/schema bloombox/services
+	@mkdir -p bloombox/schema bloombox/schema/services
 	@cd schema/languages/python && cp -fr$(CP_FLAGS) ./* ../../../bloombox/schema/
 
-bloombox/services/descriptor.py:
+bloombox/schema/services/descriptor.py:
 	@echo "Installing services..."
 	@for service in $(SERVICE_NAMES); do \
 		echo "- Installing '$$service'..."; \
-		mkdir -p bloombox/services/$$service; \
-		cp -fr$(CP_FLAGS) schema/languages/pygrpc/$$services/* bloombox/services/$$service; done
-	@echo "# -*- coding: utf-8 -*-" > bloombox/services/descriptor.py
-	@echo "" >> bloombox/services/descriptor.py
-	@echo "all_services = \"$(SERVICES)\"" >> bloombox/services/descriptor.py
-	@echo "" >> bloombox/services/descriptor.py
+		mkdir -p bloombox/schema/services/$$service; \
+		cp -fr$(CP_FLAGS) schema/languages/pygrpc/$$service/* bloombox/schema/services/$$service; done
+	@echo "# -*- coding: utf-8 -*-" > bloombox/schema/services/descriptor.py
+	@echo "" >> bloombox/schema/services/descriptor.py
+	@echo "all_services = \"$(SERVICES)\"" >> bloombox/schema/services/descriptor.py
+	@echo "" >> bloombox/schema/services/descriptor.py
 
-embedded-schema: schema/languages/python bloombox/schema/__init__.py bloombox/services/descriptor.py
+embedded-schema: schema/languages/python bloombox/schema/__init__.py bloombox/schema/services/descriptor.py
+	@echo "Fixing up modules..."
+	@cd bloombox/schema/services && for directory in `find -s -x . -type d | xargs`; do touch $$directory/__init__.py; done
 	@echo "Embedded schema ready."
 
 build: embedded-schema

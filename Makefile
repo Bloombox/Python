@@ -64,7 +64,7 @@ bloombox/schema/__init__.py:
 
 bloombox/services/descriptor.py:
 	@echo "Installing services..."
-	@for service in "$(SERVICE_NAMES)"; do \
+	@for service in $(SERVICE_NAMES); do \
 		echo "- Installing '$$service'..."; \
 		mkdir -p bloombox/services/$$service; \
 		cp -fr$(CP_FLAGS) schema/languages/pygrpc/$$services/* bloombox/services/$$service; done

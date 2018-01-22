@@ -18,11 +18,14 @@ all: env build
 
 env: submodules $(ENV_PATH)
 
-distclean: clean
-	@echo "Cleaning embedded schema..."
-	@rm -fr$(RM_FLAGS) bloombox/schema/*
+distclean: clean clean-schema
 	@echo "Cleaning environment..."
 	@rm -fr$(RM_FLAGS) $(ENV_PATH)
+
+clean-schema:
+	@echo "Cleaning embedded schema..."
+	@rm -fr$(RM_FLAGS) bloombox/schema/*
+	@$(MAKE) -C schema clean
 
 clean:
 	@echo "Cleaning PYC files..."
@@ -38,6 +41,13 @@ $(ENV_PATH):
 submodules:
 	@echo "Fetching submodules..."
 	@git submodule update --init --recursive
+
+update-schema: submodules
+	@echo "Updating schema..."
+	@git submodule update --init --remote
+
+sync-schema: update-schema clean-schema embedded-schema
+	@echo "Sync done."
 
 schema/languages/python:
 	@echo "Building schema..."

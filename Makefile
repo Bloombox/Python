@@ -7,7 +7,7 @@ ENV_PATH ?= .env
 VERBOSE ?= no
 VERSION ?= 0.0.1
 SERVICES ?= checkin:v1beta1 devices:v1beta1 menu:v1beta1 shop:v1 telemetry:v1beta3
-SERVICE_NAMES ?= $(foreach svc,$(SERVICES),$(firstword $(subst :, ,$svc)))
+SERVICE_NAMES ?= $(foreach svc,$(SERVICES),$(firstword $(subst :, ,$(svc))))
 
 ifeq ($(VERBOSE),yes)
 CP_FLAGS ?= v
@@ -24,6 +24,7 @@ env: submodules $(ENV_PATH)
 distclean: clean clean-schema
 	@echo "Cleaning environment..."
 	@rm -fr$(RM_FLAGS) $(ENV_PATH)
+	@rm -fr$(RM_FLAGS) bloombox/services/descriptor.py
 
 clean-schema:
 	@echo "Cleaning embedded schema..."

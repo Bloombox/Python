@@ -18,9 +18,15 @@ all: env build
 
 env: submodules $(ENV_PATH)
 
-clean:
+distclean: clean
 	@echo "Cleaning embedded schema..."
 	@rm -fr$(RM_FLAGS) bloombox/schema/*
+	@echo "Cleaning environment..."
+	@rm -fr$(RM_FLAGS) $(ENV_PATH)
+
+clean:
+	@echo "Cleaning PYC files..."
+	@find . -name '*.py[c,o]' -delete
 
 $(ENV_PATH):
 	@echo "Setting up environment..."
@@ -47,4 +53,7 @@ embedded-schema: schema/languages/python bloombox/schema/__init__.py
 
 build: embedded-schema
 	@echo "Build would happen now."
+
+interactive: all
+	@$(ENV_PATH)/bin/python
 

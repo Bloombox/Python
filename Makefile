@@ -55,8 +55,9 @@ schema/languages/python:
 
 bloombox/schema/__init__.py:
 	@echo "Installing Schema..."
-	@mkdir -p bloombox/schema
+	@mkdir -p bloombox/schema bloombox/services
 	@cd schema/languages/python && cp -fr$(CP_FLAGS) ./* ../../../bloombox/schema/
+	@cd schema/languages/pygrpc && cp -fr$(CP_FLAGS) ./* ../../../bloombox/services/
 
 embedded-schema: schema/languages/python bloombox/schema/__init__.py
 	@echo "Embedded schema ready."

@@ -73,8 +73,11 @@ embedded-schema: schema/languages/python src/schema/__init__.py src/schema/servi
 	@cd src/schema/services && for directory in `find -s -x . -type d | xargs`; do touch $$directory/__init__.py; done
 	@echo "Embedded schema ready."
 
-build: embedded-schema
+build:
 	@echo "Build would happen now."
+
+test:
+	@echo "Would run tests."
 
 interactive: all
 	@$(ENV_PATH)/bin/python

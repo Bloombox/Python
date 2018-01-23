@@ -1,0 +1,18 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=abc123
+language: python
+python:
+  - "2.6"
+  - "2.7"
+git:
+  submodules: false
+before_script:
+  - make env
+install:
+  - make
+script:
+  - make test
+#after_script:
+#  - ./cc-test-reporter after-build -d --exit-code $TRAVIS_TEST_RESULT --coverage-input-type jacoco --prefix /home/travis/build/Bloombox/Java/src/main/java
+

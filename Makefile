@@ -20,6 +20,7 @@ endif
 PYTHON_BUILD_TARGETS ?= build build_py
 PYTHON_DIST_TARGETS ?= sdist bdist bdist_dumb bdist_egg bdist_wheel
 PYTHON_TARGETS ?= $(PYTHON_BUILD_TARGETS) $(PYTHON_DIST_TARGETS)
+SCHEMA_PATH ?= src/bloombox/schema
 
 all: env build
 
@@ -31,7 +32,7 @@ distclean: clean clean-schema
 
 clean-schema:
 	@echo "Cleaning embedded schema..."
-	@rm -fr$(RM_FLAGS) src/schema/*
+	@rm -fr$(RM_FLAGS) $(SCHEMA_PATH)/*
 	@$(MAKE) -C schema clean
 
 clean:
@@ -62,21 +63,21 @@ schema/languages/python:
 	@echo "Building schema..."
 	@$(MAKE) -C schema LANGUAGES="python pygrpc"
 
-src/schema/__init__.py:
+$(SCHEMA_PATH)/__init__.py:
 	@echo "Installing Schema..."
-	@mkdir -p src/schema src/schema/services
-	@cd schema/languages/python && cp -fr$(CP_FLAGS) ./* ../../../src/schema/
+	@mkdir -p $(SCHEMA_PATH) $(SCHEMA_PATH)/services
+	@cd schema/languages/python && cp -fr$(CP_FLAGS) ./* ../../../$(SCHEMA_PATH)/
 
-src/schema/services/descriptor.py:
+$(SCHEMA_PATH)/services/descriptor.py:
 	@echo "Installing services..."
 	@for service in $(SERVICE_NAMES); do \
 		echo "- Installing '$$service'..."; \
-		mkdir -p src/schema/services/$$service; \
-		cp -fr$(CP_FLAGS) schema/languages/pygrpc/$$service/* src/schema/services/$$service; done
+		mkdir -p $(SCHEMA_PATH)/services/$$service; \
+		cp -fr$(CP_FLAGS) schema/languages/pygrpc/$$service/* $(SCHEMA_PATH)/services/$$service; done
 
-embedded-schema: schema/languages/python src/schema/__init__.py src/schema/services/descriptor.py
+embedded-schema: schema/languages/python $(SCHEMA_PATH)/__init__.py $(SCHEMA_PATH)/services/descriptor.py
 	@echo "Fixing up modules..."
-	@cd src/schema/services && for directory in `find -s -x . -type d | xargs`; do touch $$directory/__init__.py; done
+	@cd $(SCHEMA_PATH)/services && for directory in `find -s -x . -type d | xargs`; do touch $$directory/__init__.py; done
 	@echo "Embedded schema ready."
 
 build:

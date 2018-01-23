@@ -23,7 +23,7 @@ PYTHON_TARGETS ?= $(PYTHON_BUILD_TARGETS) $(PYTHON_DIST_TARGETS)
 
 all: env build
 
-env: submodules $(ENV_PATH)
+env: $(ENV_PATH)
 
 distclean: clean clean-schema
 	@echo "Cleaning environment..."

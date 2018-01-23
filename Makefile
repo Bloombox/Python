@@ -17,6 +17,10 @@ CP_FLAGS ?=
 RM_FLAGS ?=
 endif
 
+PYTHON_BUILD_TARGETS ?= build build_py
+PYTHON_DIST_TARGETS ?= sdist bdist bdist_dumb bdist_egg bdist_wheel
+PYTHON_TARGETS ?= $(PYTHON_BUILD_TARGETS) $(PYTHON_DIST_TARGETS)
+
 all: env build
 
 env: submodules $(ENV_PATH)
@@ -33,6 +37,8 @@ clean-schema:
 clean:
 	@echo "Cleaning PYC files..."
 	@find . -name '*.py[c,o]' -delete
+	@echo "Cleaning build..."
+	@rm -fr$(RM_FLAGS) build dist
 
 $(ENV_PATH):
 	@echo "Setting up environment..."
@@ -74,7 +80,7 @@ embedded-schema: schema/languages/python src/schema/__init__.py src/schema/servi
 	@echo "Embedded schema ready."
 
 build:
-	@echo "Build would happen now."
+	@python setup.py $(PYTHON_TARGETS)
 
 test:
 	@echo "Would run tests."

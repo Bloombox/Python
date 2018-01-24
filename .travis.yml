@@ -8,8 +8,11 @@ python:
   - "3.4"
   - "3.5"
   - "3.6"
-  - "3.7-dev"
   - "nightly"
+matrix:
+  fast_finish: true
+  allow_failures:
+  - python: "nightly"
 git:
   submodules: false
 before_script:

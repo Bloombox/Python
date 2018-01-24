@@ -3,20 +3,42 @@
 ## Bloombox: Python API Client
 #
 
-ENV_PATH ?= .env
 VERBOSE ?= no
+TESTS ?= yes
+COVERAGE ?= yes
 VERSION ?= 0.0.1
 SERVICES ?= checkin:v1beta1 devices:v1beta1 menu:v1beta1 shop:v1 telemetry:v1beta3
+
+ENV_PATH ?= .env
+BUILDBOT ?= no
+
 SERVICE_NAMES ?= $(foreach svc,$(SERVICES),$(firstword $(subst :, ,$(svc))))
 
-TEST_FLAGS = --no-byte-compile \
+BASE_TEST_FLAGS = --no-byte-compile \
 		--traverse-namespace \
-		--with-coverage \
-		--cover-package=bloombox \
-		--cover-branches \
-		--cover-html --cover-html-dir=build/coverage-html \
-		--cover-xml --cover-xml-file=build/coverage.xml \
 		--with-xunit --xunit-file=build/tests.xml --xunit-testsuite-name=bloombox
+
+COVERAGE_FLAGS = --with-coverage \
+                --cover-package=bloombox \
+                --cover-branches \
+                --cover-html --cover-html-dir=build/coverage-html \
+                --cover-xml --cover-xml-file=build/coverage.xml
+
+TEST_FLAGS ?=
+
+ifeq ($(BUILDBOT),yes)
+PIP ?= pip
+PYTHON ?= python
+NOSE ?= nosetests
+else
+PIP ?= $(ENV_PATH)/bin/pip
+PYTHON ?= $(ENV_PATH)/bin/python
+NOSE ?= $(ENV_PATH)/bin/nosetests
+endif
+
+ifeq ($(COVERAGE),yes)
+TEST_FLAGS += $(COVERAGE_FLAGS)
+endif
 
 ifeq ($(VERBOSE),yes)
 CP_FLAGS ?= v
@@ -26,6 +48,8 @@ else
 CP_FLAGS ?=
 RM_FLAGS ?=
 endif
+
+_TEST_FLAGS = $(BASE_TEST_FLAGS) $(TEST_FLAGS)
 
 PYTHON_BUILD_TARGETS ?= build build_py
 PYTHON_DIST_TARGETS ?= sdist bdist bdist_dumb bdist_egg bdist_wheel
@@ -51,12 +75,20 @@ distclean: clean
 	@echo "Cleaning environment..."
 	@rm -fr$(RM_FLAGS) $(ENV_PATH)
 
+ifneq ($(BUILDBOT),yes)
 $(ENV_PATH):
 	@echo "Setting up environment..."
 	@mkdir -p $(ENV_PATH)
 	@virtualenv $(ENV_PATH)
-	@$(ENV_PATH)/bin/pip install -r requirements.txt
+	@$(PIP) install -r requirements.txt
 	@echo "Environment ready."
+else
+$(ENV_PATH):
+	@echo "Setting up environment for CI..."
+	@mkdir -p $(ENV_PATH)
+	@$(PIP) install -r requirements.txt
+	@echo "Environment ready."
+endif
 
 submodules:
 	@echo "Fetching submodules..."
@@ -91,11 +123,17 @@ embedded-schema: schema/languages/python $(SCHEMA_PATH)/__init__.py $(SCHEMA_PAT
 	@echo "Embedded schema ready."
 
 build:
-	@python setup.py $(PYTHON_TARGETS)
+	@$(PYTHON) setup.py $(PYTHON_TARGETS)
 
+ifeq ($(TESTS),yes)
 test:
 	@echo "Running testsuite..."
-	@$(ENV_PATH)/bin/nosetests $(TEST_FLAGS) bloombox_tests
+	@$(NOSE) $(_TEST_FLAGS) bloombox_tests
+else
+test:
+	@echo "Skipping testsuite."
+endif
 
 interactive: all
-	@cd src && ../$(ENV_PATH)/bin/python -B
+	@PYTHONPATH=src $(PYTHON) -B
+

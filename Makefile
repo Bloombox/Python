@@ -36,10 +36,6 @@ all: env build
 
 env: $(ENV_PATH)
 
-distclean: clean clean-schema
-	@echo "Cleaning environment..."
-	@rm -fr$(RM_FLAGS) $(ENV_PATH)
-
 clean-schema:
 	@echo "Cleaning embedded schema..."
 	@rm -fr$(RM_FLAGS) $(SCHEMA_PATH)/*
@@ -50,6 +46,10 @@ clean:
 	@find . -name '*.py[c,o]' -delete
 	@echo "Cleaning build..."
 	@rm -fr$(RM_FLAGS) build dist
+
+distclean: clean clean-schema
+	@echo "Cleaning environment..."
+	@rm -fr$(RM_FLAGS) $(ENV_PATH)
 
 $(ENV_PATH):
 	@echo "Setting up environment..."

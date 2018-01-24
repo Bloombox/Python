@@ -130,7 +130,7 @@ build:
 	@$(PYTHON) setup.py $(PYTHON_TARGETS)
 
 ifeq ($(TESTS),yes)
-test:
+test: build
 	@echo "Running testsuite..."
 	@$(NOSE) $(_TEST_FLAGS) bloombox_tests
 else

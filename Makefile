@@ -47,7 +47,7 @@ clean:
 	@echo "Cleaning build..."
 	@rm -fr$(RM_FLAGS) build dist
 
-distclean: clean clean-schema
+distclean: clean
 	@echo "Cleaning environment..."
 	@rm -fr$(RM_FLAGS) $(ENV_PATH)
 

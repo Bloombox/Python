@@ -56,7 +56,11 @@ PYTHON_DIST_TARGETS ?= sdist bdist bdist_dumb bdist_egg bdist_wheel
 PYTHON_TARGETS ?= $(PYTHON_BUILD_TARGETS) $(PYTHON_DIST_TARGETS)
 SCHEMA_PATH ?= src/bloombox/schema
 
-all: env build
+all: env build test
+	@echo "Done."
+
+install: install-egg-info install-lib
+	@echo "Installation done."
 
 env: $(ENV_PATH)
 
@@ -133,6 +137,14 @@ else
 test:
 	@echo "Skipping testsuite."
 endif
+
+install-egg-info:
+	@echo "Installing egg info..."
+	@$(PYTHON) setup.py install_egg_info
+
+install-lib:
+	@echo "Installing library..."
+	@$(PYTHON) setup.py install_lib
 
 interactive: all
 	@PYTHONPATH=src $(PYTHON) -B

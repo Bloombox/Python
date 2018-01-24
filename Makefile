@@ -87,5 +87,5 @@ test:
 	@echo "Would run tests."
 
 interactive: all
-	@$(ENV_PATH)/bin/python
+	@cd src && ../$(ENV_PATH)/bin/python
 

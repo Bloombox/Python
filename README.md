@@ -1,4 +1,4 @@
-# Bloombox Client for Python
+# Bloombox Client for Python [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Latest Version: `0.0.1`
 

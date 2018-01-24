@@ -1,6 +1,7 @@
 env:
   global:
     - CC_TEST_REPORTER_ID=c4639be7a6596c9b58e9d432b57c152954dce56516007625e677f86e9bcc3069
+    - CODACY_PROJECT_TOKEN=c9b97d30557941e1851cd385c8e6fdc8
 language: python
 python:
   - "2.7"
@@ -19,6 +20,7 @@ git:
   submodules: false
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - pip install codacy-coverage
   - chmod +x ./cc-test-reporter
   - make clean env BUILDBOT=yes
   - ./cc-test-reporter before-build
@@ -30,4 +32,5 @@ after_script:
   - cp build/coverage.xml .
   - cp build/tests.xml .
   - ./cc-test-reporter after-build -d --exit-code $TRAVIS_TEST_RESULT --coverage-input-type coverage.py
+  - python-codacy-coverage -r coverage.xml
 

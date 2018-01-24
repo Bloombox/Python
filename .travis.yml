@@ -1,0 +1,31 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=c4639be7a6596c9b58e9d432b57c152954dce56516007625e677f86e9bcc3069
+language: python
+python:
+  - "2.7"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "nightly"
+matrix:
+  fast_finish: true
+  allow_failures:
+  - python: "nightly"
+git:
+  submodules: false
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - make clean env BUILDBOT=yes
+  - ./cc-test-reporter before-build
+install:
+  - make BUILDBOT=yes
+script:
+  - make test BUILDBOT=yes COVERAGE=yes
+after_script:
+  - cp build/coverage.xml .
+  - cp build/tests.xml .
+  - ./cc-test-reporter after-build -d --exit-code $TRAVIS_TEST_RESULT --coverage-input-type coverage.py
+

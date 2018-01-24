@@ -9,14 +9,19 @@
             the root of the project.
 """
 
+import pip
 from setuptools import setup, find_packages
+from pip.req import parse_requirements
 
 
 setup(
   name="bloombox",
   version="0.0.1",
-  packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
-  install_requires=['protobuf', 'grpcio'],
+  package_dir={'': 'src'},
+  packages=find_packages('src', exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
+  namespace_packages=['bloombox'],
+  install_requires=[
+    str(requirement.req) for requirement in parse_requirements("requirements.txt", session=pip.download.PipSession())],
   author="Bloombox",
   author_email="info@bloombox.io",
   license="Apache 2.0",
@@ -27,4 +32,3 @@ setup(
     "Documentation": "https://bloombox.github.io/Python",
     "Source Code": "https://github.com/bloombox/python"
   })
-

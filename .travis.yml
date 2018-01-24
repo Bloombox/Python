@@ -10,8 +10,7 @@ git:
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
-  - make env
-  - .env/bin/pip install -r requirements.txt
+  - make distclean env
   - ./cc-test-reporter before-build
 install:
   - make

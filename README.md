@@ -19,7 +19,7 @@ Published libs coming soon. In the meantime, see `Building the code`.
 Building the code is easy and follows standard Swift packaging conventions. There is also a `Makefile` packaged with various useful routines - you'll use `make` if you are developing on the code.
 
 **Required tools:**
-- Python 2.7
+- Python 2.7-3.7
 - `virtualenv`
 - `git`
 - `make` and other CLI tools

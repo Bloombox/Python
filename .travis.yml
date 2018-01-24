@@ -16,5 +16,7 @@ install:
 script:
   - make test BUILDBOT=yes COVERAGE=yes
 after_script:
-  - ./cc-test-reporter after-build -d --exit-code $TRAVIS_TEST_RESULT
+  - cp build/coverage.xml .
+  - cp build/tests.xml .
+  - ./cc-test-reporter after-build -d --exit-code $TRAVIS_TEST_RESULT --coverage-input-type coverage.py -c /home/travis/build/Bloombox/Python/src
 

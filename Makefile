@@ -29,10 +29,12 @@ TEST_FLAGS ?=
 ifeq ($(BUILDBOT),yes)
 PIP ?= pip
 PYTHON ?= python
+ENVPYTHON ?= python
 NOSE ?= nosetests
 else
 PIP ?= $(ENV_PATH)/bin/pip
-PYTHON ?= $(ENV_PATH)/bin/python
+PYTHON ?= $(shell which python2.7)
+ENVPYTHON ?= $(ENV_PATH)/bin/python
 NOSE ?= $(ENV_PATH)/bin/nosetests
 endif
 
@@ -83,7 +85,7 @@ ifneq ($(BUILDBOT),yes)
 $(ENV_PATH):
 	@echo "Setting up environment..."
 	@mkdir -p $(ENV_PATH)
-	@virtualenv $(ENV_PATH)
+	@virtualenv $(ENV_PATH) -p $(PYTHON)
 	@$(PIP) install -r requirements.txt
 	@echo "Environment ready."
 else
@@ -127,7 +129,7 @@ embedded-schema: schema/languages/python $(SCHEMA_PATH)/__init__.py $(SCHEMA_PAT
 	@echo "Embedded schema ready."
 
 build:
-	@$(PYTHON) setup.py $(PYTHON_TARGETS)
+	@$(ENVPYTHON) setup.py $(PYTHON_TARGETS)
 
 ifeq ($(TESTS),yes)
 test: build
@@ -140,12 +142,12 @@ endif
 
 install-egg-info:
 	@echo "Installing egg info..."
-	@$(PYTHON) setup.py install_egg_info
+	@$(ENVPYTHON) setup.py install_egg_info
 
 install-lib:
 	@echo "Installing library..."
-	@$(PYTHON) setup.py install_lib
+	@$(ENVPYTHON) setup.py install_lib
 
 interactive: all
-	@PYTHONPATH=src $(PYTHON) -B
+	@PYTHONPATH=src $(ENVPYTHON) -B
 

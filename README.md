@@ -1,4 +1,6 @@
-# Bloombox Client for Python [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# Bloombox Client for Python
+
+[![Build Status](https://travis-ci.org/Bloombox/Python.svg?branch=master)](https://travis-ci.org/Bloombox/Python) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Maintainability](https://api.codeclimate.com/v1/badges/8067bca447a946905de7/maintainability)](https://codeclimate.com/github/Bloombox/Python/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/8067bca447a946905de7/test_coverage)](https://codeclimate.com/github/Bloombox/Python/test_coverage)
 
 Latest Version: `0.0.1`
 

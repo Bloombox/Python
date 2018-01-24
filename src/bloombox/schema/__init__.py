@@ -9,6 +9,13 @@
             the root of the project.
 """
 
-import sys
+import sys, os
 
-import pdb; pdb.set_trace()
+
+## calculate schema path and add to sys.path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+## preload some of the proto machinery
+import grpc
+from google import api
+from google import protobuf

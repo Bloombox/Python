@@ -27,5 +27,5 @@ script:
 after_script:
   - cp build/coverage.xml .
   - cp build/tests.xml .
-  - ./cc-test-reporter after-build -d --exit-code $TRAVIS_TEST_RESULT --coverage-input-type coverage.py --prefix /home/travis/build/Bloombox/Python/src
+  - ./cc-test-reporter after-build -d --exit-code $TRAVIS_TEST_RESULT --coverage-input-type coverage.py
 

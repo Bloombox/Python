@@ -17,7 +17,7 @@ from pip.req import parse_requirements
 setup(
   name="bloombox",
   version="0.0.1",
-  package_dir={'':'src'},
+  package_dir={'': 'src'},
   packages=find_packages('src', exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
   namespace_packages=['bloombox'],
   install_requires=[

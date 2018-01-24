@@ -1,6 +1,6 @@
 env:
   global:
-    - CC_TEST_REPORTER_ID=abc123
+    - CC_TEST_REPORTER_ID=c4639be7a6596c9b58e9d432b57c152954dce56516007625e677f86e9bcc3069
 language: python
 python:
   - "2.6"
@@ -8,11 +8,14 @@ python:
 git:
   submodules: false
 before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
   - make env
+  - ./cc-test-reporter before-build
 install:
   - make
 script:
   - make test
-#after_script:
-#  - ./cc-test-reporter after-build -d --exit-code $TRAVIS_TEST_RESULT --coverage-input-type jacoco --prefix /home/travis/build/Bloombox/Java/src/main/java
+after_script:
+  - ./cc-test-reporter after-build -d --exit-code $TRAVIS_TEST_RESULT
 

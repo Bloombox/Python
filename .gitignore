@@ -6,3 +6,6 @@ target/
 .DS_Store
 dist/
 bloombox.egg-info/
+.coverage
+coverage.xml
+htmlcov/

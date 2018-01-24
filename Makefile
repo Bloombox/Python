@@ -9,9 +9,19 @@ VERSION ?= 0.0.1
 SERVICES ?= checkin:v1beta1 devices:v1beta1 menu:v1beta1 shop:v1 telemetry:v1beta3
 SERVICE_NAMES ?= $(foreach svc,$(SERVICES),$(firstword $(subst :, ,$(svc))))
 
+TEST_FLAGS = --no-byte-compile \
+		--traverse-namespace \
+		--with-coverage \
+		--cover-package=bloombox \
+		--cover-branches \
+		--cover-html --cover-html-dir=build/coverage-html \
+		--cover-xml --cover-xml-file=build/coverage.xml \
+		--with-xunit --xunit-file=build/tests.xml --xunit-testsuite-name=bloombox
+
 ifeq ($(VERBOSE),yes)
 CP_FLAGS ?= v
 RM_FLAGS ?= v
+TEST_FLAGS += -v
 else
 CP_FLAGS ?=
 RM_FLAGS ?=
@@ -84,8 +94,8 @@ build:
 	@python setup.py $(PYTHON_TARGETS)
 
 test:
-	@echo "Would run tests."
+	@echo "Running testsuite..."
+	@$(ENV_PATH)/bin/nosetests $(TEST_FLAGS) bloombox_tests
 
 interactive: all
 	@cd src && ../$(ENV_PATH)/bin/python -B
-

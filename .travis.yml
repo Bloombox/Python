@@ -16,6 +16,10 @@ matrix:
   allow_failures:
   - python: "nightly"
   - python: "3.7-dev"
+cache:
+  pip: true
+  directories:
+  - ./.env
 git:
   submodules: false
 before_script:

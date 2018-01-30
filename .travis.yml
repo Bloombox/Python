@@ -28,6 +28,7 @@ before_script:
   - chmod +x ./cc-test-reporter
   - make clean env BUILDBOT=yes
   - ./cc-test-reporter before-build
+  - make distclean BUILDBOT=yes
 install:
   - make BUILDBOT=yes
 script:

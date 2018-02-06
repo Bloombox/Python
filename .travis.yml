@@ -26,14 +26,14 @@ before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - pip install codacy-coverage
   - chmod +x ./cc-test-reporter
-  - make distclean BUILDBOT=yes
-  - make clean env BUILDBOT=yes
+  - make distclean
+  - make clean env
   - ./cc-test-reporter before-build
   - pip install --upgrade -r requirements.txt
 install:
-  - make BUILDBOT=yes
+  - make
 script:
-  - make test BUILDBOT=yes COVERAGE=yes
+  - make test COVERAGE=yes
 after_script:
   - cp build/coverage.xml .
   - cp build/tests.xml .

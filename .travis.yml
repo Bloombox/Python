@@ -29,6 +29,7 @@ before_script:
   - make distclean BUILDBOT=yes
   - make clean env BUILDBOT=yes
   - ./cc-test-reporter before-build
+  - pip install --upgrade -r requirements.txt
 install:
   - make BUILDBOT=yes
 script:

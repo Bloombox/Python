@@ -7,7 +7,7 @@ VERBOSE ?= no
 TESTS ?= yes
 COVERAGE ?= yes
 VERSION ?= 0.0.1
-RELEASE ?= no
+STAGING ?= yes
 SERVICES ?= checkin:v1beta1 devices:v1beta1 menu:v1beta1 shop:v1 telemetry:v1beta3
 
 ENV_PATH ?= .env
@@ -26,6 +26,12 @@ COVERAGE_FLAGS = --with-coverage \
                 --cover-xml --cover-xml-file=build/coverage.xml
 
 TEST_FLAGS ?=
+
+ifeq ($(STAGING),no)
+PYPI ?= pypi
+else
+PYPI ?= pypitest
+endif
 
 ifeq ($(BUILDBOT),yes)
 PIP ?= pip
@@ -59,9 +65,6 @@ PYTHON_DIST_TARGETS ?= sdist bdist bdist_dumb bdist_egg bdist_wheel
 PYTHON_TARGETS ?= $(PYTHON_BUILD_TARGETS) $(PYTHON_DIST_TARGETS)
 SCHEMA_PATH ?= src/bloombox/schema
 
-ifeq ($(RELEASE),yes)
-PYTHON_TARGETS += upload
-endif
 
 all: env build test
 	@echo "Done."
@@ -135,6 +138,9 @@ embedded-schema: schema/languages/python $(SCHEMA_PATH)/__init__.py $(SCHEMA_PAT
 
 build:
 	@$(ENVPYTHON) setup.py $(PYTHON_TARGETS)
+
+release:
+	@$(ENVPYTHON) setup.py $(PYTHON_TARGETS) check upload -r $(PYPI)
 
 ifeq ($(TESTS),yes)
 test: build

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='partner/PartnerScope.proto',
   package='bloombox.schema.partner',
   syntax='proto3',
-  serialized_pb=_b('\n\x1apartner/PartnerScope.proto\x12\x17\x62loombox.schema.partner*\x82\x01\n\x0cPartnerScope\x12\x08\n\x04\x41UTH\x10\x00\x12\x0b\n\x07\x43ONTACT\x10\x01\x12\r\n\tDASHBOARD\x10\x02\x12\x12\n\x0eMENU_DATA_READ\x10\n\x12\x13\n\x0fMENU_DATA_WRITE\x10\x14\x12\x0c\n\x08SETTINGS\x10\x32\x12\n\n\x06\x41\x43\x43\x45SS\x10\x33\x12\t\n\x05\x41\x44MIN\x10\x64\x42&\n\x1aio.bloombox.schema.partnerH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n\x1apartner/PartnerScope.proto\x12\x17\x62loombox.schema.partner*\x8f\x01\n\x0cPartnerScope\x12\x08\n\x04\x41UTH\x10\x00\x12\x0b\n\x07\x43ONTACT\x10\x01\x12\r\n\tDASHBOARD\x10\x02\x12\x12\n\x0eMENU_DATA_READ\x10\n\x12\x13\n\x0fMENU_DATA_WRITE\x10\x14\x12\x11\n\rSETTINGS_READ\x10\x32\x12\x12\n\x0eSETTINGS_WRITE\x10\x33\x12\t\n\x05\x41\x44MIN\x10\x64\x42&\n\x1aio.bloombox.schema.partnerH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
 )
 
 _PARTNERSCOPE = _descriptor.EnumDescriptor(
@@ -50,11 +50,11 @@ _PARTNERSCOPE = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SETTINGS', index=5, number=50,
+      name='SETTINGS_READ', index=5, number=50,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ACCESS', index=6, number=51,
+      name='SETTINGS_WRITE', index=6, number=51,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
@@ -65,7 +65,7 @@ _PARTNERSCOPE = _descriptor.EnumDescriptor(
   containing_type=None,
   options=None,
   serialized_start=56,
-  serialized_end=186,
+  serialized_end=199,
 )
 _sym_db.RegisterEnumDescriptor(_PARTNERSCOPE)
 
@@ -75,8 +75,8 @@ CONTACT = 1
 DASHBOARD = 2
 MENU_DATA_READ = 10
 MENU_DATA_WRITE = 20
-SETTINGS = 50
-ACCESS = 51
+SETTINGS_READ = 50
+SETTINGS_WRITE = 51
 ADMIN = 100
 
 

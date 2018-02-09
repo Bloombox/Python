@@ -22,6 +22,7 @@ from identity import ID_pb2 as identity_dot_ID__pb2
 from identity.ids import UserDoctorRec_pb2 as identity_dot_ids_dot_UserDoctorRec__pb2
 from services import ServiceStatus_pb2 as services_dot_ServiceStatus__pb2
 from partner import PartnerLocation_pb2 as partner_dot_PartnerLocation__pb2
+from partner.settings import PartnerLocationSettings_pb2 as partner_dot_settings_dot_PartnerLocationSettings__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 
@@ -29,9 +30,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='shop/v1/ShopService_v1.proto',
   package='bloombox.schema.services.shop.v1',
   syntax='proto3',
-  serialized_pb=_b('\n\x1cshop/v1/ShopService_v1.proto\x12 bloombox.schema.services.shop.v1\x1a\x13identity/User.proto\x1a\x13person/Person.proto\x1a\x14\x63ommerce/Order.proto\x1a\x17\x63ommerce/Customer.proto\x1a\x11identity/ID.proto\x1a identity/ids/UserDoctorRec.proto\x1a\x1cservices/ServiceStatus.proto\x1a\x1dpartner/PartnerLocation.proto\x1a\x1cgoogle/api/annotations.proto\"\xe8\x01\n\x04Ping\x1a\t\n\x07Request\x1a\x43\n\x08Response\x12\x37\n\x06status\x18\x01 \x01(\x0e\x32\'.bloombox.schema.services.ServiceStatus\x1a\x8f\x01\n\tOperation\x12?\n\x07request\x18\x01 \x01(\x0b\x32..bloombox.schema.services.shop.v1.Ping.Request\x12\x41\n\x08response\x18\x02 \x01(\x0b\x32/.bloombox.schema.services.shop.v1.Ping.Response\"\xbd\x02\n\x08ShopInfo\x1aH\n\x07Request\x12=\n\x08location\x18\x01 \x01(\x0b\x32+.bloombox.schema.partner.PartnerLocationKey\x1aM\n\x08Response\x12\x41\n\x0bshop_status\x18\x01 \x01(\x0e\x32,.bloombox.schema.services.shop.v1.ShopStatus\x1a\x97\x01\n\tOperation\x12\x43\n\x07request\x18\x01 \x01(\x0b\x32\x32.bloombox.schema.services.shop.v1.ShopInfo.Request\x12\x45\n\x08response\x18\x02 \x01(\x0b\x32\x33.bloombox.schema.services.shop.v1.ShopInfo.Response\"\xcf\x05\n\x0c\x45nrollMember\x1a\xa0\x03\n\x07Request\x12+\n\x06person\x18\x01 \x01(\x0b\x32\x1b.opencannabis.person.Person\x12:\n\x06source\x18\x02 \x01(\x0e\x32*.bloombox.schema.identity.EnrollmentSource\x12\x0f\n\x07\x63hannel\x18\x03 \x01(\t\x12?\n\ndoctor_rec\x18\x04 \x01(\x0b\x32+.bloombox.schema.identity.ids.UserDoctorRec\x12\x33\n\rgovernment_id\x18\x05 \x01(\x0b\x32\x1c.bloombox.schema.identity.ID\x12=\n\x08location\x18\x06 \x01(\x0b\x32+.bloombox.schema.partner.PartnerLocationKey\x12\x10\n\x08password\x18\x07 \x01(\t\x12\x0f\n\x07\x64ry_run\x18\x08 \x01(\x08\x12\x43\n\x10\x63onsumer_profile\x18\t \x01(\x0b\x32).bloombox.schema.identity.ConsumerProfile\x1az\n\x08Response\x12\n\n\x02id\x18\x01 \x01(\t\x12\x14\n\nforeign_id\x18\x02 \x01(\tH\x00\x12\x42\n\x05\x65rror\x18\x03 \x01(\x0e\x32\x31.bloombox.schema.services.shop.v1.EnrollmentErrorH\x00\x42\x08\n\x06result\x1a\x9f\x01\n\tOperation\x12G\n\x07request\x18\x01 \x01(\x0b\x32\x36.bloombox.schema.services.shop.v1.EnrollMember.Request\x12I\n\x08response\x18\x02 \x01(\x0b\x32\x37.bloombox.schema.services.shop.v1.EnrollMember.Response\"\xaf\x03\n\x0cVerifyMember\x1a_\n\x07Request\x12\x15\n\remail_address\x18\x01 \x01(\t\x12=\n\x08location\x18\x02 \x01(\x0b\x32+.bloombox.schema.partner.PartnerLocationKey\x1a\x9b\x01\n\x08Response\x12\x10\n\x08verified\x18\x01 \x01(\x08\x12\x33\n\x08\x63ustomer\x18\x02 \x01(\x0b\x32\x1f.opencannabis.commerce.CustomerH\x00\x12>\n\x05\x65rror\x18\x03 \x01(\x0e\x32-.bloombox.schema.services.shop.v1.VerifyErrorH\x00\x42\x08\n\x06result\x1a\x9f\x01\n\tOperation\x12G\n\x07request\x18\x01 \x01(\x0b\x32\x36.bloombox.schema.services.shop.v1.VerifyMember.Request\x12I\n\x08response\x18\x02 \x01(\x0b\x32\x37.bloombox.schema.services.shop.v1.VerifyMember.Response\"\xc4\x02\n\x0c\x43heckZipcode\x1aY\n\x07Request\x12\x0f\n\x07zipcode\x18\x01 \x01(\t\x12=\n\x08location\x18\x02 \x01(\x0b\x32+.bloombox.schema.partner.PartnerLocationKey\x1a\x37\n\x08Response\x12\x11\n\tsupported\x18\x01 \x01(\x08\x12\x18\n\x10\x64\x65livery_minimum\x18\x02 \x01(\x02\x1a\x9f\x01\n\tOperation\x12G\n\x07request\x18\x01 \x01(\x0b\x32\x36.bloombox.schema.services.shop.v1.CheckZipcode.Request\x12I\n\x08response\x18\x02 \x01(\x0b\x32\x37.bloombox.schema.services.shop.v1.CheckZipcode.Response\"\xff\x02\n\x0bSubmitOrder\x1au\n\x07Request\x12+\n\x05order\x18\x01 \x01(\x0b\x32\x1c.opencannabis.commerce.Order\x12=\n\x08location\x18\x02 \x01(\x0b\x32+.bloombox.schema.partner.PartnerLocationKey\x1aY\n\x08Response\x12;\n\x05\x65rror\x18\x01 \x01(\x0e\x32,.bloombox.schema.services.shop.v1.OrderError\x12\x10\n\x08order_id\x18\x02 \x01(\t\x1a\x9d\x01\n\tOperation\x12\x46\n\x07request\x18\x01 \x01(\x0b\x32\x35.bloombox.schema.services.shop.v1.SubmitOrder.Request\x12H\n\x08response\x18\x02 \x01(\x0b\x32\x36.bloombox.schema.services.shop.v1.SubmitOrder.Response\"\xca\x02\n\x08GetOrder\x1aZ\n\x07Request\x12\x10\n\x08order_id\x18\x01 \x01(\t\x12=\n\x08location\x18\x02 \x01(\x0b\x32+.bloombox.schema.partner.PartnerLocationKey\x1aH\n\x08Response\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12+\n\x05order\x18\x02 \x01(\x0b\x32\x1c.opencannabis.commerce.Order\x1a\x97\x01\n\tOperation\x12\x43\n\x07request\x18\x01 \x01(\x0b\x32\x32.bloombox.schema.services.shop.v1.GetOrder.Request\x12\x45\n\x08response\x18\x02 \x01(\x0b\x32\x33.bloombox.schema.services.shop.v1.GetOrder.Response*d\n\x0bVerifyError\x12\r\n\tNOT_FOUND\x10\x00\x12\x0f\n\x0bREC_EXPIRED\x10\x01\x12\x0e\n\nID_EXPIRED\x10\x02\x12\x13\n\x0fINVALID_PAYLOAD\x10\x03\x12\x10\n\x0cNOT_ELIGIBLE\x10\x04*\xcb\x02\n\nOrderError\x12\x0c\n\x08NO_ERROR\x10\x00\x12\x11\n\rINVALID_ORDER\x10\x01\x12\x15\n\x11USER_NOT_ELIGIBLE\x10\x02\x12\x18\n\x14ZIPCODE_NOT_ELIGIBLE\x10\x03\x12\x16\n\x12ZIPCODE_NOT_ACTIVE\x10\x04\x12\x1b\n\x17ZIPCODE_MINIMUM_NOT_MET\x10\x05\x12\x13\n\x0fINVALID_PARTNER\x10\x06\x12\x14\n\x10INVALID_LOCATION\x10\x07\x12\x14\n\x10INVALID_CUSTOMER\x10\x08\x12\x17\n\x13MISSING_DESTINATION\x10\t\x12\x11\n\rSHOP_NOT_OPEN\x10\n\x12\x1a\n\x16GLOBAL_MINIMUM_NOT_MET\x10\x0b\x12\x18\n\x14MEMBERSHIP_NOT_FOUND\x10\x0c\x12\x13\n\x0f\x44UPLICATE_ORDER\x10\r*\xa7\x03\n\x0f\x45nrollmentError\x12\x17\n\x13NO_ENROLLMENT_ERROR\x10\x00\x12\x11\n\rINVALID_EMAIL\x10\x01\x12\x10\n\x0cINVALID_NAME\x10\x02\x12\x11\n\rINVALID_PHONE\x10\x03\x12\x19\n\x15INVALID_DATE_OF_BIRTH\x10\x04\x12\x12\n\x0eINVALID_REC_ID\x10\x05\x12\x1a\n\x16INVALID_REC_EXPIRATION\x10\x06\x12\x1b\n\x17INVALID_REC_DOCTOR_NAME\x10\x07\x12\x1c\n\x18INVALID_REC_DOCTOR_PHONE\x10\x08\x12\x13\n\x0fINVALID_USDL_ID\x10\t\x12\x1b\n\x17INVALID_USDL_EXPIRATION\x10\x0b\x12\x1d\n\x19INVALID_USDL_JURISDICTION\x10\x0c\x12\x14\n\x10\x41\x43\x43OUNT_CONFLICT\x10\r\x12\x1a\n\x16\x41\x43\x43OUNT_CONFLICT_EMAIL\x10\x0e\x12\x1a\n\x16\x41\x43\x43OUNT_CONFLICT_PHONE\x10\x0f\x12\x1e\n\x1aINVALID_ENROLLMENT_PAYLOAD\x10\x63*F\n\nShopStatus\x12\x08\n\x04OPEN\x10\x00\x12\n\n\x06\x43LOSED\x10\x01\x12\x11\n\rDELIVERY_ONLY\x10\x02\x12\x0f\n\x0bPICKUP_ONLY\x10\x03\x32\xc3\x0c\n\x04Shop\x12~\n\x04Ping\x12..bloombox.schema.services.shop.v1.Ping.Request\x1a/.bloombox.schema.services.shop.v1.Ping.Response\"\x15\x82\xd3\xe4\x93\x02\x0f\x12\r/shop/v1/ping\x12\xca\x01\n\x08ShopInfo\x12\x32.bloombox.schema.services.shop.v1.ShopInfo.Request\x1a\x33.bloombox.schema.services.shop.v1.ShopInfo.Response\"U\x82\xd3\xe4\x93\x02O\x12M/shop/v1/partners/{location.partner.code}/locations/{location.code}/shop/info\x12\xee\x01\n\x0c\x45nrollMember\x12\x36.bloombox.schema.services.shop.v1.EnrollMember.Request\x1a\x37.bloombox.schema.services.shop.v1.EnrollMember.Response\"m\x82\xd3\xe4\x93\x02g\"K/shop/v1/partners/{location.partner.code}/locations/{location.code}/members:\x01*Z\x15\"\x10/shop/v1/members:\x01*\x12\xdf\x01\n\x0c\x43heckZipcode\x12\x36.bloombox.schema.services.shop.v1.CheckZipcode.Request\x1a\x37.bloombox.schema.services.shop.v1.CheckZipcode.Response\"^\x82\xd3\xe4\x93\x02X\x12V/shop/v1/partners/{location.partner.code}/locations/{location.code}/zipcheck/{zipcode}\x12\xeb\x01\n\x0cVerifyMember\x12\x36.bloombox.schema.services.shop.v1.VerifyMember.Request\x1a\x37.bloombox.schema.services.shop.v1.VerifyMember.Response\"j\x82\xd3\xe4\x93\x02\x64\x12\x62/shop/v1/partners/{location.partner.code}/locations/{location.code}/members/{email_address}/verify\x12\xb9\x02\n\x0bSubmitOrder\x12\x35.bloombox.schema.services.shop.v1.SubmitOrder.Request\x1a\x36.bloombox.schema.services.shop.v1.SubmitOrder.Response\"\xba\x01\x82\xd3\xe4\x93\x02\xb3\x01\"J/shop/v1/partners/{location.partner.code}/locations/{location.code}/orders:\x05orderZ^\"U/shop/v1/partners/{location.partner.code}/locations/{location.code}/orders/{order.id}:\x05order\x12\xf0\x01\n\x08GetOrder\x12\x32.bloombox.schema.services.shop.v1.GetOrder.Request\x1a\x33.bloombox.schema.services.shop.v1.GetOrder.Response\"{\x82\xd3\xe4\x93\x02u\x12U/shop/v1/partners/{location.partner.code}/locations/{location.code}/orders/{order_id}Z\x1c\x12\x1a/shop/v1/orders/{order_id}B/\n#io.bloombox.schema.services.shop.v1H\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n\x1cshop/v1/ShopService_v1.proto\x12 bloombox.schema.services.shop.v1\x1a\x13identity/User.proto\x1a\x13person/Person.proto\x1a\x14\x63ommerce/Order.proto\x1a\x17\x63ommerce/Customer.proto\x1a\x11identity/ID.proto\x1a identity/ids/UserDoctorRec.proto\x1a\x1cservices/ServiceStatus.proto\x1a\x1dpartner/PartnerLocation.proto\x1a.partner/settings/PartnerLocationSettings.proto\x1a\x1cgoogle/api/annotations.proto\"\xe8\x01\n\x04Ping\x1a\t\n\x07Request\x1a\x43\n\x08Response\x12\x37\n\x06status\x18\x01 \x01(\x0e\x32\'.bloombox.schema.services.ServiceStatus\x1a\x8f\x01\n\tOperation\x12?\n\x07request\x18\x01 \x01(\x0b\x32..bloombox.schema.services.shop.v1.Ping.Request\x12\x41\n\x08response\x18\x02 \x01(\x0b\x32/.bloombox.schema.services.shop.v1.Ping.Response\"\xbd\x02\n\x08ShopInfo\x1aH\n\x07Request\x12=\n\x08location\x18\x01 \x01(\x0b\x32+.bloombox.schema.partner.PartnerLocationKey\x1aM\n\x08Response\x12\x41\n\x0bshop_status\x18\x01 \x01(\x0e\x32,.bloombox.schema.partner.settings.ShopStatus\x1a\x97\x01\n\tOperation\x12\x43\n\x07request\x18\x01 \x01(\x0b\x32\x32.bloombox.schema.services.shop.v1.ShopInfo.Request\x12\x45\n\x08response\x18\x02 \x01(\x0b\x32\x33.bloombox.schema.services.shop.v1.ShopInfo.Response\"\xcf\x05\n\x0c\x45nrollMember\x1a\xa0\x03\n\x07Request\x12+\n\x06person\x18\x01 \x01(\x0b\x32\x1b.opencannabis.person.Person\x12:\n\x06source\x18\x02 \x01(\x0e\x32*.bloombox.schema.identity.EnrollmentSource\x12\x0f\n\x07\x63hannel\x18\x03 \x01(\t\x12?\n\ndoctor_rec\x18\x04 \x01(\x0b\x32+.bloombox.schema.identity.ids.UserDoctorRec\x12\x33\n\rgovernment_id\x18\x05 \x01(\x0b\x32\x1c.bloombox.schema.identity.ID\x12=\n\x08location\x18\x06 \x01(\x0b\x32+.bloombox.schema.partner.PartnerLocationKey\x12\x10\n\x08password\x18\x07 \x01(\t\x12\x0f\n\x07\x64ry_run\x18\x08 \x01(\x08\x12\x43\n\x10\x63onsumer_profile\x18\t \x01(\x0b\x32).bloombox.schema.identity.ConsumerProfile\x1az\n\x08Response\x12\n\n\x02id\x18\x01 \x01(\t\x12\x14\n\nforeign_id\x18\x02 \x01(\tH\x00\x12\x42\n\x05\x65rror\x18\x03 \x01(\x0e\x32\x31.bloombox.schema.services.shop.v1.EnrollmentErrorH\x00\x42\x08\n\x06result\x1a\x9f\x01\n\tOperation\x12G\n\x07request\x18\x01 \x01(\x0b\x32\x36.bloombox.schema.services.shop.v1.EnrollMember.Request\x12I\n\x08response\x18\x02 \x01(\x0b\x32\x37.bloombox.schema.services.shop.v1.EnrollMember.Response\"\xaf\x03\n\x0cVerifyMember\x1a_\n\x07Request\x12\x15\n\remail_address\x18\x01 \x01(\t\x12=\n\x08location\x18\x02 \x01(\x0b\x32+.bloombox.schema.partner.PartnerLocationKey\x1a\x9b\x01\n\x08Response\x12\x10\n\x08verified\x18\x01 \x01(\x08\x12\x33\n\x08\x63ustomer\x18\x02 \x01(\x0b\x32\x1f.opencannabis.commerce.CustomerH\x00\x12>\n\x05\x65rror\x18\x03 \x01(\x0e\x32-.bloombox.schema.services.shop.v1.VerifyErrorH\x00\x42\x08\n\x06result\x1a\x9f\x01\n\tOperation\x12G\n\x07request\x18\x01 \x01(\x0b\x32\x36.bloombox.schema.services.shop.v1.VerifyMember.Request\x12I\n\x08response\x18\x02 \x01(\x0b\x32\x37.bloombox.schema.services.shop.v1.VerifyMember.Response\"\xc4\x02\n\x0c\x43heckZipcode\x1aY\n\x07Request\x12\x0f\n\x07zipcode\x18\x01 \x01(\t\x12=\n\x08location\x18\x02 \x01(\x0b\x32+.bloombox.schema.partner.PartnerLocationKey\x1a\x37\n\x08Response\x12\x11\n\tsupported\x18\x01 \x01(\x08\x12\x18\n\x10\x64\x65livery_minimum\x18\x02 \x01(\x02\x1a\x9f\x01\n\tOperation\x12G\n\x07request\x18\x01 \x01(\x0b\x32\x36.bloombox.schema.services.shop.v1.CheckZipcode.Request\x12I\n\x08response\x18\x02 \x01(\x0b\x32\x37.bloombox.schema.services.shop.v1.CheckZipcode.Response\"\xff\x02\n\x0bSubmitOrder\x1au\n\x07Request\x12+\n\x05order\x18\x01 \x01(\x0b\x32\x1c.opencannabis.commerce.Order\x12=\n\x08location\x18\x02 \x01(\x0b\x32+.bloombox.schema.partner.PartnerLocationKey\x1aY\n\x08Response\x12;\n\x05\x65rror\x18\x01 \x01(\x0e\x32,.bloombox.schema.services.shop.v1.OrderError\x12\x10\n\x08order_id\x18\x02 \x01(\t\x1a\x9d\x01\n\tOperation\x12\x46\n\x07request\x18\x01 \x01(\x0b\x32\x35.bloombox.schema.services.shop.v1.SubmitOrder.Request\x12H\n\x08response\x18\x02 \x01(\x0b\x32\x36.bloombox.schema.services.shop.v1.SubmitOrder.Response\"\x88\x03\n\x08GetOrder\x1aZ\n\x07Request\x12\x10\n\x08order_id\x18\x01 \x01(\t\x12=\n\x08location\x18\x02 \x01(\x0b\x32+.bloombox.schema.partner.PartnerLocationKey\x1a\x85\x01\n\x08Response\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12+\n\x05order\x18\x02 \x01(\x0b\x32\x1c.opencannabis.commerce.Order\x12;\n\x05\x65rror\x18\x03 \x01(\x0e\x32,.bloombox.schema.services.shop.v1.OrderError\x1a\x97\x01\n\tOperation\x12\x43\n\x07request\x18\x01 \x01(\x0b\x32\x32.bloombox.schema.services.shop.v1.GetOrder.Request\x12\x45\n\x08response\x18\x02 \x01(\x0b\x32\x33.bloombox.schema.services.shop.v1.GetOrder.Response*d\n\x0bVerifyError\x12\r\n\tNOT_FOUND\x10\x00\x12\x0f\n\x0bREC_EXPIRED\x10\x01\x12\x0e\n\nID_EXPIRED\x10\x02\x12\x13\n\x0fINVALID_PAYLOAD\x10\x03\x12\x10\n\x0cNOT_ELIGIBLE\x10\x04*\xcb\x02\n\nOrderError\x12\x0c\n\x08NO_ERROR\x10\x00\x12\x11\n\rINVALID_ORDER\x10\x01\x12\x15\n\x11USER_NOT_ELIGIBLE\x10\x02\x12\x18\n\x14ZIPCODE_NOT_ELIGIBLE\x10\x03\x12\x16\n\x12ZIPCODE_NOT_ACTIVE\x10\x04\x12\x1b\n\x17ZIPCODE_MINIMUM_NOT_MET\x10\x05\x12\x13\n\x0fINVALID_PARTNER\x10\x06\x12\x14\n\x10INVALID_LOCATION\x10\x07\x12\x14\n\x10INVALID_CUSTOMER\x10\x08\x12\x17\n\x13MISSING_DESTINATION\x10\t\x12\x11\n\rSHOP_NOT_OPEN\x10\n\x12\x1a\n\x16GLOBAL_MINIMUM_NOT_MET\x10\x0b\x12\x18\n\x14MEMBERSHIP_NOT_FOUND\x10\x0c\x12\x13\n\x0f\x44UPLICATE_ORDER\x10\r*\xa7\x03\n\x0f\x45nrollmentError\x12\x17\n\x13NO_ENROLLMENT_ERROR\x10\x00\x12\x11\n\rINVALID_EMAIL\x10\x01\x12\x10\n\x0cINVALID_NAME\x10\x02\x12\x11\n\rINVALID_PHONE\x10\x03\x12\x19\n\x15INVALID_DATE_OF_BIRTH\x10\x04\x12\x12\n\x0eINVALID_REC_ID\x10\x05\x12\x1a\n\x16INVALID_REC_EXPIRATION\x10\x06\x12\x1b\n\x17INVALID_REC_DOCTOR_NAME\x10\x07\x12\x1c\n\x18INVALID_REC_DOCTOR_PHONE\x10\x08\x12\x13\n\x0fINVALID_USDL_ID\x10\t\x12\x1b\n\x17INVALID_USDL_EXPIRATION\x10\x0b\x12\x1d\n\x19INVALID_USDL_JURISDICTION\x10\x0c\x12\x14\n\x10\x41\x43\x43OUNT_CONFLICT\x10\r\x12\x1a\n\x16\x41\x43\x43OUNT_CONFLICT_EMAIL\x10\x0e\x12\x1a\n\x16\x41\x43\x43OUNT_CONFLICT_PHONE\x10\x0f\x12\x1e\n\x1aINVALID_ENROLLMENT_PAYLOAD\x10\x63\x32\xc3\x0c\n\x04Shop\x12~\n\x04Ping\x12..bloombox.schema.services.shop.v1.Ping.Request\x1a/.bloombox.schema.services.shop.v1.Ping.Response\"\x15\x82\xd3\xe4\x93\x02\x0f\x12\r/shop/v1/ping\x12\xca\x01\n\x08ShopInfo\x12\x32.bloombox.schema.services.shop.v1.ShopInfo.Request\x1a\x33.bloombox.schema.services.shop.v1.ShopInfo.Response\"U\x82\xd3\xe4\x93\x02O\x12M/shop/v1/partners/{location.partner.code}/locations/{location.code}/shop/info\x12\xee\x01\n\x0c\x45nrollMember\x12\x36.bloombox.schema.services.shop.v1.EnrollMember.Request\x1a\x37.bloombox.schema.services.shop.v1.EnrollMember.Response\"m\x82\xd3\xe4\x93\x02g\"K/shop/v1/partners/{location.partner.code}/locations/{location.code}/members:\x01*Z\x15\"\x10/shop/v1/members:\x01*\x12\xdf\x01\n\x0c\x43heckZipcode\x12\x36.bloombox.schema.services.shop.v1.CheckZipcode.Request\x1a\x37.bloombox.schema.services.shop.v1.CheckZipcode.Response\"^\x82\xd3\xe4\x93\x02X\x12V/shop/v1/partners/{location.partner.code}/locations/{location.code}/zipcheck/{zipcode}\x12\xeb\x01\n\x0cVerifyMember\x12\x36.bloombox.schema.services.shop.v1.VerifyMember.Request\x1a\x37.bloombox.schema.services.shop.v1.VerifyMember.Response\"j\x82\xd3\xe4\x93\x02\x64\x12\x62/shop/v1/partners/{location.partner.code}/locations/{location.code}/members/{email_address}/verify\x12\xb9\x02\n\x0bSubmitOrder\x12\x35.bloombox.schema.services.shop.v1.SubmitOrder.Request\x1a\x36.bloombox.schema.services.shop.v1.SubmitOrder.Response\"\xba\x01\x82\xd3\xe4\x93\x02\xb3\x01\"J/shop/v1/partners/{location.partner.code}/locations/{location.code}/orders:\x05orderZ^\"U/shop/v1/partners/{location.partner.code}/locations/{location.code}/orders/{order.id}:\x05order\x12\xf0\x01\n\x08GetOrder\x12\x32.bloombox.schema.services.shop.v1.GetOrder.Request\x1a\x33.bloombox.schema.services.shop.v1.GetOrder.Response\"{\x82\xd3\xe4\x93\x02u\x12U/shop/v1/partners/{location.partner.code}/locations/{location.code}/orders/{order_id}Z\x1c\x12\x1a/shop/v1/orders/{order_id}B/\n#io.bloombox.schema.services.shop.v1H\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
-  dependencies=[identity_dot_User__pb2.DESCRIPTOR,person_dot_Person__pb2.DESCRIPTOR,commerce_dot_Order__pb2.DESCRIPTOR,commerce_dot_Customer__pb2.DESCRIPTOR,identity_dot_ID__pb2.DESCRIPTOR,identity_dot_ids_dot_UserDoctorRec__pb2.DESCRIPTOR,services_dot_ServiceStatus__pb2.DESCRIPTOR,partner_dot_PartnerLocation__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
+  dependencies=[identity_dot_User__pb2.DESCRIPTOR,person_dot_Person__pb2.DESCRIPTOR,commerce_dot_Order__pb2.DESCRIPTOR,commerce_dot_Customer__pb2.DESCRIPTOR,identity_dot_ID__pb2.DESCRIPTOR,identity_dot_ids_dot_UserDoctorRec__pb2.DESCRIPTOR,services_dot_ServiceStatus__pb2.DESCRIPTOR,partner_dot_PartnerLocation__pb2.DESCRIPTOR,partner_dot_settings_dot_PartnerLocationSettings__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
 _VERIFYERROR = _descriptor.EnumDescriptor(
   name='VerifyError',
@@ -62,8 +63,8 @@ _VERIFYERROR = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3056,
-  serialized_end=3156,
+  serialized_start=3166,
+  serialized_end=3266,
 )
 _sym_db.RegisterEnumDescriptor(_VERIFYERROR)
 
@@ -133,8 +134,8 @@ _ORDERERROR = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3159,
-  serialized_end=3490,
+  serialized_start=3269,
+  serialized_end=3600,
 )
 _sym_db.RegisterEnumDescriptor(_ORDERERROR)
 
@@ -212,43 +213,12 @@ _ENROLLMENTERROR = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3493,
-  serialized_end=3916,
+  serialized_start=3603,
+  serialized_end=4026,
 )
 _sym_db.RegisterEnumDescriptor(_ENROLLMENTERROR)
 
 EnrollmentError = enum_type_wrapper.EnumTypeWrapper(_ENROLLMENTERROR)
-_SHOPSTATUS = _descriptor.EnumDescriptor(
-  name='ShopStatus',
-  full_name='bloombox.schema.services.shop.v1.ShopStatus',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='OPEN', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CLOSED', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='DELIVERY_ONLY', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='PICKUP_ONLY', index=3, number=3,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=3918,
-  serialized_end=3988,
-)
-_sym_db.RegisterEnumDescriptor(_SHOPSTATUS)
-
-ShopStatus = enum_type_wrapper.EnumTypeWrapper(_SHOPSTATUS)
 NOT_FOUND = 0
 REC_EXPIRED = 1
 ID_EXPIRED = 2
@@ -284,10 +254,6 @@ ACCOUNT_CONFLICT = 13
 ACCOUNT_CONFLICT_EMAIL = 14
 ACCOUNT_CONFLICT_PHONE = 15
 INVALID_ENROLLMENT_PAYLOAD = 99
-OPEN = 0
-CLOSED = 1
-DELIVERY_ONLY = 2
-PICKUP_ONLY = 3
 
 
 
@@ -310,8 +276,8 @@ _PING_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=308,
-  serialized_end=317,
+  serialized_start=356,
+  serialized_end=365,
 )
 
 _PING_RESPONSE = _descriptor.Descriptor(
@@ -340,8 +306,8 @@ _PING_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=319,
-  serialized_end=386,
+  serialized_start=367,
+  serialized_end=434,
 )
 
 _PING_OPERATION = _descriptor.Descriptor(
@@ -377,8 +343,8 @@ _PING_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=389,
-  serialized_end=532,
+  serialized_start=437,
+  serialized_end=580,
 )
 
 _PING = _descriptor.Descriptor(
@@ -400,8 +366,8 @@ _PING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=300,
-  serialized_end=532,
+  serialized_start=348,
+  serialized_end=580,
 )
 
 
@@ -431,8 +397,8 @@ _SHOPINFO_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=547,
-  serialized_end=619,
+  serialized_start=595,
+  serialized_end=667,
 )
 
 _SHOPINFO_RESPONSE = _descriptor.Descriptor(
@@ -461,8 +427,8 @@ _SHOPINFO_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=621,
-  serialized_end=698,
+  serialized_start=669,
+  serialized_end=746,
 )
 
 _SHOPINFO_OPERATION = _descriptor.Descriptor(
@@ -498,8 +464,8 @@ _SHOPINFO_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=701,
-  serialized_end=852,
+  serialized_start=749,
+  serialized_end=900,
 )
 
 _SHOPINFO = _descriptor.Descriptor(
@@ -521,8 +487,8 @@ _SHOPINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=535,
-  serialized_end=852,
+  serialized_start=583,
+  serialized_end=900,
 )
 
 
@@ -608,8 +574,8 @@ _ENROLLMEMBER_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=872,
-  serialized_end=1288,
+  serialized_start=920,
+  serialized_end=1336,
 )
 
 _ENROLLMEMBER_RESPONSE = _descriptor.Descriptor(
@@ -655,8 +621,8 @@ _ENROLLMEMBER_RESPONSE = _descriptor.Descriptor(
       name='result', full_name='bloombox.schema.services.shop.v1.EnrollMember.Response.result',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=1290,
-  serialized_end=1412,
+  serialized_start=1338,
+  serialized_end=1460,
 )
 
 _ENROLLMEMBER_OPERATION = _descriptor.Descriptor(
@@ -692,8 +658,8 @@ _ENROLLMEMBER_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1415,
-  serialized_end=1574,
+  serialized_start=1463,
+  serialized_end=1622,
 )
 
 _ENROLLMEMBER = _descriptor.Descriptor(
@@ -715,8 +681,8 @@ _ENROLLMEMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=855,
-  serialized_end=1574,
+  serialized_start=903,
+  serialized_end=1622,
 )
 
 
@@ -753,8 +719,8 @@ _VERIFYMEMBER_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1593,
-  serialized_end=1688,
+  serialized_start=1641,
+  serialized_end=1736,
 )
 
 _VERIFYMEMBER_RESPONSE = _descriptor.Descriptor(
@@ -800,8 +766,8 @@ _VERIFYMEMBER_RESPONSE = _descriptor.Descriptor(
       name='result', full_name='bloombox.schema.services.shop.v1.VerifyMember.Response.result',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=1691,
-  serialized_end=1846,
+  serialized_start=1739,
+  serialized_end=1894,
 )
 
 _VERIFYMEMBER_OPERATION = _descriptor.Descriptor(
@@ -837,8 +803,8 @@ _VERIFYMEMBER_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1849,
-  serialized_end=2008,
+  serialized_start=1897,
+  serialized_end=2056,
 )
 
 _VERIFYMEMBER = _descriptor.Descriptor(
@@ -860,8 +826,8 @@ _VERIFYMEMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1577,
-  serialized_end=2008,
+  serialized_start=1625,
+  serialized_end=2056,
 )
 
 
@@ -898,8 +864,8 @@ _CHECKZIPCODE_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2027,
-  serialized_end=2116,
+  serialized_start=2075,
+  serialized_end=2164,
 )
 
 _CHECKZIPCODE_RESPONSE = _descriptor.Descriptor(
@@ -935,8 +901,8 @@ _CHECKZIPCODE_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2118,
-  serialized_end=2173,
+  serialized_start=2166,
+  serialized_end=2221,
 )
 
 _CHECKZIPCODE_OPERATION = _descriptor.Descriptor(
@@ -972,8 +938,8 @@ _CHECKZIPCODE_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2176,
-  serialized_end=2335,
+  serialized_start=2224,
+  serialized_end=2383,
 )
 
 _CHECKZIPCODE = _descriptor.Descriptor(
@@ -995,8 +961,8 @@ _CHECKZIPCODE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2011,
-  serialized_end=2335,
+  serialized_start=2059,
+  serialized_end=2383,
 )
 
 
@@ -1033,8 +999,8 @@ _SUBMITORDER_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2353,
-  serialized_end=2470,
+  serialized_start=2401,
+  serialized_end=2518,
 )
 
 _SUBMITORDER_RESPONSE = _descriptor.Descriptor(
@@ -1070,8 +1036,8 @@ _SUBMITORDER_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2472,
-  serialized_end=2561,
+  serialized_start=2520,
+  serialized_end=2609,
 )
 
 _SUBMITORDER_OPERATION = _descriptor.Descriptor(
@@ -1107,8 +1073,8 @@ _SUBMITORDER_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2564,
-  serialized_end=2721,
+  serialized_start=2612,
+  serialized_end=2769,
 )
 
 _SUBMITORDER = _descriptor.Descriptor(
@@ -1130,8 +1096,8 @@ _SUBMITORDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2338,
-  serialized_end=2721,
+  serialized_start=2386,
+  serialized_end=2769,
 )
 
 
@@ -1168,8 +1134,8 @@ _GETORDER_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2736,
-  serialized_end=2826,
+  serialized_start=2784,
+  serialized_end=2874,
 )
 
 _GETORDER_RESPONSE = _descriptor.Descriptor(
@@ -1193,6 +1159,13 @@ _GETORDER_RESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='error', full_name='bloombox.schema.services.shop.v1.GetOrder.Response.error', index=2,
+      number=3, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1205,8 +1178,8 @@ _GETORDER_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2828,
-  serialized_end=2900,
+  serialized_start=2877,
+  serialized_end=3010,
 )
 
 _GETORDER_OPERATION = _descriptor.Descriptor(
@@ -1242,8 +1215,8 @@ _GETORDER_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2903,
-  serialized_end=3054,
+  serialized_start=3013,
+  serialized_end=3164,
 )
 
 _GETORDER = _descriptor.Descriptor(
@@ -1265,8 +1238,8 @@ _GETORDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2724,
-  serialized_end=3054,
+  serialized_start=2772,
+  serialized_end=3164,
 )
 
 _PING_REQUEST.containing_type = _PING
@@ -1277,7 +1250,7 @@ _PING_OPERATION.fields_by_name['response'].message_type = _PING_RESPONSE
 _PING_OPERATION.containing_type = _PING
 _SHOPINFO_REQUEST.fields_by_name['location'].message_type = partner_dot_PartnerLocation__pb2._PARTNERLOCATIONKEY
 _SHOPINFO_REQUEST.containing_type = _SHOPINFO
-_SHOPINFO_RESPONSE.fields_by_name['shop_status'].enum_type = _SHOPSTATUS
+_SHOPINFO_RESPONSE.fields_by_name['shop_status'].enum_type = partner_dot_settings_dot_PartnerLocationSettings__pb2._SHOPSTATUS
 _SHOPINFO_RESPONSE.containing_type = _SHOPINFO
 _SHOPINFO_OPERATION.fields_by_name['request'].message_type = _SHOPINFO_REQUEST
 _SHOPINFO_OPERATION.fields_by_name['response'].message_type = _SHOPINFO_RESPONSE
@@ -1331,6 +1304,7 @@ _SUBMITORDER_OPERATION.containing_type = _SUBMITORDER
 _GETORDER_REQUEST.fields_by_name['location'].message_type = partner_dot_PartnerLocation__pb2._PARTNERLOCATIONKEY
 _GETORDER_REQUEST.containing_type = _GETORDER
 _GETORDER_RESPONSE.fields_by_name['order'].message_type = commerce_dot_Order__pb2._ORDER
+_GETORDER_RESPONSE.fields_by_name['error'].enum_type = _ORDERERROR
 _GETORDER_RESPONSE.containing_type = _GETORDER
 _GETORDER_OPERATION.fields_by_name['request'].message_type = _GETORDER_REQUEST
 _GETORDER_OPERATION.fields_by_name['response'].message_type = _GETORDER_RESPONSE
@@ -1345,7 +1319,6 @@ DESCRIPTOR.message_types_by_name['GetOrder'] = _GETORDER
 DESCRIPTOR.enum_types_by_name['VerifyError'] = _VERIFYERROR
 DESCRIPTOR.enum_types_by_name['OrderError'] = _ORDERERROR
 DESCRIPTOR.enum_types_by_name['EnrollmentError'] = _ENROLLMENTERROR
-DESCRIPTOR.enum_types_by_name['ShopStatus'] = _SHOPSTATUS
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Ping = _reflection.GeneratedProtocolMessageType('Ping', (_message.Message,), dict(
@@ -1575,8 +1548,8 @@ _SHOP = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=3991,
-  serialized_end=5594,
+  serialized_start=4029,
+  serialized_end=5632,
   methods=[
   _descriptor.MethodDescriptor(
     name='Ping',

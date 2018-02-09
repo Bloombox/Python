@@ -24,6 +24,21 @@ class MenuStub(object):
         request_serializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.GetMenu.Request.SerializeToString,
         response_deserializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.GetMenu.Response.FromString,
         )
+    self.Featured = channel.unary_unary(
+        '/bloombox.schema.services.menu.v1beta1.Menu/Featured',
+        request_serializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.GetFeatured.Request.SerializeToString,
+        response_deserializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.GetFeatured.Response.FromString,
+        )
+    self.Products = channel.unary_unary(
+        '/bloombox.schema.services.menu.v1beta1.Menu/Products',
+        request_serializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.GetProduct.Request.SerializeToString,
+        response_deserializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.GetProduct.Response.FromString,
+        )
+    self.Search = channel.unary_unary(
+        '/bloombox.schema.services.menu.v1beta1.Menu/Search',
+        request_serializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.SearchMenu.Request.SerializeToString,
+        response_deserializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.SearchMenu.Response.FromString,
+        )
 
 
 class MenuServicer(object):
@@ -44,6 +59,27 @@ class MenuServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def Featured(self, request, context):
+    """Specifies an operation to read the list of featured products.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def Products(self, request, context):
+    """Specifies an operation to read a product by its key.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def Search(self, request, context):
+    """Specifies an operation to read a full or sectioned menu.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_MenuServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -56,6 +92,21 @@ def add_MenuServicer_to_server(servicer, server):
           servicer.Retrieve,
           request_deserializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.GetMenu.Request.FromString,
           response_serializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.GetMenu.Response.SerializeToString,
+      ),
+      'Featured': grpc.unary_unary_rpc_method_handler(
+          servicer.Featured,
+          request_deserializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.GetFeatured.Request.FromString,
+          response_serializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.GetFeatured.Response.SerializeToString,
+      ),
+      'Products': grpc.unary_unary_rpc_method_handler(
+          servicer.Products,
+          request_deserializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.GetProduct.Request.FromString,
+          response_serializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.GetProduct.Response.SerializeToString,
+      ),
+      'Search': grpc.unary_unary_rpc_method_handler(
+          servicer.Search,
+          request_deserializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.SearchMenu.Request.FromString,
+          response_serializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.SearchMenu.Response.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

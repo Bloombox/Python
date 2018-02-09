@@ -76,18 +76,20 @@ env: $(ENV_PATH)
 
 clean-schema:
 	@echo "Cleaning embedded schema..."
+	@mv $(SCHEMA_PATH)/__init__.py ./__schema_init__.py
 	@rm -fr$(RM_FLAGS) $(SCHEMA_PATH)/*
+	@mv ./__schema_init__.py $(SCHEMA_PATH)/__init__.py
 	@$(MAKE) -C schema clean
 
 clean:
 	@echo "Cleaning PYC files..."
 	@find . -name '*.py[c,o]' -delete
 	@echo "Cleaning build..."
-	@rm -fr$(RM_FLAGS) build dist
+	@rm -fr$(RM_FLAGS) build dist schema/languages/python
 
 distclean: clean
 	@echo "Cleaning environment..."
-	@rm -fr$(RM_FLAGS) $(ENV_PATH)
+	@rm -fr$(RM_FLAGS) $(ENV_PATH) schema/languages
 
 ifneq ($(BUILDBOT),yes)
 $(ENV_PATH):
@@ -134,6 +136,12 @@ $(SCHEMA_PATH)/services/descriptor.py:
 embedded-schema: schema/languages/python $(SCHEMA_PATH)/__init__.py $(SCHEMA_PATH)/services/descriptor.py
 	@echo "Fixing up modules..."
 	@cd $(SCHEMA_PATH)/services && for directory in `find -s -x . -type d | xargs`; do touch $$directory/__init__.py; done
+	@echo "Installing schema..."
+	@mkdir -p $(SCHEMA_PATH) $(SCHEMA_PATH)/services
+	@mv $(SCHEMA_PATH)/__init__.py $(SCHEMA_PATH)/__init_loader__.py
+	@cd schema/languages/python && cp -fr$(CP_FLAGS) ./* ../../../$(SCHEMA_PATH)/
+	@rm -f $(SCHEMA_PATH)/__init__.py
+	@mv $(SCHEMA_PATH)/__init_loader__.py $(SCHEMA_PATH)/__init__.py
 	@echo "Embedded schema ready."
 
 build:

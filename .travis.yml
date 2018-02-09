@@ -18,8 +18,6 @@ matrix:
   - python: "3.7-dev"
 cache:
   pip: true
-  directories:
-  - ./.env
 git:
   submodules: false
 before_script:
@@ -27,7 +25,6 @@ before_script:
   - pip install codacy-coverage
   - chmod +x ./cc-test-reporter
   - make distclean
-  - make clean env
   - ./cc-test-reporter before-build
   - pip install --upgrade -r requirements.txt
 install:

@@ -61,7 +61,7 @@ endif
 _TEST_FLAGS = $(BASE_TEST_FLAGS) $(TEST_FLAGS)
 
 PYTHON_BUILD_TARGETS ?= build build_py
-PYTHON_DIST_TARGETS ?= sdist bdist bdist_dumb bdist_egg bdist_wheel
+PYTHON_DIST_TARGETS ?= sdist bdist_egg bdist_wheel
 PYTHON_TARGETS ?= $(PYTHON_BUILD_TARGETS) $(PYTHON_DIST_TARGETS)
 SCHEMA_PATH ?= src/bloombox/schema
 

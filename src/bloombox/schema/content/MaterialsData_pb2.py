@@ -24,7 +24,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='content/MaterialsData.proto',
   package='opencannabis.content',
   syntax='proto3',
-  serialized_pb=_b('\n\x1b\x63ontent/MaterialsData.proto\x12\x14opencannabis.content\x1a\x12structs/Grow.proto\x1a\x13structs/Shelf.proto\x1a\x15structs/Species.proto\x1a\x16structs/Genetics.proto\x1a/products/distribution/DistributionChannel.proto\"\x91\x02\n\rMaterialsData\x12.\n\x07species\x18\x01 \x01(\x0e\x32\x1d.opencannabis.structs.Species\x12\x30\n\x08genetics\x18\x02 \x01(\x0b\x32\x1e.opencannabis.structs.Genetics\x12(\n\x04grow\x18\x03 \x01(\x0e\x32\x1a.opencannabis.structs.Grow\x12*\n\x05shelf\x18\x04 \x01(\x0e\x32\x1b.opencannabis.structs.Shelf\x12H\n\x08\x63hannels\x18\x05 \x03(\x0b\x32\x36.opencannabis.products.distribution.DistributionPolicyB9\n\x1eio.opencannabis.schema.contentB\x10MaterialsContentH\x01P\x01\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1b\x63ontent/MaterialsData.proto\x12\x14opencannabis.content\x1a\x12structs/Grow.proto\x1a\x13structs/Shelf.proto\x1a\x15structs/Species.proto\x1a\x16structs/Genetics.proto\x1a/products/distribution/DistributionChannel.proto\"\x91\x02\n\rMaterialsData\x12.\n\x07species\x18\x01 \x01(\x0e\x32\x1d.opencannabis.structs.Species\x12\x30\n\x08genetics\x18\x02 \x01(\x0b\x32\x1e.opencannabis.structs.Genetics\x12(\n\x04grow\x18\x03 \x01(\x0e\x32\x1a.opencannabis.structs.Grow\x12*\n\x05shelf\x18\x04 \x01(\x0e\x32\x1b.opencannabis.structs.Shelf\x12H\n\x08\x63hannels\x18\x05 \x03(\x0b\x32\x36.opencannabis.products.distribution.DistributionPolicyB<\n\x1eio.opencannabis.schema.contentB\x10MaterialsContentH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[structs_dot_Grow__pb2.DESCRIPTOR,structs_dot_Shelf__pb2.DESCRIPTOR,structs_dot_Species__pb2.DESCRIPTOR,structs_dot_Genetics__pb2.DESCRIPTOR,products_dot_distribution_dot_DistributionChannel__pb2.DESCRIPTOR,])
 
@@ -106,5 +106,5 @@ _sym_db.RegisterMessage(MaterialsData)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.contentB\020MaterialsContentH\001P\001\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.contentB\020MaterialsContentH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='temporal/Instant.proto',
   package='opencannabis.temporal',
   syntax='proto3',
-  serialized_pb=_b('\n\x16temporal/Instant.proto\x12\x15opencannabis.temporal\x1a\x0e\x62q_field.proto\"\x8f\x01\n\x07Instant\x12\x32\n\x07iso8601\x18\x01 \x01(\tB\x1f\x8a@\x1cISO8601-formatted timestamp.H\x00\x12H\n\ttimestamp\x18\x02 \x01(\x04\x42\x33\x8a@0Unix epoch timestamp, at millisecond resolution.H\x00\x42\x06\n\x04specB%\n\x1fio.opencannabis.schema.temporalH\x01P\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x16temporal/Instant.proto\x12\x15opencannabis.temporal\x1a\x0e\x62q_field.proto\"\x8f\x01\n\x07Instant\x12\x32\n\x07iso8601\x18\x01 \x01(\tB\x1f\x8a@\x1cISO8601-formatted timestamp.H\x00\x12H\n\ttimestamp\x18\x02 \x01(\x04\x42\x33\x8a@0Unix epoch timestamp, at millisecond resolution.H\x00\x42\x06\n\x04specB+\n\x1fio.opencannabis.schema.temporalH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,])
 
@@ -85,7 +85,7 @@ _sym_db.RegisterMessage(Instant)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\037io.opencannabis.schema.temporalH\001P\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\037io.opencannabis.schema.temporalH\001P\001\242\002\003OCS'))
 _INSTANT.fields_by_name['iso8601'].has_options = True
 _INSTANT.fields_by_name['iso8601']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\034ISO8601-formatted timestamp.'))
 _INSTANT.fields_by_name['timestamp'].has_options = True

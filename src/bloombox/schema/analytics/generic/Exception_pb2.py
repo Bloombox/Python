@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='analytics/generic/Exception.proto',
   package='bloombox.schema.analytics.generic',
   syntax='proto3',
-  serialized_pb=_b('\n!analytics/generic/Exception.proto\x12!bloombox.schema.analytics.generic\x1a\x16temporal/Instant.proto\"3\n\x13SourceLineReference\x12\x0c\n\x04line\x18\x03 \x01(\x05\x12\x0e\n\x06\x63olumn\x18\x04 \x01(\x05\"\x9b\x01\n\x0eSourceLocation\x12\x0e\n\x06module\x18\x01 \x01(\t\x12\x10\n\x08\x66ilepath\x18\x02 \x01(\t\x12I\n\x07lineref\x18\x03 \x01(\x0b\x32\x36.bloombox.schema.analytics.generic.SourceLineReferenceH\x00\x12\x10\n\x06offset\x18\x04 \x01(\x03H\x00\x42\n\n\x08pinpoint\"\xa0\x01\n\tException\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\x12\x0c\n\x04\x63ode\x18\x02 \x01(\x05\x12\x43\n\x08location\x18\x03 \x01(\x0b\x32\x31.bloombox.schema.analytics.generic.SourceLocation\x12\x30\n\x08occurred\x18\x04 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB9\n\x1cio.bloombox.schema.telemetryB\x12\x41nalyticsExceptionH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n!analytics/generic/Exception.proto\x12!bloombox.schema.analytics.generic\x1a\x16temporal/Instant.proto\"3\n\x13SourceLineReference\x12\x0c\n\x04line\x18\x03 \x01(\x05\x12\x0e\n\x06\x63olumn\x18\x04 \x01(\x05\"\x9b\x01\n\x0eSourceLocation\x12\x0e\n\x06module\x18\x01 \x01(\t\x12\x10\n\x08\x66ilepath\x18\x02 \x01(\t\x12I\n\x07lineref\x18\x03 \x01(\x0b\x32\x36.bloombox.schema.analytics.generic.SourceLineReferenceH\x00\x12\x10\n\x06offset\x18\x04 \x01(\x03H\x00\x42\n\n\x08pinpoint\"\xa0\x01\n\tException\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\x12\x0c\n\x04\x63ode\x18\x02 \x01(\x05\x12\x43\n\x08location\x18\x03 \x01(\x0b\x32\x31.bloombox.schema.analytics.generic.SourceLocation\x12\x30\n\x08occurred\x18\x04 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB<\n\x1cio.bloombox.schema.telemetryB\x12\x41nalyticsExceptionH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
   dependencies=[temporal_dot_Instant__pb2.DESCRIPTOR,])
 
@@ -208,5 +208,5 @@ _sym_db.RegisterMessage(Exception)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\034io.bloombox.schema.telemetryB\022AnalyticsExceptionH\001P\000\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\034io.bloombox.schema.telemetryB\022AnalyticsExceptionH\001P\000\242\002\003BBS'))
 # @@protoc_insertion_point(module_scope)

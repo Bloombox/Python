@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='commerce/Discounts.proto',
   package='opencannabis.commerce',
   syntax='proto3',
-  serialized_pb=_b('\n\x18\x63ommerce/Discounts.proto\x12\x15opencannabis.commerce\x1a\x16temporal/Instant.proto\"\xac\x01\n\x0c\x44iscountSpec\x12\x31\n\x04type\x18\x01 \x01(\x0e\x32#.opencannabis.commerce.DiscountType\x12\x33\n\x05\x62\x61sis\x18\x02 \x01(\x0e\x32$.opencannabis.commerce.DiscountBasis\x12\x14\n\npercentage\x18\x03 \x01(\x01H\x00\x12\x16\n\x0cstatic_value\x18\x04 \x01(\x01H\x00\x42\x06\n\x04rate\"\xe4\x01\n\x08\x44iscount\x12\n\n\x02id\x18\x01 \x01(\t\x12\x31\n\x04spec\x18\x02 \x01(\x0b\x32#.opencannabis.commerce.DiscountSpec\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\r\n\x05label\x18\x04 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x05 \x01(\t\x12\x33\n\x0bmodified_at\x18\x07 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x32\n\ncreated_at\x18\x06 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant*9\n\x0c\x44iscountType\x12\n\n\x06\x43USTOM\x10\x00\x12\r\n\tSTATUTORY\x10\x01\x12\x0e\n\nCOMMERCIAL\x10\x02*>\n\rDiscountBasis\x12\x08\n\x04ITEM\x10\x00\x12\x12\n\x0eORDER_SUBTOTAL\x10\x01\x12\x0f\n\x0bORDER_TOTAL\x10\x02\x42?\n!io.opencannabis.schema.accountingB\x13\x43ommercialDiscountsH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x18\x63ommerce/Discounts.proto\x12\x15opencannabis.commerce\x1a\x16temporal/Instant.proto\"\xac\x01\n\x0c\x44iscountSpec\x12\x31\n\x04type\x18\x01 \x01(\x0e\x32#.opencannabis.commerce.DiscountType\x12\x33\n\x05\x62\x61sis\x18\x02 \x01(\x0e\x32$.opencannabis.commerce.DiscountBasis\x12\x14\n\npercentage\x18\x03 \x01(\x01H\x00\x12\x16\n\x0cstatic_value\x18\x04 \x01(\x01H\x00\x42\x06\n\x04rate\"\xe4\x01\n\x08\x44iscount\x12\n\n\x02id\x18\x01 \x01(\t\x12\x31\n\x04spec\x18\x02 \x01(\x0b\x32#.opencannabis.commerce.DiscountSpec\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\r\n\x05label\x18\x04 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x05 \x01(\t\x12\x33\n\x0bmodified_at\x18\x07 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x32\n\ncreated_at\x18\x06 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant*9\n\x0c\x44iscountType\x12\n\n\x06\x43USTOM\x10\x00\x12\r\n\tSTATUTORY\x10\x01\x12\x0e\n\nCOMMERCIAL\x10\x02*>\n\rDiscountBasis\x12\x08\n\x04ITEM\x10\x00\x12\x12\n\x0eORDER_SUBTOTAL\x10\x01\x12\x0f\n\x0bORDER_TOTAL\x10\x02\x42\x42\n!io.opencannabis.schema.accountingB\x13\x43ommercialDiscountsH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[temporal_dot_Instant__pb2.DESCRIPTOR,])
 
@@ -248,5 +248,5 @@ _sym_db.RegisterMessage(Discount)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n!io.opencannabis.schema.accountingB\023CommercialDiscountsH\001P\000\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n!io.opencannabis.schema.accountingB\023CommercialDiscountsH\001P\000\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='products/distribution/DistributionChannel.proto',
   package='opencannabis.products.distribution',
   syntax='proto3',
-  serialized_pb=_b('\n/products/distribution/DistributionChannel.proto\x12\"opencannabis.products.distribution\"\xb4\x01\n\x12\x44istributionPolicy\x12\x0f\n\x07\x65nabled\x18\x01 \x01(\x08\x12<\n\x07\x63hannel\x18\x02 \x01(\x0e\x32+.opencannabis.products.distribution.Channel\x12=\n\x04type\x18\x03 \x01(\x0e\x32/.opencannabis.products.distribution.ChannelType\x12\x10\n\x08suppress\x18\x04 \x01(\x08*G\n\x07\x43hannel\x12\x17\n\x13UNSPECIFIED_CHANNEL\x10\x00\x12\n\n\x06RETAIL\x10\x01\x12\r\n\tWHOLESALE\x10\x02\x12\x08\n\x04\x42ULK\x10\x03*H\n\x0b\x43hannelType\x12\x1c\n\x18UNSPECIFIED_CHANNEL_TYPE\x10\x00\x12\n\n\x06\x44IRECT\x10\x01\x12\x0f\n\x0bMARKETPLACE\x10\x02\x42<\n\x1eio.opencannabis.schema.productB\x13\x44istributionChannelH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n/products/distribution/DistributionChannel.proto\x12\"opencannabis.products.distribution\"\xb4\x01\n\x12\x44istributionPolicy\x12\x0f\n\x07\x65nabled\x18\x01 \x01(\x08\x12<\n\x07\x63hannel\x18\x02 \x01(\x0e\x32+.opencannabis.products.distribution.Channel\x12=\n\x04type\x18\x03 \x01(\x0e\x32/.opencannabis.products.distribution.ChannelType\x12\x10\n\x08suppress\x18\x04 \x01(\x08*G\n\x07\x43hannel\x12\x17\n\x13UNSPECIFIED_CHANNEL\x10\x00\x12\n\n\x06RETAIL\x10\x01\x12\r\n\tWHOLESALE\x10\x02\x12\x08\n\x04\x42ULK\x10\x03*H\n\x0b\x43hannelType\x12\x1c\n\x18UNSPECIFIED_CHANNEL_TYPE\x10\x00\x12\n\n\x06\x44IRECT\x10\x01\x12\x0f\n\x0bMARKETPLACE\x10\x02\x42?\n\x1eio.opencannabis.schema.productB\x13\x44istributionChannelH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
 )
 
 _CHANNEL = _descriptor.EnumDescriptor(
@@ -158,5 +158,5 @@ _sym_db.RegisterMessage(DistributionPolicy)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.productB\023DistributionChannelH\001P\000\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.productB\023DistributionChannelH\001P\000\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='contact/PhoneNumber.proto',
   package='opencannabis.contact',
   syntax='proto3',
-  serialized_pb=_b('\n\x19\x63ontact/PhoneNumber.proto\x12\x14opencannabis.contact\".\n\x0bPhoneNumber\x12\x0c\n\x04\x65\x31\x36\x34\x18\x01 \x01(\t\x12\x11\n\tvalidated\x18\x02 \x01(\x08\x42$\n\x1eio.opencannabis.schema.contactH\x01P\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x19\x63ontact/PhoneNumber.proto\x12\x14opencannabis.contact\".\n\x0bPhoneNumber\x12\x0c\n\x04\x65\x31\x36\x34\x18\x01 \x01(\t\x12\x11\n\tvalidated\x18\x02 \x01(\x08\x42*\n\x1eio.opencannabis.schema.contactH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
 )
 
 
@@ -74,5 +74,5 @@ _sym_db.RegisterMessage(PhoneNumber)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.contactH\001P\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.contactH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='media/MediaOrientation.proto',
   package='opencannabis.media',
   syntax='proto3',
-  serialized_pb=_b('\n\x1cmedia/MediaOrientation.proto\x12\x12opencannabis.media*\x84\x01\n\x10MediaOrientation\x12\x06\n\x02UP\x10\x00\x12\x08\n\x04\x44OWN\x10\x01\x12\x08\n\x04LEFT\x10\x02\x12\t\n\x05RIGHT\x10\x03\x12\x0f\n\x0bUP_MIRRORED\x10\x04\x12\x11\n\rDOWN_MIRRORED\x10\x05\x12\x11\n\rLEFT_MIRRORED\x10\x06\x12\x12\n\x0eRIGHT_MIRRORED\x10\x07\x42%\n\x1cio.opencannabis.schema.mediaH\x01P\x01\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1cmedia/MediaOrientation.proto\x12\x12opencannabis.media*\x84\x01\n\x10MediaOrientation\x12\x06\n\x02UP\x10\x00\x12\x08\n\x04\x44OWN\x10\x01\x12\x08\n\x04LEFT\x10\x02\x12\t\n\x05RIGHT\x10\x03\x12\x0f\n\x0bUP_MIRRORED\x10\x04\x12\x11\n\rDOWN_MIRRORED\x10\x05\x12\x11\n\rLEFT_MIRRORED\x10\x06\x12\x12\n\x0eRIGHT_MIRRORED\x10\x07\x42(\n\x1cio.opencannabis.schema.mediaH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
 )
 
 _MEDIAORIENTATION = _descriptor.EnumDescriptor(
@@ -85,5 +85,5 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\034io.opencannabis.schema.mediaH\001P\001\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\034io.opencannabis.schema.mediaH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='structs/Species.proto',
   package='opencannabis.structs',
   syntax='proto3',
-  serialized_pb=_b('\n\x15structs/Species.proto\x12\x14opencannabis.structs*d\n\x07Species\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\n\n\x06SATIVA\x10\x01\x12\x11\n\rHYBRID_SATIVA\x10\x02\x12\n\n\x06HYBRID\x10\x03\x12\x11\n\rHYBRID_INDICA\x10\x04\x12\n\n\x06INDICA\x10\x05\x42?\n%io.opencannabis.schema.product.structB\x0fMaterialSpeciesH\x01P\x01\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x15structs/Species.proto\x12\x14opencannabis.structs*d\n\x07Species\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\n\n\x06SATIVA\x10\x01\x12\x11\n\rHYBRID_SATIVA\x10\x02\x12\n\n\x06HYBRID\x10\x03\x12\x11\n\rHYBRID_INDICA\x10\x04\x12\n\n\x06INDICA\x10\x05\x42\x42\n%io.opencannabis.schema.product.structB\x0fMaterialSpeciesH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
 )
 
 _SPECIES = _descriptor.EnumDescriptor(
@@ -75,5 +75,5 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n%io.opencannabis.schema.product.structB\017MaterialSpeciesH\001P\001\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n%io.opencannabis.schema.product.structB\017MaterialSpeciesH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

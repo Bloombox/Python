@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='structs/labtesting/TestValue.proto',
   package='opencannabis.structs.labtesting',
   syntax='proto3',
-  serialized_pb=_b('\n\"structs/labtesting/TestValue.proto\x12\x1fopencannabis.structs.labtesting\x1a\x15media/MediaItem.proto\"|\n\tTestValue\x12<\n\x04type\x18\x01 \x01(\x0e\x32..opencannabis.structs.labtesting.TestValueType\x12\x15\n\x0bmeasurement\x18\n \x01(\x01H\x00\x12\x11\n\x07present\x18\x14 \x01(\x08H\x00\x42\x07\n\x05value\"|\n\tTestMedia\x12<\n\x04type\x18\x01 \x01(\x0e\x32..opencannabis.structs.labtesting.TestMediaType\x12\x31\n\nmedia_item\x18\x02 \x01(\x0b\x32\x1d.opencannabis.media.MediaItem*=\n\rTestValueType\x12\x0e\n\nMILLIGRAMS\x10\x00\x12\x0e\n\nPERCENTAGE\x10\x01\x12\x0c\n\x08PRESENCE\x10\x03*@\n\rTestMediaType\x12\x0f\n\x0b\x43\x45RTIFICATE\x10\x00\x12\x0b\n\x07RESULTS\x10\x01\x12\x11\n\rPRODUCT_IMAGE\x10\x02\x42G\n-io.opencannabis.schema.product.struct.testingB\x0f\x42\x61seTestingSpecH\x01P\x01\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\"structs/labtesting/TestValue.proto\x12\x1fopencannabis.structs.labtesting\x1a\x15media/MediaItem.proto\"|\n\tTestValue\x12<\n\x04type\x18\x01 \x01(\x0e\x32..opencannabis.structs.labtesting.TestValueType\x12\x15\n\x0bmeasurement\x18\n \x01(\x01H\x00\x12\x11\n\x07present\x18\x14 \x01(\x08H\x00\x42\x07\n\x05value\"|\n\tTestMedia\x12<\n\x04type\x18\x01 \x01(\x0e\x32..opencannabis.structs.labtesting.TestMediaType\x12\x31\n\nmedia_item\x18\x02 \x01(\x0b\x32\x1d.opencannabis.media.MediaItem*=\n\rTestValueType\x12\x0e\n\nMILLIGRAMS\x10\x00\x12\x0e\n\nPERCENTAGE\x10\x01\x12\x0c\n\x08PRESENCE\x10\x03*@\n\rTestMediaType\x12\x0f\n\x0b\x43\x45RTIFICATE\x10\x00\x12\x0b\n\x07RESULTS\x10\x01\x12\x11\n\rPRODUCT_IMAGE\x10\x02\x42J\n-io.opencannabis.schema.product.struct.testingB\x0f\x42\x61seTestingSpecH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[media_dot_MediaItem__pb2.DESCRIPTOR,])
 
@@ -204,5 +204,5 @@ _sym_db.RegisterMessage(TestMedia)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n-io.opencannabis.schema.product.struct.testingB\017BaseTestingSpecH\001P\001\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n-io.opencannabis.schema.product.struct.testingB\017BaseTestingSpecH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

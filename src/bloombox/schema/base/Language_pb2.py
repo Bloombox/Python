@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='base/Language.proto',
   package='opencannabis.base',
   syntax='proto3',
-  serialized_pb=_b('\n\x13\x62\x61se/Language.proto\x12\x11opencannabis.base*0\n\x08Language\x12\x0b\n\x07\x45NGLISH\x10\x00\x12\x0b\n\x07SPANISH\x10\x01\x12\n\n\x06\x46RENCH\x10\x02\x42\x32\n\x1bio.opencannabis.schema.baseB\x0c\x42\x61seLanguageH\x01P\x01\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x13\x62\x61se/Language.proto\x12\x11opencannabis.base*0\n\x08Language\x12\x0b\n\x07\x45NGLISH\x10\x00\x12\x0b\n\x07SPANISH\x10\x01\x12\n\n\x06\x46RENCH\x10\x02\x42\x35\n\x1bio.opencannabis.schema.baseB\x0c\x42\x61seLanguageH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
 )
 
 _LANGUAGE = _descriptor.EnumDescriptor(
@@ -60,5 +60,5 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\033io.opencannabis.schema.baseB\014BaseLanguageH\001P\001\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\033io.opencannabis.schema.baseB\014BaseLanguageH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

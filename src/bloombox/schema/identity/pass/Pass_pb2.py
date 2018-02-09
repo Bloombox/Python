@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='identity/pass/Pass.proto',
   package='bloombox.schema.identity.pass',
   syntax='proto3',
-  serialized_pb=_b('\n\x18identity/pass/Pass.proto\x12\x1d\x62loombox.schema.identity.pass\x1a\x1bidentity/pass/PassKey.proto\x1a\x16temporal/Instant.proto\"\xca\x01\n\x04Pass\x12\x33\n\x03key\x18\x01 \x01(\x0b\x32&.bloombox.schema.identity.pass.PassKey\x12\r\n\x05token\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0e\n\x06\x61\x63tive\x18\x04 \x01(\x08\x12.\n\x06issued\x18\x05 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x31\n\tsuspended\x18\x06 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\x1d\n\x17io.bloombox.schema.passH\x01P\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x18identity/pass/Pass.proto\x12\x1d\x62loombox.schema.identity.pass\x1a\x1bidentity/pass/PassKey.proto\x1a\x16temporal/Instant.proto\"\xca\x01\n\x04Pass\x12\x33\n\x03key\x18\x01 \x01(\x0b\x32&.bloombox.schema.identity.pass.PassKey\x12\r\n\x05token\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0e\n\x06\x61\x63tive\x18\x04 \x01(\x08\x12.\n\x06issued\x18\x05 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x31\n\tsuspended\x18\x06 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB#\n\x17io.bloombox.schema.passH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
   dependencies=[identity_dot_pass_dot_PassKey__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,])
 
@@ -109,5 +109,5 @@ _sym_db.RegisterMessage(Pass)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\027io.bloombox.schema.passH\001P\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\027io.bloombox.schema.passH\001P\001\242\002\003BBS'))
 # @@protoc_insertion_point(module_scope)

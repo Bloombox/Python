@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='proximity/BluetoothBeacon.proto',
   package='opencannabis.proximity',
   syntax='proto3',
-  serialized_pb=_b('\n\x1fproximity/BluetoothBeacon.proto\x12\x16opencannabis.proximity\x1a\x12geo/Location.proto\x1a\x16temporal/Instant.proto\"\xcf\x01\n\x0f\x42luetoothBeacon\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\r\n\x05major\x18\x02 \x01(\r\x12\r\n\x05minor\x18\x03 \x01(\r\x12,\n\x04seen\x18\x04 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12,\n\x08location\x18\x05 \x01(\x0b\x32\x1a.opencannabis.geo.Location\x12\x34\n\x08\x61\x63\x63uracy\x18\x06 \x01(\x0b\x32\".opencannabis.geo.LocationAccuracyB&\n io.opencannabis.schema.proximityH\x01P\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1fproximity/BluetoothBeacon.proto\x12\x16opencannabis.proximity\x1a\x12geo/Location.proto\x1a\x16temporal/Instant.proto\"\xcf\x01\n\x0f\x42luetoothBeacon\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\r\n\x05major\x18\x02 \x01(\r\x12\r\n\x05minor\x18\x03 \x01(\r\x12,\n\x04seen\x18\x04 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12,\n\x08location\x18\x05 \x01(\x0b\x32\x1a.opencannabis.geo.Location\x12\x34\n\x08\x61\x63\x63uracy\x18\x06 \x01(\x0b\x32\".opencannabis.geo.LocationAccuracyB,\n io.opencannabis.schema.proximityH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[geo_dot_Location__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,])
 
@@ -108,5 +108,5 @@ _sym_db.RegisterMessage(BluetoothBeacon)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n io.opencannabis.schema.proximityH\001P\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n io.opencannabis.schema.proximityH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

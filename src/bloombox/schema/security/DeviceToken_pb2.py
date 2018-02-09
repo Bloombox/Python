@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='security/DeviceToken.proto',
   package='bloombox.schema.security',
   syntax='proto3',
-  serialized_pb=_b('\n\x1asecurity/DeviceToken.proto\x12\x18\x62loombox.schema.security\x1a\x13\x64\x65vice/Device.proto\x1a\x16temporal/Instant.proto\x1a\x18security/AuthToken.proto\"\xcf\x01\n\x0b\x44\x65viceToken\x12\x32\n\x05token\x18\x01 \x01(\x0b\x32#.bloombox.schema.security.AuthToken\x12+\n\x06\x64\x65vice\x18\x02 \x01(\x0b\x32\x1b.opencannabis.device.Device\x12.\n\x06issued\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12/\n\x07\x65xpires\x18\x04 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB!\n\x1bio.bloombox.schema.securityH\x01P\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1asecurity/DeviceToken.proto\x12\x18\x62loombox.schema.security\x1a\x13\x64\x65vice/Device.proto\x1a\x16temporal/Instant.proto\x1a\x18security/AuthToken.proto\"\xcf\x01\n\x0b\x44\x65viceToken\x12\x32\n\x05token\x18\x01 \x01(\x0b\x32#.bloombox.schema.security.AuthToken\x12+\n\x06\x64\x65vice\x18\x02 \x01(\x0b\x32\x1b.opencannabis.device.Device\x12.\n\x06issued\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12/\n\x07\x65xpires\x18\x04 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\'\n\x1bio.bloombox.schema.securityH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
   dependencies=[device_dot_Device__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,security_dot_AuthToken__pb2.DESCRIPTOR,])
 
@@ -96,5 +96,5 @@ _sym_db.RegisterMessage(DeviceToken)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\033io.bloombox.schema.securityH\001P\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\033io.bloombox.schema.securityH\001P\001\242\002\003BBS'))
 # @@protoc_insertion_point(module_scope)

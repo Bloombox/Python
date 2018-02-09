@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='security/IdentityToken.proto',
   package='bloombox.schema.security',
   syntax='proto3',
-  serialized_pb=_b('\n\x1csecurity/IdentityToken.proto\x12\x18\x62loombox.schema.security\"l\n\rIdentityToken\x12\x0b\n\x03uid\x18\x01 \x01(\t\x12\x0f\n\x07\x65ncoded\x18\x02 \x01(\t\x12=\n\x06issuer\x18\x03 \x01(\x0e\x32-.bloombox.schema.security.IdentityTokenIssuer*<\n\x13IdentityTokenIssuer\x12\x0c\n\x08INTERNAL\x10\x00\x12\x0c\n\x08\x46IREBASE\x10\x01\x12\t\n\x05\x41UTH0\x10\x02\x42!\n\x1bio.bloombox.schema.securityH\x01P\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1csecurity/IdentityToken.proto\x12\x18\x62loombox.schema.security\"l\n\rIdentityToken\x12\x0b\n\x03uid\x18\x01 \x01(\t\x12\x0f\n\x07\x65ncoded\x18\x02 \x01(\t\x12=\n\x06issuer\x18\x03 \x01(\x0e\x32-.bloombox.schema.security.IdentityTokenIssuer*<\n\x13IdentityTokenIssuer\x12\x0c\n\x08INTERNAL\x10\x00\x12\x0c\n\x08\x46IREBASE\x10\x01\x12\t\n\x05\x41UTH0\x10\x02\x42\'\n\x1bio.bloombox.schema.securityH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
 )
 
 _IDENTITYTOKENISSUER = _descriptor.EnumDescriptor(
@@ -114,5 +114,5 @@ _sym_db.RegisterMessage(IdentityToken)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\033io.bloombox.schema.securityH\001P\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\033io.bloombox.schema.securityH\001P\001\242\002\003BBS'))
 # @@protoc_insertion_point(module_scope)

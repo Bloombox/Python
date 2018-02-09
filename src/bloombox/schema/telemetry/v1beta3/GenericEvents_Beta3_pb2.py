@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='telemetry/v1beta3/GenericEvents_Beta3.proto',
   package='bloombox.schema.services.telemetry.v1beta3',
   syntax='proto3',
-  serialized_pb=_b('\n+telemetry/v1beta3/GenericEvents_Beta3.proto\x12*bloombox.schema.services.telemetry.v1beta3\x1a\x17\x61nalytics/Context.proto\x1a\x1d\x61nalytics/generic/Event.proto\x1a!analytics/generic/Exception.proto\"\xdf\x02\n\x05\x45vent\x1a\x85\x01\n\x07Request\x12\x33\n\x07\x63ontext\x18\x01 \x01(\x0b\x32\".bloombox.schema.analytics.Context\x12\x37\n\x05\x65vent\x18\x02 \x01(\x0b\x32(.bloombox.schema.analytics.generic.Event\x12\x0c\n\x04uuid\x18\x03 \x01(\t\x1a@\n\x05\x42\x61tch\x12\x37\n\x05\x65vent\x18\x02 \x03(\x0b\x32(.bloombox.schema.analytics.generic.Event\x1a\x8b\x01\n\x0c\x42\x61tchRequest\x12\x33\n\x07\x63ontext\x18\x01 \x01(\x0b\x32\".bloombox.schema.analytics.Context\x12\x46\n\x05\x62\x61tch\x18\x02 \x03(\x0b\x32\x37.bloombox.schema.services.telemetry.v1beta3.Event.Batch\"\x8b\x01\n\tException\x12\x33\n\x07\x63ontext\x18\x01 \x01(\x0b\x32\".bloombox.schema.analytics.Context\x12;\n\x05\x65rror\x18\x02 \x01(\x0b\x32,.bloombox.schema.analytics.generic.Exception\x12\x0c\n\x04uuid\x18\x03 \x01(\tBG\n-io.bloombox.schema.services.telemetry.v1beta3H\x01P\x01\xaa\x02\x11Telemetry.v1beta3b\x06proto3')
+  serialized_pb=_b('\n+telemetry/v1beta3/GenericEvents_Beta3.proto\x12*bloombox.schema.services.telemetry.v1beta3\x1a\x17\x61nalytics/Context.proto\x1a\x1d\x61nalytics/generic/Event.proto\x1a!analytics/generic/Exception.proto\"\xdf\x02\n\x05\x45vent\x1a\x85\x01\n\x07Request\x12\x33\n\x07\x63ontext\x18\x01 \x01(\x0b\x32\".bloombox.schema.analytics.Context\x12\x37\n\x05\x65vent\x18\x02 \x01(\x0b\x32(.bloombox.schema.analytics.generic.Event\x12\x0c\n\x04uuid\x18\x03 \x01(\t\x1a@\n\x05\x42\x61tch\x12\x37\n\x05\x65vent\x18\x02 \x03(\x0b\x32(.bloombox.schema.analytics.generic.Event\x1a\x8b\x01\n\x0c\x42\x61tchRequest\x12\x33\n\x07\x63ontext\x18\x01 \x01(\x0b\x32\".bloombox.schema.analytics.Context\x12\x46\n\x05\x62\x61tch\x18\x02 \x03(\x0b\x32\x37.bloombox.schema.services.telemetry.v1beta3.Event.Batch\"\x8b\x01\n\tException\x12\x33\n\x07\x63ontext\x18\x01 \x01(\x0b\x32\".bloombox.schema.analytics.Context\x12;\n\x05\x65rror\x18\x02 \x01(\x0b\x32,.bloombox.schema.analytics.generic.Exception\x12\x0c\n\x04uuid\x18\x03 \x01(\tBM\n-io.bloombox.schema.services.telemetry.v1beta3H\x01P\x01\xa2\x02\x03\x42\x42S\xaa\x02\x11Telemetry.v1beta3b\x06proto3')
   ,
   dependencies=[analytics_dot_Context__pb2.DESCRIPTOR,analytics_dot_generic_dot_Event__pb2.DESCRIPTOR,analytics_dot_generic_dot_Exception__pb2.DESCRIPTOR,])
 
@@ -262,5 +262,5 @@ _sym_db.RegisterMessage(Exception)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n-io.bloombox.schema.services.telemetry.v1beta3H\001P\001\252\002\021Telemetry.v1beta3'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n-io.bloombox.schema.services.telemetry.v1beta3H\001P\001\242\002\003BBS\252\002\021Telemetry.v1beta3'))
 # @@protoc_insertion_point(module_scope)

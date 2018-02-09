@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='person/Person.proto',
   package='opencannabis.person',
   syntax='proto3',
-  serialized_pb=_b('\n\x13person/Person.proto\x12\x13opencannabis.person\x1a\x0e\x62q_field.proto\x1a\x13temporal/Date.proto\x1a\x19\x63ontact/ContactInfo.proto\x1a\x17person/PersonName.proto\"\xbd\x03\n\x06Person\x12N\n\x04name\x18\x01 \x01(\x0b\x32\x19.opencannabis.person.NameB%\x8a@\"Person\'s primary name information.\x12m\n\nlegal_name\x18\x02 \x01(\x0b\x32\x19.opencannabis.person.NameB>\x8a@;Person\'s legal name, if it differs from their primary name.\x12W\n\x0e\x61lternate_name\x18\x03 \x01(\x0b\x32\x19.opencannabis.person.NameB$\x8a@!Person\'s optional alternate name.\x12T\n\x07\x63ontact\x18\x04 \x01(\x0b\x32!.opencannabis.contact.ContactInfoB \x8a@\x1dPerson\'s contact information.\x12\x45\n\rdate_of_birth\x18\x05 \x01(\x0b\x32\x1b.opencannabis.temporal.DateB\x11\x8a@\x0e\x44\x61te of birth.B#\n\x1dio.opencannabis.schema.personH\x01P\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x13person/Person.proto\x12\x13opencannabis.person\x1a\x0e\x62q_field.proto\x1a\x13temporal/Date.proto\x1a\x19\x63ontact/ContactInfo.proto\x1a\x17person/PersonName.proto\"\xbd\x03\n\x06Person\x12N\n\x04name\x18\x01 \x01(\x0b\x32\x19.opencannabis.person.NameB%\x8a@\"Person\'s primary name information.\x12m\n\nlegal_name\x18\x02 \x01(\x0b\x32\x19.opencannabis.person.NameB>\x8a@;Person\'s legal name, if it differs from their primary name.\x12W\n\x0e\x61lternate_name\x18\x03 \x01(\x0b\x32\x19.opencannabis.person.NameB$\x8a@!Person\'s optional alternate name.\x12T\n\x07\x63ontact\x18\x04 \x01(\x0b\x32!.opencannabis.contact.ContactInfoB \x8a@\x1dPerson\'s contact information.\x12\x45\n\rdate_of_birth\x18\x05 \x01(\x0b\x32\x1b.opencannabis.temporal.DateB\x11\x8a@\x0e\x44\x61te of birth.B)\n\x1dio.opencannabis.schema.personH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,temporal_dot_Date__pb2.DESCRIPTOR,contact_dot_ContactInfo__pb2.DESCRIPTOR,person_dot_PersonName__pb2.DESCRIPTOR,])
 
@@ -105,7 +105,7 @@ _sym_db.RegisterMessage(Person)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\035io.opencannabis.schema.personH\001P\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\035io.opencannabis.schema.personH\001P\001\242\002\003OCS'))
 _PERSON.fields_by_name['name'].has_options = True
 _PERSON.fields_by_name['name']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\"Person\'s primary name information.'))
 _PERSON.fields_by_name['legal_name'].has_options = True

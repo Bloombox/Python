@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='analytics/context/Collection.proto',
   package='bloombox.schema.analytics.context',
   syntax='proto3',
-  serialized_pb=_b('\n\"analytics/context/Collection.proto\x12!bloombox.schema.analytics.context\x1a\x0e\x62q_field.proto\"\xab\x02\n\nCollection\x12\x41\n\x04name\x18\x01 \x01(\tB3\xf0?\x01\x8a@-Specifies an unenumerated collection by name.\x12T\n\x08internal\x18\x02 \x01(\x08\x42\x42\x8a@?Specifies a specific collection as internal. Backend-only flag.\x12\x83\x01\n\x04type\x18\x03 \x01(\x0e\x32,.bloombox.schema.analytics.context.EventTypeBG\x8a@DSpecifies the type of event. Usually added by the telemetry backend.*W\n\tEventType\x12\x0b\n\x07GENERIC\x10\x00\x12\x0e\n\nCOMMERCIAL\x10\x01\x12\x0c\n\x08IDENTITY\x10\x02\x12\x0e\n\nEXPERIENCE\x10\x03\x12\x0f\n\x0bOPERATIONAL\x10\x04\x42\x42\n$io.bloombox.schema.telemetry.contextB\x13\x41nalyticsCollectionH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\"analytics/context/Collection.proto\x12!bloombox.schema.analytics.context\x1a\x0e\x62q_field.proto\"\xab\x02\n\nCollection\x12\x41\n\x04name\x18\x01 \x01(\tB3\xf0?\x01\x8a@-Specifies an unenumerated collection by name.\x12T\n\x08internal\x18\x02 \x01(\x08\x42\x42\x8a@?Specifies a specific collection as internal. Backend-only flag.\x12\x83\x01\n\x04type\x18\x03 \x01(\x0e\x32,.bloombox.schema.analytics.context.EventTypeBG\x8a@DSpecifies the type of event. Usually added by the telemetry backend.*W\n\tEventType\x12\x0b\n\x07GENERIC\x10\x00\x12\x0e\n\nCOMMERCIAL\x10\x01\x12\x0c\n\x08IDENTITY\x10\x02\x12\x0e\n\nEXPERIENCE\x10\x03\x12\x0f\n\x0bOPERATIONAL\x10\x04\x42\x45\n$io.bloombox.schema.telemetry.contextB\x13\x41nalyticsCollectionH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,])
 
@@ -126,7 +126,7 @@ _sym_db.RegisterMessage(Collection)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n$io.bloombox.schema.telemetry.contextB\023AnalyticsCollectionH\001P\000\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n$io.bloombox.schema.telemetry.contextB\023AnalyticsCollectionH\001P\000\242\002\003BBS'))
 _COLLECTION.fields_by_name['name'].has_options = True
 _COLLECTION.fields_by_name['name']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@-Specifies an unenumerated collection by name.'))
 _COLLECTION.fields_by_name['internal'].has_options = True

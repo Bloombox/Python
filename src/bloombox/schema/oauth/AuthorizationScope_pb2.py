@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='oauth/AuthorizationScope.proto',
   package='opencannabis.oauth',
   syntax='proto3',
-  serialized_pb=_b('\n\x1eoauth/AuthorizationScope.proto\x12\x12opencannabis.oauth\"0\n\x12\x41uthorizationScope\x12\r\n\x05label\x18\x01 \x01(\t\x12\x0b\n\x03uri\x18\x02 \x01(\tB\"\n\x1cio.opencannabis.schema.oauthH\x01P\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1eoauth/AuthorizationScope.proto\x12\x12opencannabis.oauth\"0\n\x12\x41uthorizationScope\x12\r\n\x05label\x18\x01 \x01(\t\x12\x0b\n\x03uri\x18\x02 \x01(\tB(\n\x1cio.opencannabis.schema.oauthH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
 )
 
 
@@ -74,5 +74,5 @@ _sym_db.RegisterMessage(AuthorizationScope)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\034io.opencannabis.schema.oauthH\001P\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\034io.opencannabis.schema.oauthH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

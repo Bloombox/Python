@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='crypto/primitives/Integrity.proto',
   package='opencannabis.crypto.primitives.integrity',
   syntax='proto3',
-  serialized_pb=_b('\n!crypto/primitives/Integrity.proto\x12(opencannabis.crypto.primitives.integrity\"\x89\x01\n\x04Hash\x12J\n\talgorithm\x18\x01 \x01(\x0e\x32\x37.opencannabis.crypto.primitives.integrity.HashAlgorithm\x12\r\n\x03raw\x18\x02 \x01(\x0cH\x00\x12\r\n\x03hex\x18\x03 \x01(\tH\x00\x12\r\n\x03\x62\x36\x34\x18\x04 \x01(\tH\x00\x42\x08\n\x06\x64igest\"X\n\nHashedData\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x12<\n\x04hash\x18\x02 \x01(\x0b\x32..opencannabis.crypto.primitives.integrity.Hash*R\n\rHashAlgorithm\x12\x08\n\x04SHA1\x10\x00\x12\x07\n\x03MD5\x10\x01\x12\n\n\x06SHA256\x10\x02\x12\n\n\x06SHA384\x10\x03\x12\n\n\x06SHA512\x10\x04\x12\n\n\x06MURMUR\x10\x06\x42\x38\n2io.opencannabis.schema.crypto.primitives.integrityH\x01P\x01\x62\x06proto3')
+  serialized_pb=_b('\n!crypto/primitives/Integrity.proto\x12(opencannabis.crypto.primitives.integrity\"\x89\x01\n\x04Hash\x12J\n\talgorithm\x18\x01 \x01(\x0e\x32\x37.opencannabis.crypto.primitives.integrity.HashAlgorithm\x12\r\n\x03raw\x18\x02 \x01(\x0cH\x00\x12\r\n\x03hex\x18\x03 \x01(\tH\x00\x12\r\n\x03\x62\x36\x34\x18\x04 \x01(\tH\x00\x42\x08\n\x06\x64igest\"X\n\nHashedData\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x12<\n\x04hash\x18\x02 \x01(\x0b\x32..opencannabis.crypto.primitives.integrity.Hash*R\n\rHashAlgorithm\x12\x08\n\x04SHA1\x10\x00\x12\x07\n\x03MD5\x10\x01\x12\n\n\x06SHA256\x10\x02\x12\n\n\x06SHA384\x10\x03\x12\n\n\x06SHA512\x10\x04\x12\n\n\x06MURMUR\x10\x06\x42>\n2io.opencannabis.schema.crypto.primitives.integrityH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
 )
 
 _HASHALGORITHM = _descriptor.EnumDescriptor(
@@ -195,5 +195,5 @@ _sym_db.RegisterMessage(HashedData)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n2io.opencannabis.schema.crypto.primitives.integrityH\001P\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n2io.opencannabis.schema.crypto.primitives.integrityH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

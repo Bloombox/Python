@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='structs/ProductFlags.proto',
   package='opencannabis.structs',
   syntax='proto3',
-  serialized_pb=_b('\n\x1astructs/ProductFlags.proto\x12\x14opencannabis.structs*\xa6\x01\n\x0bProductFlag\x12\x0b\n\x07VISIBLE\x10\x00\x12\n\n\x06HIDDEN\x10\x01\x12\x0b\n\x07PREMIUM\x10\x02\x12\x0c\n\x08\x46\x45\x41TURED\x10\x03\x12\x0b\n\x07ORGANIC\x10\x04\x12\r\n\tEXCLUSIVE\x10\x05\x12\x0c\n\x08IN_HOUSE\x10\x06\x12\x0f\n\x0bLAST_CHANCE\x10\x07\x12\x10\n\x0cLIMITED_TIME\x10\x08\x12\x0b\n\x07ON_SALE\x10\t\x12\t\n\x05LOCAL\x10\nB;\n%io.opencannabis.schema.product.structB\x0b\x42\x61seStructsH\x01P\x01\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1astructs/ProductFlags.proto\x12\x14opencannabis.structs*\xa6\x01\n\x0bProductFlag\x12\x0b\n\x07VISIBLE\x10\x00\x12\n\n\x06HIDDEN\x10\x01\x12\x0b\n\x07PREMIUM\x10\x02\x12\x0c\n\x08\x46\x45\x41TURED\x10\x03\x12\x0b\n\x07ORGANIC\x10\x04\x12\r\n\tEXCLUSIVE\x10\x05\x12\x0c\n\x08IN_HOUSE\x10\x06\x12\x0f\n\x0bLAST_CHANCE\x10\x07\x12\x10\n\x0cLIMITED_TIME\x10\x08\x12\x0b\n\x07ON_SALE\x10\t\x12\t\n\x05LOCAL\x10\nB>\n%io.opencannabis.schema.product.structB\x0b\x42\x61seStructsH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
 )
 
 _PRODUCTFLAG = _descriptor.EnumDescriptor(
@@ -100,5 +100,5 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n%io.opencannabis.schema.product.structB\013BaseStructsH\001P\001\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n%io.opencannabis.schema.product.structB\013BaseStructsH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

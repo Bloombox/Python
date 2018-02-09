@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='geo/Point.proto',
   package='opencannabis.geo',
   syntax='proto3',
-  serialized_pb=_b('\n\x0fgeo/Point.proto\x12\x10opencannabis.geo\"Q\n\x05Point\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x11\n\tlongitude\x18\x02 \x01(\x01\x12\x11\n\televation\x18\x03 \x01(\x01\x12\x10\n\x08\x61\x63\x63uracy\x18\x04 \x01(\x01\x42 \n\x1aio.opencannabis.schema.geoH\x01P\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x0fgeo/Point.proto\x12\x10opencannabis.geo\"Q\n\x05Point\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x11\n\tlongitude\x18\x02 \x01(\x01\x12\x11\n\televation\x18\x03 \x01(\x01\x12\x10\n\x08\x61\x63\x63uracy\x18\x04 \x01(\x01\x42&\n\x1aio.opencannabis.schema.geoH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
 )
 
 
@@ -88,5 +88,5 @@ _sym_db.RegisterMessage(Point)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.opencannabis.schema.geoH\001P\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.opencannabis.schema.geoH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

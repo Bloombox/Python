@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='temporal/Time.proto',
   package='opencannabis.temporal',
   syntax='proto3',
-  serialized_pb=_b('\n\x13temporal/Time.proto\x12\x15opencannabis.temporal\"!\n\x04Time\x12\x11\n\x07iso8601\x18\x01 \x01(\tH\x00\x42\x06\n\x04specB%\n\x1fio.opencannabis.schema.temporalH\x01P\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x13temporal/Time.proto\x12\x15opencannabis.temporal\"!\n\x04Time\x12\x11\n\x07iso8601\x18\x01 \x01(\tH\x00\x42\x06\n\x04specB+\n\x1fio.opencannabis.schema.temporalH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
 )
 
 
@@ -73,5 +73,5 @@ _sym_db.RegisterMessage(Time)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\037io.opencannabis.schema.temporalH\001P\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\037io.opencannabis.schema.temporalH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='media/MediaKey.proto',
   package='opencannabis.media',
   syntax='proto3',
-  serialized_pb=_b('\n\x14media/MediaKey.proto\x12\x12opencannabis.media\x1a\x0e\x62q_field.proto\"9\n\x08MediaKey\x12-\n\x02id\x18\x01 \x01(\tB!\x8a@\x1eUnique ID for this media item.B3\n\x1cio.opencannabis.schema.mediaB\x0cMediaItemKeyH\x01P\x01\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x14media/MediaKey.proto\x12\x12opencannabis.media\x1a\x0e\x62q_field.proto\"9\n\x08MediaKey\x12-\n\x02id\x18\x01 \x01(\tB!\x8a@\x1eUnique ID for this media item.B6\n\x1cio.opencannabis.schema.mediaB\x0cMediaItemKeyH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,])
 
@@ -69,7 +69,7 @@ _sym_db.RegisterMessage(MediaKey)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\034io.opencannabis.schema.mediaB\014MediaItemKeyH\001P\001\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\034io.opencannabis.schema.mediaB\014MediaItemKeyH\001P\001\242\002\003OCS'))
 _MEDIAKEY.fields_by_name['id'].has_options = True
 _MEDIAKEY.fields_by_name['id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\036Unique ID for this media item.'))
 # @@protoc_insertion_point(module_scope)

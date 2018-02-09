@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='geo/Address.proto',
   package='opencannabis.geo',
   syntax='proto3',
-  serialized_pb=_b('\n\x11geo/Address.proto\x12\x10opencannabis.geo\"q\n\x07\x41\x64\x64ress\x12\x12\n\nfirst_line\x18\x01 \x01(\t\x12\x13\n\x0bsecond_line\x18\x02 \x01(\t\x12\x0c\n\x04\x63ity\x18\x03 \x01(\t\x12\r\n\x05state\x18\x04 \x01(\t\x12\x0f\n\x07zipcode\x18\x05 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x06 \x01(\tB \n\x1aio.opencannabis.schema.geoH\x01P\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x11geo/Address.proto\x12\x10opencannabis.geo\"q\n\x07\x41\x64\x64ress\x12\x12\n\nfirst_line\x18\x01 \x01(\t\x12\x13\n\x0bsecond_line\x18\x02 \x01(\t\x12\x0c\n\x04\x63ity\x18\x03 \x01(\t\x12\r\n\x05state\x18\x04 \x01(\t\x12\x0f\n\x07zipcode\x18\x05 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x06 \x01(\tB&\n\x1aio.opencannabis.schema.geoH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
 )
 
 
@@ -102,5 +102,5 @@ _sym_db.RegisterMessage(Address)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.opencannabis.schema.geoH\001P\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.opencannabis.schema.geoH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='analytics/Scope.proto',
   package='bloombox.schema.analytics',
   syntax='proto3',
-  serialized_pb=_b('\n\x15\x61nalytics/Scope.proto\x12\x19\x62loombox.schema.analytics\x1a\x0e\x62q_field.proto\"\xf9\x03\n\x05Scope\x12\xc8\x01\n\x07partner\x18\x01 \x01(\tB\xb6\x01\x8a@\xb2\x01Partner scope. Specifies, each-if-applicable and only in the following order-of-scope, the partner code, location code, and partner co-located device UUID that reported an event.\x12\xa0\x01\n\ncommercial\x18\x02 \x01(\tB\x8b\x01\x8a@\x87\x01\x43ommercial scope. Specifies, each-if-applicable and only in the following order-of-scope, the section name, product key, and order key.\x12\x81\x01\n\x05order\x18\x03 \x01(\tBr\x8a@oOrder scope. Specifies, only if there is an active order, the order ID that was active when the event was sent.B5\n\x1cio.bloombox.schema.telemetryB\x0e\x41nalyticsScopeH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x15\x61nalytics/Scope.proto\x12\x19\x62loombox.schema.analytics\x1a\x0e\x62q_field.proto\"\xf9\x03\n\x05Scope\x12\xc8\x01\n\x07partner\x18\x01 \x01(\tB\xb6\x01\x8a@\xb2\x01Partner scope. Specifies, each-if-applicable and only in the following order-of-scope, the partner code, location code, and partner co-located device UUID that reported an event.\x12\xa0\x01\n\ncommercial\x18\x02 \x01(\tB\x8b\x01\x8a@\x87\x01\x43ommercial scope. Specifies, each-if-applicable and only in the following order-of-scope, the section name, product key, and order key.\x12\x81\x01\n\x05order\x18\x03 \x01(\tBr\x8a@oOrder scope. Specifies, only if there is an active order, the order ID that was active when the event was sent.B8\n\x1cio.bloombox.schema.telemetryB\x0e\x41nalyticsScopeH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,])
 
@@ -83,7 +83,7 @@ _sym_db.RegisterMessage(Scope)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\034io.bloombox.schema.telemetryB\016AnalyticsScopeH\001P\000\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\034io.bloombox.schema.telemetryB\016AnalyticsScopeH\001P\000\242\002\003BBS'))
 _SCOPE.fields_by_name['partner'].has_options = True
 _SCOPE.fields_by_name['partner']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\262\001Partner scope. Specifies, each-if-applicable and only in the following order-of-scope, the partner code, location code, and partner co-located device UUID that reported an event.'))
 _SCOPE.fields_by_name['commercial'].has_options = True

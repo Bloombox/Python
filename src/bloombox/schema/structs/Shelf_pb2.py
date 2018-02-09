@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='structs/Shelf.proto',
   package='opencannabis.structs',
   syntax='proto3',
-  serialized_pb=_b('\n\x13structs/Shelf.proto\x12\x14opencannabis.structs*0\n\x05Shelf\x12\x0b\n\x07\x45\x43ONOMY\x10\x00\x12\x0c\n\x08MIDSHELF\x10\x01\x12\x0c\n\x08TOPSHELF\x10\x02\x42=\n%io.opencannabis.schema.product.structB\rMaterialShelfH\x01P\x01\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x13structs/Shelf.proto\x12\x14opencannabis.structs*0\n\x05Shelf\x12\x0b\n\x07\x45\x43ONOMY\x10\x00\x12\x0c\n\x08MIDSHELF\x10\x01\x12\x0c\n\x08TOPSHELF\x10\x02\x42@\n%io.opencannabis.schema.product.structB\rMaterialShelfH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
 )
 
 _SHELF = _descriptor.EnumDescriptor(
@@ -60,5 +60,5 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n%io.opencannabis.schema.product.structB\rMaterialShelfH\001P\001\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n%io.opencannabis.schema.product.structB\rMaterialShelfH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='products/Extract.proto',
   package='opencannabis.products',
   syntax='proto3',
-  serialized_pb=_b('\n\x16products/Extract.proto\x12\x15opencannabis.products\x1a\x15\x62\x61se/ProductKey.proto\x1a\x1b\x63ontent/MaterialsData.proto\x1a\x1c\x63ontent/ProductContent.proto\"\xbc\x02\n\x07\x45xtract\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x30\n\x04type\x18\x02 \x01(\x0e\x32\".opencannabis.products.ExtractType\x12\x30\n\x04\x66lag\x18\x03 \x03(\x0e\x32\".opencannabis.products.ExtractFlag\x12\x33\n\x06\x66lower\x18\x04 \x01(\x0b\x32#.opencannabis.base.ProductReference\x12\x35\n\x07product\x18\x05 \x01(\x0b\x32$.opencannabis.content.ProductContent\x12\x35\n\x08material\x18\x06 \x01(\x0b\x32#.opencannabis.content.MaterialsData*t\n\x0b\x45xtractType\x12\x17\n\x13UNSPECIFIED_EXTRACT\x10\x00\x12\x07\n\x03OIL\x10\x01\x12\x07\n\x03WAX\x10\x02\x12\x0b\n\x07SHATTER\x10\x03\x12\x08\n\x04KIEF\x10\x04\x12\x08\n\x04HASH\x10\x05\x12\x0e\n\nLIVE_RESIN\x10\x06\x12\t\n\x05ROSIN\x10\x07*4\n\x0b\x45xtractFlag\x12\x14\n\x10NO_EXTRACT_FLAGS\x10\x00\x12\x0f\n\x0bSOLVENTLESS\x10\x01\x42\x37\n\x1eio.opencannabis.schema.productB\x0e\x45xtractProductH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x16products/Extract.proto\x12\x15opencannabis.products\x1a\x15\x62\x61se/ProductKey.proto\x1a\x1b\x63ontent/MaterialsData.proto\x1a\x1c\x63ontent/ProductContent.proto\"\xbc\x02\n\x07\x45xtract\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x30\n\x04type\x18\x02 \x01(\x0e\x32\".opencannabis.products.ExtractType\x12\x30\n\x04\x66lag\x18\x03 \x03(\x0e\x32\".opencannabis.products.ExtractFlag\x12\x33\n\x06\x66lower\x18\x04 \x01(\x0b\x32#.opencannabis.base.ProductReference\x12\x35\n\x07product\x18\x05 \x01(\x0b\x32$.opencannabis.content.ProductContent\x12\x35\n\x08material\x18\x06 \x01(\x0b\x32#.opencannabis.content.MaterialsData*t\n\x0b\x45xtractType\x12\x17\n\x13UNSPECIFIED_EXTRACT\x10\x00\x12\x07\n\x03OIL\x10\x01\x12\x07\n\x03WAX\x10\x02\x12\x0b\n\x07SHATTER\x10\x03\x12\x08\n\x04KIEF\x10\x04\x12\x08\n\x04HASH\x10\x05\x12\x0e\n\nLIVE_RESIN\x10\x06\x12\t\n\x05ROSIN\x10\x07*4\n\x0b\x45xtractFlag\x12\x14\n\x10NO_EXTRACT_FLAGS\x10\x00\x12\x0f\n\x0bSOLVENTLESS\x10\x01\x42:\n\x1eio.opencannabis.schema.productB\x0e\x45xtractProductH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[base_dot_ProductKey__pb2.DESCRIPTOR,content_dot_MaterialsData__pb2.DESCRIPTOR,content_dot_ProductContent__pb2.DESCRIPTOR,])
 
@@ -195,5 +195,5 @@ _sym_db.RegisterMessage(Extract)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.productB\016ExtractProductH\001P\000\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.productB\016ExtractProductH\001P\000\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

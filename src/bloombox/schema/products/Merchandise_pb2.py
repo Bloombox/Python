@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='products/Merchandise.proto',
   package='opencannabis.products',
   syntax='proto3',
-  serialized_pb=_b('\n\x1aproducts/Merchandise.proto\x12\x15opencannabis.products\x1a\x15\x62\x61se/ProductKey.proto\x1a\x1c\x63ontent/ProductContent.proto\"\xdd\x01\n\x0bMerchandise\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x34\n\x04type\x18\x02 \x01(\x0e\x32&.opencannabis.products.MerchandiseType\x12\x35\n\x05\x66lags\x18\x03 \x03(\x0e\x32&.opencannabis.products.MerchandiseFlag\x12\x35\n\x07product\x18\x04 \x01(\x0b\x32$.opencannabis.content.ProductContent*g\n\x0fMerchandiseType\x12\x1b\n\x17UNSPECIFIED_MERCHANDISE\x10\x00\x12\x0c\n\x08\x43LOTHING\x10\x01\x12\r\n\tGLASSWARE\x10\x02\x12\r\n\tCONTAINER\x10\x03\x12\x0b\n\x07LIGHTER\x10\x04*M\n\x0fMerchandiseFlag\x12\x18\n\x14NO_MERCHANDISE_FLAGS\x10\x00\x12\x10\n\x0cMEDICAL_ONLY\x10\x01\x12\x0e\n\nBRAND_SWAG\x10\x02\x42;\n\x1eio.opencannabis.schema.productB\x12MerchandiseProductH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1aproducts/Merchandise.proto\x12\x15opencannabis.products\x1a\x15\x62\x61se/ProductKey.proto\x1a\x1c\x63ontent/ProductContent.proto\"\xdd\x01\n\x0bMerchandise\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x34\n\x04type\x18\x02 \x01(\x0e\x32&.opencannabis.products.MerchandiseType\x12\x35\n\x05\x66lags\x18\x03 \x03(\x0e\x32&.opencannabis.products.MerchandiseFlag\x12\x35\n\x07product\x18\x04 \x01(\x0b\x32$.opencannabis.content.ProductContent*g\n\x0fMerchandiseType\x12\x1b\n\x17UNSPECIFIED_MERCHANDISE\x10\x00\x12\x0c\n\x08\x43LOTHING\x10\x01\x12\r\n\tGLASSWARE\x10\x02\x12\r\n\tCONTAINER\x10\x03\x12\x0b\n\x07LIGHTER\x10\x04*M\n\x0fMerchandiseFlag\x12\x18\n\x14NO_MERCHANDISE_FLAGS\x10\x00\x12\x10\n\x0cMEDICAL_ONLY\x10\x01\x12\x0e\n\nBRAND_SWAG\x10\x02\x42>\n\x1eio.opencannabis.schema.productB\x12MerchandiseProductH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[base_dot_ProductKey__pb2.DESCRIPTOR,content_dot_ProductContent__pb2.DESCRIPTOR,])
 
@@ -168,5 +168,5 @@ _sym_db.RegisterMessage(Merchandise)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.productB\022MerchandiseProductH\001P\000\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.productB\022MerchandiseProductH\001P\000\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

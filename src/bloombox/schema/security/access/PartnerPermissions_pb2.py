@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='security/access/PartnerPermissions.proto',
   package='bloombox.schema.security.access',
   syntax='proto3',
-  serialized_pb=_b('\n(security/access/PartnerPermissions.proto\x12\x1f\x62loombox.schema.security.access\x1a\x16temporal/Instant.proto\"\x99\x02\n\rPartnerAccess\x12\x0e\n\x06\x61\x63tive\x18\x01 \x01(\x08\x12\x12\n\ngranted_by\x18\x02 \x01(\t\x12\x32\n\ngranted_at\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x46\n\nprivileges\x18\x04 \x03(\x0e\x32\x32.bloombox.schema.security.access.PartnerPermission\x12\x42\n\tlocations\x18\x05 \x03(\x0b\x32/.bloombox.schema.security.access.LocationAccess\x12\x15\n\rall_locations\x18\x06 \x01(\x08\x12\r\n\x05\x61\x64min\x18\x64 \x01(\x08\"w\n\x0eLocationAccess\x12\x0e\n\x06\x61\x63tive\x18\x01 \x01(\x08\x12\x12\n\ngranted_by\x18\x02 \x01(\t\x12\x32\n\ngranted_at\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\r\n\x05\x61\x64min\x18\x64 \x01(\x08*T\n\x11PartnerPermission\x12\t\n\x05OWNER\x10\x00\x12\x0e\n\nSUPERVISOR\x10\x01\x12\x0b\n\x07\x42ILLING\x10\x02\x12\t\n\x05\x41UDIT\x10\x03\x12\x0c\n\x08READONLY\x10\x04\x42(\n\"io.bloombox.schema.security.accessH\x01P\x01\x62\x06proto3')
+  serialized_pb=_b('\n(security/access/PartnerPermissions.proto\x12\x1f\x62loombox.schema.security.access\x1a\x16temporal/Instant.proto\"\x99\x02\n\rPartnerAccess\x12\x0e\n\x06\x61\x63tive\x18\x01 \x01(\x08\x12\x12\n\ngranted_by\x18\x02 \x01(\t\x12\x32\n\ngranted_at\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x46\n\nprivileges\x18\x04 \x03(\x0e\x32\x32.bloombox.schema.security.access.PartnerPermission\x12\x42\n\tlocations\x18\x05 \x03(\x0b\x32/.bloombox.schema.security.access.LocationAccess\x12\x15\n\rall_locations\x18\x06 \x01(\x08\x12\r\n\x05\x61\x64min\x18\x64 \x01(\x08\"w\n\x0eLocationAccess\x12\x0e\n\x06\x61\x63tive\x18\x01 \x01(\x08\x12\x12\n\ngranted_by\x18\x02 \x01(\t\x12\x32\n\ngranted_at\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\r\n\x05\x61\x64min\x18\x64 \x01(\x08*T\n\x11PartnerPermission\x12\t\n\x05OWNER\x10\x00\x12\x0e\n\nSUPERVISOR\x10\x01\x12\x0b\n\x07\x42ILLING\x10\x02\x12\t\n\x05\x41UDIT\x10\x03\x12\x0c\n\x08READONLY\x10\x04\x42.\n\"io.bloombox.schema.security.accessH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
   dependencies=[temporal_dot_Instant__pb2.DESCRIPTOR,])
 
@@ -217,5 +217,5 @@ _sym_db.RegisterMessage(LocationAccess)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\"io.bloombox.schema.security.accessH\001P\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\"io.bloombox.schema.security.accessH\001P\001\242\002\003BBS'))
 # @@protoc_insertion_point(module_scope)

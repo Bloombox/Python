@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='identity/pass/PassKey.proto',
   package='bloombox.schema.identity.pass',
   syntax='proto3',
-  serialized_pb=_b('\n\x1bidentity/pass/PassKey.proto\x12\x1d\x62loombox.schema.identity.pass\"7\n\x07PassKey\x12\x0f\n\x07\x65ncoded\x18\x01 \x01(\t\x12\x0e\n\x06serial\x18\x02 \x01(\t\x12\x0b\n\x03uid\x18\x03 \x01(\tB\x1d\n\x17io.bloombox.schema.passH\x01P\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1bidentity/pass/PassKey.proto\x12\x1d\x62loombox.schema.identity.pass\"7\n\x07PassKey\x12\x0f\n\x07\x65ncoded\x18\x01 \x01(\t\x12\x0e\n\x06serial\x18\x02 \x01(\t\x12\x0b\n\x03uid\x18\x03 \x01(\tB#\n\x17io.bloombox.schema.passH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
 )
 
 
@@ -81,5 +81,5 @@ _sym_db.RegisterMessage(PassKey)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\027io.bloombox.schema.passH\001P\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\027io.bloombox.schema.passH\001P\001\242\002\003BBS'))
 # @@protoc_insertion_point(module_scope)

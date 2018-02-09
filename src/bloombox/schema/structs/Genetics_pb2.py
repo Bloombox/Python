@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='structs/Genetics.proto',
   package='opencannabis.structs',
   syntax='proto3',
-  serialized_pb=_b('\n\x16structs/Genetics.proto\x12\x14opencannabis.structs\x1a\x12\x63ontent/Name.proto\x1a\x15\x62\x61se/ProductKey.proto\"r\n\x08Genetics\x12\x31\n\x04male\x18\x01 \x01(\x0b\x32#.opencannabis.base.ProductReference\x12\x33\n\x06\x66\x65male\x18\x02 \x01(\x0b\x32#.opencannabis.base.ProductReferenceB?\n%io.opencannabis.schema.product.structB\x0fGeneticsStructsH\x01P\x01\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x16structs/Genetics.proto\x12\x14opencannabis.structs\x1a\x12\x63ontent/Name.proto\x1a\x15\x62\x61se/ProductKey.proto\"r\n\x08Genetics\x12\x31\n\x04male\x18\x01 \x01(\x0b\x32#.opencannabis.base.ProductReference\x12\x33\n\x06\x66\x65male\x18\x02 \x01(\x0b\x32#.opencannabis.base.ProductReferenceBB\n%io.opencannabis.schema.product.structB\x0fGeneticsStructsH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[content_dot_Name__pb2.DESCRIPTOR,base_dot_ProductKey__pb2.DESCRIPTOR,])
 
@@ -79,5 +79,5 @@ _sym_db.RegisterMessage(Genetics)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n%io.opencannabis.schema.product.structB\017GeneticsStructsH\001P\001\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n%io.opencannabis.schema.product.structB\017GeneticsStructsH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

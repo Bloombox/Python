@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='analytics/context/OS.proto',
   package='bloombox.schema.analytics.context',
   syntax='proto3',
-  serialized_pb=_b('\n\x1a\x61nalytics/context/OS.proto\x12!bloombox.schema.analytics.context\x1a\x0e\x62q_field.proto\x1a\x15structs/Version.proto\"\xe2\x01\n\x08\x44\x65viceOS\x12u\n\x04type\x18\x01 \x01(\x0e\x32).bloombox.schema.analytics.context.OSTypeB<\xf0?\x01\x8a@6Type of Operating System being expressed or specified.\x12_\n\x07version\x18\x02 \x01(\x0b\x32!.opencannabis.structs.VersionSpecB+\x8a@(Version of the OS running on the device.*\x8f\x01\n\x06OSType\x12\x0e\n\nOS_UNKNOWN\x10\x00\x12\x07\n\x03iOS\x10\x64\x12\t\n\x05macOS\x10\x65\x12\x08\n\x04tvOS\x10\x66\x12\x0b\n\x07watchOS\x10g\x12\x0c\n\x07\x41NDROID\x10\xc8\x01\x12\x11\n\x0c\x41NDROID_WEAR\x10\xc9\x01\x12\x0b\n\x07WINDOWS\x10\x04\x12\x11\n\rWINDOWS_PHONE\x10\x05\x12\t\n\x05LINUX\x10\x06\x42\x45\n$io.bloombox.schema.telemetry.contextB\x16OperatingSystemContextH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1a\x61nalytics/context/OS.proto\x12!bloombox.schema.analytics.context\x1a\x0e\x62q_field.proto\x1a\x15structs/Version.proto\"\xe2\x01\n\x08\x44\x65viceOS\x12u\n\x04type\x18\x01 \x01(\x0e\x32).bloombox.schema.analytics.context.OSTypeB<\xf0?\x01\x8a@6Type of Operating System being expressed or specified.\x12_\n\x07version\x18\x02 \x01(\x0b\x32!.opencannabis.structs.VersionSpecB+\x8a@(Version of the OS running on the device.*\x8f\x01\n\x06OSType\x12\x0e\n\nOS_UNKNOWN\x10\x00\x12\x07\n\x03iOS\x10\x64\x12\t\n\x05macOS\x10\x65\x12\x08\n\x04tvOS\x10\x66\x12\x0b\n\x07watchOS\x10g\x12\x0c\n\x07\x41NDROID\x10\xc8\x01\x12\x11\n\x0c\x41NDROID_WEAR\x10\xc9\x01\x12\x0b\n\x07WINDOWS\x10\x04\x12\x11\n\rWINDOWS_PHONE\x10\x05\x12\t\n\x05LINUX\x10\x06\x42H\n$io.bloombox.schema.telemetry.contextB\x16OperatingSystemContextH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,structs_dot_Version__pb2.DESCRIPTOR,])
 
@@ -146,7 +146,7 @@ _sym_db.RegisterMessage(DeviceOS)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n$io.bloombox.schema.telemetry.contextB\026OperatingSystemContextH\001P\000\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n$io.bloombox.schema.telemetry.contextB\026OperatingSystemContextH\001P\000\242\002\003BBS'))
 _DEVICEOS.fields_by_name['type'].has_options = True
 _DEVICEOS.fields_by_name['type']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@6Type of Operating System being expressed or specified.'))
 _DEVICEOS.fields_by_name['version'].has_options = True

@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='structs/pricing/SaleDescriptor.proto',
   package='opencannabis.structs.pricing',
   syntax='proto3',
-  serialized_pb=_b('\n$structs/pricing/SaleDescriptor.proto\x12\x1copencannabis.structs.pricing\x1a\x16temporal/Instant.proto\"&\n\x12PercentageDiscount\x12\x10\n\x08\x64iscount\x18\x14 \x01(\r\"/\n\x0c\x42OGODiscount\x12\x0f\n\x07trigger\x18\x15 \x01(\r\x12\x0e\n\x06reward\x18\x16 \x01(\r\"2\n\x0fLoyaltyDiscount\x12\x0f\n\x07trigger\x18\x17 \x01(\r\x12\x0e\n\x06reward\x18\x18 \x01(\r\"\xff\x02\n\x0eSaleDescriptor\x12\x34\n\x04type\x18\x01 \x01(\x0e\x32&.opencannabis.structs.pricing.SaleType\x12\x31\n\teffective\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x32\n\nexpiration\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12J\n\x0epercentage_off\x18\x04 \x01(\x0b\x32\x30.opencannabis.structs.pricing.PercentageDiscountH\x00\x12:\n\x04\x62ogo\x18\x05 \x01(\x0b\x32*.opencannabis.structs.pricing.BOGODiscountH\x00\x12@\n\x07loyalty\x18\x06 \x01(\x0b\x32-.opencannabis.structs.pricing.LoyaltyDiscountH\x00\x42\x06\n\x04sale*5\n\x08SaleType\x12\x12\n\x0ePERCENTAGE_OFF\x10\x00\x12\x08\n\x04\x42OGO\x10\x01\x12\x0b\n\x07LOYALTY\x10\x02\x42?\n%io.opencannabis.schema.product.structB\x0fProductDiscountH\x01P\x01\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n$structs/pricing/SaleDescriptor.proto\x12\x1copencannabis.structs.pricing\x1a\x16temporal/Instant.proto\"&\n\x12PercentageDiscount\x12\x10\n\x08\x64iscount\x18\x14 \x01(\r\"/\n\x0c\x42OGODiscount\x12\x0f\n\x07trigger\x18\x15 \x01(\r\x12\x0e\n\x06reward\x18\x16 \x01(\r\"2\n\x0fLoyaltyDiscount\x12\x0f\n\x07trigger\x18\x17 \x01(\r\x12\x0e\n\x06reward\x18\x18 \x01(\r\"\xff\x02\n\x0eSaleDescriptor\x12\x34\n\x04type\x18\x01 \x01(\x0e\x32&.opencannabis.structs.pricing.SaleType\x12\x31\n\teffective\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x32\n\nexpiration\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12J\n\x0epercentage_off\x18\x04 \x01(\x0b\x32\x30.opencannabis.structs.pricing.PercentageDiscountH\x00\x12:\n\x04\x62ogo\x18\x05 \x01(\x0b\x32*.opencannabis.structs.pricing.BOGODiscountH\x00\x12@\n\x07loyalty\x18\x06 \x01(\x0b\x32-.opencannabis.structs.pricing.LoyaltyDiscountH\x00\x42\x06\n\x04sale*5\n\x08SaleType\x12\x12\n\x0ePERCENTAGE_OFF\x10\x00\x12\x08\n\x04\x42OGO\x10\x01\x12\x0b\n\x07LOYALTY\x10\x02\x42\x42\n%io.opencannabis.schema.product.structB\x0fProductDiscountH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[temporal_dot_Instant__pb2.DESCRIPTOR,])
 
@@ -285,5 +285,5 @@ _sym_db.RegisterMessage(SaleDescriptor)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n%io.opencannabis.schema.product.structB\017ProductDiscountH\001P\001\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n%io.opencannabis.schema.product.structB\017ProductDiscountH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

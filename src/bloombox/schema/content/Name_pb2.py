@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='content/Name.proto',
   package='opencannabis.content',
   syntax='proto3',
-  serialized_pb=_b('\n\x12\x63ontent/Name.proto\x12\x14opencannabis.content\"(\n\x04Name\x12\x0f\n\x07primary\x18\x01 \x01(\t\x12\x0f\n\x07\x64isplay\x18\x02 \x01(\tB4\n\x1eio.opencannabis.schema.contentB\x0bNameContentH\x01P\x01\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x12\x63ontent/Name.proto\x12\x14opencannabis.content\"(\n\x04Name\x12\x0f\n\x07primary\x18\x01 \x01(\t\x12\x0f\n\x07\x64isplay\x18\x02 \x01(\tB7\n\x1eio.opencannabis.schema.contentB\x0bNameContentH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
 )
 
 
@@ -74,5 +74,5 @@ _sym_db.RegisterMessage(Name)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.contentB\013NameContentH\001P\001\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.contentB\013NameContentH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

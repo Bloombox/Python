@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='commerce/Delivery.proto',
   package='opencannabis.commerce',
   syntax='proto3',
-  serialized_pb=_b('\n\x17\x63ommerce/Delivery.proto\x12\x15opencannabis.commerce\x1a\x11geo/Address.proto\"W\n\x13\x44\x65liveryDestination\x12*\n\x07\x61\x64\x64ress\x18\x01 \x01(\x0b\x32\x19.opencannabis.geo.Address\x12\x14\n\x0cinstructions\x18\x02 \x01(\tB7\n\x1fio.opencannabis.schema.commerceB\rOrderDeliveryH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x17\x63ommerce/Delivery.proto\x12\x15opencannabis.commerce\x1a\x11geo/Address.proto\"W\n\x13\x44\x65liveryDestination\x12*\n\x07\x61\x64\x64ress\x18\x01 \x01(\x0b\x32\x19.opencannabis.geo.Address\x12\x14\n\x0cinstructions\x18\x02 \x01(\tB:\n\x1fio.opencannabis.schema.commerceB\rOrderDeliveryH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[geo_dot_Address__pb2.DESCRIPTOR,])
 
@@ -77,5 +77,5 @@ _sym_db.RegisterMessage(DeliveryDestination)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\037io.opencannabis.schema.commerceB\rOrderDeliveryH\001P\000\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\037io.opencannabis.schema.commerceB\rOrderDeliveryH\001P\000\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

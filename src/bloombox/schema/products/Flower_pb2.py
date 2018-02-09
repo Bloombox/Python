@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='products/Flower.proto',
   package='opencannabis.products',
   syntax='proto3',
-  serialized_pb=_b('\n\x15products/Flower.proto\x12\x15opencannabis.products\x1a\x15\x62\x61se/ProductKey.proto\x1a\x1b\x63ontent/MaterialsData.proto\x1a\x1c\x63ontent/ProductContent.proto\"\xa2\x01\n\x06\x46lower\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x35\n\x07product\x18\x02 \x01(\x0b\x32$.opencannabis.content.ProductContent\x12\x35\n\x08material\x18\x03 \x01(\x0b\x32#.opencannabis.content.MaterialsDataB6\n\x1eio.opencannabis.schema.productB\rFlowerProductH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x15products/Flower.proto\x12\x15opencannabis.products\x1a\x15\x62\x61se/ProductKey.proto\x1a\x1b\x63ontent/MaterialsData.proto\x1a\x1c\x63ontent/ProductContent.proto\"\xa2\x01\n\x06\x46lower\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x35\n\x07product\x18\x02 \x01(\x0b\x32$.opencannabis.content.ProductContent\x12\x35\n\x08material\x18\x03 \x01(\x0b\x32#.opencannabis.content.MaterialsDataB9\n\x1eio.opencannabis.schema.productB\rFlowerProductH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[base_dot_ProductKey__pb2.DESCRIPTOR,content_dot_MaterialsData__pb2.DESCRIPTOR,content_dot_ProductContent__pb2.DESCRIPTOR,])
 
@@ -88,5 +88,5 @@ _sym_db.RegisterMessage(Flower)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.productB\rFlowerProductH\001P\000\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.productB\rFlowerProductH\001P\000\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

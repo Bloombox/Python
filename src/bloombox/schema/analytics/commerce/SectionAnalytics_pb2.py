@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='analytics/commerce/SectionAnalytics.proto',
   package='bloombox.schema.analytics.section',
   syntax='proto3',
-  serialized_pb=_b('\n)analytics/commerce/SectionAnalytics.proto\x12!bloombox.schema.analytics.section\x1a\x16temporal/Instant.proto\x1a\x1bproducts/menu/Section.proto\"}\n\nImpression\x12=\n\x04spec\x18\x01 \x01(\x0b\x32/.opencannabis.products.menu.section.SectionSpec\x12\x30\n\x08occurred\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\"\x8c\x01\n\x04View\x12=\n\x04spec\x18\x01 \x01(\x0b\x32/.opencannabis.products.menu.section.SectionSpec\x12\x13\n\x0binteractive\x18\x02 \x01(\x08\x12\x30\n\x08occurred\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\"\xb9\x01\n\x06\x41\x63tion\x12=\n\x04spec\x18\x01 \x01(\x0b\x32/.opencannabis.products.menu.section.SectionSpec\x12>\n\x04verb\x18\x02 \x01(\x0e\x32\x30.bloombox.schema.analytics.section.SectionAction\x12\x30\n\x08occurred\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant*/\n\rSectionAction\x12\x08\n\x04VIEW\x10\x00\x12\x08\n\x04SORT\x10\x01\x12\n\n\x06\x46ILTER\x10\x02\x42?\n$io.bloombox.schema.analytics.sectionB\x10SectionAnalyticsH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n)analytics/commerce/SectionAnalytics.proto\x12!bloombox.schema.analytics.section\x1a\x16temporal/Instant.proto\x1a\x1bproducts/menu/Section.proto\"}\n\nImpression\x12=\n\x04spec\x18\x01 \x01(\x0b\x32/.opencannabis.products.menu.section.SectionSpec\x12\x30\n\x08occurred\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\"\x8c\x01\n\x04View\x12=\n\x04spec\x18\x01 \x01(\x0b\x32/.opencannabis.products.menu.section.SectionSpec\x12\x13\n\x0binteractive\x18\x02 \x01(\x08\x12\x30\n\x08occurred\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\"\xb9\x01\n\x06\x41\x63tion\x12=\n\x04spec\x18\x01 \x01(\x0b\x32/.opencannabis.products.menu.section.SectionSpec\x12>\n\x04verb\x18\x02 \x01(\x0e\x32\x30.bloombox.schema.analytics.section.SectionAction\x12\x30\n\x08occurred\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant*/\n\rSectionAction\x12\x08\n\x04VIEW\x10\x00\x12\x08\n\x04SORT\x10\x01\x12\n\n\x06\x46ILTER\x10\x02\x42\x42\n$io.bloombox.schema.analytics.sectionB\x10SectionAnalyticsH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
   dependencies=[temporal_dot_Instant__pb2.DESCRIPTOR,products_dot_menu_dot_Section__pb2.DESCRIPTOR,])
 
@@ -222,5 +222,5 @@ _sym_db.RegisterMessage(Action)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n$io.bloombox.schema.analytics.sectionB\020SectionAnalyticsH\001P\000\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n$io.bloombox.schema.analytics.sectionB\020SectionAnalyticsH\001P\000\242\002\003BBS'))
 # @@protoc_insertion_point(module_scope)

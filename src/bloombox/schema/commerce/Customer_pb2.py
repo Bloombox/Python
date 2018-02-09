@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='commerce/Customer.proto',
   package='opencannabis.commerce',
   syntax='proto3',
-  serialized_pb=_b('\n\x17\x63ommerce/Customer.proto\x12\x15opencannabis.commerce\x1a\x13person/Person.proto\"]\n\x08\x43ustomer\x12+\n\x06person\x18\x01 \x01(\x0b\x32\x1b.opencannabis.person.Person\x12\x12\n\nforeign_id\x18\x02 \x01(\t\x12\x10\n\x08user_key\x18\x03 \x01(\tB7\n\x1fio.opencannabis.schema.commerceB\rOrderCustomerH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x17\x63ommerce/Customer.proto\x12\x15opencannabis.commerce\x1a\x13person/Person.proto\"]\n\x08\x43ustomer\x12+\n\x06person\x18\x01 \x01(\x0b\x32\x1b.opencannabis.person.Person\x12\x12\n\nforeign_id\x18\x02 \x01(\t\x12\x10\n\x08user_key\x18\x03 \x01(\tB:\n\x1fio.opencannabis.schema.commerceB\rOrderCustomerH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[person_dot_Person__pb2.DESCRIPTOR,])
 
@@ -84,5 +84,5 @@ _sym_db.RegisterMessage(Customer)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\037io.opencannabis.schema.commerceB\rOrderCustomerH\001P\000\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\037io.opencannabis.schema.commerceB\rOrderCustomerH\001P\000\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

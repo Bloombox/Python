@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='analytics/generic/Event.proto',
   package='bloombox.schema.analytics.generic',
   syntax='proto3',
-  serialized_pb=_b('\n\x1d\x61nalytics/generic/Event.proto\x12!bloombox.schema.analytics.generic\x1a\x0e\x62q_field.proto\x1a\x16temporal/Instant.proto\x1a\x1cgoogle/protobuf/struct.proto\"m\n\x05\x45vent\x12-\n\x07payload\x18\x01 \x01(\x0b\x32\x17.google.protobuf.StructB\x03\x80@\x01\x12\x35\n\x08occurred\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\x03\x80@\x01\x42\x35\n\x1cio.bloombox.schema.telemetryB\x0e\x41nalyticsEventH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1d\x61nalytics/generic/Event.proto\x12!bloombox.schema.analytics.generic\x1a\x0e\x62q_field.proto\x1a\x16temporal/Instant.proto\x1a\x1cgoogle/protobuf/struct.proto\"m\n\x05\x45vent\x12-\n\x07payload\x18\x01 \x01(\x0b\x32\x17.google.protobuf.StructB\x03\x80@\x01\x12\x35\n\x08occurred\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\x03\x80@\x01\x42\x38\n\x1cio.bloombox.schema.telemetryB\x0e\x41nalyticsEventH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,google_dot_protobuf_dot_struct__pb2.DESCRIPTOR,])
 
@@ -80,7 +80,7 @@ _sym_db.RegisterMessage(Event)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\034io.bloombox.schema.telemetryB\016AnalyticsEventH\001P\000\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\034io.bloombox.schema.telemetryB\016AnalyticsEventH\001P\000\242\002\003BBS'))
 _EVENT.fields_by_name['payload'].has_options = True
 _EVENT.fields_by_name['payload']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001'))
 _EVENT.fields_by_name['occurred'].has_options = True

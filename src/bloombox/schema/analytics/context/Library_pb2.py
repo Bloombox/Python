@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='analytics/context/Library.proto',
   package='bloombox.schema.analytics.context',
   syntax='proto3',
-  serialized_pb=_b('\n\x1f\x61nalytics/context/Library.proto\x12!bloombox.schema.analytics.context\x1a\x0e\x62q_field.proto\x1a\x15structs/Version.proto\"\xe4\x02\n\rDeviceLibrary\x12O\n\x07variant\x18\x01 \x01(\tB>\xf0?\x01\x8a@8Variant name of the library being used to transmit data.\x12|\n\x07version\x18\x02 \x01(\x0b\x32!.opencannabis.structs.VersionSpecBH\xf0?\x01\x8a@BVersion specification for the library being used to transmit data.\x12\x83\x01\n\x06\x63lient\x18\x03 \x01(\x0e\x32,.bloombox.schema.analytics.context.APIClientBE\x8a@BSpecifies which internal Bloombox library sent this event, if any.*C\n\tAPIClient\x12\x10\n\x0cUNIDENTIFIED\x10\x00\x12\x0f\n\x0bJAVA_SCRIPT\x10\x01\x12\t\n\x05SWIFT\x10\x02\x12\x08\n\x04JAVA\x10\x03\x42=\n$io.bloombox.schema.telemetry.contextB\x0eLibraryContextH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1f\x61nalytics/context/Library.proto\x12!bloombox.schema.analytics.context\x1a\x0e\x62q_field.proto\x1a\x15structs/Version.proto\"\xe4\x02\n\rDeviceLibrary\x12O\n\x07variant\x18\x01 \x01(\tB>\xf0?\x01\x8a@8Variant name of the library being used to transmit data.\x12|\n\x07version\x18\x02 \x01(\x0b\x32!.opencannabis.structs.VersionSpecBH\xf0?\x01\x8a@BVersion specification for the library being used to transmit data.\x12\x83\x01\n\x06\x63lient\x18\x03 \x01(\x0e\x32,.bloombox.schema.analytics.context.APIClientBE\x8a@BSpecifies which internal Bloombox library sent this event, if any.*C\n\tAPIClient\x12\x10\n\x0cUNIDENTIFIED\x10\x00\x12\x0f\n\x0bJAVA_SCRIPT\x10\x01\x12\t\n\x05SWIFT\x10\x02\x12\x08\n\x04JAVA\x10\x03\x42@\n$io.bloombox.schema.telemetry.contextB\x0eLibraryContextH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,structs_dot_Version__pb2.DESCRIPTOR,])
 
@@ -123,7 +123,7 @@ _sym_db.RegisterMessage(DeviceLibrary)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n$io.bloombox.schema.telemetry.contextB\016LibraryContextH\001P\000\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n$io.bloombox.schema.telemetry.contextB\016LibraryContextH\001P\000\242\002\003BBS'))
 _DEVICELIBRARY.fields_by_name['variant'].has_options = True
 _DEVICELIBRARY.fields_by_name['variant']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@8Variant name of the library being used to transmit data.'))
 _DEVICELIBRARY.fields_by_name['version'].has_options = True

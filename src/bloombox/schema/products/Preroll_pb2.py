@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='products/Preroll.proto',
   package='opencannabis.products',
   syntax='proto3',
-  serialized_pb=_b('\n\x16products/Preroll.proto\x12\x15opencannabis.products\x1a\x15\x62\x61se/ProductKey.proto\x1a\x1b\x63ontent/MaterialsData.proto\x1a\x1c\x63ontent/ProductContent.proto\"\xae\x02\n\x07Preroll\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x33\n\x06\x66lower\x18\x02 \x01(\x0b\x32#.opencannabis.base.ProductReference\x12\x0e\n\x06length\x18\x03 \x01(\x01\x12\x11\n\tthickness\x18\x04 \x01(\x01\x12\x31\n\x05\x66lags\x18\x05 \x03(\x0e\x32\".opencannabis.products.PrerollFlag\x12\x35\n\x07product\x18\x06 \x01(\x0b\x32$.opencannabis.content.ProductContent\x12\x35\n\x08material\x18\x07 \x01(\x0b\x32#.opencannabis.content.MaterialsData*}\n\x0bPrerollFlag\x12\x14\n\x10NO_PREROLL_FLAGS\x10\x00\x12\x10\n\x0cHASH_INFUSED\x10\x01\x12\x10\n\x0cKIEF_INFUSED\x10\x02\x12\r\n\tFORTIFIED\x10\x03\x12\x0f\n\x0b\x46ULL_FLOWER\x10\x04\x12\x14\n\x10\x43ONTAINS_TOBACCO\x10\x05\x42\x37\n\x1eio.opencannabis.schema.productB\x0ePrerollProductH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x16products/Preroll.proto\x12\x15opencannabis.products\x1a\x15\x62\x61se/ProductKey.proto\x1a\x1b\x63ontent/MaterialsData.proto\x1a\x1c\x63ontent/ProductContent.proto\"\xae\x02\n\x07Preroll\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x33\n\x06\x66lower\x18\x02 \x01(\x0b\x32#.opencannabis.base.ProductReference\x12\x0e\n\x06length\x18\x03 \x01(\x01\x12\x11\n\tthickness\x18\x04 \x01(\x01\x12\x31\n\x05\x66lags\x18\x05 \x03(\x0e\x32\".opencannabis.products.PrerollFlag\x12\x35\n\x07product\x18\x06 \x01(\x0b\x32$.opencannabis.content.ProductContent\x12\x35\n\x08material\x18\x07 \x01(\x0b\x32#.opencannabis.content.MaterialsData*}\n\x0bPrerollFlag\x12\x14\n\x10NO_PREROLL_FLAGS\x10\x00\x12\x10\n\x0cHASH_INFUSED\x10\x01\x12\x10\n\x0cKIEF_INFUSED\x10\x02\x12\r\n\tFORTIFIED\x10\x03\x12\x0f\n\x0b\x46ULL_FLOWER\x10\x04\x12\x14\n\x10\x43ONTAINS_TOBACCO\x10\x05\x42:\n\x1eio.opencannabis.schema.productB\x0ePrerollProductH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[base_dot_ProductKey__pb2.DESCRIPTOR,content_dot_MaterialsData__pb2.DESCRIPTOR,content_dot_ProductContent__pb2.DESCRIPTOR,])
 
@@ -165,5 +165,5 @@ _sym_db.RegisterMessage(Preroll)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.productB\016PrerollProductH\001P\000\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.productB\016PrerollProductH\001P\000\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

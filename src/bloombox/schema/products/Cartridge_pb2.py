@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='products/Cartridge.proto',
   package='opencannabis.products',
   syntax='proto3',
-  serialized_pb=_b('\n\x18products/Cartridge.proto\x12\x15opencannabis.products\x1a\x15\x62\x61se/ProductKey.proto\x1a\x1b\x63ontent/MaterialsData.proto\x1a\x1c\x63ontent/ProductContent.proto\"\xd9\x01\n\tCartridge\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x32\n\x04type\x18\x02 \x01(\x0e\x32$.opencannabis.products.CartridgeType\x12\x35\n\x07product\x18\x03 \x01(\x0b\x32$.opencannabis.content.ProductContent\x12\x35\n\x08material\x18\x04 \x01(\x0b\x32#.opencannabis.content.MaterialsData*O\n\rCartridgeType\x12\x19\n\x15UNSPECIFIED_CARTRIDGE\x10\x00\x12\r\n\tCARTRIDGE\x10\x01\x12\x0b\n\x07\x42\x41TTERY\x10\x02\x12\x07\n\x03KIT\x10\x03\x42\x39\n\x1eio.opencannabis.schema.productB\x10\x43\x61rtridgeProductH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x18products/Cartridge.proto\x12\x15opencannabis.products\x1a\x15\x62\x61se/ProductKey.proto\x1a\x1b\x63ontent/MaterialsData.proto\x1a\x1c\x63ontent/ProductContent.proto\"\xd9\x01\n\tCartridge\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x32\n\x04type\x18\x02 \x01(\x0e\x32$.opencannabis.products.CartridgeType\x12\x35\n\x07product\x18\x03 \x01(\x0b\x32$.opencannabis.content.ProductContent\x12\x35\n\x08material\x18\x04 \x01(\x0b\x32#.opencannabis.content.MaterialsData*O\n\rCartridgeType\x12\x19\n\x15UNSPECIFIED_CARTRIDGE\x10\x00\x12\r\n\tCARTRIDGE\x10\x01\x12\x0b\n\x07\x42\x41TTERY\x10\x02\x12\x07\n\x03KIT\x10\x03\x42<\n\x1eio.opencannabis.schema.productB\x10\x43\x61rtridgeProductH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[base_dot_ProductKey__pb2.DESCRIPTOR,content_dot_MaterialsData__pb2.DESCRIPTOR,content_dot_ProductContent__pb2.DESCRIPTOR,])
 
@@ -133,5 +133,5 @@ _sym_db.RegisterMessage(Cartridge)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.productB\020CartridgeProductH\001P\000\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.productB\020CartridgeProductH\001P\000\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='structs/Version.proto',
   package='opencannabis.structs',
   syntax='proto3',
-  serialized_pb=_b('\n\x15structs/Version.proto\x12\x14opencannabis.structs\x1a\x0e\x62q_field.proto\"N\n\x0bVersionSpec\x12\x37\n\x04name\x18\x01 \x01(\tB\'\x8a@$Version specified by arbitrary name.H\x00\x42\x06\n\x04specB/\n\x1dio.opencannabis.schema.structB\x07VersionH\x01P\x01\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x15structs/Version.proto\x12\x14opencannabis.structs\x1a\x0e\x62q_field.proto\"N\n\x0bVersionSpec\x12\x37\n\x04name\x18\x01 \x01(\tB\'\x8a@$Version specified by arbitrary name.H\x00\x42\x06\n\x04specB2\n\x1dio.opencannabis.schema.structB\x07VersionH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,])
 
@@ -75,7 +75,7 @@ _sym_db.RegisterMessage(VersionSpec)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\035io.opencannabis.schema.structB\007VersionH\001P\001\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\035io.opencannabis.schema.structB\007VersionH\001P\001\242\002\003OCS'))
 _VERSIONSPEC.fields_by_name['name'].has_options = True
 _VERSIONSPEC.fields_by_name['name']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@$Version specified by arbitrary name.'))
 # @@protoc_insertion_point(module_scope)

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='base/ProductType.proto',
   package='opencannabis.base',
   syntax='proto3',
-  serialized_pb=_b('\n\x16\x62\x61se/ProductType.proto\x12\x11opencannabis.base\x1a\x16\x62\x61se/ProductKind.proto\";\n\x0bProductType\x12,\n\x04kind\x18\x01 \x01(\x0e\x32\x1e.opencannabis.base.ProductKindB5\n\x1bio.opencannabis.schema.baseB\x0f\x42\x61seProductTypeH\x01P\x01\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x16\x62\x61se/ProductType.proto\x12\x11opencannabis.base\x1a\x16\x62\x61se/ProductKind.proto\";\n\x0bProductType\x12,\n\x04kind\x18\x01 \x01(\x0e\x32\x1e.opencannabis.base.ProductKindB8\n\x1bio.opencannabis.schema.baseB\x0f\x42\x61seProductTypeH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[base_dot_ProductKind__pb2.DESCRIPTOR,])
 
@@ -70,5 +70,5 @@ _sym_db.RegisterMessage(ProductType)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\033io.opencannabis.schema.baseB\017BaseProductTypeH\001P\001\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\033io.opencannabis.schema.baseB\017BaseProductTypeH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

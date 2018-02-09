@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='analytics/commerce/OrderAnalytics.proto',
   package='bloombox.schema.analytics.order',
   syntax='proto3',
-  serialized_pb=_b('\n\'analytics/commerce/OrderAnalytics.proto\x12\x1f\x62loombox.schema.analytics.order\x1a\x14\x63ommerce/Order.proto\x1a\x16temporal/Instant.proto\x1a\x17\x63ommerce/Customer.proto\"\xdd\x01\n\x06\x41\x63tion\x12\x32\n\torder_key\x18\x01 \x01(\x0b\x32\x1f.opencannabis.commerce.OrderKey\x12:\n\x04verb\x18\x02 \x01(\x0e\x32,.bloombox.schema.analytics.order.OrderAction\x12\x31\n\x08\x63ustomer\x18\x03 \x01(\x0b\x32\x1f.opencannabis.commerce.Customer\x12\x30\n\x08occurred\x18\x04 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant*\xff\x01\n\x0bOrderAction\x12\x0f\n\x0b\x41\x44\x44_TO_CART\x10\x00\x12\x14\n\x10REMOVE_FROM_CART\x10\x01\x12\x10\n\x0cRESTORE_CART\x10\x02\x12\x11\n\rVERIFY_MEMBER\x10\x03\x12\x10\n\x0cORDER_SUBMIT\x10\x04\x12\x10\n\x0cORDER_STATUS\x10\x05\x12\x10\n\x0cORDER_CANCEL\x10\x06\x12\x12\n\x0eORDER_ACCEPTED\x10\x07\x12\x12\n\x0eORDER_REJECTED\x10\x08\x12\x15\n\x11ORDER_IN_PROGERSS\x10\t\x12\x1a\n\x16ORDER_OUT_FOR_DELIVERY\x10\n\x12\x13\n\x0fORDER_FULFILLED\x10\x0b\x42;\n\"io.bloombox.schema.analytics.orderB\x0eOrderAnalyticsH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\'analytics/commerce/OrderAnalytics.proto\x12\x1f\x62loombox.schema.analytics.order\x1a\x14\x63ommerce/Order.proto\x1a\x16temporal/Instant.proto\x1a\x17\x63ommerce/Customer.proto\"\xdd\x01\n\x06\x41\x63tion\x12\x32\n\torder_key\x18\x01 \x01(\x0b\x32\x1f.opencannabis.commerce.OrderKey\x12:\n\x04verb\x18\x02 \x01(\x0e\x32,.bloombox.schema.analytics.order.OrderAction\x12\x31\n\x08\x63ustomer\x18\x03 \x01(\x0b\x32\x1f.opencannabis.commerce.Customer\x12\x30\n\x08occurred\x18\x04 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant*\xff\x01\n\x0bOrderAction\x12\x0f\n\x0b\x41\x44\x44_TO_CART\x10\x00\x12\x14\n\x10REMOVE_FROM_CART\x10\x01\x12\x10\n\x0cRESTORE_CART\x10\x02\x12\x11\n\rVERIFY_MEMBER\x10\x03\x12\x10\n\x0cORDER_SUBMIT\x10\x04\x12\x10\n\x0cORDER_STATUS\x10\x05\x12\x10\n\x0cORDER_CANCEL\x10\x06\x12\x12\n\x0eORDER_ACCEPTED\x10\x07\x12\x12\n\x0eORDER_REJECTED\x10\x08\x12\x15\n\x11ORDER_IN_PROGERSS\x10\t\x12\x1a\n\x16ORDER_OUT_FOR_DELIVERY\x10\n\x12\x13\n\x0fORDER_FULFILLED\x10\x0b\x42>\n\"io.bloombox.schema.analytics.orderB\x0eOrderAnalyticsH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
   dependencies=[commerce_dot_Order__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,commerce_dot_Customer__pb2.DESCRIPTOR,])
 
@@ -173,5 +173,5 @@ _sym_db.RegisterMessage(Action)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\"io.bloombox.schema.analytics.orderB\016OrderAnalyticsH\001P\000\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\"io.bloombox.schema.analytics.orderB\016OrderAnalyticsH\001P\000\242\002\003BBS'))
 # @@protoc_insertion_point(module_scope)

@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='analytics/identity/UserAnalytics.proto',
   package='bloombox.schema.analytics.identity',
   syntax='proto3',
-  serialized_pb=_b('\n&analytics/identity/UserAnalytics.proto\x12\"bloombox.schema.analytics.identity\x1a\x16temporal/Instant.proto\"\x8a\x01\n\x06\x41\x63tion\x12\x10\n\x08identity\x18\x01 \x01(\t\x12<\n\x04verb\x18\x02 \x01(\x0e\x32..bloombox.schema.analytics.identity.UserAction\x12\x30\n\x08occurred\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant*\x98\x01\n\nUserAction\x12\n\n\x06\x45NGAGE\x10\x00\x12\n\n\x06\x45NROLL\x10\n\x12\x0c\n\x08\x41\x43TIVATE\x10\x0b\x12\x08\n\x04JOIN\x10\x0c\x12\n\n\x06VERIFY\x10\r\x12\x0b\n\x07\x43HECKIN\x10\x0e\x12\x0f\n\x0bPREFERENCES\x10\x0f\x12\x0c\n\x08PURCHASE\x10\x10\x12\t\n\x05ORDER\x10\x11\x12\n\n\x06OPT_IN\x10\x12\x12\x0b\n\x07OPT_OUT\x10\x13\x42\x39\n!io.bloombox.schema.analytics.userB\rUserAnalyticsH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n&analytics/identity/UserAnalytics.proto\x12\"bloombox.schema.analytics.identity\x1a\x16temporal/Instant.proto\"\x8a\x01\n\x06\x41\x63tion\x12\x10\n\x08identity\x18\x01 \x01(\t\x12<\n\x04verb\x18\x02 \x01(\x0e\x32..bloombox.schema.analytics.identity.UserAction\x12\x30\n\x08occurred\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant*\x98\x01\n\nUserAction\x12\n\n\x06\x45NGAGE\x10\x00\x12\n\n\x06\x45NROLL\x10\n\x12\x0c\n\x08\x41\x43TIVATE\x10\x0b\x12\x08\n\x04JOIN\x10\x0c\x12\n\n\x06VERIFY\x10\r\x12\x0b\n\x07\x43HECKIN\x10\x0e\x12\x0f\n\x0bPREFERENCES\x10\x0f\x12\x0c\n\x08PURCHASE\x10\x10\x12\t\n\x05ORDER\x10\x11\x12\n\n\x06OPT_IN\x10\x12\x12\x0b\n\x07OPT_OUT\x10\x13\x42<\n!io.bloombox.schema.analytics.userB\rUserAnalyticsH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
   dependencies=[temporal_dot_Instant__pb2.DESCRIPTOR,])
 
@@ -157,5 +157,5 @@ _sym_db.RegisterMessage(Action)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n!io.bloombox.schema.analytics.userB\rUserAnalyticsH\001P\000\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n!io.bloombox.schema.analytics.userB\rUserAnalyticsH\001P\000\242\002\003BBS'))
 # @@protoc_insertion_point(module_scope)

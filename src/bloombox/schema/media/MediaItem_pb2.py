@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='media/MediaItem.proto',
   package='opencannabis.media',
   syntax='proto3',
-  serialized_pb=_b('\n\x15media/MediaItem.proto\x12\x12opencannabis.media\x1a\x0e\x62q_field.proto\x1a\x14media/MediaKey.proto\x1a\x15media/MediaType.proto\"\x94\x02\n\tMediaItem\x12W\n\x03key\x18\x01 \x01(\x0b\x32\x1c.opencannabis.media.MediaKeyB,\x8a@)Key uniquely identifying this media item.\x12Q\n\x04type\x18\x02 \x01(\x0b\x32\x1d.opencannabis.media.MediaTypeB$\x8a@!Type of media this is describing.\x12.\n\x04name\x18\x03 \x01(\tB \x8a@\x1d\x46riendly name for this media.\x12+\n\x03uri\x18\x04 \x01(\tB\x1e\x8a@\x1b\x41\x62solute URI to this media.B4\n\x1cio.opencannabis.schema.mediaB\rAttachedMediaH\x01P\x01\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x15media/MediaItem.proto\x12\x12opencannabis.media\x1a\x0e\x62q_field.proto\x1a\x14media/MediaKey.proto\x1a\x15media/MediaType.proto\"\x94\x02\n\tMediaItem\x12W\n\x03key\x18\x01 \x01(\x0b\x32\x1c.opencannabis.media.MediaKeyB,\x8a@)Key uniquely identifying this media item.\x12Q\n\x04type\x18\x02 \x01(\x0b\x32\x1d.opencannabis.media.MediaTypeB$\x8a@!Type of media this is describing.\x12.\n\x04name\x18\x03 \x01(\tB \x8a@\x1d\x46riendly name for this media.\x12+\n\x03uri\x18\x04 \x01(\tB\x1e\x8a@\x1b\x41\x62solute URI to this media.B7\n\x1cio.opencannabis.schema.mediaB\rAttachedMediaH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,media_dot_MediaKey__pb2.DESCRIPTOR,media_dot_MediaType__pb2.DESCRIPTOR,])
 
@@ -94,7 +94,7 @@ _sym_db.RegisterMessage(MediaItem)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\034io.opencannabis.schema.mediaB\rAttachedMediaH\001P\001\370\001\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\034io.opencannabis.schema.mediaB\rAttachedMediaH\001P\001\242\002\003OCS'))
 _MEDIAITEM.fields_by_name['key'].has_options = True
 _MEDIAITEM.fields_by_name['key']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@)Key uniquely identifying this media item.'))
 _MEDIAITEM.fields_by_name['type'].has_options = True

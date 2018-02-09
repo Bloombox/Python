@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='services/ServiceStatus.proto',
   package='bloombox.schema.services',
   syntax='proto3',
-  serialized_pb=_b('\n\x1cservices/ServiceStatus.proto\x12\x18\x62loombox.schema.services*?\n\rServiceStatus\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x06\n\x02UP\x10\x01\x12\x08\n\x04\x44OWN\x10\x02\x12\x0f\n\x0bMAINTENANCE\x10\x03\x42!\n\x1bio.bloombox.schema.servicesH\x01P\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1cservices/ServiceStatus.proto\x12\x18\x62loombox.schema.services*?\n\rServiceStatus\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x06\n\x02UP\x10\x01\x12\x08\n\x04\x44OWN\x10\x02\x12\x0f\n\x0bMAINTENANCE\x10\x03\x42\'\n\x1bio.bloombox.schema.servicesH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
 )
 
 _SERVICESTATUS = _descriptor.EnumDescriptor(
@@ -65,5 +65,5 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\033io.bloombox.schema.servicesH\001P\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\033io.bloombox.schema.servicesH\001P\001\242\002\003BBS'))
 # @@protoc_insertion_point(module_scope)

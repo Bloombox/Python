@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='pos/v1beta1/POSService.proto',
   package='bloombox.schema.services.pos.v1beta1',
   syntax='proto3',
-  serialized_pb=_b('\n\x1cpos/v1beta1/POSService.proto\x12$bloombox.schema.services.pos.v1beta1\x1a\x1cservices/ServiceStatus.proto\x1a\x1cgoogle/api/annotations.proto\"\xf0\x01\n\x04Ping\x1a\t\n\x07Request\x1a\x43\n\x08Response\x12\x37\n\x06status\x18\x01 \x01(\x0e\x32\'.bloombox.schema.services.ServiceStatus\x1a\x97\x01\n\tOperation\x12\x43\n\x07request\x18\x01 \x01(\x0b\x32\x32.bloombox.schema.services.pos.v1beta1.Ping.Request\x12\x45\n\x08response\x18\x02 \x01(\x0b\x32\x33.bloombox.schema.services.pos.v1beta1.Ping.Response*\xb2\x01\n\x08POSError\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x16\n\x12INVALID_COLLECTION\x10\x01\x12\x13\n\x0fINVALID_PARTNER\x10\x02\x12\x14\n\x10INVALID_LOCATION\x10\x03\x12\x12\n\x0eINVALID_DEVICE\x10\x04\x12\x15\n\x11PARTNER_NOT_FOUND\x10\x05\x12\x16\n\x12LOCATION_NOT_FOUND\x10\x06\x12\x13\n\x0fINVALID_PAYLOAD\x10\x63\x32\x96\x01\n\x0bPointOfSale\x12\x86\x01\n\x04Ping\x12\x32.bloombox.schema.services.pos.v1beta1.Ping.Request\x1a\x33.bloombox.schema.services.pos.v1beta1.Ping.Response\"\x15\x82\xd3\xe4\x93\x02\x0f\x12\r/v1beta1/pingB-\n\'io.bloombox.schema.services.pos.v1beta1H\x01P\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1cpos/v1beta1/POSService.proto\x12$bloombox.schema.services.pos.v1beta1\x1a\x1cservices/ServiceStatus.proto\x1a\x1cgoogle/api/annotations.proto\"\xf0\x01\n\x04Ping\x1a\t\n\x07Request\x1a\x43\n\x08Response\x12\x37\n\x06status\x18\x01 \x01(\x0e\x32\'.bloombox.schema.services.ServiceStatus\x1a\x97\x01\n\tOperation\x12\x43\n\x07request\x18\x01 \x01(\x0b\x32\x32.bloombox.schema.services.pos.v1beta1.Ping.Request\x12\x45\n\x08response\x18\x02 \x01(\x0b\x32\x33.bloombox.schema.services.pos.v1beta1.Ping.Response*\xb2\x01\n\x08POSError\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x16\n\x12INVALID_COLLECTION\x10\x01\x12\x13\n\x0fINVALID_PARTNER\x10\x02\x12\x14\n\x10INVALID_LOCATION\x10\x03\x12\x12\n\x0eINVALID_DEVICE\x10\x04\x12\x15\n\x11PARTNER_NOT_FOUND\x10\x05\x12\x16\n\x12LOCATION_NOT_FOUND\x10\x06\x12\x13\n\x0fINVALID_PAYLOAD\x10\x63\x32\x96\x01\n\x0bPointOfSale\x12\x86\x01\n\x04Ping\x12\x32.bloombox.schema.services.pos.v1beta1.Ping.Request\x1a\x33.bloombox.schema.services.pos.v1beta1.Ping.Response\"\x15\x82\xd3\xe4\x93\x02\x0f\x12\r/v1beta1/pingB3\n\'io.bloombox.schema.services.pos.v1beta1H\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
   dependencies=[services_dot_ServiceStatus__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -240,7 +240,7 @@ _sym_db.RegisterMessage(Ping.Operation)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\'io.bloombox.schema.services.pos.v1beta1H\001P\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\'io.bloombox.schema.services.pos.v1beta1H\001P\001\242\002\003BBS'))
 
 _POINTOFSALE = _descriptor.ServiceDescriptor(
   name='PointOfSale',

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='geo/Country.proto',
   package='opencannabis.geo',
   syntax='proto3',
-  serialized_pb=_b('\n\x11geo/Country.proto\x12\x10opencannabis.geo\"\x17\n\x07\x43ountry\x12\x0c\n\x04\x63ode\x18\x01 \x01(\tB \n\x1aio.opencannabis.schema.geoH\x01P\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x11geo/Country.proto\x12\x10opencannabis.geo\"\x17\n\x07\x43ountry\x12\x0c\n\x04\x63ode\x18\x01 \x01(\tB&\n\x1aio.opencannabis.schema.geoH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
 )
 
 
@@ -67,5 +67,5 @@ _sym_db.RegisterMessage(Country)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.opencannabis.schema.geoH\001P\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.opencannabis.schema.geoH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

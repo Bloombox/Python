@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='person/PersonName.proto',
   package='opencannabis.person',
   syntax='proto3',
-  serialized_pb=_b('\n\x17person/PersonName.proto\x12\x13opencannabis.person\x1a\x0e\x62q_field.proto\"\xd6\x02\n\x04Name\x12N\n\tfull_name\x18\x01 \x01(\tB;\x8a@8Person\'s full name, if a fulltext value should override.\x12\x36\n\nfirst_name\x18\x02 \x01(\tB\"\x8a@\x1fPerson\'s given, or first, name.\x12\x35\n\tlast_name\x18\x03 \x01(\tB\"\x8a@\x1fPerson\'s family, or last, name.\x12-\n\x0bmiddle_name\x18\x04 \x01(\tB\x18\x8a@\x15Person\'s middle name.\x12.\n\x06prefix\x18\x05 \x01(\tB\x1e\x8a@\x1bPrefix for a person\'s name.\x12\x30\n\x07postfix\x18\x06 \x01(\tB\x1f\x8a@\x1cPostfix for a person\'s name.B#\n\x1dio.opencannabis.schema.personH\x01P\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x17person/PersonName.proto\x12\x13opencannabis.person\x1a\x0e\x62q_field.proto\"\xd6\x02\n\x04Name\x12N\n\tfull_name\x18\x01 \x01(\tB;\x8a@8Person\'s full name, if a fulltext value should override.\x12\x36\n\nfirst_name\x18\x02 \x01(\tB\"\x8a@\x1fPerson\'s given, or first, name.\x12\x35\n\tlast_name\x18\x03 \x01(\tB\"\x8a@\x1fPerson\'s family, or last, name.\x12-\n\x0bmiddle_name\x18\x04 \x01(\tB\x18\x8a@\x15Person\'s middle name.\x12.\n\x06prefix\x18\x05 \x01(\tB\x1e\x8a@\x1bPrefix for a person\'s name.\x12\x30\n\x07postfix\x18\x06 \x01(\tB\x1f\x8a@\x1cPostfix for a person\'s name.B)\n\x1dio.opencannabis.schema.personH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,])
 
@@ -104,7 +104,7 @@ _sym_db.RegisterMessage(Name)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\035io.opencannabis.schema.personH\001P\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\035io.opencannabis.schema.personH\001P\001\242\002\003OCS'))
 _NAME.fields_by_name['full_name'].has_options = True
 _NAME.fields_by_name['full_name']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@8Person\'s full name, if a fulltext value should override.'))
 _NAME.fields_by_name['first_name'].has_options = True

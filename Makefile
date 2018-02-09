@@ -6,7 +6,7 @@
 VERBOSE ?= no
 TESTS ?= yes
 COVERAGE ?= yes
-VERSION ?= 0.0.1-alpha1
+VERSION ?= 0.0.1-alpha2
 STAGING ?= yes
 SERVICES ?= checkin:v1beta1 devices:v1beta1 menu:v1beta1 shop:v1 telemetry:v1beta3
 

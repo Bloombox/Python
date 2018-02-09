@@ -109,7 +109,7 @@ sync-schema: update-schema clean-schema embedded-schema
 
 schema/languages/python:
 	@echo "Building schema..."
-	@$(MAKE) -C schema LANGUAGES="python pygrpc"
+	@$(MAKE) -C schema LANGUAGES="python pygrpc c cpp"
 
 $(SCHEMA_PATH)/__init__.py:
 	@echo "Installing Schema..."

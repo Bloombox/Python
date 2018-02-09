@@ -139,7 +139,7 @@ embedded-schema: schema/languages/python $(SCHEMA_PATH)/__init__.py $(SCHEMA_PAT
 build:
 	@$(ENVPYTHON) setup.py $(PYTHON_TARGETS)
 
-release:
+release: clean build test
 	@$(ENVPYTHON) setup.py $(PYTHON_TARGETS) check upload -r $(PYPI)
 
 ifeq ($(TESTS),yes)

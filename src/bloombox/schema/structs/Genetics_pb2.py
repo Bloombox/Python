@@ -13,7 +13,6 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from content import Name_pb2 as content_dot_Name__pb2
 from base import ProductKey_pb2 as base_dot_ProductKey__pb2
 
 
@@ -21,9 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='structs/Genetics.proto',
   package='opencannabis.structs',
   syntax='proto3',
-  serialized_pb=_b('\n\x16structs/Genetics.proto\x12\x14opencannabis.structs\x1a\x12\x63ontent/Name.proto\x1a\x15\x62\x61se/ProductKey.proto\"r\n\x08Genetics\x12\x31\n\x04male\x18\x01 \x01(\x0b\x32#.opencannabis.base.ProductReference\x12\x33\n\x06\x66\x65male\x18\x02 \x01(\x0b\x32#.opencannabis.base.ProductReferenceBB\n%io.opencannabis.schema.product.structB\x0fGeneticsStructsH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x16structs/Genetics.proto\x12\x14opencannabis.structs\x1a\x15\x62\x61se/ProductKey.proto\"r\n\x08Genetics\x12\x31\n\x04male\x18\x01 \x01(\x0b\x32#.opencannabis.base.ProductReference\x12\x33\n\x06\x66\x65male\x18\x02 \x01(\x0b\x32#.opencannabis.base.ProductReferenceBB\n%io.opencannabis.schema.product.structB\x0fGeneticsStructsH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
-  dependencies=[content_dot_Name__pb2.DESCRIPTOR,base_dot_ProductKey__pb2.DESCRIPTOR,])
+  dependencies=[base_dot_ProductKey__pb2.DESCRIPTOR,])
 
 
 
@@ -61,8 +60,8 @@ _GENETICS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=91,
-  serialized_end=205,
+  serialized_start=71,
+  serialized_end=185,
 )
 
 _GENETICS.fields_by_name['male'].message_type = base_dot_ProductKey__pb2._PRODUCTREFERENCE

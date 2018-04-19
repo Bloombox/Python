@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='devices/v1beta1/DevicesService_Beta1.proto',
   package='bloombox.schema.services.devices.v1beta1',
   syntax='proto3',
-  serialized_pb=_b('\n*devices/v1beta1/DevicesService_Beta1.proto\x12(bloombox.schema.services.devices.v1beta1\x1a\x1cservices/ServiceStatus.proto\x1a\x1cgoogle/api/annotations.proto\"y\n\x10\x44\x65viceAssignment\x12\x0f\n\x07partner\x18\x01 \x01(\t\x12\x10\n\x08location\x18\x02 \x01(\t\x12\x42\n\x04role\x18\x03 \x01(\x0e\x32\x34.bloombox.schema.services.devices.v1beta1.DeviceRole\"\x82\x01\n\x10\x44\x65viceActivation\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x10\n\x08hostname\x18\x02 \x01(\t\x12N\n\nassignment\x18\x03 \x01(\x0b\x32:.bloombox.schema.services.devices.v1beta1.DeviceAssignment\"\xf8\x01\n\x04Ping\x1a\t\n\x07Request\x1a\x43\n\x08Response\x12\x37\n\x06status\x18\x01 \x01(\x0e\x32\'.bloombox.schema.services.ServiceStatus\x1a\x9f\x01\n\tOperation\x12G\n\x07request\x18\x01 \x01(\x0b\x32\x36.bloombox.schema.services.devices.v1beta1.Ping.Request\x12I\n\x08response\x18\x02 \x01(\x0b\x32\x37.bloombox.schema.services.devices.v1beta1.Ping.Response\"\x9b\x03\n\nActivation\x1a.\n\x07Request\x12\x0e\n\x06serial\x18\x01 \x01(\t\x12\x13\n\x0b\x66ingerprint\x18\x02 \x01(\t\x1a\xae\x01\n\x08Response\x12\x0e\n\x06\x61\x63tive\x18\x01 \x01(\x08\x12\x44\n\x05\x65rror\x18\x02 \x01(\x0e\x32\x35.bloombox.schema.services.devices.v1beta1.DeviceError\x12L\n\x08manifest\x18\x03 \x01(\x0b\x32:.bloombox.schema.services.devices.v1beta1.DeviceActivation\x1a\xab\x01\n\tOperation\x12M\n\x07request\x18\x01 \x01(\x0b\x32<.bloombox.schema.services.devices.v1beta1.Activation.Request\x12O\n\x08response\x18\x02 \x01(\x0b\x32=.bloombox.schema.services.devices.v1beta1.Activation.Response*p\n\x0b\x44\x65viceError\x12\x0c\n\x08NO_ERROR\x10\x00\x12\x12\n\x0eINVALID_SERIAL\x10\x01\x12\x14\n\x10\x44\x45VICE_NOT_FOUND\x10\x02\x12\x12\n\x0eINTERNAL_ERROR\x10\x03\x12\x15\n\x11\x44\x45VICE_UNASSIGNED\x10\x04*=\n\nDeviceRole\x12\x0e\n\nUNASSIGNED\x10\x00\x12\x06\n\x02TV\x10\x01\x12\x0b\n\x07\x43HECKIN\x10\x02\x12\n\n\x06\x42\x45\x41\x43ON\x10\x03\x32\x8f\x03\n\x07\x44\x65vices\x12\x96\x01\n\x04Ping\x12\x36.bloombox.schema.services.devices.v1beta1.Ping.Request\x1a\x37.bloombox.schema.services.devices.v1beta1.Ping.Response\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/devices/v1beta1/ping\x12\xea\x01\n\x08\x41\x63tivate\x12<.bloombox.schema.services.devices.v1beta1.Activation.Request\x1a=.bloombox.schema.services.devices.v1beta1.Activation.Response\"a\x82\xd3\xe4\x93\x02[\")/devices/v1beta1/{serial}/device:activate:\x01*Z+\x12)/devices/v1beta1/{serial}/device:activateB7\n+io.bloombox.schema.services.devices.v1beta1H\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n*devices/v1beta1/DevicesService_Beta1.proto\x12(bloombox.schema.services.devices.v1beta1\x1a\x1cservices/ServiceStatus.proto\x1a\x1cgoogle/api/annotations.proto\"y\n\x10\x44\x65viceAssignment\x12\x0f\n\x07partner\x18\x01 \x01(\t\x12\x10\n\x08location\x18\x02 \x01(\t\x12\x42\n\x04role\x18\x03 \x01(\x0e\x32\x34.bloombox.schema.services.devices.v1beta1.DeviceRole\"\x82\x01\n\x10\x44\x65viceActivation\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x10\n\x08hostname\x18\x02 \x01(\t\x12N\n\nassignment\x18\x03 \x01(\x0b\x32:.bloombox.schema.services.devices.v1beta1.DeviceAssignment\"\xf8\x01\n\x04Ping\x1a\t\n\x07Request\x1a\x43\n\x08Response\x12\x37\n\x06status\x18\x01 \x01(\x0e\x32\'.bloombox.schema.services.ServiceStatus\x1a\x9f\x01\n\tOperation\x12G\n\x07request\x18\x01 \x01(\x0b\x32\x36.bloombox.schema.services.devices.v1beta1.Ping.Request\x12I\n\x08response\x18\x02 \x01(\x0b\x32\x37.bloombox.schema.services.devices.v1beta1.Ping.Response\"\x9b\x03\n\nActivation\x1a.\n\x07Request\x12\x0e\n\x06serial\x18\x01 \x01(\t\x12\x13\n\x0b\x66ingerprint\x18\x02 \x01(\t\x1a\xae\x01\n\x08Response\x12\x0e\n\x06\x61\x63tive\x18\x01 \x01(\x08\x12\x44\n\x05\x65rror\x18\x02 \x01(\x0e\x32\x35.bloombox.schema.services.devices.v1beta1.DeviceError\x12L\n\x08manifest\x18\x03 \x01(\x0b\x32:.bloombox.schema.services.devices.v1beta1.DeviceActivation\x1a\xab\x01\n\tOperation\x12M\n\x07request\x18\x01 \x01(\x0b\x32<.bloombox.schema.services.devices.v1beta1.Activation.Request\x12O\n\x08response\x18\x02 \x01(\x0b\x32=.bloombox.schema.services.devices.v1beta1.Activation.Response*p\n\x0b\x44\x65viceError\x12\x0c\n\x08NO_ERROR\x10\x00\x12\x12\n\x0eINVALID_SERIAL\x10\x01\x12\x14\n\x10\x44\x45VICE_NOT_FOUND\x10\x02\x12\x12\n\x0eINTERNAL_ERROR\x10\x03\x12\x15\n\x11\x44\x45VICE_UNASSIGNED\x10\x04*H\n\nDeviceRole\x12\x0e\n\nUNASSIGNED\x10\x00\x12\x08\n\x04MENU\x10\x01\x12\x0b\n\x07\x43HECKIN\x10\x02\x12\n\n\x06\x42\x45\x41\x43ON\x10\x03\x12\x07\n\x03POS\x10\x04\x32\xdf\x02\n\x07\x44\x65vices\x12\x96\x01\n\x04Ping\x12\x36.bloombox.schema.services.devices.v1beta1.Ping.Request\x1a\x37.bloombox.schema.services.devices.v1beta1.Ping.Response\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/devices/v1beta1/ping\x12\xba\x01\n\x08\x41\x63tivate\x12<.bloombox.schema.services.devices.v1beta1.Activation.Request\x1a=.bloombox.schema.services.devices.v1beta1.Activation.Response\"1\x82\xd3\xe4\x93\x02+\x12)/devices/v1beta1/{serial}/device:activateB7\n+io.bloombox.schema.services.devices.v1beta1H\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
   dependencies=[services_dot_ServiceStatus__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -72,7 +72,7 @@ _DEVICEROLE = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TV', index=1, number=1,
+      name='MENU', index=1, number=1,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
@@ -83,11 +83,15 @@ _DEVICEROLE = _descriptor.EnumDescriptor(
       name='BEACON', index=3, number=3,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='POS', index=4, number=4,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
   serialized_start=1183,
-  serialized_end=1244,
+  serialized_end=1255,
 )
 _sym_db.RegisterEnumDescriptor(_DEVICEROLE)
 
@@ -98,9 +102,10 @@ DEVICE_NOT_FOUND = 2
 INTERNAL_ERROR = 3
 DEVICE_UNASSIGNED = 4
 UNASSIGNED = 0
-TV = 1
+MENU = 1
 CHECKIN = 2
 BEACON = 3
+POS = 4
 
 
 
@@ -558,8 +563,8 @@ _DEVICES = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=1247,
-  serialized_end=1646,
+  serialized_start=1258,
+  serialized_end=1609,
   methods=[
   _descriptor.MethodDescriptor(
     name='Ping',
@@ -577,7 +582,7 @@ _DEVICES = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_ACTIVATION_REQUEST,
     output_type=_ACTIVATION_RESPONSE,
-    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002[\")/devices/v1beta1/{serial}/device:activate:\001*Z+\022)/devices/v1beta1/{serial}/device:activate')),
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002+\022)/devices/v1beta1/{serial}/device:activate')),
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_DEVICES)

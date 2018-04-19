@@ -27,7 +27,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='content/ProductContent.proto',
   package='opencannabis.content',
   syntax='proto3',
-  serialized_pb=_b('\n\x1c\x63ontent/ProductContent.proto\x12\x14opencannabis.content\x1a\x12\x63ontent/Name.proto\x1a\x15\x63ontent/Content.proto\x1a\x13\x63ontent/Brand.proto\x1a\x16temporal/Instant.proto\x1a\x15media/MediaItem.proto\x1a\x1astructs/ProductFlags.proto\x1a$structs/labtesting/TestResults.proto\x1a\'structs/pricing/PricingDescriptor.proto\"\xa9\x01\n\x11ProductTimestamps\x12/\n\x07\x63reated\x18\x01 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x30\n\x08modified\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x31\n\tpublished\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\"\x86\x04\n\x0eProductContent\x12(\n\x04name\x18\x01 \x01(\x0b\x32\x1a.opencannabis.content.Name\x12*\n\x05\x62rand\x18\x02 \x01(\x0b\x32\x1b.opencannabis.content.Brand\x12.\n\x07summary\x18\x03 \x01(\x0b\x32\x1d.opencannabis.content.Content\x12,\n\x05usage\x18\x04 \x01(\x0b\x32\x1d.opencannabis.content.Content\x12-\n\x06\x64osage\x18\x05 \x01(\x0b\x32\x1d.opencannabis.content.Content\x12,\n\x05media\x18\x06 \x03(\x0b\x32\x1d.opencannabis.media.MediaItem\x12=\n\x07pricing\x18\x07 \x01(\x0b\x32,.opencannabis.structs.pricing.ProductPricing\x12=\n\x07testing\x18\x08 \x01(\x0b\x32,.opencannabis.structs.labtesting.TestResults\x12\x30\n\x05\x66lags\x18\t \x03(\x0e\x32!.opencannabis.structs.ProductFlag\x12\x33\n\x02ts\x18\n \x01(\x0b\x32\'.opencannabis.content.ProductTimestampsB;\n\x1eio.opencannabis.schema.contentB\x0f\x41ttachedContentH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x1c\x63ontent/ProductContent.proto\x12\x14opencannabis.content\x1a\x12\x63ontent/Name.proto\x1a\x15\x63ontent/Content.proto\x1a\x13\x63ontent/Brand.proto\x1a\x16temporal/Instant.proto\x1a\x15media/MediaItem.proto\x1a\x1astructs/ProductFlags.proto\x1a$structs/labtesting/TestResults.proto\x1a\'structs/pricing/PricingDescriptor.proto\"\xa9\x01\n\x11ProductTimestamps\x12/\n\x07\x63reated\x18\x01 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x30\n\x08modified\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x31\n\tpublished\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\"\x84\x04\n\x0eProductContent\x12(\n\x04name\x18\x01 \x01(\x0b\x32\x1a.opencannabis.content.Name\x12*\n\x05\x62rand\x18\x02 \x01(\x0b\x32\x1b.opencannabis.content.Brand\x12.\n\x07summary\x18\x03 \x01(\x0b\x32\x1d.opencannabis.content.Content\x12,\n\x05usage\x18\x04 \x01(\x0b\x32\x1d.opencannabis.content.Content\x12-\n\x06\x64osage\x18\x05 \x01(\x0b\x32\x1d.opencannabis.content.Content\x12,\n\x05media\x18\x06 \x03(\x0b\x32\x1d.opencannabis.media.MediaItem\x12=\n\x07pricing\x18\x07 \x01(\x0b\x32,.opencannabis.structs.pricing.ProductPricing\x12;\n\x05tests\x18\x08 \x01(\x0b\x32,.opencannabis.structs.labtesting.TestResults\x12\x30\n\x05\x66lags\x18\t \x03(\x0e\x32!.opencannabis.structs.ProductFlag\x12\x33\n\x02ts\x18\n \x01(\x0b\x32\'.opencannabis.content.ProductTimestampsB;\n\x1eio.opencannabis.schema.contentB\x0f\x41ttachedContentH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[content_dot_Name__pb2.DESCRIPTOR,content_dot_Content__pb2.DESCRIPTOR,content_dot_Brand__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,media_dot_MediaItem__pb2.DESCRIPTOR,structs_dot_ProductFlags__pb2.DESCRIPTOR,structs_dot_labtesting_dot_TestResults__pb2.DESCRIPTOR,structs_dot_pricing_dot_PricingDescriptor__pb2.DESCRIPTOR,])
 
@@ -136,7 +136,7 @@ _PRODUCTCONTENT = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='testing', full_name='opencannabis.content.ProductContent.testing', index=7,
+      name='tests', full_name='opencannabis.content.ProductContent.tests', index=7,
       number=8, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -169,7 +169,7 @@ _PRODUCTCONTENT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=445,
-  serialized_end=963,
+  serialized_end=961,
 )
 
 _PRODUCTTIMESTAMPS.fields_by_name['created'].message_type = temporal_dot_Instant__pb2._INSTANT
@@ -182,7 +182,7 @@ _PRODUCTCONTENT.fields_by_name['usage'].message_type = content_dot_Content__pb2.
 _PRODUCTCONTENT.fields_by_name['dosage'].message_type = content_dot_Content__pb2._CONTENT
 _PRODUCTCONTENT.fields_by_name['media'].message_type = media_dot_MediaItem__pb2._MEDIAITEM
 _PRODUCTCONTENT.fields_by_name['pricing'].message_type = structs_dot_pricing_dot_PricingDescriptor__pb2._PRODUCTPRICING
-_PRODUCTCONTENT.fields_by_name['testing'].message_type = structs_dot_labtesting_dot_TestResults__pb2._TESTRESULTS
+_PRODUCTCONTENT.fields_by_name['tests'].message_type = structs_dot_labtesting_dot_TestResults__pb2._TESTRESULTS
 _PRODUCTCONTENT.fields_by_name['flags'].enum_type = structs_dot_ProductFlags__pb2._PRODUCTFLAG
 _PRODUCTCONTENT.fields_by_name['ts'].message_type = _PRODUCTTIMESTAMPS
 DESCRIPTOR.message_types_by_name['ProductTimestamps'] = _PRODUCTTIMESTAMPS

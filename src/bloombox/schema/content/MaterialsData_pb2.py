@@ -24,7 +24,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='content/MaterialsData.proto',
   package='opencannabis.content',
   syntax='proto3',
-  serialized_pb=_b('\n\x1b\x63ontent/MaterialsData.proto\x12\x14opencannabis.content\x1a\x12structs/Grow.proto\x1a\x13structs/Shelf.proto\x1a\x15structs/Species.proto\x1a\x16structs/Genetics.proto\x1a/products/distribution/DistributionChannel.proto\"\x91\x02\n\rMaterialsData\x12.\n\x07species\x18\x01 \x01(\x0e\x32\x1d.opencannabis.structs.Species\x12\x30\n\x08genetics\x18\x02 \x01(\x0b\x32\x1e.opencannabis.structs.Genetics\x12(\n\x04grow\x18\x03 \x01(\x0e\x32\x1a.opencannabis.structs.Grow\x12*\n\x05shelf\x18\x04 \x01(\x0e\x32\x1b.opencannabis.structs.Shelf\x12H\n\x08\x63hannels\x18\x05 \x03(\x0b\x32\x36.opencannabis.products.distribution.DistributionPolicyB<\n\x1eio.opencannabis.schema.contentB\x10MaterialsContentH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x1b\x63ontent/MaterialsData.proto\x12\x14opencannabis.content\x1a\x12structs/Grow.proto\x1a\x13structs/Shelf.proto\x1a\x15structs/Species.proto\x1a\x16structs/Genetics.proto\x1a/products/distribution/DistributionChannel.proto\"\x90\x02\n\rMaterialsData\x12.\n\x07species\x18\x01 \x01(\x0e\x32\x1d.opencannabis.structs.Species\x12\x30\n\x08genetics\x18\x02 \x01(\x0b\x32\x1e.opencannabis.structs.Genetics\x12(\n\x04grow\x18\x03 \x01(\x0e\x32\x1a.opencannabis.structs.Grow\x12*\n\x05shelf\x18\x04 \x01(\x0e\x32\x1b.opencannabis.structs.Shelf\x12G\n\x07\x63hannel\x18\x05 \x03(\x0b\x32\x36.opencannabis.products.distribution.DistributionPolicyB<\n\x1eio.opencannabis.schema.contentB\x10MaterialsContentH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[structs_dot_Grow__pb2.DESCRIPTOR,structs_dot_Shelf__pb2.DESCRIPTOR,structs_dot_Species__pb2.DESCRIPTOR,structs_dot_Genetics__pb2.DESCRIPTOR,products_dot_distribution_dot_DistributionChannel__pb2.DESCRIPTOR,])
 
@@ -67,7 +67,7 @@ _MATERIALSDATA = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='channels', full_name='opencannabis.content.MaterialsData.channels', index=4,
+      name='channel', full_name='opencannabis.content.MaterialsData.channel', index=4,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -86,14 +86,14 @@ _MATERIALSDATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=191,
-  serialized_end=464,
+  serialized_end=463,
 )
 
 _MATERIALSDATA.fields_by_name['species'].enum_type = structs_dot_Species__pb2._SPECIES
 _MATERIALSDATA.fields_by_name['genetics'].message_type = structs_dot_Genetics__pb2._GENETICS
 _MATERIALSDATA.fields_by_name['grow'].enum_type = structs_dot_Grow__pb2._GROW
 _MATERIALSDATA.fields_by_name['shelf'].enum_type = structs_dot_Shelf__pb2._SHELF
-_MATERIALSDATA.fields_by_name['channels'].message_type = products_dot_distribution_dot_DistributionChannel__pb2._DISTRIBUTIONPOLICY
+_MATERIALSDATA.fields_by_name['channel'].message_type = products_dot_distribution_dot_DistributionChannel__pb2._DISTRIBUTIONPOLICY
 DESCRIPTOR.message_types_by_name['MaterialsData'] = _MATERIALSDATA
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 

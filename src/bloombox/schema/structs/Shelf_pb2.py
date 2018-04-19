@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='structs/Shelf.proto',
   package='opencannabis.structs',
   syntax='proto3',
-  serialized_pb=_b('\n\x13structs/Shelf.proto\x12\x14opencannabis.structs*0\n\x05Shelf\x12\x0b\n\x07\x45\x43ONOMY\x10\x00\x12\x0c\n\x08MIDSHELF\x10\x01\x12\x0c\n\x08TOPSHELF\x10\x02\x42@\n%io.opencannabis.schema.product.structB\rMaterialShelfH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x13structs/Shelf.proto\x12\x14opencannabis.structs*C\n\x05Shelf\x12\x11\n\rGENERIC_SHELF\x10\x00\x12\x0b\n\x07\x45\x43ONOMY\x10\x01\x12\x0c\n\x08MIDSHELF\x10\x02\x12\x0c\n\x08TOPSHELF\x10\x03\x42@\n%io.opencannabis.schema.product.structB\rMaterialShelfH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
 )
 
 _SHELF = _descriptor.EnumDescriptor(
@@ -30,29 +30,34 @@ _SHELF = _descriptor.EnumDescriptor(
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='ECONOMY', index=0, number=0,
+      name='GENERIC_SHELF', index=0, number=0,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MIDSHELF', index=1, number=1,
+      name='ECONOMY', index=1, number=1,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TOPSHELF', index=2, number=2,
+      name='MIDSHELF', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TOPSHELF', index=3, number=3,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
   serialized_start=45,
-  serialized_end=93,
+  serialized_end=112,
 )
 _sym_db.RegisterEnumDescriptor(_SHELF)
 
 Shelf = enum_type_wrapper.EnumTypeWrapper(_SHELF)
-ECONOMY = 0
-MIDSHELF = 1
-TOPSHELF = 2
+GENERIC_SHELF = 0
+ECONOMY = 1
+MIDSHELF = 2
+TOPSHELF = 3
 
 
 DESCRIPTOR.enum_types_by_name['Shelf'] = _SHELF

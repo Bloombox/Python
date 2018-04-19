@@ -13,14 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+import bq_field_pb2 as bq__field__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='geo/Point.proto',
   package='opencannabis.geo',
   syntax='proto3',
-  serialized_pb=_b('\n\x0fgeo/Point.proto\x12\x10opencannabis.geo\"Q\n\x05Point\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x11\n\tlongitude\x18\x02 \x01(\x01\x12\x11\n\televation\x18\x03 \x01(\x01\x12\x10\n\x08\x61\x63\x63uracy\x18\x04 \x01(\x01\x42&\n\x1aio.opencannabis.schema.geoH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
-)
+  serialized_pb=_b('\n\x0fgeo/Point.proto\x12\x10opencannabis.geo\x1a\x0e\x62q_field.proto\"\xef\x01\n\x05Point\x12\x32\n\x08latitude\x18\x01 \x01(\x01\x42 \x8a@\x1dLatitude value of this point.\x12\x34\n\tlongitude\x18\x02 \x01(\x01\x42!\x8a@\x1eLongitude value of this point.\x12\x36\n\televation\x18\x03 \x01(\x01\x42#\x8a@ Elevation of this point, if any.\x12\x44\n\x08\x61\x63\x63uracy\x18\x04 \x01(\x01\x42\x32\x8a@/Accuracy rating attached to this point, if any.B&\n\x1aio.opencannabis.schema.geoH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  ,
+  dependencies=[bq__field__pb2.DESCRIPTOR,])
 
 
 
@@ -38,28 +40,28 @@ _POINT = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\035Latitude value of this point.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='longitude', full_name='opencannabis.geo.Point.longitude', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\036Longitude value of this point.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='elevation', full_name='opencannabis.geo.Point.elevation', index=2,
       number=3, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@ Elevation of this point, if any.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='accuracy', full_name='opencannabis.geo.Point.accuracy', index=3,
       number=4, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@/Accuracy rating attached to this point, if any.')), file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -72,8 +74,8 @@ _POINT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=37,
-  serialized_end=118,
+  serialized_start=54,
+  serialized_end=293,
 )
 
 DESCRIPTOR.message_types_by_name['Point'] = _POINT
@@ -89,4 +91,12 @@ _sym_db.RegisterMessage(Point)
 
 DESCRIPTOR.has_options = True
 DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.opencannabis.schema.geoH\001P\001\242\002\003OCS'))
+_POINT.fields_by_name['latitude'].has_options = True
+_POINT.fields_by_name['latitude']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\035Latitude value of this point.'))
+_POINT.fields_by_name['longitude'].has_options = True
+_POINT.fields_by_name['longitude']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\036Longitude value of this point.'))
+_POINT.fields_by_name['elevation'].has_options = True
+_POINT.fields_by_name['elevation']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@ Elevation of this point, if any.'))
+_POINT.fields_by_name['accuracy'].has_options = True
+_POINT.fields_by_name['accuracy']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@/Accuracy rating attached to this point, if any.'))
 # @@protoc_insertion_point(module_scope)

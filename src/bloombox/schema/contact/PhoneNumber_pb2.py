@@ -13,14 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+import bq_field_pb2 as bq__field__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='contact/PhoneNumber.proto',
   package='opencannabis.contact',
   syntax='proto3',
-  serialized_pb=_b('\n\x19\x63ontact/PhoneNumber.proto\x12\x14opencannabis.contact\".\n\x0bPhoneNumber\x12\x0c\n\x04\x65\x31\x36\x34\x18\x01 \x01(\t\x12\x11\n\tvalidated\x18\x02 \x01(\x08\x42*\n\x1eio.opencannabis.schema.contactH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
-)
+  serialized_pb=_b('\n\x19\x63ontact/PhoneNumber.proto\x12\x14opencannabis.contact\x1a\x0e\x62q_field.proto\"\x80\x01\n\x0bPhoneNumber\x12\x31\n\x04\x65\x31\x36\x34\x18\x01 \x01(\tB#\x8a@ E164-formatted telephone number.\x12>\n\tvalidated\x18\x02 \x01(\x08\x42+\x8a@(Validation status for this phone number.B*\n\x1eio.opencannabis.schema.contactH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  ,
+  dependencies=[bq__field__pb2.DESCRIPTOR,])
 
 
 
@@ -38,14 +40,14 @@ _PHONENUMBER = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@ E164-formatted telephone number.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='validated', full_name='opencannabis.contact.PhoneNumber.validated', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@(Validation status for this phone number.')), file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -58,8 +60,8 @@ _PHONENUMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=51,
-  serialized_end=97,
+  serialized_start=68,
+  serialized_end=196,
 )
 
 DESCRIPTOR.message_types_by_name['PhoneNumber'] = _PHONENUMBER
@@ -75,4 +77,8 @@ _sym_db.RegisterMessage(PhoneNumber)
 
 DESCRIPTOR.has_options = True
 DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.contactH\001P\001\242\002\003OCS'))
+_PHONENUMBER.fields_by_name['e164'].has_options = True
+_PHONENUMBER.fields_by_name['e164']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@ E164-formatted telephone number.'))
+_PHONENUMBER.fields_by_name['validated'].has_options = True
+_PHONENUMBER.fields_by_name['validated']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@(Validation status for this phone number.'))
 # @@protoc_insertion_point(module_scope)

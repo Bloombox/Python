@@ -15,15 +15,16 @@ _sym_db = _symbol_database.Default()
 
 
 from base import ProductKey_pb2 as base_dot_ProductKey__pb2
+from structs.pricing import PricingDescriptor_pb2 as structs_dot_pricing_dot_PricingDescriptor__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='commerce/Item.proto',
   package='opencannabis.commerce',
   syntax='proto3',
-  serialized_pb=_b('\n\x13\x63ommerce/Item.proto\x12\x15opencannabis.commerce\x1a\x15\x62\x61se/ProductKey.proto\"\xa6\x01\n\x0bVariantSpec\x12\x36\n\x07variant\x18\x01 \x01(\x0e\x32%.opencannabis.commerce.ProductVariant\x12\x36\n\x06weight\x18\x02 \x01(\x0e\x32$.opencannabis.commerce.ProductWeightH\x00\x12\x0e\n\x04size\x18\x03 \x01(\tH\x00\x12\x0f\n\x05\x63olor\x18\x04 \x01(\tH\x00\x42\x06\n\x04spec\"\x93\x01\n\x04Item\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x33\n\x07variant\x18\x02 \x03(\x0b\x32\".opencannabis.commerce.VariantSpec\x12\r\n\x05\x63ount\x18\x03 \x01(\r\x12\r\n\x05price\x18\x04 \x01(\x01\x12\x0c\n\x04\x63ost\x18\x05 \x01(\x01*1\n\x0eProductVariant\x12\n\n\x06WEIGHT\x10\x00\x12\t\n\x05\x43OLOR\x10\x01\x12\x08\n\x04SIZE\x10\x02*a\n\rProductWeight\x12\r\n\tNO_WEIGHT\x10\x00\x12\x0c\n\x08HALFGRAM\x10\x01\x12\x08\n\x04GRAM\x10\x02\x12\n\n\x06\x45IGHTH\x10\x03\x12\x0b\n\x07QUARTER\x10\x04\x12\x08\n\x04HALF\x10\x05\x12\x06\n\x02OZ\x10\x06\x42\x36\n\x1fio.opencannabis.schema.commerceB\tOrderItemH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x13\x63ommerce/Item.proto\x12\x15opencannabis.commerce\x1a\x15\x62\x61se/ProductKey.proto\x1a\'structs/pricing/PricingDescriptor.proto\"\xb1\x01\n\x0bVariantSpec\x12\x36\n\x07variant\x18\x01 \x01(\x0e\x32%.opencannabis.commerce.ProductVariant\x12\x41\n\x06weight\x18\x02 \x01(\x0e\x32/.opencannabis.structs.pricing.PricingWeightTierH\x00\x12\x0e\n\x04size\x18\x03 \x01(\tH\x00\x12\x0f\n\x05\x63olor\x18\x04 \x01(\tH\x00\x42\x06\n\x04spec\"v\n\x04Item\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x33\n\x07variant\x18\x02 \x03(\x0b\x32\".opencannabis.commerce.VariantSpec\x12\r\n\x05\x63ount\x18\x03 \x01(\r*1\n\x0eProductVariant\x12\n\n\x06WEIGHT\x10\x00\x12\t\n\x05\x43OLOR\x10\x01\x12\x08\n\x04SIZE\x10\x02\x42\x36\n\x1fio.opencannabis.schema.commerceB\tOrderItemH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
-  dependencies=[base_dot_ProductKey__pb2.DESCRIPTOR,])
+  dependencies=[base_dot_ProductKey__pb2.DESCRIPTOR,structs_dot_pricing_dot_PricingDescriptor__pb2.DESCRIPTOR,])
 
 _PRODUCTVARIANT = _descriptor.EnumDescriptor(
   name='ProductVariant',
@@ -46,65 +47,15 @@ _PRODUCTVARIANT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=388,
-  serialized_end=437,
+  serialized_start=410,
+  serialized_end=459,
 )
 _sym_db.RegisterEnumDescriptor(_PRODUCTVARIANT)
 
 ProductVariant = enum_type_wrapper.EnumTypeWrapper(_PRODUCTVARIANT)
-_PRODUCTWEIGHT = _descriptor.EnumDescriptor(
-  name='ProductWeight',
-  full_name='opencannabis.commerce.ProductWeight',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='NO_WEIGHT', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='HALFGRAM', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='GRAM', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='EIGHTH', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='QUARTER', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='HALF', index=5, number=5,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='OZ', index=6, number=6,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=439,
-  serialized_end=536,
-)
-_sym_db.RegisterEnumDescriptor(_PRODUCTWEIGHT)
-
-ProductWeight = enum_type_wrapper.EnumTypeWrapper(_PRODUCTWEIGHT)
 WEIGHT = 0
 COLOR = 1
 SIZE = 2
-NO_WEIGHT = 0
-HALFGRAM = 1
-GRAM = 2
-EIGHTH = 3
-QUARTER = 4
-HALF = 5
-OZ = 6
 
 
 
@@ -158,8 +109,8 @@ _VARIANTSPEC = _descriptor.Descriptor(
       name='spec', full_name='opencannabis.commerce.VariantSpec.spec',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=70,
-  serialized_end=236,
+  serialized_start=111,
+  serialized_end=288,
 )
 
 
@@ -191,20 +142,6 @@ _ITEM = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='price', full_name='opencannabis.commerce.Item.price', index=3,
-      number=4, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='cost', full_name='opencannabis.commerce.Item.cost', index=4,
-      number=5, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -217,12 +154,12 @@ _ITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=239,
-  serialized_end=386,
+  serialized_start=290,
+  serialized_end=408,
 )
 
 _VARIANTSPEC.fields_by_name['variant'].enum_type = _PRODUCTVARIANT
-_VARIANTSPEC.fields_by_name['weight'].enum_type = _PRODUCTWEIGHT
+_VARIANTSPEC.fields_by_name['weight'].enum_type = structs_dot_pricing_dot_PricingDescriptor__pb2._PRICINGWEIGHTTIER
 _VARIANTSPEC.oneofs_by_name['spec'].fields.append(
   _VARIANTSPEC.fields_by_name['weight'])
 _VARIANTSPEC.fields_by_name['weight'].containing_oneof = _VARIANTSPEC.oneofs_by_name['spec']
@@ -237,7 +174,6 @@ _ITEM.fields_by_name['variant'].message_type = _VARIANTSPEC
 DESCRIPTOR.message_types_by_name['VariantSpec'] = _VARIANTSPEC
 DESCRIPTOR.message_types_by_name['Item'] = _ITEM
 DESCRIPTOR.enum_types_by_name['ProductVariant'] = _PRODUCTVARIANT
-DESCRIPTOR.enum_types_by_name['ProductWeight'] = _PRODUCTWEIGHT
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 VariantSpec = _reflection.GeneratedProtocolMessageType('VariantSpec', (_message.Message,), dict(

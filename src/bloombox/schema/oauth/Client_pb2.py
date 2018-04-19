@@ -3,6 +3,7 @@
 
 import sys
 _b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
@@ -13,15 +14,89 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+from media import MediaItem_pb2 as media_dot_MediaItem__pb2
+from temporal import Instant_pb2 as temporal_dot_Instant__pb2
+from oauth import AuthorizationScope_pb2 as oauth_dot_AuthorizationScope__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='oauth/Client.proto',
   package='opencannabis.oauth',
   syntax='proto3',
-  serialized_pb=_b('\n\x12oauth/Client.proto\x12\x12opencannabis.oauth\"2\n\x06\x43lient\x12\x11\n\tclient_id\x18\x01 \x01(\t\x12\x15\n\rclient_secret\x18\x02 \x01(\t\"\x16\n\x08\x43lientID\x12\n\n\x02id\x18\x01 \x01(\t\"\x1e\n\x0c\x43lientSecret\x12\x0e\n\x06secret\x18\x01 \x01(\tB(\n\x1cio.opencannabis.schema.oauthH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
-)
+  serialized_pb=_b('\n\x12oauth/Client.proto\x12\x12opencannabis.oauth\x1a\x15media/MediaItem.proto\x1a\x16temporal/Instant.proto\x1a\x1eoauth/AuthorizationScope.proto\"\xaa\x03\n\x06\x43lient\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0e\n\x06secret\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0f\n\x07\x63ontact\x18\x04 \x03(\t\x12\x32\n\x0bgrant_types\x18\x05 \x03(\x0e\x32\x1d.opencannabis.oauth.GrantType\x12/\n\x08\x62randing\x18\x06 \x01(\x0b\x32\x1d.opencannabis.media.MediaItem\x12\r\n\x05owner\x18\x07 \x01(\t\x12-\n\x06policy\x18\x08 \x01(\x0b\x32\x1d.opencannabis.media.MediaItem\x12,\n\x05terms\x18\t \x01(\x0b\x32\x1d.opencannabis.media.MediaItem\x12\x0e\n\x06public\x18\n \x01(\x08\x12\x14\n\x0credirect_uri\x18\x0b \x03(\t\x12\x37\n\rresponse_type\x18\x0c \x03(\x0e\x32 .opencannabis.oauth.ResponseType\x12\x35\n\x05scope\x18\r \x03(\x0b\x32&.opencannabis.oauth.AuthorizationScope\"\x8b\x01\n\x07\x43onsent\x12\n\n\x02id\x18\x01 \x01(\t\x12\x11\n\tclient_id\x18\x02 \x01(\t\x12\x32\n\nexpires_at\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x14\n\x0credirect_uri\x18\x04 \x01(\t\x12\x17\n\x0frequested_scope\x18\x05 \x03(\t\"i\n\rConsentTicket\x12*\n\x06\x63lient\x18\x01 \x01(\x0b\x32\x1a.opencannabis.oauth.Client\x12,\n\x07\x63onsent\x18\x02 \x01(\x0b\x32\x1b.opencannabis.oauth.Consent*P\n\x0cResponseType\x12\x1d\n\x19UNSPECIFIED_RESPONSE_TYPE\x10\x00\x12\t\n\x05TOKEN\x10\x01\x12\x08\n\x04\x43ODE\x10\x02\x12\x0c\n\x08ID_TOKEN\x10\x03*j\n\tGrantType\x12\x1a\n\x16UNSPECIFIED_GRANT_TYPE\x10\x00\x12\x16\n\x12\x41UTHORIZATION_CODE\x10\x01\x12\x11\n\rREFRESH_TOKEN\x10\x02\x12\x16\n\x12\x43LIENT_CREDENTIALS\x10\x03\x42\x35\n\x1cio.opencannabis.schema.oauthB\x0bOAuthClientH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  ,
+  dependencies=[media_dot_MediaItem__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,oauth_dot_AuthorizationScope__pb2.DESCRIPTOR,])
 
+_RESPONSETYPE = _descriptor.EnumDescriptor(
+  name='ResponseType',
+  full_name='opencannabis.oauth.ResponseType',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSPECIFIED_RESPONSE_TYPE', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TOKEN', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CODE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ID_TOKEN', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=799,
+  serialized_end=879,
+)
+_sym_db.RegisterEnumDescriptor(_RESPONSETYPE)
+
+ResponseType = enum_type_wrapper.EnumTypeWrapper(_RESPONSETYPE)
+_GRANTTYPE = _descriptor.EnumDescriptor(
+  name='GrantType',
+  full_name='opencannabis.oauth.GrantType',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSPECIFIED_GRANT_TYPE', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='AUTHORIZATION_CODE', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='REFRESH_TOKEN', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CLIENT_CREDENTIALS', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=881,
+  serialized_end=987,
+)
+_sym_db.RegisterEnumDescriptor(_GRANTTYPE)
+
+GrantType = enum_type_wrapper.EnumTypeWrapper(_GRANTTYPE)
+UNSPECIFIED_RESPONSE_TYPE = 0
+TOKEN = 1
+CODE = 2
+ID_TOKEN = 3
+UNSPECIFIED_GRANT_TYPE = 0
+AUTHORIZATION_CODE = 1
+REFRESH_TOKEN = 2
+CLIENT_CREDENTIALS = 3
 
 
 
@@ -33,47 +108,93 @@ _CLIENT = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='client_id', full_name='opencannabis.oauth.Client.client_id', index=0,
+      name='id', full_name='opencannabis.oauth.Client.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='client_secret', full_name='opencannabis.oauth.Client.client_secret', index=1,
+      name='secret', full_name='opencannabis.oauth.Client.secret', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=42,
-  serialized_end=92,
-)
-
-
-_CLIENTID = _descriptor.Descriptor(
-  name='ClientID',
-  full_name='opencannabis.oauth.ClientID',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='opencannabis.oauth.ClientID.id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      name='name', full_name='opencannabis.oauth.Client.name', index=2,
+      number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='contact', full_name='opencannabis.oauth.Client.contact', index=3,
+      number=4, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='grant_types', full_name='opencannabis.oauth.Client.grant_types', index=4,
+      number=5, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='branding', full_name='opencannabis.oauth.Client.branding', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='owner', full_name='opencannabis.oauth.Client.owner', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='policy', full_name='opencannabis.oauth.Client.policy', index=7,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='terms', full_name='opencannabis.oauth.Client.terms', index=8,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='public', full_name='opencannabis.oauth.Client.public', index=9,
+      number=10, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='redirect_uri', full_name='opencannabis.oauth.Client.redirect_uri', index=10,
+      number=11, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='response_type', full_name='opencannabis.oauth.Client.response_type', index=11,
+      number=12, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='scope', full_name='opencannabis.oauth.Client.scope', index=12,
+      number=13, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
@@ -89,22 +210,50 @@ _CLIENTID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=94,
-  serialized_end=116,
+  serialized_start=122,
+  serialized_end=548,
 )
 
 
-_CLIENTSECRET = _descriptor.Descriptor(
-  name='ClientSecret',
-  full_name='opencannabis.oauth.ClientSecret',
+_CONSENT = _descriptor.Descriptor(
+  name='Consent',
+  full_name='opencannabis.oauth.Consent',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='secret', full_name='opencannabis.oauth.ClientSecret.secret', index=0,
+      name='id', full_name='opencannabis.oauth.Consent.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='client_id', full_name='opencannabis.oauth.Consent.client_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='expires_at', full_name='opencannabis.oauth.Consent.expires_at', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='redirect_uri', full_name='opencannabis.oauth.Consent.redirect_uri', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='requested_scope', full_name='opencannabis.oauth.Consent.requested_scope', index=4,
+      number=5, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
@@ -120,13 +269,62 @@ _CLIENTSECRET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=118,
-  serialized_end=148,
+  serialized_start=551,
+  serialized_end=690,
 )
 
+
+_CONSENTTICKET = _descriptor.Descriptor(
+  name='ConsentTicket',
+  full_name='opencannabis.oauth.ConsentTicket',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='client', full_name='opencannabis.oauth.ConsentTicket.client', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='consent', full_name='opencannabis.oauth.ConsentTicket.consent', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=692,
+  serialized_end=797,
+)
+
+_CLIENT.fields_by_name['grant_types'].enum_type = _GRANTTYPE
+_CLIENT.fields_by_name['branding'].message_type = media_dot_MediaItem__pb2._MEDIAITEM
+_CLIENT.fields_by_name['policy'].message_type = media_dot_MediaItem__pb2._MEDIAITEM
+_CLIENT.fields_by_name['terms'].message_type = media_dot_MediaItem__pb2._MEDIAITEM
+_CLIENT.fields_by_name['response_type'].enum_type = _RESPONSETYPE
+_CLIENT.fields_by_name['scope'].message_type = oauth_dot_AuthorizationScope__pb2._AUTHORIZATIONSCOPE
+_CONSENT.fields_by_name['expires_at'].message_type = temporal_dot_Instant__pb2._INSTANT
+_CONSENTTICKET.fields_by_name['client'].message_type = _CLIENT
+_CONSENTTICKET.fields_by_name['consent'].message_type = _CONSENT
 DESCRIPTOR.message_types_by_name['Client'] = _CLIENT
-DESCRIPTOR.message_types_by_name['ClientID'] = _CLIENTID
-DESCRIPTOR.message_types_by_name['ClientSecret'] = _CLIENTSECRET
+DESCRIPTOR.message_types_by_name['Consent'] = _CONSENT
+DESCRIPTOR.message_types_by_name['ConsentTicket'] = _CONSENTTICKET
+DESCRIPTOR.enum_types_by_name['ResponseType'] = _RESPONSETYPE
+DESCRIPTOR.enum_types_by_name['GrantType'] = _GRANTTYPE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Client = _reflection.GeneratedProtocolMessageType('Client', (_message.Message,), dict(
@@ -136,21 +334,21 @@ Client = _reflection.GeneratedProtocolMessageType('Client', (_message.Message,),
   ))
 _sym_db.RegisterMessage(Client)
 
-ClientID = _reflection.GeneratedProtocolMessageType('ClientID', (_message.Message,), dict(
-  DESCRIPTOR = _CLIENTID,
+Consent = _reflection.GeneratedProtocolMessageType('Consent', (_message.Message,), dict(
+  DESCRIPTOR = _CONSENT,
   __module__ = 'oauth.Client_pb2'
-  # @@protoc_insertion_point(class_scope:opencannabis.oauth.ClientID)
+  # @@protoc_insertion_point(class_scope:opencannabis.oauth.Consent)
   ))
-_sym_db.RegisterMessage(ClientID)
+_sym_db.RegisterMessage(Consent)
 
-ClientSecret = _reflection.GeneratedProtocolMessageType('ClientSecret', (_message.Message,), dict(
-  DESCRIPTOR = _CLIENTSECRET,
+ConsentTicket = _reflection.GeneratedProtocolMessageType('ConsentTicket', (_message.Message,), dict(
+  DESCRIPTOR = _CONSENTTICKET,
   __module__ = 'oauth.Client_pb2'
-  # @@protoc_insertion_point(class_scope:opencannabis.oauth.ClientSecret)
+  # @@protoc_insertion_point(class_scope:opencannabis.oauth.ConsentTicket)
   ))
-_sym_db.RegisterMessage(ClientSecret)
+_sym_db.RegisterMessage(ConsentTicket)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\034io.opencannabis.schema.oauthH\001P\001\242\002\003OCS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\034io.opencannabis.schema.oauthB\013OAuthClientH\001P\001\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

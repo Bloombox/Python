@@ -14,11 +14,6 @@ class MenuStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.Ping = channel.unary_unary(
-        '/bloombox.schema.services.menu.v1beta1.Menu/Ping',
-        request_serializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.Ping.Request.SerializeToString,
-        response_deserializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.Ping.Response.FromString,
-        )
     self.Retrieve = channel.unary_unary(
         '/bloombox.schema.services.menu.v1beta1.Menu/Retrieve',
         request_serializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.GetMenu.Request.SerializeToString,
@@ -45,13 +40,6 @@ class MenuServicer(object):
   """Specifies the menu service, which provides tools for consuming, updating, and subscribing to menu data.
   """
 
-  def Ping(self, request, context):
-    """Ping the menu service.
-    """
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
   def Retrieve(self, request, context):
     """Specifies an operation to read a full or sectioned menu.
     """
@@ -67,7 +55,7 @@ class MenuServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def Products(self, request, context):
-    """Specifies an operation to read a product by its key.
+    """Specifies an operation to read data for product(s) by key.
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
@@ -83,11 +71,6 @@ class MenuServicer(object):
 
 def add_MenuServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'Ping': grpc.unary_unary_rpc_method_handler(
-          servicer.Ping,
-          request_deserializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.Ping.Request.FromString,
-          response_serializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.Ping.Response.SerializeToString,
-      ),
       'Retrieve': grpc.unary_unary_rpc_method_handler(
           servicer.Retrieve,
           request_deserializer=menu_dot_v1beta1_dot_MenuService__Beta1__pb2.GetMenu.Request.FromString,

@@ -25,7 +25,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='commerce/Order.proto',
   package='opencannabis.commerce',
   syntax='proto3',
-  serialized_pb=_b('\n\x14\x63ommerce/Order.proto\x12\x15opencannabis.commerce\x1a\x0e\x62q_field.proto\x1a\x13\x63ommerce/Item.proto\x1a\x17\x63ommerce/Delivery.proto\x1a\x17\x63ommerce/Customer.proto\x1a\x16temporal/Instant.proto\"\x82\x01\n\x0fOrderScheduling\x12\x39\n\nscheduling\x18\x01 \x01(\x0e\x32%.opencannabis.commerce.SchedulingType\x12\x34\n\x0c\x64\x65sired_time\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\"\x85\x01\n\rStatusCheckin\x12\x32\n\x06status\x18\x01 \x01(\x0e\x32\".opencannabis.commerce.OrderStatus\x12/\n\x07instant\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x0f\n\x07message\x18\x03 \x01(\t\"J\n\x08OrderKey\x12>\n\x02id\x18\x01 \x01(\tB2\x8a@/Order ID, assigned by the server upon creation.\"\xe1\x03\n\x05Order\x12\n\n\x02id\x18\x01 \x01(\t\x12.\n\x04type\x18\x02 \x01(\x0e\x32 .opencannabis.commerce.OrderType\x12\x32\n\x06status\x18\x03 \x01(\x0e\x32\".opencannabis.commerce.OrderStatus\x12\x31\n\x08\x63ustomer\x18\x04 \x01(\x0b\x32\x1f.opencannabis.commerce.Customer\x12:\n\nscheduling\x18\x05 \x01(\x0b\x32&.opencannabis.commerce.OrderScheduling\x12?\n\x0b\x64\x65stination\x18\x06 \x01(\x0b\x32*.opencannabis.commerce.DeliveryDestination\x12\r\n\x05notes\x18\x07 \x01(\t\x12)\n\x04item\x18\x08 \x03(\x0b\x32\x1b.opencannabis.commerce.Item\x12\x38\n\naction_log\x18\t \x03(\x0b\x32$.opencannabis.commerce.StatusCheckin\x12\x32\n\ncreated_at\x18\n \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x10\n\x08subtotal\x18\x0b \x01(\x01*%\n\tOrderType\x12\n\n\x06PICKUP\x10\x00\x12\x0c\n\x08\x44\x45LIVERY\x10\x01*%\n\x0eSchedulingType\x12\x08\n\x04\x41SAP\x10\x00\x12\t\n\x05TIMED\x10\x01*a\n\x0bOrderStatus\x12\x0b\n\x07PENDING\x10\x00\x12\x0c\n\x08\x41PPROVED\x10\x01\x12\x0c\n\x08REJECTED\x10\x02\x12\x0c\n\x08\x41SSIGNED\x10\x03\x12\x0c\n\x08\x45N_ROUTE\x10\x04\x12\r\n\tFULFILLED\x10\x05\x42<\n\x1fio.opencannabis.schema.commerceB\x0f\x43ommercialOrderH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x14\x63ommerce/Order.proto\x12\x15opencannabis.commerce\x1a\x0e\x62q_field.proto\x1a\x13\x63ommerce/Item.proto\x1a\x17\x63ommerce/Delivery.proto\x1a\x17\x63ommerce/Customer.proto\x1a\x16temporal/Instant.proto\"\xe3\x01\n\x0fOrderScheduling\x12q\n\nscheduling\x18\x01 \x01(\x0e\x32%.opencannabis.commerce.SchedulingTypeB6\xf0?\x01\x8a@0Scheduling type, either \'ASAP\' or a target time.\x12]\n\x0c\x64\x65sired_time\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\'\x8a@$Desired delivery time, if specified.\"\x85\x01\n\rStatusCheckin\x12\x32\n\x06status\x18\x01 \x01(\x0e\x32\".opencannabis.commerce.OrderStatus\x12/\n\x07instant\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x0f\n\x07message\x18\x03 \x01(\t\"J\n\x08OrderKey\x12>\n\x02id\x18\x01 \x01(\tB2\x8a@/Order ID, assigned by the server upon creation.\"\xc1\x07\n\x05Order\x12\x62\n\x02id\x18\x01 \x01(\tBV\xf0?\x01\x8a@PID assigned to the order by the server, and potentially nominated by the client.\x12j\n\x04type\x18\x02 \x01(\x0e\x32 .opencannabis.commerce.OrderTypeB:\xf0?\x01\x8a@4Type of order requested - either PICKUP or DELIVERY.\x12\x37\n\x06status\x18\x03 \x01(\x0e\x32\".opencannabis.commerce.OrderStatusB\x03\x80@\x01\x12\\\n\x08\x63ustomer\x18\x04 \x01(\x0b\x32\x1f.opencannabis.commerce.CustomerB)\xf0?\x01\x8a@#Customer that submitted this order.\x12\x61\n\nscheduling\x18\x05 \x01(\x0b\x32&.opencannabis.commerce.OrderSchedulingB%\xf0?\x01\x8a@\x1fScheduling spec for this order.\x12i\n\x0b\x64\x65stination\x18\x06 \x01(\x0b\x32*.opencannabis.commerce.DeliveryDestinationB(\x8a@%Location for delivery, if applicable.\x12\x12\n\x05notes\x18\x07 \x01(\tB\x03\x80@\x01\x12.\n\x04item\x18\x08 \x03(\x0b\x32\x1b.opencannabis.commerce.ItemB\x03\x80@\x01\x12=\n\naction_log\x18\t \x03(\x0b\x32$.opencannabis.commerce.StatusCheckinB\x03\x80@\x01\x12V\n\ncreated_at\x18\n \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\"\xf0?\x01\x8a@\x1cWhen this order was created.\x12$\n\x08subtotal\x18\x0b \x01(\x01\x42\x12\x8a@\x0fOrder subtotal.\x12\x37\n\nupdated_at\x18\x0c \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\x03\x80@\x01\x12I\n\x03sid\x18\r \x01(\tB<\x8a@9Session ID that was active when this order was submitted.*%\n\tOrderType\x12\n\n\x06PICKUP\x10\x00\x12\x0c\n\x08\x44\x45LIVERY\x10\x01*%\n\x0eSchedulingType\x12\x08\n\x04\x41SAP\x10\x00\x12\t\n\x05TIMED\x10\x01*a\n\x0bOrderStatus\x12\x0b\n\x07PENDING\x10\x00\x12\x0c\n\x08\x41PPROVED\x10\x01\x12\x0c\n\x08REJECTED\x10\x02\x12\x0c\n\x08\x41SSIGNED\x10\x03\x12\x0c\n\x08\x45N_ROUTE\x10\x04\x12\r\n\tFULFILLED\x10\x05\x42<\n\x1fio.opencannabis.schema.commerceB\x0f\x43ommercialOrderH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,commerce_dot_Item__pb2.DESCRIPTOR,commerce_dot_Delivery__pb2.DESCRIPTOR,commerce_dot_Customer__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,])
 
@@ -46,8 +46,8 @@ _ORDERTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=987,
-  serialized_end=1024,
+  serialized_start=1564,
+  serialized_end=1601,
 )
 _sym_db.RegisterEnumDescriptor(_ORDERTYPE)
 
@@ -69,8 +69,8 @@ _SCHEDULINGTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1026,
-  serialized_end=1063,
+  serialized_start=1603,
+  serialized_end=1640,
 )
 _sym_db.RegisterEnumDescriptor(_SCHEDULINGTYPE)
 
@@ -108,8 +108,8 @@ _ORDERSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1065,
-  serialized_end=1162,
+  serialized_start=1642,
+  serialized_end=1739,
 )
 _sym_db.RegisterEnumDescriptor(_ORDERSTATUS)
 
@@ -140,14 +140,14 @@ _ORDERSCHEDULING = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@0Scheduling type, either \'ASAP\' or a target time.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='desired_time', full_name='opencannabis.commerce.OrderScheduling.desired_time', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@$Desired delivery time, if specified.')), file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -161,7 +161,7 @@ _ORDERSCHEDULING = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=159,
-  serialized_end=289,
+  serialized_end=386,
 )
 
 
@@ -205,8 +205,8 @@ _STATUSCHECKIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=292,
-  serialized_end=425,
+  serialized_start=389,
+  serialized_end=522,
 )
 
 
@@ -236,8 +236,8 @@ _ORDERKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=427,
-  serialized_end=501,
+  serialized_start=524,
+  serialized_end=598,
 )
 
 
@@ -254,77 +254,91 @@ _ORDER = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@PID assigned to the order by the server, and potentially nominated by the client.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='type', full_name='opencannabis.commerce.Order.type', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@4Type of order requested - either PICKUP or DELIVERY.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='status', full_name='opencannabis.commerce.Order.status', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='customer', full_name='opencannabis.commerce.Order.customer', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@#Customer that submitted this order.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='scheduling', full_name='opencannabis.commerce.Order.scheduling', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@\037Scheduling spec for this order.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='destination', full_name='opencannabis.commerce.Order.destination', index=5,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@%Location for delivery, if applicable.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='notes', full_name='opencannabis.commerce.Order.notes', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='item', full_name='opencannabis.commerce.Order.item', index=7,
       number=8, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='action_log', full_name='opencannabis.commerce.Order.action_log', index=8,
       number=9, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='created_at', full_name='opencannabis.commerce.Order.created_at', index=9,
       number=10, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@\034When this order was created.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='subtotal', full_name='opencannabis.commerce.Order.subtotal', index=10,
       number=11, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\017Order subtotal.')), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='updated_at', full_name='opencannabis.commerce.Order.updated_at', index=11,
+      number=12, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001')), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sid', full_name='opencannabis.commerce.Order.sid', index=12,
+      number=13, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@9Session ID that was active when this order was submitted.')), file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -337,8 +351,8 @@ _ORDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=504,
-  serialized_end=985,
+  serialized_start=601,
+  serialized_end=1562,
 )
 
 _ORDERSCHEDULING.fields_by_name['scheduling'].enum_type = _SCHEDULINGTYPE
@@ -353,6 +367,7 @@ _ORDER.fields_by_name['destination'].message_type = commerce_dot_Delivery__pb2._
 _ORDER.fields_by_name['item'].message_type = commerce_dot_Item__pb2._ITEM
 _ORDER.fields_by_name['action_log'].message_type = _STATUSCHECKIN
 _ORDER.fields_by_name['created_at'].message_type = temporal_dot_Instant__pb2._INSTANT
+_ORDER.fields_by_name['updated_at'].message_type = temporal_dot_Instant__pb2._INSTANT
 DESCRIPTOR.message_types_by_name['OrderScheduling'] = _ORDERSCHEDULING
 DESCRIPTOR.message_types_by_name['StatusCheckin'] = _STATUSCHECKIN
 DESCRIPTOR.message_types_by_name['OrderKey'] = _ORDERKEY
@@ -393,6 +408,36 @@ _sym_db.RegisterMessage(Order)
 
 DESCRIPTOR.has_options = True
 DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\037io.opencannabis.schema.commerceB\017CommercialOrderH\001P\000\242\002\003OCS'))
+_ORDERSCHEDULING.fields_by_name['scheduling'].has_options = True
+_ORDERSCHEDULING.fields_by_name['scheduling']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@0Scheduling type, either \'ASAP\' or a target time.'))
+_ORDERSCHEDULING.fields_by_name['desired_time'].has_options = True
+_ORDERSCHEDULING.fields_by_name['desired_time']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@$Desired delivery time, if specified.'))
 _ORDERKEY.fields_by_name['id'].has_options = True
 _ORDERKEY.fields_by_name['id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@/Order ID, assigned by the server upon creation.'))
+_ORDER.fields_by_name['id'].has_options = True
+_ORDER.fields_by_name['id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@PID assigned to the order by the server, and potentially nominated by the client.'))
+_ORDER.fields_by_name['type'].has_options = True
+_ORDER.fields_by_name['type']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@4Type of order requested - either PICKUP or DELIVERY.'))
+_ORDER.fields_by_name['status'].has_options = True
+_ORDER.fields_by_name['status']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001'))
+_ORDER.fields_by_name['customer'].has_options = True
+_ORDER.fields_by_name['customer']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@#Customer that submitted this order.'))
+_ORDER.fields_by_name['scheduling'].has_options = True
+_ORDER.fields_by_name['scheduling']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@\037Scheduling spec for this order.'))
+_ORDER.fields_by_name['destination'].has_options = True
+_ORDER.fields_by_name['destination']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@%Location for delivery, if applicable.'))
+_ORDER.fields_by_name['notes'].has_options = True
+_ORDER.fields_by_name['notes']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001'))
+_ORDER.fields_by_name['item'].has_options = True
+_ORDER.fields_by_name['item']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001'))
+_ORDER.fields_by_name['action_log'].has_options = True
+_ORDER.fields_by_name['action_log']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001'))
+_ORDER.fields_by_name['created_at'].has_options = True
+_ORDER.fields_by_name['created_at']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@\034When this order was created.'))
+_ORDER.fields_by_name['subtotal'].has_options = True
+_ORDER.fields_by_name['subtotal']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\017Order subtotal.'))
+_ORDER.fields_by_name['updated_at'].has_options = True
+_ORDER.fields_by_name['updated_at']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001'))
+_ORDER.fields_by_name['sid'].has_options = True
+_ORDER.fields_by_name['sid']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@9Session ID that was active when this order was submitted.'))
 # @@protoc_insertion_point(module_scope)

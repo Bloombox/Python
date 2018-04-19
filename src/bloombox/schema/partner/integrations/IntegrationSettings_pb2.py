@@ -15,6 +15,10 @@ _sym_db = _symbol_database.Default()
 
 
 from temporal import Instant_pb2 as temporal_dot_Instant__pb2
+from partner.integrations import TwilioSettings_pb2 as partner_dot_integrations_dot_TwilioSettings__pb2
+from partner.integrations import OnFleetSettings_pb2 as partner_dot_integrations_dot_OnFleetSettings__pb2
+from partner.integrations import SendgridSettings_pb2 as partner_dot_integrations_dot_SendgridSettings__pb2
+from partner.integrations import MailchimpSettings_pb2 as partner_dot_integrations_dot_MailchimpSettings__pb2
 from partner.integrations import GreenbitsSettings_pb2 as partner_dot_integrations_dot_GreenbitsSettings__pb2
 
 
@@ -22,9 +26,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='partner/integrations/IntegrationSettings.proto',
   package='bloombox.schema.partner.integrations',
   syntax='proto3',
-  serialized_pb=_b('\n.partner/integrations/IntegrationSettings.proto\x12$bloombox.schema.partner.integrations\x1a\x16temporal/Instant.proto\x1a,partner/integrations/GreenbitsSettings.proto\"\xc2\x01\n\x1aGenericIntegrationSettings\x12I\n\x07partner\x18\x01 \x01(\x0e\x32\x38.bloombox.schema.partner.integrations.IntegrationPartner\x12\x0f\n\x07\x65nabled\x18\x02 \x01(\x08\x12\x13\n\x0b\x66ully_setup\x18\x03 \x01(\x08\x12\x33\n\x0blast_tested\x18\x04 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\"\x96\x03\n\x1bLocationIntegrationSettings\x12N\n\x0cintegrations\x18\x01 \x03(\x0e\x32\x38.bloombox.schema.partner.integrations.IntegrationPartner\x12_\n\x07generic\x18\x02 \x03(\x0b\x32N.bloombox.schema.partner.integrations.LocationIntegrationSettings.GenericEntry\x12T\n\tgreenbits\x18\n \x01(\x0b\x32\x41.bloombox.schema.partner.integrations.greenbits.GreenbitsSettings\x1ap\n\x0cGenericEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12O\n\x05value\x18\x02 \x01(\x0b\x32@.bloombox.schema.partner.integrations.GenericIntegrationSettings:\x02\x38\x01\"\x1c\n\x1aPartnerIntegrationSettings*|\n\x12IntegrationPartner\x12\x0c\n\x08INTERNAL\x10\x00\x12\x0b\n\x07SALSIFY\x10\x01\x12\x08\n\x04KEEN\x10\x02\x12\r\n\tGREENBITS\x10\x03\x12\r\n\tMAILCHIMP\x10\x04\x12\n\n\x06TWILIO\x10\x05\x12\x0b\n\x07ONFLEET\x10\x06\x12\n\n\x06GSUITE\x10\x07\x42\x33\n\'io.bloombox.schema.partner.integrationsH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n.partner/integrations/IntegrationSettings.proto\x12$bloombox.schema.partner.integrations\x1a\x16temporal/Instant.proto\x1a)partner/integrations/TwilioSettings.proto\x1a*partner/integrations/OnFleetSettings.proto\x1a+partner/integrations/SendgridSettings.proto\x1a,partner/integrations/MailchimpSettings.proto\x1a,partner/integrations/GreenbitsSettings.proto\"\xc2\x01\n\x1aGenericIntegrationSettings\x12I\n\x07partner\x18\x01 \x01(\x0e\x32\x38.bloombox.schema.partner.integrations.IntegrationPartner\x12\x0f\n\x07\x65nabled\x18\x02 \x01(\x08\x12\x13\n\x0b\x66ully_setup\x18\x03 \x01(\x08\x12\x33\n\x0blast_tested\x18\x04 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\"\xdc\x05\n\x1bLocationIntegrationSettings\x12N\n\x0cintegrations\x18\x01 \x03(\x0e\x32\x38.bloombox.schema.partner.integrations.IntegrationPartner\x12_\n\x07generic\x18\x02 \x03(\x0b\x32N.bloombox.schema.partner.integrations.LocationIntegrationSettings.GenericEntry\x12T\n\tgreenbits\x18\n \x01(\x0b\x32\x41.bloombox.schema.partner.integrations.greenbits.GreenbitsSettings\x12T\n\tmailchimp\x18\x0b \x01(\x0b\x32\x41.bloombox.schema.partner.integrations.mailchimp.MailchimpSettings\x12Q\n\x08sendgrid\x18\x0c \x01(\x0b\x32?.bloombox.schema.partner.integrations.sendgrid.SendgridSettings\x12K\n\x06twilio\x18\r \x01(\x0b\x32;.bloombox.schema.partner.integrations.twilio.TwilioSettings\x12N\n\x07onfleet\x18\x0e \x01(\x0b\x32=.bloombox.schema.partner.integrations.onfleet.OnFleetSettings\x1ap\n\x0cGenericEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12O\n\x05value\x18\x02 \x01(\x0b\x32@.bloombox.schema.partner.integrations.GenericIntegrationSettings:\x02\x38\x01\"\x1c\n\x1aPartnerIntegrationSettings*\x8a\x01\n\x12IntegrationPartner\x12\x0c\n\x08INTERNAL\x10\x00\x12\x0b\n\x07SALSIFY\x10\x01\x12\x08\n\x04KEEN\x10\x02\x12\r\n\tGREENBITS\x10\x03\x12\r\n\tMAILCHIMP\x10\x04\x12\x0c\n\x08SENDGRID\x10\x05\x12\n\n\x06TWILIO\x10\x06\x12\x0b\n\x07ONFLEET\x10\x07\x12\n\n\x06GSUITE\x10\x08\x42\x33\n\'io.bloombox.schema.partner.integrationsH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
-  dependencies=[temporal_dot_Instant__pb2.DESCRIPTOR,partner_dot_integrations_dot_GreenbitsSettings__pb2.DESCRIPTOR,])
+  dependencies=[temporal_dot_Instant__pb2.DESCRIPTOR,partner_dot_integrations_dot_TwilioSettings__pb2.DESCRIPTOR,partner_dot_integrations_dot_OnFleetSettings__pb2.DESCRIPTOR,partner_dot_integrations_dot_SendgridSettings__pb2.DESCRIPTOR,partner_dot_integrations_dot_MailchimpSettings__pb2.DESCRIPTOR,partner_dot_integrations_dot_GreenbitsSettings__pb2.DESCRIPTOR,])
 
 _INTEGRATIONPARTNER = _descriptor.EnumDescriptor(
   name='IntegrationPartner',
@@ -53,22 +57,26 @@ _INTEGRATIONPARTNER = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TWILIO', index=5, number=5,
+      name='SENDGRID', index=5, number=5,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ONFLEET', index=6, number=6,
+      name='TWILIO', index=6, number=6,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='GSUITE', index=7, number=7,
+      name='ONFLEET', index=7, number=7,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='GSUITE', index=8, number=8,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=794,
-  serialized_end=918,
+  serialized_start=1299,
+  serialized_end=1437,
 )
 _sym_db.RegisterEnumDescriptor(_INTEGRATIONPARTNER)
 
@@ -78,9 +86,10 @@ SALSIFY = 1
 KEEN = 2
 GREENBITS = 3
 MAILCHIMP = 4
-TWILIO = 5
-ONFLEET = 6
-GSUITE = 7
+SENDGRID = 5
+TWILIO = 6
+ONFLEET = 7
+GSUITE = 8
 
 
 
@@ -131,8 +140,8 @@ _GENERICINTEGRATIONSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=159,
-  serialized_end=353,
+  serialized_start=337,
+  serialized_end=531,
 )
 
 
@@ -169,8 +178,8 @@ _LOCATIONINTEGRATIONSETTINGS_GENERICENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=650,
-  serialized_end=762,
+  serialized_start=1154,
+  serialized_end=1266,
 )
 
 _LOCATIONINTEGRATIONSETTINGS = _descriptor.Descriptor(
@@ -201,6 +210,34 @@ _LOCATIONINTEGRATIONSETTINGS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='mailchimp', full_name='bloombox.schema.partner.integrations.LocationIntegrationSettings.mailchimp', index=3,
+      number=11, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sendgrid', full_name='bloombox.schema.partner.integrations.LocationIntegrationSettings.sendgrid', index=4,
+      number=12, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='twilio', full_name='bloombox.schema.partner.integrations.LocationIntegrationSettings.twilio', index=5,
+      number=13, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='onfleet', full_name='bloombox.schema.partner.integrations.LocationIntegrationSettings.onfleet', index=6,
+      number=14, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -213,8 +250,8 @@ _LOCATIONINTEGRATIONSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=356,
-  serialized_end=762,
+  serialized_start=534,
+  serialized_end=1266,
 )
 
 
@@ -237,8 +274,8 @@ _PARTNERINTEGRATIONSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=764,
-  serialized_end=792,
+  serialized_start=1268,
+  serialized_end=1296,
 )
 
 _GENERICINTEGRATIONSETTINGS.fields_by_name['partner'].enum_type = _INTEGRATIONPARTNER
@@ -248,6 +285,10 @@ _LOCATIONINTEGRATIONSETTINGS_GENERICENTRY.containing_type = _LOCATIONINTEGRATION
 _LOCATIONINTEGRATIONSETTINGS.fields_by_name['integrations'].enum_type = _INTEGRATIONPARTNER
 _LOCATIONINTEGRATIONSETTINGS.fields_by_name['generic'].message_type = _LOCATIONINTEGRATIONSETTINGS_GENERICENTRY
 _LOCATIONINTEGRATIONSETTINGS.fields_by_name['greenbits'].message_type = partner_dot_integrations_dot_GreenbitsSettings__pb2._GREENBITSSETTINGS
+_LOCATIONINTEGRATIONSETTINGS.fields_by_name['mailchimp'].message_type = partner_dot_integrations_dot_MailchimpSettings__pb2._MAILCHIMPSETTINGS
+_LOCATIONINTEGRATIONSETTINGS.fields_by_name['sendgrid'].message_type = partner_dot_integrations_dot_SendgridSettings__pb2._SENDGRIDSETTINGS
+_LOCATIONINTEGRATIONSETTINGS.fields_by_name['twilio'].message_type = partner_dot_integrations_dot_TwilioSettings__pb2._TWILIOSETTINGS
+_LOCATIONINTEGRATIONSETTINGS.fields_by_name['onfleet'].message_type = partner_dot_integrations_dot_OnFleetSettings__pb2._ONFLEETSETTINGS
 DESCRIPTOR.message_types_by_name['GenericIntegrationSettings'] = _GENERICINTEGRATIONSETTINGS
 DESCRIPTOR.message_types_by_name['LocationIntegrationSettings'] = _LOCATIONINTEGRATIONSETTINGS
 DESCRIPTOR.message_types_by_name['PartnerIntegrationSettings'] = _PARTNERINTEGRATIONSETTINGS

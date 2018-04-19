@@ -50,6 +50,11 @@ class ShopStub(object):
         request_serializer=shop_dot_v1_dot_ShopService__v1__pb2.GetOrder.Request.SerializeToString,
         response_deserializer=shop_dot_v1_dot_ShopService__v1__pb2.GetOrder.Response.FromString,
         )
+    self.ShareOrder = channel.unary_unary(
+        '/bloombox.schema.services.shop.v1.Shop/ShareOrder',
+        request_serializer=shop_dot_v1_dot_ShopService__v1__pb2.ShareOrder.Request.SerializeToString,
+        response_deserializer=shop_dot_v1_dot_ShopService__v1__pb2.ShareOrder.Response.FromString,
+        )
 
 
 class ShopServicer(object):
@@ -106,6 +111,13 @@ class ShopServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def ShareOrder(self, request, context):
+    """Share a commercial order with a given email address or phone number.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_ShopServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -143,6 +155,11 @@ def add_ShopServicer_to_server(servicer, server):
           servicer.GetOrder,
           request_deserializer=shop_dot_v1_dot_ShopService__v1__pb2.GetOrder.Request.FromString,
           response_serializer=shop_dot_v1_dot_ShopService__v1__pb2.GetOrder.Response.SerializeToString,
+      ),
+      'ShareOrder': grpc.unary_unary_rpc_method_handler(
+          servicer.ShareOrder,
+          request_deserializer=shop_dot_v1_dot_ShopService__v1__pb2.ShareOrder.Request.FromString,
+          response_serializer=shop_dot_v1_dot_ShopService__v1__pb2.ShareOrder.Response.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

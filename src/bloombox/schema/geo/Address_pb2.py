@@ -13,14 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+import bq_field_pb2 as bq__field__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='geo/Address.proto',
   package='opencannabis.geo',
   syntax='proto3',
-  serialized_pb=_b('\n\x11geo/Address.proto\x12\x10opencannabis.geo\"q\n\x07\x41\x64\x64ress\x12\x12\n\nfirst_line\x18\x01 \x01(\t\x12\x13\n\x0bsecond_line\x18\x02 \x01(\t\x12\x0c\n\x04\x63ity\x18\x03 \x01(\t\x12\r\n\x05state\x18\x04 \x01(\t\x12\x0f\n\x07zipcode\x18\x05 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x06 \x01(\tB&\n\x1aio.opencannabis.schema.geoH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
-)
+  serialized_pb=_b('\n\x11geo/Address.proto\x12\x10opencannabis.geo\x1a\x0e\x62q_field.proto\"\xbf\x03\n\x07\x41\x64\x64ress\x12\x31\n\nfirst_line\x18\x01 \x01(\tB\x1d\x8a@\x1a\x46irst line of the address.\x12\x42\n\x0bsecond_line\x18\x02 \x01(\tB-\x8a@*Second line of the address, if applicable.\x12;\n\x04\x63ity\x18\x03 \x01(\tB-\x8a@*City or municipality name for the address.\x12P\n\x05state\x18\x04 \x01(\tBA\x8a@>State that contains the city or municipality for this address.\x12>\n\x07zipcode\x18\x05 \x01(\tB-\x8a@*USPS zipcode associated with this address.\x12n\n\x07\x63ountry\x18\x06 \x01(\tB]\x8a@ZCountry code associated with this address (\'US\' or \'USA\' for United States, for instance).B&\n\x1aio.opencannabis.schema.geoH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  ,
+  dependencies=[bq__field__pb2.DESCRIPTOR,])
 
 
 
@@ -38,42 +40,42 @@ _ADDRESS = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\032First line of the address.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='second_line', full_name='opencannabis.geo.Address.second_line', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@*Second line of the address, if applicable.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='city', full_name='opencannabis.geo.Address.city', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@*City or municipality name for the address.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='state', full_name='opencannabis.geo.Address.state', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@>State that contains the city or municipality for this address.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='zipcode', full_name='opencannabis.geo.Address.zipcode', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@*USPS zipcode associated with this address.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='country', full_name='opencannabis.geo.Address.country', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@ZCountry code associated with this address (\'US\' or \'USA\' for United States, for instance).')), file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -86,8 +88,8 @@ _ADDRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39,
-  serialized_end=152,
+  serialized_start=56,
+  serialized_end=503,
 )
 
 DESCRIPTOR.message_types_by_name['Address'] = _ADDRESS
@@ -103,4 +105,16 @@ _sym_db.RegisterMessage(Address)
 
 DESCRIPTOR.has_options = True
 DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.opencannabis.schema.geoH\001P\001\242\002\003OCS'))
+_ADDRESS.fields_by_name['first_line'].has_options = True
+_ADDRESS.fields_by_name['first_line']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\032First line of the address.'))
+_ADDRESS.fields_by_name['second_line'].has_options = True
+_ADDRESS.fields_by_name['second_line']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@*Second line of the address, if applicable.'))
+_ADDRESS.fields_by_name['city'].has_options = True
+_ADDRESS.fields_by_name['city']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@*City or municipality name for the address.'))
+_ADDRESS.fields_by_name['state'].has_options = True
+_ADDRESS.fields_by_name['state']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@>State that contains the city or municipality for this address.'))
+_ADDRESS.fields_by_name['zipcode'].has_options = True
+_ADDRESS.fields_by_name['zipcode']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@*USPS zipcode associated with this address.'))
+_ADDRESS.fields_by_name['country'].has_options = True
+_ADDRESS.fields_by_name['country']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@ZCountry code associated with this address (\'US\' or \'USA\' for United States, for instance).'))
 # @@protoc_insertion_point(module_scope)

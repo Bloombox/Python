@@ -19,10 +19,48 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='partner/integrations/GreenbitsSettings.proto',
   package='bloombox.schema.partner.integrations.greenbits',
   syntax='proto3',
-  serialized_pb=_b('\n,partner/integrations/GreenbitsSettings.proto\x12.bloombox.schema.partner.integrations.greenbits\"N\n\x11GreenbitsSettings\x12\x14\n\x0corganization\x18\x01 \x01(\t\x12\x0f\n\x07\x61pi_key\x18\x02 \x01(\t\x12\x12\n\nauth_token\x18\x03 \x01(\tB=\n1io.bloombox.schema.partner.integrations.greenbitsH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n,partner/integrations/GreenbitsSettings.proto\x12.bloombox.schema.partner.integrations.greenbits\"B\n\x1cGreenbitsIntegrationFeatures\x12\x11\n\tcustomers\x18\x01 \x01(\x08\x12\x0f\n\x07\x63heckin\x18\x02 \x01(\x08\"\xae\x01\n\x11GreenbitsSettings\x12\x14\n\x0corganization\x18\x01 \x01(\t\x12\x0f\n\x07\x61pi_key\x18\x02 \x01(\t\x12\x12\n\nauth_token\x18\x03 \x01(\t\x12^\n\x08\x66\x65\x61tures\x18\n \x01(\x0b\x32L.bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeaturesB=\n1io.bloombox.schema.partner.integrations.greenbitsH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
 )
 
 
+
+
+_GREENBITSINTEGRATIONFEATURES = _descriptor.Descriptor(
+  name='GreenbitsIntegrationFeatures',
+  full_name='bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='customers', full_name='bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures.customers', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='checkin', full_name='bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures.checkin', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=96,
+  serialized_end=162,
+)
 
 
 _GREENBITSSETTINGS = _descriptor.Descriptor(
@@ -53,6 +91,13 @@ _GREENBITSSETTINGS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='features', full_name='bloombox.schema.partner.integrations.greenbits.GreenbitsSettings.features', index=3,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -65,12 +110,21 @@ _GREENBITSSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=96,
-  serialized_end=174,
+  serialized_start=165,
+  serialized_end=339,
 )
 
+_GREENBITSSETTINGS.fields_by_name['features'].message_type = _GREENBITSINTEGRATIONFEATURES
+DESCRIPTOR.message_types_by_name['GreenbitsIntegrationFeatures'] = _GREENBITSINTEGRATIONFEATURES
 DESCRIPTOR.message_types_by_name['GreenbitsSettings'] = _GREENBITSSETTINGS
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+GreenbitsIntegrationFeatures = _reflection.GeneratedProtocolMessageType('GreenbitsIntegrationFeatures', (_message.Message,), dict(
+  DESCRIPTOR = _GREENBITSINTEGRATIONFEATURES,
+  __module__ = 'partner.integrations.GreenbitsSettings_pb2'
+  # @@protoc_insertion_point(class_scope:bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures)
+  ))
+_sym_db.RegisterMessage(GreenbitsIntegrationFeatures)
 
 GreenbitsSettings = _reflection.GeneratedProtocolMessageType('GreenbitsSettings', (_message.Message,), dict(
   DESCRIPTOR = _GREENBITSSETTINGS,

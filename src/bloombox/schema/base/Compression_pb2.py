@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='base/Compression.proto',
   package='opencannabis.base',
   syntax='proto3',
-  serialized_pb=_b('\n\x16\x62\x61se/Compression.proto\x12\x11opencannabis.base\"c\n\x0b\x43ompression\x12\x0f\n\x07\x65nabled\x18\x01 \x01(\x08\x12\x31\n\x04type\x18\x02 \x01(\x0e\x32#.opencannabis.base.Compression.Type\"\x10\n\x04Type\x12\x08\n\x04GZIP\x10\x00\x42\x38\n\x1bio.opencannabis.schema.baseB\x0f\x42\x61seCompressionH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x16\x62\x61se/Compression.proto\x12\x11opencannabis.base\"\x8f\x01\n\x0b\x43ompression\x12\x0f\n\x07\x65nabled\x18\x01 \x01(\x08\x12\x31\n\x04type\x18\x02 \x01(\x0e\x32#.opencannabis.base.Compression.Type\"<\n\x04Type\x12\x12\n\x0eNO_COMPRESSION\x10\x00\x12\x08\n\x04GZIP\x10\x01\x12\n\n\x06\x42ROTLI\x10\x02\x12\n\n\x06SNAPPY\x10\x03\x42\x38\n\x1bio.opencannabis.schema.baseB\x0f\x42\x61seCompressionH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
 )
 
 
@@ -31,14 +31,26 @@ _COMPRESSION_TYPE = _descriptor.EnumDescriptor(
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='GZIP', index=0, number=0,
+      name='NO_COMPRESSION', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='GZIP', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='BROTLI', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SNAPPY', index=3, number=3,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=128,
-  serialized_end=144,
+  serialized_start=129,
+  serialized_end=189,
 )
 _sym_db.RegisterEnumDescriptor(_COMPRESSION_TYPE)
 
@@ -77,8 +89,8 @@ _COMPRESSION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=45,
-  serialized_end=144,
+  serialized_start=46,
+  serialized_end=189,
 )
 
 _COMPRESSION.fields_by_name['type'].enum_type = _COMPRESSION_TYPE

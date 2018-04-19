@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='oauth/AuthorizationScope.proto',
   package='opencannabis.oauth',
   syntax='proto3',
-  serialized_pb=_b('\n\x1eoauth/AuthorizationScope.proto\x12\x12opencannabis.oauth\"0\n\x12\x41uthorizationScope\x12\r\n\x05label\x18\x01 \x01(\t\x12\x0b\n\x03uri\x18\x02 \x01(\tB(\n\x1cio.opencannabis.schema.oauthH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x1eoauth/AuthorizationScope.proto\x12\x12opencannabis.oauth\"J\n\x12\x41uthorizationScope\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05label\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0c\n\x04icon\x18\x04 \x01(\tB(\n\x1cio.opencannabis.schema.oauthH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
 )
 
 
@@ -33,15 +33,29 @@ _AUTHORIZATIONSCOPE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='label', full_name='opencannabis.oauth.AuthorizationScope.label', index=0,
+      name='id', full_name='opencannabis.oauth.AuthorizationScope.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='uri', full_name='opencannabis.oauth.AuthorizationScope.uri', index=1,
+      name='label', full_name='opencannabis.oauth.AuthorizationScope.label', index=1,
       number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='uri', full_name='opencannabis.oauth.AuthorizationScope.uri', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='icon', full_name='opencannabis.oauth.AuthorizationScope.icon', index=3,
+      number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -59,7 +73,7 @@ _AUTHORIZATIONSCOPE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=54,
-  serialized_end=102,
+  serialized_end=128,
 )
 
 DESCRIPTOR.message_types_by_name['AuthorizationScope'] = _AUTHORIZATIONSCOPE

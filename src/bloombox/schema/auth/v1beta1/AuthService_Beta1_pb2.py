@@ -14,18 +14,21 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+from oauth import Client_pb2 as oauth_dot_Client__pb2
 from identity import User_pb2 as identity_dot_User__pb2
-from services import ServiceStatus_pb2 as services_dot_ServiceStatus__pb2
+from security import Token_pb2 as security_dot_Token__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from protoc_gen_swagger.options import swagger_pb2 as protoc__gen__swagger_dot_options_dot_swagger__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='auth/v1beta1/AuthService_Beta1.proto',
   package='bloombox.schema.services.auth.v1beta1',
   syntax='proto3',
-  serialized_pb=_b('\n$auth/v1beta1/AuthService_Beta1.proto\x12%bloombox.schema.services.auth.v1beta1\x1a\x13identity/User.proto\x1a\x1cservices/ServiceStatus.proto\x1a\x1cgoogle/api/annotations.proto\"\xf2\x01\n\x04Ping\x1a\t\n\x07Request\x1a\x43\n\x08Response\x12\x37\n\x06status\x18\x01 \x01(\x0e\x32\'.bloombox.schema.services.ServiceStatus\x1a\x99\x01\n\tOperation\x12\x44\n\x07request\x18\x01 \x01(\x0b\x32\x33.bloombox.schema.services.auth.v1beta1.Ping.Request\x12\x46\n\x08response\x18\x02 \x01(\x0b\x32\x34.bloombox.schema.services.auth.v1beta1.Ping.Response\"9\n\x16\x45mailPasswordAssertion\x12\r\n\x05\x65mail\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"4\n\x16\x46irebaseTokenAssertion\x12\r\n\x05token\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\t\"\xcb\x01\n\x10\x41\x63\x63ountAssertion\x12W\n\x0e\x65mail_password\x18\x01 \x01(\x0b\x32=.bloombox.schema.services.auth.v1beta1.EmailPasswordAssertionH\x00\x12Q\n\x08\x66irebase\x18\x02 \x01(\x0b\x32=.bloombox.schema.services.auth.v1beta1.FirebaseTokenAssertionH\x00\x42\x0b\n\tassertion\"\xd4\x03\n\x10\x41uthenticateUser\x1a\x93\x01\n\x07Request\x12<\n\x08provider\x18\x01 \x01(\x0e\x32*.bloombox.schema.identity.IdentityProvider\x12J\n\tassertion\x18\x02 \x01(\x0b\x32\x37.bloombox.schema.services.auth.v1beta1.AccountAssertion\x1av\n\x08Response\x12\x41\n\x06status\x18\x01 \x01(\x0e\x32\x31.bloombox.schema.services.auth.v1beta1.AuthStatus\x12\x0b\n\x03uid\x18\x02 \x01(\t\x12\x0b\n\x03key\x18\x03 \x01(\t\x12\r\n\x05token\x18\x04 \x01(\t\x1a\xb1\x01\n\tOperation\x12P\n\x07request\x18\x01 \x01(\x0b\x32?.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request\x12R\n\x08response\x18\x02 \x01(\x0b\x32@.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response*\x19\n\tAuthError\x12\x0c\n\x08NO_ERROR\x10\x00*W\n\nAuthStatus\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x12\n\x0e\x41\x43\x43\x45SS_GRANTED\x10\x01\x12\x11\n\rACCESS_DENIED\x10\x02\x12\x15\n\x11\x41\x43\x43OUNT_SUSPENDED\x10\x03\x32\xdd\x02\n\x04\x41uth\x12\x8d\x01\n\x04Ping\x12\x33.bloombox.schema.services.auth.v1beta1.Ping.Request\x1a\x34.bloombox.schema.services.auth.v1beta1.Ping.Response\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/auth/v1beta1/ping\x12\xc4\x01\n\x0c\x41uthenticate\x12?.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request\x1a@.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response\"1\x82\xd3\xe4\x93\x02+\"\x1e/auth/v1beta1/login/{provider}:\tassertionB4\n(io.bloombox.schema.services.auth.v1beta1H\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n$auth/v1beta1/AuthService_Beta1.proto\x12%bloombox.schema.services.auth.v1beta1\x1a\x12oauth/Client.proto\x1a\x13identity/User.proto\x1a\x14security/Token.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1cgoogle/api/annotations.proto\x1a(protoc-gen-swagger/options/swagger.proto\"9\n\x16\x45mailPasswordAssertion\x12\r\n\x05\x65mail\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"4\n\x16\x46irebaseTokenAssertion\x12\r\n\x05token\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\t\"\xcb\x01\n\x10\x41\x63\x63ountAssertion\x12W\n\x0e\x65mail_password\x18\x01 \x01(\x0b\x32=.bloombox.schema.services.auth.v1beta1.EmailPasswordAssertionH\x00\x12Q\n\x08\x66irebase\x18\x02 \x01(\x0b\x32=.bloombox.schema.services.auth.v1beta1.FirebaseTokenAssertionH\x00\x42\x0b\n\tassertion\"\xdd\x01\n\x10\x41uthenticateUser\x1a\x93\x01\n\x07Request\x12<\n\x08provider\x18\x01 \x01(\x0e\x32*.bloombox.schema.identity.IdentityProvider\x12J\n\tassertion\x18\x02 \x01(\x0b\x32\x37.bloombox.schema.services.auth.v1beta1.AccountAssertion\x1a\x33\n\x08Response\x12\x0b\n\x03uid\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\x12\r\n\x05token\x18\x03 \x01(\t\"\xd1\x01\n\x0cResolveToken\x1a\xa7\x01\n\x07Request\x12\x11\n\tclient_id\x18\x01 \x01(\t\x12\x0e\n\x06origin\x18\x02 \x01(\t\x12\r\n\x05state\x18\x03 \x01(\t\x12\x0f\n\x07\x63\x61ptcha\x18\x04 \x01(\t\x12\x0f\n\x07session\x18\x05 \x01(\t\x12\x13\n\x0b\x66ingerprint\x18\x06 \x01(\t\x12\x33\n\x04\x61uth\x18\x07 \x01(\x0b\x32%.bloombox.schema.security.AuthPayload\x1a\x17\n\x08Response\x12\x0b\n\x03jwt\x18\x01 \x01(\t\"|\n\x0f\x43onsentDecision\x1a\x35\n\x06\x41\x63\x63\x65pt\x12\x0b\n\x03uid\x18\x01 \x01(\t\x12\x0f\n\x07\x63onsent\x18\x02 \x01(\t\x12\r\n\x05scope\x18\x03 \x03(\t\x1a&\n\x06Reject\x12\x0b\n\x03uid\x18\x01 \x01(\t\x12\x0f\n\x07\x63onsent\x18\x02 \x01(\t\x1a\n\n\x08Response\"\x8d\x01\n\x0bUserContext\x1a\'\n\x07Request\x12\x0b\n\x03uid\x18\x01 \x01(\t\x12\x0f\n\x07session\x18\x02 \x01(\t\x1aU\n\x08Response\x12\x0b\n\x03jwt\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\x12/\n\x07profile\x18\x03 \x01(\x0b\x32\x1e.bloombox.schema.identity.User\"b\n\nGetProfile\x1a\x17\n\x07Request\x12\x0c\n\x04user\x18\x01 \x01(\t\x1a;\n\x08Response\x12/\n\x07profile\x18\x01 \x01(\x0b\x32\x1e.bloombox.schema.identity.User\"h\n\x0b\x43onsentFlow\x1a\x1a\n\x07Request\x12\x0f\n\x07\x63onsent\x18\x01 \x01(\t\x1a=\n\x08Response\x12\x31\n\x06ticket\x18\x01 \x01(\x0b\x32!.opencannabis.oauth.ConsentTicket*\xb3\x04\n\tAuthError\x12\x0c\n\x08NO_ERROR\x10\x00\x12\x15\n\x11\x41\x43\x43OUNT_SUSPENDED\x10\x01\x12\x15\n\x11PROFILE_NOT_FOUND\x10\x02\x12\x14\n\x10INVALID_USER_KEY\x10\x03\x12\x15\n\x11INVALID_ASSERTION\x10\x04\x12\x1a\n\x16UNSUPPORTED_LOGIN_TYPE\x10\x05\x12\x16\n\x12INVALID_AUTH_TOKEN\x10\x06\x12\x12\n\x0eINVALID_TICKET\x10\x07\x12\x14\n\x10\x43LIENT_NOT_FOUND\x10\x08\x12\x16\n\x12INVALID_CONSENT_ID\x10\t\x12\x14\n\x10INVALID_ID_TOKEN\x10\n\x12\x18\n\x14INVALID_ACCESS_TOKEN\x10\x0b\x12\x14\n\x10\x45XPIRED_ID_TOKEN\x10\x0c\x12\x18\n\x14\x45XPIRED_ACCESS_TOKEN\x10\r\x12\x12\n\x0eINVALID_CLIENT\x10\x0e\x12\x12\n\x0eINVALID_ORIGIN\x10\x0f\x12\x11\n\rACCESS_DENIED\x10\x10\x12\x13\n\x0fINVALID_SESSION\x10\x11\x12\x13\n\x0f\x45XPIRED_SESSION\x10\x12\x12\x17\n\x13INVALID_FINGERPRINT\x10\x13\x12\x13\n\x0fINVALID_CAPTCHA\x10\x14\x12\x14\n\x10\x43\x41PTCHA_REJECTED\x10\x15\x12\x15\n\x11\x43ONSENT_NOT_FOUND\x10\x16\x12\x13\n\x0f\x45XPIRED_CONSENT\x10\x17\x12\x12\n\x0eINTERNAL_ERROR\x10\x63\x32\x82\x13\n\x04\x41uth\x12\xa7\x02\n\x0c\x41uthenticate\x12?.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request\x1a@.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response\"\x93\x01\x82\xd3\xe4\x93\x02+\"\x1e/auth/v1beta1/login/{provider}:\tassertion\x92\x41_\x12\x11\x41uthenticate User\x1a<Authenticate a user to their digital identity with Bloombox.*\x0c\x41uthenticate\x12\x90\x02\n\x07\x43onsent\x12:.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request\x1a;.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response\"\x8b\x01\x82\xd3\xe4\x93\x02\x19\x12\x17/auth/v1beta1/{consent}\x92\x41i\x12\x10Retrieve Consent\x1aLRetrieve information about a specific consent operation, by consent flow ID.*\x07\x43onsent\x12\xb9\x02\n\x05Token\x12;.bloombox.schema.services.auth.v1beta1.ResolveToken.Request\x1a<.bloombox.schema.services.auth.v1beta1.ResolveToken.Response\"\xb4\x01\x82\xd3\xe4\x93\x02\x37\"2/auth/v1beta1/{origin}/{client_id}/{session}/token:\x01*\x92\x41t\x12\x0fProvision Token\x1aZMint a data access token, given a completed authentication and authorization/consent flow.*\x05Token\x12\x87\x02\n\x06\x41\x63\x63\x65pt\x12=.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept\x1a\x16.google.protobuf.Empty\"\xa5\x01\x82\xd3\xe4\x93\x02#\"\x1e/auth/v1beta1/{consent}/accept:\x01*\x92\x41y\x12\x0e\x41\x63\x63\x65pt Consent\x1a_Indicate that a subject entity approves or accepts the consent challenge during a consent flow.*\x06\x41\x63\x63\x65pt\x12\x87\x02\n\x06Reject\x12=.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject\x1a\x16.google.protobuf.Empty\"\xa5\x01\x82\xd3\xe4\x93\x02#\"\x1e/auth/v1beta1/{consent}/reject:\x01*\x92\x41y\x12\x0eReject Consent\x1a_Indicate that a subject entity approves or accepts the consent challenge during a consent flow.*\x06Reject\x12\xda\x03\n\x07\x43ontext\x12:.bloombox.schema.services.auth.v1beta1.UserContext.Request\x1a;.bloombox.schema.services.auth.v1beta1.UserContext.Response\"\xd5\x02\x82\xd3\xe4\x93\x02!\x12\x1f/auth/v1beta1/{session}/context\x92\x41\xaa\x02\x12\x10Security Context\x1a\x8f\x01Retrieve full security context (including access rights, a full user profile, and so on) for a given authorized and authenticated user session.*\x07\x43ontextb<\n\x0f\n\x0b\x41piKeyParam\x12\x00\n)\n\x06OAuth2\x12\x1f\n\x07offline\n\x06openid\n\x0cprofile:readb=\n\x10\n\x0c\x41piKeyHeader\x12\x00\n)\n\x06OAuth2\x12\x1f\n\x07offline\n\x06openid\n\x0cprofile:read\x12\x8f\x04\n\x07Profile\x12\x39.bloombox.schema.services.auth.v1beta1.GetProfile.Request\x1a:.bloombox.schema.services.auth.v1beta1.GetProfile.Response\"\x8c\x03\x82\xd3\xe4\x93\x02\x1e\x12\x1c/auth/v1beta1/profile/{user}\x92\x41\xe4\x02\x12\x10Retrieve Profile\x1a\xc9\x01Retrieve profile data about a user by their user key, which is resolved upon finishing an authentication and authorization/consent flow.\nData offered in return depends on granted OAuth2 profile scopes.*\x07Profileb<\n\x0f\n\x0b\x41piKeyParam\x12\x00\n)\n\x06OAuth2\x12\x1f\n\x07offline\n\x06openid\n\x0cprofile:readb=\n\x10\n\x0c\x41piKeyHeader\x12\x00\n)\n\x06OAuth2\x12\x1f\n\x07offline\n\x06openid\n\x0cprofile:readB\xd7\x08\n(io.bloombox.schema.services.auth.v1beta1H\x01P\x01\xa2\x02\x03\x42\x42S\x92\x41\x9f\x08\x12g\n\x08\x41uth API\x1a\x19https://bloombox.io/terms\"7\n\x08\x42loombox\x12\x13https://bloombox.io\x1a\x16\x64\x65velopers@bloombox.io2\x07v1beta1\x1a\x12\x61pi.bloombox.cloud*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonZ\xa0\x06\nd\n\x0b\x41piKeyParam\x12U\x08\x02\x12JParameter for identifying API key owned by the invoking project or system.\x1a\x03key \x01\nh\n\x0c\x41piKeyHeader\x12X\x08\x02\x12GHeader for identifying API key owned by the invoking project or system.\x1a\tX-API-Key \x01\n\xcd\x04\n\x06OAuth2\x12\xc2\x04\x08\x03\x12]Bloombox Identity-powered OAuth2 access, authorized on behalf of an end-user or organization.(\x04\x32,https://authorize.bloombox.cloud/oauth2/auth:-https://authorize.bloombox.cloud/oauth2/tokenB\xff\x02\n1\n\x07offline\x12&Offline access to authorized user data\n9\n\x06openid\x12/OIDC (OpenID Connect) access for seamless logon\n0\n\x05\x65mail\x12\'Read access to the user\'s email address\n/\n\x05phone\x12&Read access to the user\'s phone number\n9\n\x06notify\x12/Ability to notify the user for important events\n1\n\x0cprofile:read\x12!Read access to the user\'s profile\n>\n\x12profile.basic:read\x12(Read access to the user\'s public profileb\x11\n\x0f\n\x0b\x41piKeyParam\x12\x00\x62\x12\n\x10\n\x0c\x41piKeyHeader\x12\x00r/\n\rBloombox APIs\x12\x1ehttps://apidocs.bloombox.cloudb\x06proto3')
   ,
-  dependencies=[identity_dot_User__pb2.DESCRIPTOR,services_dot_ServiceStatus__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
+  dependencies=[oauth_dot_Client__pb2.DESCRIPTOR,identity_dot_User__pb2.DESCRIPTOR,security_dot_Token__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,protoc__gen__swagger_dot_options_dot_swagger__pb2.DESCRIPTOR,])
 
 _AUTHERROR = _descriptor.EnumDescriptor(
   name='AuthError',
@@ -37,166 +40,137 @@ _AUTHERROR = _descriptor.EnumDescriptor(
       name='NO_ERROR', index=0, number=0,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ACCOUNT_SUSPENDED', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PROFILE_NOT_FOUND', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INVALID_USER_KEY', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INVALID_ASSERTION', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='UNSUPPORTED_LOGIN_TYPE', index=5, number=5,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INVALID_AUTH_TOKEN', index=6, number=6,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INVALID_TICKET', index=7, number=7,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CLIENT_NOT_FOUND', index=8, number=8,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INVALID_CONSENT_ID', index=9, number=9,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INVALID_ID_TOKEN', index=10, number=10,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INVALID_ACCESS_TOKEN', index=11, number=11,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='EXPIRED_ID_TOKEN', index=12, number=12,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='EXPIRED_ACCESS_TOKEN', index=13, number=13,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INVALID_CLIENT', index=14, number=14,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INVALID_ORIGIN', index=15, number=15,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ACCESS_DENIED', index=16, number=16,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INVALID_SESSION', index=17, number=17,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='EXPIRED_SESSION', index=18, number=18,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INVALID_FINGERPRINT', index=19, number=19,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INVALID_CAPTCHA', index=20, number=20,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAPTCHA_REJECTED', index=21, number=21,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CONSENT_NOT_FOUND', index=22, number=22,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='EXPIRED_CONSENT', index=23, number=23,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INTERNAL_ERROR', index=24, number=99,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=1195,
-  serialized_end=1220,
+  serialized_start=1475,
+  serialized_end=2038,
 )
 _sym_db.RegisterEnumDescriptor(_AUTHERROR)
 
 AuthError = enum_type_wrapper.EnumTypeWrapper(_AUTHERROR)
-_AUTHSTATUS = _descriptor.EnumDescriptor(
-  name='AuthStatus',
-  full_name='bloombox.schema.services.auth.v1beta1.AuthStatus',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNKNOWN', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ACCESS_GRANTED', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ACCESS_DENIED', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ACCOUNT_SUSPENDED', index=3, number=3,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=1222,
-  serialized_end=1309,
-)
-_sym_db.RegisterEnumDescriptor(_AUTHSTATUS)
-
-AuthStatus = enum_type_wrapper.EnumTypeWrapper(_AUTHSTATUS)
 NO_ERROR = 0
-UNKNOWN = 0
-ACCESS_GRANTED = 1
-ACCESS_DENIED = 2
-ACCOUNT_SUSPENDED = 3
+ACCOUNT_SUSPENDED = 1
+PROFILE_NOT_FOUND = 2
+INVALID_USER_KEY = 3
+INVALID_ASSERTION = 4
+UNSUPPORTED_LOGIN_TYPE = 5
+INVALID_AUTH_TOKEN = 6
+INVALID_TICKET = 7
+CLIENT_NOT_FOUND = 8
+INVALID_CONSENT_ID = 9
+INVALID_ID_TOKEN = 10
+INVALID_ACCESS_TOKEN = 11
+EXPIRED_ID_TOKEN = 12
+EXPIRED_ACCESS_TOKEN = 13
+INVALID_CLIENT = 14
+INVALID_ORIGIN = 15
+ACCESS_DENIED = 16
+INVALID_SESSION = 17
+EXPIRED_SESSION = 18
+INVALID_FINGERPRINT = 19
+INVALID_CAPTCHA = 20
+CAPTCHA_REJECTED = 21
+CONSENT_NOT_FOUND = 22
+EXPIRED_CONSENT = 23
+INTERNAL_ERROR = 99
 
-
-
-_PING_REQUEST = _descriptor.Descriptor(
-  name='Request',
-  full_name='bloombox.schema.services.auth.v1beta1.Ping.Request',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=169,
-  serialized_end=178,
-)
-
-_PING_RESPONSE = _descriptor.Descriptor(
-  name='Response',
-  full_name='bloombox.schema.services.auth.v1beta1.Ping.Response',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='status', full_name='bloombox.schema.services.auth.v1beta1.Ping.Response.status', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=180,
-  serialized_end=247,
-)
-
-_PING_OPERATION = _descriptor.Descriptor(
-  name='Operation',
-  full_name='bloombox.schema.services.auth.v1beta1.Ping.Operation',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='request', full_name='bloombox.schema.services.auth.v1beta1.Ping.Operation.request', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='response', full_name='bloombox.schema.services.auth.v1beta1.Ping.Operation.response', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=250,
-  serialized_end=403,
-)
-
-_PING = _descriptor.Descriptor(
-  name='Ping',
-  full_name='bloombox.schema.services.auth.v1beta1.Ping',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[_PING_REQUEST, _PING_RESPONSE, _PING_OPERATION, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=161,
-  serialized_end=403,
-)
 
 
 _EMAILPASSWORDASSERTION = _descriptor.Descriptor(
@@ -232,8 +206,8 @@ _EMAILPASSWORDASSERTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=405,
-  serialized_end=462,
+  serialized_start=243,
+  serialized_end=300,
 )
 
 
@@ -270,8 +244,8 @@ _FIREBASETOKENASSERTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=464,
-  serialized_end=516,
+  serialized_start=302,
+  serialized_end=354,
 )
 
 
@@ -311,8 +285,8 @@ _ACCOUNTASSERTION = _descriptor.Descriptor(
       name='assertion', full_name='bloombox.schema.services.auth.v1beta1.AccountAssertion.assertion',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=519,
-  serialized_end=722,
+  serialized_start=357,
+  serialized_end=560,
 )
 
 
@@ -349,8 +323,8 @@ _AUTHENTICATEUSER_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=746,
-  serialized_end=893,
+  serialized_start=584,
+  serialized_end=731,
 )
 
 _AUTHENTICATEUSER_RESPONSE = _descriptor.Descriptor(
@@ -361,33 +335,26 @@ _AUTHENTICATEUSER_RESPONSE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.status', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
+      name='uid', full_name='bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.uid', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='uid', full_name='bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.uid', index=1,
+      name='key', full_name='bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.key', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='key', full_name='bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.key', index=2,
+      name='token', full_name='bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.token', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='token', full_name='bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.token', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -400,45 +367,8 @@ _AUTHENTICATEUSER_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=895,
-  serialized_end=1013,
-)
-
-_AUTHENTICATEUSER_OPERATION = _descriptor.Descriptor(
-  name='Operation',
-  full_name='bloombox.schema.services.auth.v1beta1.AuthenticateUser.Operation',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='request', full_name='bloombox.schema.services.auth.v1beta1.AuthenticateUser.Operation.request', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='response', full_name='bloombox.schema.services.auth.v1beta1.AuthenticateUser.Operation.response', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1016,
-  serialized_end=1193,
+  serialized_start=733,
+  serialized_end=784,
 )
 
 _AUTHENTICATEUSER = _descriptor.Descriptor(
@@ -451,7 +381,7 @@ _AUTHENTICATEUSER = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_AUTHENTICATEUSER_REQUEST, _AUTHENTICATEUSER_RESPONSE, _AUTHENTICATEUSER_OPERATION, ],
+  nested_types=[_AUTHENTICATEUSER_REQUEST, _AUTHENTICATEUSER_RESPONSE, ],
   enum_types=[
   ],
   options=None,
@@ -460,16 +390,537 @@ _AUTHENTICATEUSER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=725,
-  serialized_end=1193,
+  serialized_start=563,
+  serialized_end=784,
 )
 
-_PING_REQUEST.containing_type = _PING
-_PING_RESPONSE.fields_by_name['status'].enum_type = services_dot_ServiceStatus__pb2._SERVICESTATUS
-_PING_RESPONSE.containing_type = _PING
-_PING_OPERATION.fields_by_name['request'].message_type = _PING_REQUEST
-_PING_OPERATION.fields_by_name['response'].message_type = _PING_RESPONSE
-_PING_OPERATION.containing_type = _PING
+
+_RESOLVETOKEN_REQUEST = _descriptor.Descriptor(
+  name='Request',
+  full_name='bloombox.schema.services.auth.v1beta1.ResolveToken.Request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='client_id', full_name='bloombox.schema.services.auth.v1beta1.ResolveToken.Request.client_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='origin', full_name='bloombox.schema.services.auth.v1beta1.ResolveToken.Request.origin', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='state', full_name='bloombox.schema.services.auth.v1beta1.ResolveToken.Request.state', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='captcha', full_name='bloombox.schema.services.auth.v1beta1.ResolveToken.Request.captcha', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='session', full_name='bloombox.schema.services.auth.v1beta1.ResolveToken.Request.session', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='fingerprint', full_name='bloombox.schema.services.auth.v1beta1.ResolveToken.Request.fingerprint', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='auth', full_name='bloombox.schema.services.auth.v1beta1.ResolveToken.Request.auth', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=804,
+  serialized_end=971,
+)
+
+_RESOLVETOKEN_RESPONSE = _descriptor.Descriptor(
+  name='Response',
+  full_name='bloombox.schema.services.auth.v1beta1.ResolveToken.Response',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='jwt', full_name='bloombox.schema.services.auth.v1beta1.ResolveToken.Response.jwt', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=973,
+  serialized_end=996,
+)
+
+_RESOLVETOKEN = _descriptor.Descriptor(
+  name='ResolveToken',
+  full_name='bloombox.schema.services.auth.v1beta1.ResolveToken',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[_RESOLVETOKEN_REQUEST, _RESOLVETOKEN_RESPONSE, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=787,
+  serialized_end=996,
+)
+
+
+_CONSENTDECISION_ACCEPT = _descriptor.Descriptor(
+  name='Accept',
+  full_name='bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uid', full_name='bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept.uid', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='consent', full_name='bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept.consent', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='scope', full_name='bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept.scope', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1017,
+  serialized_end=1070,
+)
+
+_CONSENTDECISION_REJECT = _descriptor.Descriptor(
+  name='Reject',
+  full_name='bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uid', full_name='bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject.uid', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='consent', full_name='bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject.consent', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1072,
+  serialized_end=1110,
+)
+
+_CONSENTDECISION_RESPONSE = _descriptor.Descriptor(
+  name='Response',
+  full_name='bloombox.schema.services.auth.v1beta1.ConsentDecision.Response',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=733,
+  serialized_end=743,
+)
+
+_CONSENTDECISION = _descriptor.Descriptor(
+  name='ConsentDecision',
+  full_name='bloombox.schema.services.auth.v1beta1.ConsentDecision',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[_CONSENTDECISION_ACCEPT, _CONSENTDECISION_REJECT, _CONSENTDECISION_RESPONSE, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=998,
+  serialized_end=1122,
+)
+
+
+_USERCONTEXT_REQUEST = _descriptor.Descriptor(
+  name='Request',
+  full_name='bloombox.schema.services.auth.v1beta1.UserContext.Request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uid', full_name='bloombox.schema.services.auth.v1beta1.UserContext.Request.uid', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='session', full_name='bloombox.schema.services.auth.v1beta1.UserContext.Request.session', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1140,
+  serialized_end=1179,
+)
+
+_USERCONTEXT_RESPONSE = _descriptor.Descriptor(
+  name='Response',
+  full_name='bloombox.schema.services.auth.v1beta1.UserContext.Response',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='jwt', full_name='bloombox.schema.services.auth.v1beta1.UserContext.Response.jwt', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='key', full_name='bloombox.schema.services.auth.v1beta1.UserContext.Response.key', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='profile', full_name='bloombox.schema.services.auth.v1beta1.UserContext.Response.profile', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1181,
+  serialized_end=1266,
+)
+
+_USERCONTEXT = _descriptor.Descriptor(
+  name='UserContext',
+  full_name='bloombox.schema.services.auth.v1beta1.UserContext',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[_USERCONTEXT_REQUEST, _USERCONTEXT_RESPONSE, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1125,
+  serialized_end=1266,
+)
+
+
+_GETPROFILE_REQUEST = _descriptor.Descriptor(
+  name='Request',
+  full_name='bloombox.schema.services.auth.v1beta1.GetProfile.Request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='user', full_name='bloombox.schema.services.auth.v1beta1.GetProfile.Request.user', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1282,
+  serialized_end=1305,
+)
+
+_GETPROFILE_RESPONSE = _descriptor.Descriptor(
+  name='Response',
+  full_name='bloombox.schema.services.auth.v1beta1.GetProfile.Response',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='profile', full_name='bloombox.schema.services.auth.v1beta1.GetProfile.Response.profile', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1307,
+  serialized_end=1366,
+)
+
+_GETPROFILE = _descriptor.Descriptor(
+  name='GetProfile',
+  full_name='bloombox.schema.services.auth.v1beta1.GetProfile',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[_GETPROFILE_REQUEST, _GETPROFILE_RESPONSE, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1268,
+  serialized_end=1366,
+)
+
+
+_CONSENTFLOW_REQUEST = _descriptor.Descriptor(
+  name='Request',
+  full_name='bloombox.schema.services.auth.v1beta1.ConsentFlow.Request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='consent', full_name='bloombox.schema.services.auth.v1beta1.ConsentFlow.Request.consent', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1383,
+  serialized_end=1409,
+)
+
+_CONSENTFLOW_RESPONSE = _descriptor.Descriptor(
+  name='Response',
+  full_name='bloombox.schema.services.auth.v1beta1.ConsentFlow.Response',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ticket', full_name='bloombox.schema.services.auth.v1beta1.ConsentFlow.Response.ticket', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1411,
+  serialized_end=1472,
+)
+
+_CONSENTFLOW = _descriptor.Descriptor(
+  name='ConsentFlow',
+  full_name='bloombox.schema.services.auth.v1beta1.ConsentFlow',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[_CONSENTFLOW_REQUEST, _CONSENTFLOW_RESPONSE, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1368,
+  serialized_end=1472,
+)
+
 _ACCOUNTASSERTION.fields_by_name['email_password'].message_type = _EMAILPASSWORDASSERTION
 _ACCOUNTASSERTION.fields_by_name['firebase'].message_type = _FIREBASETOKENASSERTION
 _ACCOUNTASSERTION.oneofs_by_name['assertion'].fields.append(
@@ -481,50 +932,33 @@ _ACCOUNTASSERTION.fields_by_name['firebase'].containing_oneof = _ACCOUNTASSERTIO
 _AUTHENTICATEUSER_REQUEST.fields_by_name['provider'].enum_type = identity_dot_User__pb2._IDENTITYPROVIDER
 _AUTHENTICATEUSER_REQUEST.fields_by_name['assertion'].message_type = _ACCOUNTASSERTION
 _AUTHENTICATEUSER_REQUEST.containing_type = _AUTHENTICATEUSER
-_AUTHENTICATEUSER_RESPONSE.fields_by_name['status'].enum_type = _AUTHSTATUS
 _AUTHENTICATEUSER_RESPONSE.containing_type = _AUTHENTICATEUSER
-_AUTHENTICATEUSER_OPERATION.fields_by_name['request'].message_type = _AUTHENTICATEUSER_REQUEST
-_AUTHENTICATEUSER_OPERATION.fields_by_name['response'].message_type = _AUTHENTICATEUSER_RESPONSE
-_AUTHENTICATEUSER_OPERATION.containing_type = _AUTHENTICATEUSER
-DESCRIPTOR.message_types_by_name['Ping'] = _PING
+_RESOLVETOKEN_REQUEST.fields_by_name['auth'].message_type = security_dot_Token__pb2._AUTHPAYLOAD
+_RESOLVETOKEN_REQUEST.containing_type = _RESOLVETOKEN
+_RESOLVETOKEN_RESPONSE.containing_type = _RESOLVETOKEN
+_CONSENTDECISION_ACCEPT.containing_type = _CONSENTDECISION
+_CONSENTDECISION_REJECT.containing_type = _CONSENTDECISION
+_CONSENTDECISION_RESPONSE.containing_type = _CONSENTDECISION
+_USERCONTEXT_REQUEST.containing_type = _USERCONTEXT
+_USERCONTEXT_RESPONSE.fields_by_name['profile'].message_type = identity_dot_User__pb2._USER
+_USERCONTEXT_RESPONSE.containing_type = _USERCONTEXT
+_GETPROFILE_REQUEST.containing_type = _GETPROFILE
+_GETPROFILE_RESPONSE.fields_by_name['profile'].message_type = identity_dot_User__pb2._USER
+_GETPROFILE_RESPONSE.containing_type = _GETPROFILE
+_CONSENTFLOW_REQUEST.containing_type = _CONSENTFLOW
+_CONSENTFLOW_RESPONSE.fields_by_name['ticket'].message_type = oauth_dot_Client__pb2._CONSENTTICKET
+_CONSENTFLOW_RESPONSE.containing_type = _CONSENTFLOW
 DESCRIPTOR.message_types_by_name['EmailPasswordAssertion'] = _EMAILPASSWORDASSERTION
 DESCRIPTOR.message_types_by_name['FirebaseTokenAssertion'] = _FIREBASETOKENASSERTION
 DESCRIPTOR.message_types_by_name['AccountAssertion'] = _ACCOUNTASSERTION
 DESCRIPTOR.message_types_by_name['AuthenticateUser'] = _AUTHENTICATEUSER
+DESCRIPTOR.message_types_by_name['ResolveToken'] = _RESOLVETOKEN
+DESCRIPTOR.message_types_by_name['ConsentDecision'] = _CONSENTDECISION
+DESCRIPTOR.message_types_by_name['UserContext'] = _USERCONTEXT
+DESCRIPTOR.message_types_by_name['GetProfile'] = _GETPROFILE
+DESCRIPTOR.message_types_by_name['ConsentFlow'] = _CONSENTFLOW
 DESCRIPTOR.enum_types_by_name['AuthError'] = _AUTHERROR
-DESCRIPTOR.enum_types_by_name['AuthStatus'] = _AUTHSTATUS
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
-
-Ping = _reflection.GeneratedProtocolMessageType('Ping', (_message.Message,), dict(
-
-  Request = _reflection.GeneratedProtocolMessageType('Request', (_message.Message,), dict(
-    DESCRIPTOR = _PING_REQUEST,
-    __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
-    # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.Ping.Request)
-    ))
-  ,
-
-  Response = _reflection.GeneratedProtocolMessageType('Response', (_message.Message,), dict(
-    DESCRIPTOR = _PING_RESPONSE,
-    __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
-    # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.Ping.Response)
-    ))
-  ,
-
-  Operation = _reflection.GeneratedProtocolMessageType('Operation', (_message.Message,), dict(
-    DESCRIPTOR = _PING_OPERATION,
-    __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
-    # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.Ping.Operation)
-    ))
-  ,
-  DESCRIPTOR = _PING,
-  __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
-  # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.Ping)
-  ))
-_sym_db.RegisterMessage(Ping)
-_sym_db.RegisterMessage(Ping.Request)
-_sym_db.RegisterMessage(Ping.Response)
-_sym_db.RegisterMessage(Ping.Operation)
 
 EmailPasswordAssertion = _reflection.GeneratedProtocolMessageType('EmailPasswordAssertion', (_message.Message,), dict(
   DESCRIPTOR = _EMAILPASSWORDASSERTION,
@@ -562,13 +996,6 @@ AuthenticateUser = _reflection.GeneratedProtocolMessageType('AuthenticateUser', 
     # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response)
     ))
   ,
-
-  Operation = _reflection.GeneratedProtocolMessageType('Operation', (_message.Message,), dict(
-    DESCRIPTOR = _AUTHENTICATEUSER_OPERATION,
-    __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
-    # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.AuthenticateUser.Operation)
-    ))
-  ,
   DESCRIPTOR = _AUTHENTICATEUSER,
   __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
   # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.AuthenticateUser)
@@ -576,11 +1003,133 @@ AuthenticateUser = _reflection.GeneratedProtocolMessageType('AuthenticateUser', 
 _sym_db.RegisterMessage(AuthenticateUser)
 _sym_db.RegisterMessage(AuthenticateUser.Request)
 _sym_db.RegisterMessage(AuthenticateUser.Response)
-_sym_db.RegisterMessage(AuthenticateUser.Operation)
+
+ResolveToken = _reflection.GeneratedProtocolMessageType('ResolveToken', (_message.Message,), dict(
+
+  Request = _reflection.GeneratedProtocolMessageType('Request', (_message.Message,), dict(
+    DESCRIPTOR = _RESOLVETOKEN_REQUEST,
+    __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
+    # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.ResolveToken.Request)
+    ))
+  ,
+
+  Response = _reflection.GeneratedProtocolMessageType('Response', (_message.Message,), dict(
+    DESCRIPTOR = _RESOLVETOKEN_RESPONSE,
+    __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
+    # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.ResolveToken.Response)
+    ))
+  ,
+  DESCRIPTOR = _RESOLVETOKEN,
+  __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
+  # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.ResolveToken)
+  ))
+_sym_db.RegisterMessage(ResolveToken)
+_sym_db.RegisterMessage(ResolveToken.Request)
+_sym_db.RegisterMessage(ResolveToken.Response)
+
+ConsentDecision = _reflection.GeneratedProtocolMessageType('ConsentDecision', (_message.Message,), dict(
+
+  Accept = _reflection.GeneratedProtocolMessageType('Accept', (_message.Message,), dict(
+    DESCRIPTOR = _CONSENTDECISION_ACCEPT,
+    __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
+    # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept)
+    ))
+  ,
+
+  Reject = _reflection.GeneratedProtocolMessageType('Reject', (_message.Message,), dict(
+    DESCRIPTOR = _CONSENTDECISION_REJECT,
+    __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
+    # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject)
+    ))
+  ,
+
+  Response = _reflection.GeneratedProtocolMessageType('Response', (_message.Message,), dict(
+    DESCRIPTOR = _CONSENTDECISION_RESPONSE,
+    __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
+    # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.ConsentDecision.Response)
+    ))
+  ,
+  DESCRIPTOR = _CONSENTDECISION,
+  __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
+  # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.ConsentDecision)
+  ))
+_sym_db.RegisterMessage(ConsentDecision)
+_sym_db.RegisterMessage(ConsentDecision.Accept)
+_sym_db.RegisterMessage(ConsentDecision.Reject)
+_sym_db.RegisterMessage(ConsentDecision.Response)
+
+UserContext = _reflection.GeneratedProtocolMessageType('UserContext', (_message.Message,), dict(
+
+  Request = _reflection.GeneratedProtocolMessageType('Request', (_message.Message,), dict(
+    DESCRIPTOR = _USERCONTEXT_REQUEST,
+    __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
+    # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.UserContext.Request)
+    ))
+  ,
+
+  Response = _reflection.GeneratedProtocolMessageType('Response', (_message.Message,), dict(
+    DESCRIPTOR = _USERCONTEXT_RESPONSE,
+    __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
+    # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.UserContext.Response)
+    ))
+  ,
+  DESCRIPTOR = _USERCONTEXT,
+  __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
+  # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.UserContext)
+  ))
+_sym_db.RegisterMessage(UserContext)
+_sym_db.RegisterMessage(UserContext.Request)
+_sym_db.RegisterMessage(UserContext.Response)
+
+GetProfile = _reflection.GeneratedProtocolMessageType('GetProfile', (_message.Message,), dict(
+
+  Request = _reflection.GeneratedProtocolMessageType('Request', (_message.Message,), dict(
+    DESCRIPTOR = _GETPROFILE_REQUEST,
+    __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
+    # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.GetProfile.Request)
+    ))
+  ,
+
+  Response = _reflection.GeneratedProtocolMessageType('Response', (_message.Message,), dict(
+    DESCRIPTOR = _GETPROFILE_RESPONSE,
+    __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
+    # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.GetProfile.Response)
+    ))
+  ,
+  DESCRIPTOR = _GETPROFILE,
+  __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
+  # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.GetProfile)
+  ))
+_sym_db.RegisterMessage(GetProfile)
+_sym_db.RegisterMessage(GetProfile.Request)
+_sym_db.RegisterMessage(GetProfile.Response)
+
+ConsentFlow = _reflection.GeneratedProtocolMessageType('ConsentFlow', (_message.Message,), dict(
+
+  Request = _reflection.GeneratedProtocolMessageType('Request', (_message.Message,), dict(
+    DESCRIPTOR = _CONSENTFLOW_REQUEST,
+    __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
+    # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.ConsentFlow.Request)
+    ))
+  ,
+
+  Response = _reflection.GeneratedProtocolMessageType('Response', (_message.Message,), dict(
+    DESCRIPTOR = _CONSENTFLOW_RESPONSE,
+    __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
+    # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.ConsentFlow.Response)
+    ))
+  ,
+  DESCRIPTOR = _CONSENTFLOW,
+  __module__ = 'auth.v1beta1.AuthService_Beta1_pb2'
+  # @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.ConsentFlow)
+  ))
+_sym_db.RegisterMessage(ConsentFlow)
+_sym_db.RegisterMessage(ConsentFlow.Request)
+_sym_db.RegisterMessage(ConsentFlow.Response)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n(io.bloombox.schema.services.auth.v1beta1H\001P\001\242\002\003BBS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n(io.bloombox.schema.services.auth.v1beta1H\001P\001\242\002\003BBS\222A\237\010\022g\n\010Auth API\032\031https://bloombox.io/terms\"7\n\010Bloombox\022\023https://bloombox.io\032\026developers@bloombox.io2\007v1beta1\032\022api.bloombox.cloud*\001\0022\020application/json:\020application/jsonZ\240\006\nd\n\013ApiKeyParam\022U\010\002\022JParameter for identifying API key owned by the invoking project or system.\032\003key \001\nh\n\014ApiKeyHeader\022X\010\002\022GHeader for identifying API key owned by the invoking project or system.\032\tX-API-Key \001\n\315\004\n\006OAuth2\022\302\004\010\003\022]Bloombox Identity-powered OAuth2 access, authorized on behalf of an end-user or organization.(\0042,https://authorize.bloombox.cloud/oauth2/auth:-https://authorize.bloombox.cloud/oauth2/tokenB\377\002\n1\n\007offline\022&Offline access to authorized user data\n9\n\006openid\022/OIDC (OpenID Connect) access for seamless logon\n0\n\005email\022\'Read access to the user\'s email address\n/\n\005phone\022&Read access to the user\'s phone number\n9\n\006notify\022/Ability to notify the user for important events\n1\n\014profile:read\022!Read access to the user\'s profile\n>\n\022profile.basic:read\022(Read access to the user\'s public profileb\021\n\017\n\013ApiKeyParam\022\000b\022\n\020\n\014ApiKeyHeader\022\000r/\n\rBloombox APIs\022\036https://apidocs.bloombox.cloud'))
 
 _AUTH = _descriptor.ServiceDescriptor(
   name='Auth',
@@ -588,26 +1137,71 @@ _AUTH = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=1312,
-  serialized_end=1661,
+  serialized_start=2041,
+  serialized_end=4475,
   methods=[
-  _descriptor.MethodDescriptor(
-    name='Ping',
-    full_name='bloombox.schema.services.auth.v1beta1.Auth.Ping',
-    index=0,
-    containing_service=None,
-    input_type=_PING_REQUEST,
-    output_type=_PING_RESPONSE,
-    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002\024\022\022/auth/v1beta1/ping')),
-  ),
   _descriptor.MethodDescriptor(
     name='Authenticate',
     full_name='bloombox.schema.services.auth.v1beta1.Auth.Authenticate',
-    index=1,
+    index=0,
     containing_service=None,
     input_type=_AUTHENTICATEUSER_REQUEST,
     output_type=_AUTHENTICATEUSER_RESPONSE,
-    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002+\"\036/auth/v1beta1/login/{provider}:\tassertion')),
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002+\"\036/auth/v1beta1/login/{provider}:\tassertion\222A_\022\021Authenticate User\032<Authenticate a user to their digital identity with Bloombox.*\014Authenticate')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='Consent',
+    full_name='bloombox.schema.services.auth.v1beta1.Auth.Consent',
+    index=1,
+    containing_service=None,
+    input_type=_CONSENTFLOW_REQUEST,
+    output_type=_CONSENTFLOW_RESPONSE,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002\031\022\027/auth/v1beta1/{consent}\222Ai\022\020Retrieve Consent\032LRetrieve information about a specific consent operation, by consent flow ID.*\007Consent')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='Token',
+    full_name='bloombox.schema.services.auth.v1beta1.Auth.Token',
+    index=2,
+    containing_service=None,
+    input_type=_RESOLVETOKEN_REQUEST,
+    output_type=_RESOLVETOKEN_RESPONSE,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\0027\"2/auth/v1beta1/{origin}/{client_id}/{session}/token:\001*\222At\022\017Provision Token\032ZMint a data access token, given a completed authentication and authorization/consent flow.*\005Token')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='Accept',
+    full_name='bloombox.schema.services.auth.v1beta1.Auth.Accept',
+    index=3,
+    containing_service=None,
+    input_type=_CONSENTDECISION_ACCEPT,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002#\"\036/auth/v1beta1/{consent}/accept:\001*\222Ay\022\016Accept Consent\032_Indicate that a subject entity approves or accepts the consent challenge during a consent flow.*\006Accept')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='Reject',
+    full_name='bloombox.schema.services.auth.v1beta1.Auth.Reject',
+    index=4,
+    containing_service=None,
+    input_type=_CONSENTDECISION_REJECT,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002#\"\036/auth/v1beta1/{consent}/reject:\001*\222Ay\022\016Reject Consent\032_Indicate that a subject entity approves or accepts the consent challenge during a consent flow.*\006Reject')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='Context',
+    full_name='bloombox.schema.services.auth.v1beta1.Auth.Context',
+    index=5,
+    containing_service=None,
+    input_type=_USERCONTEXT_REQUEST,
+    output_type=_USERCONTEXT_RESPONSE,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002!\022\037/auth/v1beta1/{session}/context\222A\252\002\022\020Security Context\032\217\001Retrieve full security context (including access rights, a full user profile, and so on) for a given authorized and authenticated user session.*\007Contextb<\n\017\n\013ApiKeyParam\022\000\n)\n\006OAuth2\022\037\n\007offline\n\006openid\n\014profile:readb=\n\020\n\014ApiKeyHeader\022\000\n)\n\006OAuth2\022\037\n\007offline\n\006openid\n\014profile:read')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='Profile',
+    full_name='bloombox.schema.services.auth.v1beta1.Auth.Profile',
+    index=6,
+    containing_service=None,
+    input_type=_GETPROFILE_REQUEST,
+    output_type=_GETPROFILE_RESPONSE,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002\036\022\034/auth/v1beta1/profile/{user}\222A\344\002\022\020Retrieve Profile\032\311\001Retrieve profile data about a user by their user key, which is resolved upon finishing an authentication and authorization/consent flow.\nData offered in return depends on granted OAuth2 profile scopes.*\007Profileb<\n\017\n\013ApiKeyParam\022\000\n)\n\006OAuth2\022\037\n\007offline\n\006openid\n\014profile:readb=\n\020\n\014ApiKeyHeader\022\000\n)\n\006OAuth2\022\037\n\007offline\n\006openid\n\014profile:read')),
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_AUTH)

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='structs/ProductFlags.proto',
   package='opencannabis.structs',
   syntax='proto3',
-  serialized_pb=_b('\n\x1astructs/ProductFlags.proto\x12\x14opencannabis.structs*\xa6\x01\n\x0bProductFlag\x12\x0b\n\x07VISIBLE\x10\x00\x12\n\n\x06HIDDEN\x10\x01\x12\x0b\n\x07PREMIUM\x10\x02\x12\x0c\n\x08\x46\x45\x41TURED\x10\x03\x12\x0b\n\x07ORGANIC\x10\x04\x12\r\n\tEXCLUSIVE\x10\x05\x12\x0c\n\x08IN_HOUSE\x10\x06\x12\x0f\n\x0bLAST_CHANCE\x10\x07\x12\x10\n\x0cLIMITED_TIME\x10\x08\x12\x0b\n\x07ON_SALE\x10\t\x12\t\n\x05LOCAL\x10\nB>\n%io.opencannabis.schema.product.structB\x0b\x42\x61seStructsH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x1astructs/ProductFlags.proto\x12\x14opencannabis.structs*\x99\x01\n\x0bProductFlag\x12\x0b\n\x07VISIBLE\x10\x00\x12\n\n\x06HIDDEN\x10\x01\x12\x0b\n\x07PREMIUM\x10\x02\x12\x0c\n\x08\x46\x45\x41TURED\x10\x03\x12\r\n\tEXCLUSIVE\x10\x04\x12\x0c\n\x08IN_HOUSE\x10\x05\x12\x0f\n\x0bLAST_CHANCE\x10\x06\x12\x10\n\x0cLIMITED_TIME\x10\x07\x12\t\n\x05LOCAL\x10\x08\x12\x0b\n\x07ON_SALE\x10\x14\x42>\n%io.opencannabis.schema.product.structB\x0b\x42\x61seStructsH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
 )
 
 _PRODUCTFLAG = _descriptor.EnumDescriptor(
@@ -46,38 +46,34 @@ _PRODUCTFLAG = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ORGANIC', index=4, number=4,
+      name='EXCLUSIVE', index=4, number=4,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='EXCLUSIVE', index=5, number=5,
+      name='IN_HOUSE', index=5, number=5,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='IN_HOUSE', index=6, number=6,
+      name='LAST_CHANCE', index=6, number=6,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='LAST_CHANCE', index=7, number=7,
+      name='LIMITED_TIME', index=7, number=7,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='LIMITED_TIME', index=8, number=8,
+      name='LOCAL', index=8, number=8,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ON_SALE', index=9, number=9,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='LOCAL', index=10, number=10,
+      name='ON_SALE', index=9, number=20,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
   serialized_start=53,
-  serialized_end=219,
+  serialized_end=206,
 )
 _sym_db.RegisterEnumDescriptor(_PRODUCTFLAG)
 
@@ -86,13 +82,12 @@ VISIBLE = 0
 HIDDEN = 1
 PREMIUM = 2
 FEATURED = 3
-ORGANIC = 4
-EXCLUSIVE = 5
-IN_HOUSE = 6
-LAST_CHANCE = 7
-LIMITED_TIME = 8
-ON_SALE = 9
-LOCAL = 10
+EXCLUSIVE = 4
+IN_HOUSE = 5
+LAST_CHANCE = 6
+LIMITED_TIME = 7
+LOCAL = 8
+ON_SALE = 20
 
 
 DESCRIPTOR.enum_types_by_name['ProductFlag'] = _PRODUCTFLAG

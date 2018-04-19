@@ -13,6 +13,7 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+import bq_field_pb2 as bq__field__pb2
 from person import Person_pb2 as person_dot_Person__pb2
 
 
@@ -20,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='commerce/Customer.proto',
   package='opencannabis.commerce',
   syntax='proto3',
-  serialized_pb=_b('\n\x17\x63ommerce/Customer.proto\x12\x15opencannabis.commerce\x1a\x13person/Person.proto\"]\n\x08\x43ustomer\x12+\n\x06person\x18\x01 \x01(\x0b\x32\x1b.opencannabis.person.Person\x12\x12\n\nforeign_id\x18\x02 \x01(\t\x12\x10\n\x08user_key\x18\x03 \x01(\tB:\n\x1fio.opencannabis.schema.commerceB\rOrderCustomerH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x17\x63ommerce/Customer.proto\x12\x15opencannabis.commerce\x1a\x0e\x62q_field.proto\x1a\x13person/Person.proto\"\xd1\x01\n\x08\x43ustomer\x12T\n\x06person\x18\x01 \x01(\x0b\x32\x1b.opencannabis.person.PersonB\'\xf0?\x01\x8a@!Person attached to this customer.\x12;\n\nforeign_id\x18\x02 \x01(\tB\'\xf0?\x01\x8a@!Partner-scoped foreign system ID.\x12\x32\n\x08user_key\x18\x03 \x01(\tB \xf0?\x01\x8a@\x1aResolved subject user key.B:\n\x1fio.opencannabis.schema.commerceB\rOrderCustomerH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
-  dependencies=[person_dot_Person__pb2.DESCRIPTOR,])
+  dependencies=[bq__field__pb2.DESCRIPTOR,person_dot_Person__pb2.DESCRIPTOR,])
 
 
 
@@ -40,21 +41,21 @@ _CUSTOMER = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@!Person attached to this customer.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='foreign_id', full_name='opencannabis.commerce.Customer.foreign_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@!Partner-scoped foreign system ID.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='user_key', full_name='opencannabis.commerce.Customer.user_key', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@\032Resolved subject user key.')), file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -67,8 +68,8 @@ _CUSTOMER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=71,
-  serialized_end=164,
+  serialized_start=88,
+  serialized_end=297,
 )
 
 _CUSTOMER.fields_by_name['person'].message_type = person_dot_Person__pb2._PERSON
@@ -85,4 +86,10 @@ _sym_db.RegisterMessage(Customer)
 
 DESCRIPTOR.has_options = True
 DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\037io.opencannabis.schema.commerceB\rOrderCustomerH\001P\000\242\002\003OCS'))
+_CUSTOMER.fields_by_name['person'].has_options = True
+_CUSTOMER.fields_by_name['person']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@!Person attached to this customer.'))
+_CUSTOMER.fields_by_name['foreign_id'].has_options = True
+_CUSTOMER.fields_by_name['foreign_id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@!Partner-scoped foreign system ID.'))
+_CUSTOMER.fields_by_name['user_key'].has_options = True
+_CUSTOMER.fields_by_name['user_key']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@\032Resolved subject user key.'))
 # @@protoc_insertion_point(module_scope)

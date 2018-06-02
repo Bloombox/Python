@@ -19,6 +19,7 @@ from search import SearchSpec_pb2 as search_dot_SearchSpec__pb2
 from products.menu import Menu_pb2 as products_dot_menu_dot_Menu__pb2
 from products.menu import Section_pb2 as products_dot_menu_dot_Section__pb2
 from services import ServiceStatus_pb2 as services_dot_ServiceStatus__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from protoc_gen_swagger.options import swagger_pb2 as protoc__gen__swagger_dot_options_dot_swagger__pb2
 
@@ -27,9 +28,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='menu/v1beta1/MenuService_Beta1.proto',
   package='bloombox.schema.services.menu.v1beta1',
   syntax='proto3',
-  serialized_pb=_b('\n$menu/v1beta1/MenuService_Beta1.proto\x12%bloombox.schema.services.menu.v1beta1\x1a\x15\x62\x61se/ProductKey.proto\x1a\x17search/SearchSpec.proto\x1a\x18products/menu/Menu.proto\x1a\x1bproducts/menu/Section.proto\x1a\x1cservices/ServiceStatus.proto\x1a\x1cgoogle/api/annotations.proto\x1a(protoc-gen-swagger/options/swagger.proto\"V\n\x04Ping\x1a\t\n\x07Request\x1a\x43\n\x08Response\x12\x37\n\x06status\x18\x01 \x01(\x0e\x32\'.bloombox.schema.services.ServiceStatus\"\x88\x02\n\x07GetMenu\x1a\xad\x01\n\x07Request\x12\r\n\x05scope\x18\x01 \x01(\t\x12\x0c\n\x04\x66ull\x18\x02 \x01(\x08\x12\x11\n\tkeys_only\x18\x03 \x01(\x08\x12\x10\n\x08snapshot\x18\x04 \x01(\t\x12\x13\n\x0b\x66ingerprint\x18\x05 \x01(\t\x12<\n\x07section\x18\x06 \x01(\x0e\x32+.opencannabis.products.menu.section.Section\x12\r\n\x05\x66resh\x18\x07 \x01(\x08\x1aM\n\x08Response\x12\x31\n\x07\x63\x61talog\x18\x01 \x01(\x0b\x32 .opencannabis.products.menu.Menu\x12\x0e\n\x06\x63\x61\x63hed\x18\x02 \x01(\x08\"\xbf\x01\n\x0bGetFeatured\x1ai\n\x07Request\x12\r\n\x05scope\x18\x01 \x01(\t\x12\x11\n\tkeys_only\x18\x02 \x01(\x08\x12<\n\x07section\x18\x03 \x01(\x0e\x32+.opencannabis.products.menu.section.Section\x1a\x45\n\x08Response\x12\x39\n\x08\x66\x65\x61tured\x18\x01 \x03(\x0b\x32\'.opencannabis.products.menu.MenuProduct\";\n\rProductKeyset\x12*\n\x03key\x18\x01 \x03(\x0b\x32\x1d.opencannabis.base.ProductKey\"y\n\nGetProduct\x1a%\n\x07Request\x12\r\n\x05scope\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\x1a\x44\n\x08Response\x12\x38\n\x07product\x18\x02 \x03(\x0b\x32\'.opencannabis.products.menu.MenuProduct\"\x92\x01\n\nSearchMenu\x1a=\n\x07Request\x12\x32\n\x06search\x18\x01 \x01(\x0b\x32\".bloombox.schema.search.SearchSpec\x1a\x45\n\x08Response\x12\x39\n\x08resulset\x18\x01 \x01(\x0b\x32\'.bloombox.schema.search.SearchResultset*\xb0\x01\n\tMenuError\x12\x0c\n\x08NO_ERROR\x10\x00\x12\x13\n\x0fPARTNER_INVALID\x10\x01\x12\x14\n\x10LOCATION_INVALID\x10\x02\x12\x13\n\x0fSECTION_INVALID\x10\x03\x12\x15\n\x11SECTION_NOT_FOUND\x10\x04\x12\x12\n\x0eMENU_NOT_FOUND\x10\x05\x12\x12\n\x0eINTERNAL_ERROR\x10\x06\x12\x16\n\x12SEARCH_UNAVAILABLE\x10\x07\x32\xfb\n\n\x04Menu\x12\xc4\x02\n\x08Retrieve\x12\x36.bloombox.schema.services.menu.v1beta1.GetMenu.Request\x1a\x37.bloombox.schema.services.menu.v1beta1.GetMenu.Response\"\xc6\x01\x82\xd3\xe4\x93\x02\x81\x01\x12</menu/v1beta1/{scope=partners/*/locations/*}/global:retrieveZA\x12?/menu/v1beta1/{scope=partners/*/locations/*}/{section}:retrieve\x92\x41;\x12\rRetrieve Menu\x1a Fetch product catalog/menu data.*\x08Retrieve\x12\x85\x03\n\x08\x46\x65\x61tured\x12:.bloombox.schema.services.menu.v1beta1.GetFeatured.Request\x1a;.bloombox.schema.services.menu.v1beta1.GetFeatured.Response\"\xff\x01\x82\xd3\xe4\x93\x02\x93\x01\x12\x45/menu/v1beta1/{scope=partners/*/locations/*}/global/featured:retrieveZJ\x12H/menu/v1beta1/{scope=partners/*/locations/*}/{section}/featured:retrieve\x92\x41\x62\x12\x11\x46\x65\x61tured Products\x1a\x43Retrieve products marked for extra attention (\'featured\' products).*\x08\x46\x65\x61tured\x12\xaa\x02\n\x08Products\x12\x39.bloombox.schema.services.menu.v1beta1.GetProduct.Request\x1a:.bloombox.schema.services.menu.v1beta1.GetProduct.Response\"\xa6\x01\x82\xd3\xe4\x93\x02\x44\x12\x42/menu/v1beta1/{scope=partners/*/locations/*}/products/{key}/detail\x92\x41Y\x12\x0cProduct Data\x1a?Retrieve payload data for one or more products, by product key.*\x08Products\x12\xf6\x02\n\x06Search\x12\x39.bloombox.schema.services.menu.v1beta1.SearchMenu.Request\x1a:.bloombox.schema.services.menu.v1beta1.SearchMenu.Response\"\xf4\x01\x82\xd3\xe4\x93\x02\x9b\x01\x12P/menu/v1beta1/{search.options.scope=partners/*/locations/*}/search/{search.term}ZG\"B/menu/v1beta1/{search.options.scope=partners/*/locations/*}/search:\x01*\x92\x41O\x12\x0fSearch Products\x1a\x34Perform a fulltext search over product catalog data.*\x06SearchB\x87\x04\n(io.bloombox.schema.services.menu.v1beta1H\x01P\x01\xa2\x02\x03\x42\x42S\x92\x41\xcf\x03\x12g\n\x08Menu API\x1a\x19https://bloombox.io/terms\"7\n\x08\x42loombox\x12\x13https://bloombox.io\x1a\x16\x64\x65velopers@bloombox.io2\x07v1beta1\x1a\x12\x61pi.bloombox.cloud*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonZ\xd0\x01\nd\n\x0b\x41piKeyParam\x12U\x08\x02\x12JParameter for identifying API key owned by the invoking project or system.\x1a\x03key \x01\nh\n\x0c\x41piKeyHeader\x12X\x08\x02\x12GHeader for identifying API key owned by the invoking project or system.\x1a\tX-API-Key \x01\x62\x11\n\x0f\n\x0b\x41piKeyParam\x12\x00\x62\x12\n\x10\n\x0c\x41piKeyHeader\x12\x00r/\n\rBloombox APIs\x12\x1ehttps://apidocs.bloombox.cloudb\x06proto3')
+  serialized_pb=_b('\n$menu/v1beta1/MenuService_Beta1.proto\x12%bloombox.schema.services.menu.v1beta1\x1a\x15\x62\x61se/ProductKey.proto\x1a\x17search/SearchSpec.proto\x1a\x18products/menu/Menu.proto\x1a\x1bproducts/menu/Section.proto\x1a\x1cservices/ServiceStatus.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1cgoogle/api/annotations.proto\x1a(protoc-gen-swagger/options/swagger.proto\"V\n\x04Ping\x1a\t\n\x07Request\x1a\x43\n\x08Response\x12\x37\n\x06status\x18\x01 \x01(\x0e\x32\'.bloombox.schema.services.ServiceStatus\"\x88\x02\n\x07GetMenu\x1a\xad\x01\n\x07Request\x12\r\n\x05scope\x18\x01 \x01(\t\x12\x0c\n\x04\x66ull\x18\x02 \x01(\x08\x12\x11\n\tkeys_only\x18\x03 \x01(\x08\x12\x10\n\x08snapshot\x18\x04 \x01(\t\x12\x13\n\x0b\x66ingerprint\x18\x05 \x01(\t\x12<\n\x07section\x18\x06 \x01(\x0e\x32+.opencannabis.products.menu.section.Section\x12\r\n\x05\x66resh\x18\x07 \x01(\x08\x1aM\n\x08Response\x12\x31\n\x07\x63\x61talog\x18\x01 \x01(\x0b\x32 .opencannabis.products.menu.Menu\x12\x0e\n\x06\x63\x61\x63hed\x18\x02 \x01(\x08\"\xbf\x01\n\x0bGetFeatured\x1ai\n\x07Request\x12\r\n\x05scope\x18\x01 \x01(\t\x12\x11\n\tkeys_only\x18\x02 \x01(\x08\x12<\n\x07section\x18\x03 \x01(\x0e\x32+.opencannabis.products.menu.section.Section\x1a\x45\n\x08Response\x12\x39\n\x08\x66\x65\x61tured\x18\x01 \x03(\x0b\x32\'.opencannabis.products.menu.MenuProduct\";\n\rProductKeyset\x12*\n\x03key\x18\x01 \x03(\x0b\x32\x1d.opencannabis.base.ProductKey\"\xdf\x01\n\nGetProduct\x1ah\n\x07Request\x12\r\n\x05scope\x18\x01 \x01(\t\x12*\n\x03key\x18\x02 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\r\n\x05\x66resh\x18\x03 \x01(\x08\x12\x13\n\x0b\x66ingerprint\x18\x04 \x01(\t\x1ag\n\x08Response\x12\x38\n\x07product\x18\x01 \x03(\x0b\x32\'.opencannabis.products.menu.MenuProduct\x12\x0e\n\x06\x63\x61\x63hed\x18\x02 \x01(\x08\x12\x11\n\tunchanged\x18\x03 \x01(\x08\"\x9b\x01\n\rCreateProduct\x1aR\n\x07Request\x12\r\n\x05scope\x18\x01 \x01(\t\x12\x38\n\x07product\x18\x02 \x01(\x0b\x32\'.opencannabis.products.menu.MenuProduct\x1a\x36\n\x08Response\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\"c\n\rUpdateProduct\x1aR\n\x07Request\x12\r\n\x05scope\x18\x01 \x01(\t\x12\x38\n\x07product\x18\x02 \x01(\x0b\x32\'.opencannabis.products.menu.MenuProduct\"\x92\x01\n\nSearchMenu\x1a=\n\x07Request\x12\x32\n\x06search\x18\x01 \x01(\x0b\x32\".bloombox.schema.search.SearchSpec\x1a\x45\n\x08Response\x12\x39\n\x08resulset\x18\x01 \x01(\x0b\x32\'.bloombox.schema.search.SearchResultset\"T\n\x0cProductStock\x1a\x44\n\x07Request\x12\r\n\x05scope\x18\x01 \x01(\t\x12*\n\x03key\x18\x02 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\"U\n\rDeleteProduct\x1a\x44\n\x07Request\x12\r\n\x05scope\x18\x01 \x01(\t\x12*\n\x03key\x18\x02 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey*\x8d\x02\n\tMenuError\x12\x0c\n\x08NO_ERROR\x10\x00\x12\x13\n\x0fPARTNER_INVALID\x10\x01\x12\x14\n\x10LOCATION_INVALID\x10\x02\x12\x13\n\x0fSECTION_INVALID\x10\x03\x12\x15\n\x11SECTION_NOT_FOUND\x10\x04\x12\x12\n\x0eMENU_NOT_FOUND\x10\x05\x12\x16\n\x12SEARCH_UNAVAILABLE\x10\x06\x12\x15\n\x11PRODUCT_NOT_FOUND\x10\x07\x12\x11\n\rACCESS_DENIED\x10\x08\x12\x0f\n\x0bKEY_INVALID\x10\t\x12\x12\n\x0eUPDATE_INVALID\x10\n\x12\x0c\n\x08\x43ONFLICT\x10\x0b\x12\x12\n\x0eINTERNAL_ERROR\x10\x63\x32\xd0\x19\n\x04Menu\x12\x80\x02\n\x08Retrieve\x12\x36.bloombox.schema.services.menu.v1beta1.GetMenu.Request\x1a\x37.bloombox.schema.services.menu.v1beta1.GetMenu.Response\"\x82\x01\x82\xd3\xe4\x93\x02>\x12</menu/v1beta1/{scope=partners/*/locations/*}/global:retrieve\x92\x41;\x12\rRetrieve Menu\x1a Fetch product catalog/menu data.*\x08Retrieve\x12\xfd\x01\n\x07Section\x12\x36.bloombox.schema.services.menu.v1beta1.GetMenu.Request\x1a\x37.bloombox.schema.services.menu.v1beta1.GetMenu.Response\"\x80\x01\x82\xd3\xe4\x93\x02\x41\x12?/menu/v1beta1/{scope=partners/*/locations/*}/{section}/retrieve\x92\x41\x36\x12\x0eSectioned Menu\x1a\x1b\x46\x65tch menu data by section.*\x07Section\x12\x85\x03\n\x08\x46\x65\x61tured\x12:.bloombox.schema.services.menu.v1beta1.GetFeatured.Request\x1a;.bloombox.schema.services.menu.v1beta1.GetFeatured.Response\"\xff\x01\x82\xd3\xe4\x93\x02\x93\x01\x12\x45/menu/v1beta1/{scope=partners/*/locations/*}/global/featured:retrieveZJ\x12H/menu/v1beta1/{scope=partners/*/locations/*}/{section}/featured:retrieve\x92\x41\x62\x12\x11\x46\x65\x61tured Products\x1a\x43Retrieve products marked for extra attention (\'featured\' products).*\x08\x46\x65\x61tured\x12\xb8\x02\n\x08Products\x12\x39.bloombox.schema.services.menu.v1beta1.GetProduct.Request\x1a:.bloombox.schema.services.menu.v1beta1.GetProduct.Response\"\xb4\x01\x82\xd3\xe4\x93\x02R\x12P/menu/v1beta1/{scope=partners/*/locations/*}/products/{key.type}/{key.id}/detail\x92\x41Y\x12\x0cProduct Data\x1a?Retrieve payload data for one or more products, by product key.*\x08Products\x12\xf6\x02\n\x06Search\x12\x39.bloombox.schema.services.menu.v1beta1.SearchMenu.Request\x1a:.bloombox.schema.services.menu.v1beta1.SearchMenu.Response\"\xf4\x01\x82\xd3\xe4\x93\x02\x9b\x01\x12P/menu/v1beta1/{search.options.scope=partners/*/locations/*}/search/{search.term}ZG\"B/menu/v1beta1/{search.options.scope=partners/*/locations/*}/search:\x01*\x92\x41O\x12\x0fSearch Products\x1a\x34Perform a fulltext search over product catalog data.*\x06Search\x12\x9e\x02\n\x06\x43reate\x12<.bloombox.schema.services.menu.v1beta1.CreateProduct.Request\x1a=.bloombox.schema.services.menu.v1beta1.CreateProduct.Response\"\x96\x01\x82\xd3\xe4\x93\x02J\"?/menu/v1beta1/{scope=partners/*/locations/*}/{product.key.type}:\x07product\x92\x41\x43\x12\x0e\x43reate Product\x1a)Create a new product record from scratch.*\x06\x43reate\x12\x8f\x02\n\x06Update\x12<.bloombox.schema.services.menu.v1beta1.UpdateProduct.Request\x1a\x16.google.protobuf.Empty\"\xae\x01\x82\xd3\xe4\x93\x02[\x1aP/menu/v1beta1/{scope=partners/*/locations/*}/{product.key.type}/{product.key.id}:\x07product\x92\x41J\x12\x0eUpdate Product\x1a\x30Update an existing product record with new data.*\x06Update\x12\x80\x02\n\x06Remove\x12<.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request\x1a\x16.google.protobuf.Empty\"\x9f\x01\x82\xd3\xe4\x93\x02\x42*@/menu/v1beta1/{scope=partners/*/locations/*}/{key.type}/{key.id}\x92\x41T\x12\x0e\x44\x65lete Product\x1a:Mark a product as deleted. This is a recoverable deletion.*\x06\x44\x65lete\x12\x81\x02\n\rProductStatus\x12;.bloombox.schema.services.menu.v1beta1.ProductStock.Request\x1a\x16.google.protobuf.Empty\"\x9a\x01\x82\xd3\xe4\x93\x02I\x12G/menu/v1beta1/{scope=partners/*/locations/*}/{key.type}/{key.id}/status\x92\x41H\x12\x0eProduct Status\x1a.Retrieve stock status for a given product key.*\x06Status\x12\x9d\x02\n\x07InStock\x12;.bloombox.schema.services.menu.v1beta1.ProductStock.Request\x1a\x16.google.protobuf.Empty\"\xbc\x01\x82\xd3\xe4\x93\x02R\"P/menu/v1beta1/{scope=partners/*/locations/*}/{key.type}/{key.id}/status/in-stock\x92\x41\x61\x12\x15Mark Product In-Stock\x1a?Mark a product as in-stock, or, currently offered for purchase.*\x07InStock\x12\xae\x02\n\nOutOfStock\x12;.bloombox.schema.services.menu.v1beta1.ProductStock.Request\x1a\x16.google.protobuf.Empty\"\xca\x01\x82\xd3\xe4\x93\x02V\"T/menu/v1beta1/{scope=partners/*/locations/*}/{key.type}/{key.id}/status/out-of-stock\x92\x41k\x12\x19Mark Product Out-of-Stock\x1a\x42Mark a product as out-of-stock, or no longer offered for purchase.*\nOutOfStockB\x87\x04\n(io.bloombox.schema.services.menu.v1beta1H\x01P\x01\xa2\x02\x03\x42\x42S\x92\x41\xcf\x03\x12g\n\x08Menu API\x1a\x19https://bloombox.io/terms\"7\n\x08\x42loombox\x12\x13https://bloombox.io\x1a\x16\x64\x65velopers@bloombox.io2\x07v1beta1\x1a\x12\x61pi.bloombox.cloud*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonZ\xd0\x01\nd\n\x0b\x41piKeyParam\x12U\x08\x02\x12JParameter for identifying API key owned by the invoking project or system.\x1a\x03key \x01\nh\n\x0c\x41piKeyHeader\x12X\x08\x02\x12GHeader for identifying API key owned by the invoking project or system.\x1a\tX-API-Key \x01\x62\x11\n\x0f\n\x0b\x41piKeyParam\x12\x00\x62\x12\n\x10\n\x0c\x41piKeyHeader\x12\x00r/\n\rBloombox APIs\x12\x1ehttps://apidocs.bloombox.cloudb\x06proto3')
   ,
-  dependencies=[base_dot_ProductKey__pb2.DESCRIPTOR,search_dot_SearchSpec__pb2.DESCRIPTOR,products_dot_menu_dot_Menu__pb2.DESCRIPTOR,products_dot_menu_dot_Section__pb2.DESCRIPTOR,services_dot_ServiceStatus__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,protoc__gen__swagger_dot_options_dot_swagger__pb2.DESCRIPTOR,])
+  dependencies=[base_dot_ProductKey__pb2.DESCRIPTOR,search_dot_SearchSpec__pb2.DESCRIPTOR,products_dot_menu_dot_Menu__pb2.DESCRIPTOR,products_dot_menu_dot_Section__pb2.DESCRIPTOR,services_dot_ServiceStatus__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,protoc__gen__swagger_dot_options_dot_swagger__pb2.DESCRIPTOR,])
 
 _MENUERROR = _descriptor.EnumDescriptor(
   name='MenuError',
@@ -62,18 +63,38 @@ _MENUERROR = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='INTERNAL_ERROR', index=6, number=6,
+      name='SEARCH_UNAVAILABLE', index=6, number=6,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SEARCH_UNAVAILABLE', index=7, number=7,
+      name='PRODUCT_NOT_FOUND', index=7, number=7,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ACCESS_DENIED', index=8, number=8,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='KEY_INVALID', index=9, number=9,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='UPDATE_INVALID', index=10, number=10,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CONFLICT', index=11, number=11,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INTERNAL_ERROR', index=12, number=99,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=1167,
-  serialized_end=1343,
+  serialized_start=1731,
+  serialized_end=2000,
 )
 _sym_db.RegisterEnumDescriptor(_MENUERROR)
 
@@ -84,8 +105,13 @@ LOCATION_INVALID = 2
 SECTION_INVALID = 3
 SECTION_NOT_FOUND = 4
 MENU_NOT_FOUND = 5
-INTERNAL_ERROR = 6
-SEARCH_UNAVAILABLE = 7
+SEARCH_UNAVAILABLE = 6
+PRODUCT_NOT_FOUND = 7
+ACCESS_DENIED = 8
+KEY_INVALID = 9
+UPDATE_INVALID = 10
+CONFLICT = 11
+INTERNAL_ERROR = 99
 
 
 
@@ -108,8 +134,8 @@ _PING_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=292,
-  serialized_end=301,
+  serialized_start=321,
+  serialized_end=330,
 )
 
 _PING_RESPONSE = _descriptor.Descriptor(
@@ -138,8 +164,8 @@ _PING_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=303,
-  serialized_end=370,
+  serialized_start=332,
+  serialized_end=399,
 )
 
 _PING = _descriptor.Descriptor(
@@ -161,8 +187,8 @@ _PING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=284,
-  serialized_end=370,
+  serialized_start=313,
+  serialized_end=399,
 )
 
 
@@ -234,8 +260,8 @@ _GETMENU_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=385,
-  serialized_end=558,
+  serialized_start=414,
+  serialized_end=587,
 )
 
 _GETMENU_RESPONSE = _descriptor.Descriptor(
@@ -271,8 +297,8 @@ _GETMENU_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=560,
-  serialized_end=637,
+  serialized_start=589,
+  serialized_end=666,
 )
 
 _GETMENU = _descriptor.Descriptor(
@@ -294,8 +320,8 @@ _GETMENU = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=373,
-  serialized_end=637,
+  serialized_start=402,
+  serialized_end=666,
 )
 
 
@@ -339,8 +365,8 @@ _GETFEATURED_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=655,
-  serialized_end=760,
+  serialized_start=684,
+  serialized_end=789,
 )
 
 _GETFEATURED_RESPONSE = _descriptor.Descriptor(
@@ -369,8 +395,8 @@ _GETFEATURED_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=762,
-  serialized_end=831,
+  serialized_start=791,
+  serialized_end=860,
 )
 
 _GETFEATURED = _descriptor.Descriptor(
@@ -392,8 +418,8 @@ _GETFEATURED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=640,
-  serialized_end=831,
+  serialized_start=669,
+  serialized_end=860,
 )
 
 
@@ -423,8 +449,8 @@ _PRODUCTKEYSET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=833,
-  serialized_end=892,
+  serialized_start=862,
+  serialized_end=921,
 )
 
 
@@ -444,7 +470,21 @@ _GETPRODUCT_REQUEST = _descriptor.Descriptor(
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='key', full_name='bloombox.schema.services.menu.v1beta1.GetProduct.Request.key', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='fresh', full_name='bloombox.schema.services.menu.v1beta1.GetProduct.Request.fresh', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='fingerprint', full_name='bloombox.schema.services.menu.v1beta1.GetProduct.Request.fingerprint', index=3,
+      number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -461,8 +501,8 @@ _GETPRODUCT_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=908,
-  serialized_end=945,
+  serialized_start=938,
+  serialized_end=1042,
 )
 
 _GETPRODUCT_RESPONSE = _descriptor.Descriptor(
@@ -474,8 +514,22 @@ _GETPRODUCT_RESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='product', full_name='bloombox.schema.services.menu.v1beta1.GetProduct.Response.product', index=0,
-      number=2, type=11, cpp_type=10, label=3,
+      number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='cached', full_name='bloombox.schema.services.menu.v1beta1.GetProduct.Response.cached', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='unchanged', full_name='bloombox.schema.services.menu.v1beta1.GetProduct.Response.unchanged', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
@@ -491,8 +545,8 @@ _GETPRODUCT_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=947,
-  serialized_end=1015,
+  serialized_start=1044,
+  serialized_end=1147,
 )
 
 _GETPRODUCT = _descriptor.Descriptor(
@@ -514,8 +568,160 @@ _GETPRODUCT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=894,
-  serialized_end=1015,
+  serialized_start=924,
+  serialized_end=1147,
+)
+
+
+_CREATEPRODUCT_REQUEST = _descriptor.Descriptor(
+  name='Request',
+  full_name='bloombox.schema.services.menu.v1beta1.CreateProduct.Request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='scope', full_name='bloombox.schema.services.menu.v1beta1.CreateProduct.Request.scope', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='product', full_name='bloombox.schema.services.menu.v1beta1.CreateProduct.Request.product', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1167,
+  serialized_end=1249,
+)
+
+_CREATEPRODUCT_RESPONSE = _descriptor.Descriptor(
+  name='Response',
+  full_name='bloombox.schema.services.menu.v1beta1.CreateProduct.Response',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='bloombox.schema.services.menu.v1beta1.CreateProduct.Response.key', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1251,
+  serialized_end=1305,
+)
+
+_CREATEPRODUCT = _descriptor.Descriptor(
+  name='CreateProduct',
+  full_name='bloombox.schema.services.menu.v1beta1.CreateProduct',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[_CREATEPRODUCT_REQUEST, _CREATEPRODUCT_RESPONSE, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1150,
+  serialized_end=1305,
+)
+
+
+_UPDATEPRODUCT_REQUEST = _descriptor.Descriptor(
+  name='Request',
+  full_name='bloombox.schema.services.menu.v1beta1.UpdateProduct.Request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='scope', full_name='bloombox.schema.services.menu.v1beta1.UpdateProduct.Request.scope', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='product', full_name='bloombox.schema.services.menu.v1beta1.UpdateProduct.Request.product', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1167,
+  serialized_end=1249,
+)
+
+_UPDATEPRODUCT = _descriptor.Descriptor(
+  name='UpdateProduct',
+  full_name='bloombox.schema.services.menu.v1beta1.UpdateProduct',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[_UPDATEPRODUCT_REQUEST, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1307,
+  serialized_end=1406,
 )
 
 
@@ -545,8 +751,8 @@ _SEARCHMENU_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1032,
-  serialized_end=1093,
+  serialized_start=1423,
+  serialized_end=1484,
 )
 
 _SEARCHMENU_RESPONSE = _descriptor.Descriptor(
@@ -575,8 +781,8 @@ _SEARCHMENU_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1095,
-  serialized_end=1164,
+  serialized_start=1486,
+  serialized_end=1555,
 )
 
 _SEARCHMENU = _descriptor.Descriptor(
@@ -598,8 +804,130 @@ _SEARCHMENU = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1018,
-  serialized_end=1164,
+  serialized_start=1409,
+  serialized_end=1555,
+)
+
+
+_PRODUCTSTOCK_REQUEST = _descriptor.Descriptor(
+  name='Request',
+  full_name='bloombox.schema.services.menu.v1beta1.ProductStock.Request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='scope', full_name='bloombox.schema.services.menu.v1beta1.ProductStock.Request.scope', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='key', full_name='bloombox.schema.services.menu.v1beta1.ProductStock.Request.key', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=938,
+  serialized_end=1006,
+)
+
+_PRODUCTSTOCK = _descriptor.Descriptor(
+  name='ProductStock',
+  full_name='bloombox.schema.services.menu.v1beta1.ProductStock',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[_PRODUCTSTOCK_REQUEST, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1557,
+  serialized_end=1641,
+)
+
+
+_DELETEPRODUCT_REQUEST = _descriptor.Descriptor(
+  name='Request',
+  full_name='bloombox.schema.services.menu.v1beta1.DeleteProduct.Request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='scope', full_name='bloombox.schema.services.menu.v1beta1.DeleteProduct.Request.scope', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='key', full_name='bloombox.schema.services.menu.v1beta1.DeleteProduct.Request.key', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=938,
+  serialized_end=1006,
+)
+
+_DELETEPRODUCT = _descriptor.Descriptor(
+  name='DeleteProduct',
+  full_name='bloombox.schema.services.menu.v1beta1.DeleteProduct',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[_DELETEPRODUCT_REQUEST, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1643,
+  serialized_end=1728,
 )
 
 _PING_REQUEST.containing_type = _PING
@@ -614,19 +942,34 @@ _GETFEATURED_REQUEST.containing_type = _GETFEATURED
 _GETFEATURED_RESPONSE.fields_by_name['featured'].message_type = products_dot_menu_dot_Menu__pb2._MENUPRODUCT
 _GETFEATURED_RESPONSE.containing_type = _GETFEATURED
 _PRODUCTKEYSET.fields_by_name['key'].message_type = base_dot_ProductKey__pb2._PRODUCTKEY
+_GETPRODUCT_REQUEST.fields_by_name['key'].message_type = base_dot_ProductKey__pb2._PRODUCTKEY
 _GETPRODUCT_REQUEST.containing_type = _GETPRODUCT
 _GETPRODUCT_RESPONSE.fields_by_name['product'].message_type = products_dot_menu_dot_Menu__pb2._MENUPRODUCT
 _GETPRODUCT_RESPONSE.containing_type = _GETPRODUCT
+_CREATEPRODUCT_REQUEST.fields_by_name['product'].message_type = products_dot_menu_dot_Menu__pb2._MENUPRODUCT
+_CREATEPRODUCT_REQUEST.containing_type = _CREATEPRODUCT
+_CREATEPRODUCT_RESPONSE.fields_by_name['key'].message_type = base_dot_ProductKey__pb2._PRODUCTKEY
+_CREATEPRODUCT_RESPONSE.containing_type = _CREATEPRODUCT
+_UPDATEPRODUCT_REQUEST.fields_by_name['product'].message_type = products_dot_menu_dot_Menu__pb2._MENUPRODUCT
+_UPDATEPRODUCT_REQUEST.containing_type = _UPDATEPRODUCT
 _SEARCHMENU_REQUEST.fields_by_name['search'].message_type = search_dot_SearchSpec__pb2._SEARCHSPEC
 _SEARCHMENU_REQUEST.containing_type = _SEARCHMENU
 _SEARCHMENU_RESPONSE.fields_by_name['resulset'].message_type = search_dot_SearchSpec__pb2._SEARCHRESULTSET
 _SEARCHMENU_RESPONSE.containing_type = _SEARCHMENU
+_PRODUCTSTOCK_REQUEST.fields_by_name['key'].message_type = base_dot_ProductKey__pb2._PRODUCTKEY
+_PRODUCTSTOCK_REQUEST.containing_type = _PRODUCTSTOCK
+_DELETEPRODUCT_REQUEST.fields_by_name['key'].message_type = base_dot_ProductKey__pb2._PRODUCTKEY
+_DELETEPRODUCT_REQUEST.containing_type = _DELETEPRODUCT
 DESCRIPTOR.message_types_by_name['Ping'] = _PING
 DESCRIPTOR.message_types_by_name['GetMenu'] = _GETMENU
 DESCRIPTOR.message_types_by_name['GetFeatured'] = _GETFEATURED
 DESCRIPTOR.message_types_by_name['ProductKeyset'] = _PRODUCTKEYSET
 DESCRIPTOR.message_types_by_name['GetProduct'] = _GETPRODUCT
+DESCRIPTOR.message_types_by_name['CreateProduct'] = _CREATEPRODUCT
+DESCRIPTOR.message_types_by_name['UpdateProduct'] = _UPDATEPRODUCT
 DESCRIPTOR.message_types_by_name['SearchMenu'] = _SEARCHMENU
+DESCRIPTOR.message_types_by_name['ProductStock'] = _PRODUCTSTOCK
+DESCRIPTOR.message_types_by_name['DeleteProduct'] = _DELETEPRODUCT
 DESCRIPTOR.enum_types_by_name['MenuError'] = _MENUERROR
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -729,6 +1072,44 @@ _sym_db.RegisterMessage(GetProduct)
 _sym_db.RegisterMessage(GetProduct.Request)
 _sym_db.RegisterMessage(GetProduct.Response)
 
+CreateProduct = _reflection.GeneratedProtocolMessageType('CreateProduct', (_message.Message,), dict(
+
+  Request = _reflection.GeneratedProtocolMessageType('Request', (_message.Message,), dict(
+    DESCRIPTOR = _CREATEPRODUCT_REQUEST,
+    __module__ = 'menu.v1beta1.MenuService_Beta1_pb2'
+    # @@protoc_insertion_point(class_scope:bloombox.schema.services.menu.v1beta1.CreateProduct.Request)
+    ))
+  ,
+
+  Response = _reflection.GeneratedProtocolMessageType('Response', (_message.Message,), dict(
+    DESCRIPTOR = _CREATEPRODUCT_RESPONSE,
+    __module__ = 'menu.v1beta1.MenuService_Beta1_pb2'
+    # @@protoc_insertion_point(class_scope:bloombox.schema.services.menu.v1beta1.CreateProduct.Response)
+    ))
+  ,
+  DESCRIPTOR = _CREATEPRODUCT,
+  __module__ = 'menu.v1beta1.MenuService_Beta1_pb2'
+  # @@protoc_insertion_point(class_scope:bloombox.schema.services.menu.v1beta1.CreateProduct)
+  ))
+_sym_db.RegisterMessage(CreateProduct)
+_sym_db.RegisterMessage(CreateProduct.Request)
+_sym_db.RegisterMessage(CreateProduct.Response)
+
+UpdateProduct = _reflection.GeneratedProtocolMessageType('UpdateProduct', (_message.Message,), dict(
+
+  Request = _reflection.GeneratedProtocolMessageType('Request', (_message.Message,), dict(
+    DESCRIPTOR = _UPDATEPRODUCT_REQUEST,
+    __module__ = 'menu.v1beta1.MenuService_Beta1_pb2'
+    # @@protoc_insertion_point(class_scope:bloombox.schema.services.menu.v1beta1.UpdateProduct.Request)
+    ))
+  ,
+  DESCRIPTOR = _UPDATEPRODUCT,
+  __module__ = 'menu.v1beta1.MenuService_Beta1_pb2'
+  # @@protoc_insertion_point(class_scope:bloombox.schema.services.menu.v1beta1.UpdateProduct)
+  ))
+_sym_db.RegisterMessage(UpdateProduct)
+_sym_db.RegisterMessage(UpdateProduct.Request)
+
 SearchMenu = _reflection.GeneratedProtocolMessageType('SearchMenu', (_message.Message,), dict(
 
   Request = _reflection.GeneratedProtocolMessageType('Request', (_message.Message,), dict(
@@ -752,6 +1133,36 @@ _sym_db.RegisterMessage(SearchMenu)
 _sym_db.RegisterMessage(SearchMenu.Request)
 _sym_db.RegisterMessage(SearchMenu.Response)
 
+ProductStock = _reflection.GeneratedProtocolMessageType('ProductStock', (_message.Message,), dict(
+
+  Request = _reflection.GeneratedProtocolMessageType('Request', (_message.Message,), dict(
+    DESCRIPTOR = _PRODUCTSTOCK_REQUEST,
+    __module__ = 'menu.v1beta1.MenuService_Beta1_pb2'
+    # @@protoc_insertion_point(class_scope:bloombox.schema.services.menu.v1beta1.ProductStock.Request)
+    ))
+  ,
+  DESCRIPTOR = _PRODUCTSTOCK,
+  __module__ = 'menu.v1beta1.MenuService_Beta1_pb2'
+  # @@protoc_insertion_point(class_scope:bloombox.schema.services.menu.v1beta1.ProductStock)
+  ))
+_sym_db.RegisterMessage(ProductStock)
+_sym_db.RegisterMessage(ProductStock.Request)
+
+DeleteProduct = _reflection.GeneratedProtocolMessageType('DeleteProduct', (_message.Message,), dict(
+
+  Request = _reflection.GeneratedProtocolMessageType('Request', (_message.Message,), dict(
+    DESCRIPTOR = _DELETEPRODUCT_REQUEST,
+    __module__ = 'menu.v1beta1.MenuService_Beta1_pb2'
+    # @@protoc_insertion_point(class_scope:bloombox.schema.services.menu.v1beta1.DeleteProduct.Request)
+    ))
+  ,
+  DESCRIPTOR = _DELETEPRODUCT,
+  __module__ = 'menu.v1beta1.MenuService_Beta1_pb2'
+  # @@protoc_insertion_point(class_scope:bloombox.schema.services.menu.v1beta1.DeleteProduct)
+  ))
+_sym_db.RegisterMessage(DeleteProduct)
+_sym_db.RegisterMessage(DeleteProduct.Request)
+
 
 DESCRIPTOR.has_options = True
 DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n(io.bloombox.schema.services.menu.v1beta1H\001P\001\242\002\003BBS\222A\317\003\022g\n\010Menu API\032\031https://bloombox.io/terms\"7\n\010Bloombox\022\023https://bloombox.io\032\026developers@bloombox.io2\007v1beta1\032\022api.bloombox.cloud*\001\0022\020application/json:\020application/jsonZ\320\001\nd\n\013ApiKeyParam\022U\010\002\022JParameter for identifying API key owned by the invoking project or system.\032\003key \001\nh\n\014ApiKeyHeader\022X\010\002\022GHeader for identifying API key owned by the invoking project or system.\032\tX-API-Key \001b\021\n\017\n\013ApiKeyParam\022\000b\022\n\020\n\014ApiKeyHeader\022\000r/\n\rBloombox APIs\022\036https://apidocs.bloombox.cloud'))
@@ -762,8 +1173,8 @@ _MENU = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=1346,
-  serialized_end=2749,
+  serialized_start=2003,
+  serialized_end=5283,
   methods=[
   _descriptor.MethodDescriptor(
     name='Retrieve',
@@ -772,12 +1183,21 @@ _MENU = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_GETMENU_REQUEST,
     output_type=_GETMENU_RESPONSE,
-    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002\201\001\022</menu/v1beta1/{scope=partners/*/locations/*}/global:retrieveZA\022?/menu/v1beta1/{scope=partners/*/locations/*}/{section}:retrieve\222A;\022\rRetrieve Menu\032 Fetch product catalog/menu data.*\010Retrieve')),
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002>\022</menu/v1beta1/{scope=partners/*/locations/*}/global:retrieve\222A;\022\rRetrieve Menu\032 Fetch product catalog/menu data.*\010Retrieve')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='Section',
+    full_name='bloombox.schema.services.menu.v1beta1.Menu.Section',
+    index=1,
+    containing_service=None,
+    input_type=_GETMENU_REQUEST,
+    output_type=_GETMENU_RESPONSE,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002A\022?/menu/v1beta1/{scope=partners/*/locations/*}/{section}/retrieve\222A6\022\016Sectioned Menu\032\033Fetch menu data by section.*\007Section')),
   ),
   _descriptor.MethodDescriptor(
     name='Featured',
     full_name='bloombox.schema.services.menu.v1beta1.Menu.Featured',
-    index=1,
+    index=2,
     containing_service=None,
     input_type=_GETFEATURED_REQUEST,
     output_type=_GETFEATURED_RESPONSE,
@@ -786,20 +1206,74 @@ _MENU = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='Products',
     full_name='bloombox.schema.services.menu.v1beta1.Menu.Products',
-    index=2,
+    index=3,
     containing_service=None,
     input_type=_GETPRODUCT_REQUEST,
     output_type=_GETPRODUCT_RESPONSE,
-    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002D\022B/menu/v1beta1/{scope=partners/*/locations/*}/products/{key}/detail\222AY\022\014Product Data\032?Retrieve payload data for one or more products, by product key.*\010Products')),
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002R\022P/menu/v1beta1/{scope=partners/*/locations/*}/products/{key.type}/{key.id}/detail\222AY\022\014Product Data\032?Retrieve payload data for one or more products, by product key.*\010Products')),
   ),
   _descriptor.MethodDescriptor(
     name='Search',
     full_name='bloombox.schema.services.menu.v1beta1.Menu.Search',
-    index=3,
+    index=4,
     containing_service=None,
     input_type=_SEARCHMENU_REQUEST,
     output_type=_SEARCHMENU_RESPONSE,
     options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002\233\001\022P/menu/v1beta1/{search.options.scope=partners/*/locations/*}/search/{search.term}ZG\"B/menu/v1beta1/{search.options.scope=partners/*/locations/*}/search:\001*\222AO\022\017Search Products\0324Perform a fulltext search over product catalog data.*\006Search')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='Create',
+    full_name='bloombox.schema.services.menu.v1beta1.Menu.Create',
+    index=5,
+    containing_service=None,
+    input_type=_CREATEPRODUCT_REQUEST,
+    output_type=_CREATEPRODUCT_RESPONSE,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002J\"?/menu/v1beta1/{scope=partners/*/locations/*}/{product.key.type}:\007product\222AC\022\016Create Product\032)Create a new product record from scratch.*\006Create')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='Update',
+    full_name='bloombox.schema.services.menu.v1beta1.Menu.Update',
+    index=6,
+    containing_service=None,
+    input_type=_UPDATEPRODUCT_REQUEST,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002[\032P/menu/v1beta1/{scope=partners/*/locations/*}/{product.key.type}/{product.key.id}:\007product\222AJ\022\016Update Product\0320Update an existing product record with new data.*\006Update')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='Remove',
+    full_name='bloombox.schema.services.menu.v1beta1.Menu.Remove',
+    index=7,
+    containing_service=None,
+    input_type=_DELETEPRODUCT_REQUEST,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002B*@/menu/v1beta1/{scope=partners/*/locations/*}/{key.type}/{key.id}\222AT\022\016Delete Product\032:Mark a product as deleted. This is a recoverable deletion.*\006Delete')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='ProductStatus',
+    full_name='bloombox.schema.services.menu.v1beta1.Menu.ProductStatus',
+    index=8,
+    containing_service=None,
+    input_type=_PRODUCTSTOCK_REQUEST,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002I\022G/menu/v1beta1/{scope=partners/*/locations/*}/{key.type}/{key.id}/status\222AH\022\016Product Status\032.Retrieve stock status for a given product key.*\006Status')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='InStock',
+    full_name='bloombox.schema.services.menu.v1beta1.Menu.InStock',
+    index=9,
+    containing_service=None,
+    input_type=_PRODUCTSTOCK_REQUEST,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002R\"P/menu/v1beta1/{scope=partners/*/locations/*}/{key.type}/{key.id}/status/in-stock\222Aa\022\025Mark Product In-Stock\032?Mark a product as in-stock, or, currently offered for purchase.*\007InStock')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='OutOfStock',
+    full_name='bloombox.schema.services.menu.v1beta1.Menu.OutOfStock',
+    index=10,
+    containing_service=None,
+    input_type=_PRODUCTSTOCK_REQUEST,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002V\"T/menu/v1beta1/{scope=partners/*/locations/*}/{key.type}/{key.id}/status/out-of-stock\222Ak\022\031Mark Product Out-of-Stock\032BMark a product as out-of-stock, or no longer offered for purchase.*\nOutOfStock')),
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_MENU)

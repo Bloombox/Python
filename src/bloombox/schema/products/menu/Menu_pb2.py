@@ -32,7 +32,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='products/menu/Menu.proto',
   package='opencannabis.products.menu',
   syntax='proto3',
-  serialized_pb=_b('\n\x18products/menu/Menu.proto\x12\x1aopencannabis.products.menu\x1a\x15\x62\x61se/ProductKey.proto\x1a\x16temporal/Instant.proto\x1a\x1bproducts/menu/Section.proto\x1a!crypto/primitives/Integrity.proto\x1a\x19products/Apothecary.proto\x1a\x18products/Cartridge.proto\x1a\x15products/Edible.proto\x1a\x16products/Extract.proto\x1a\x15products/Flower.proto\x1a\x1aproducts/Merchandise.proto\x1a\x14products/Plant.proto\x1a\x16products/Preroll.proto\"\xf4\x01\n\x0cMenuSettings\x12\x0c\n\x04\x66ull\x18\x01 \x01(\x08\x12\x11\n\tkeys_only\x18\x02 \x01(\x08\x12@\n\x08snapshot\x18\x03 \x01(\x0b\x32..opencannabis.crypto.primitives.integrity.Hash\x12\x43\n\x0b\x66ingerprint\x18\x04 \x01(\x0b\x32..opencannabis.crypto.primitives.integrity.Hash\x12<\n\x07section\x18\x05 \x03(\x0e\x32+.opencannabis.products.menu.section.Section\"\xfe\x01\n\x08Metadata\x12\r\n\x05scope\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\x04\x12\x32\n\x06status\x18\x03 \x01(\x0e\x32\".opencannabis.products.menu.Status\x12/\n\x05\x66lags\x18\x04 \x03(\x0e\x32 .opencannabis.products.menu.Flag\x12\x31\n\tpublished\x18\x05 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12:\n\x08settings\x18\x06 \x01(\x0b\x32(.opencannabis.products.menu.MenuSettings\"\xe6\x03\n\x0bMenuProduct\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x37\n\napothecary\x18\n \x01(\x0b\x32!.opencannabis.products.ApothecaryH\x00\x12\x35\n\tcartridge\x18\x0b \x01(\x0b\x32 .opencannabis.products.CartridgeH\x00\x12/\n\x06\x65\x64ible\x18\x0c \x01(\x0b\x32\x1d.opencannabis.products.EdibleH\x00\x12\x31\n\x07\x65xtract\x18\r \x01(\x0b\x32\x1e.opencannabis.products.ExtractH\x00\x12/\n\x06\x66lower\x18\x0e \x01(\x0b\x32\x1d.opencannabis.products.FlowerH\x00\x12\x39\n\x0bmerchandise\x18\x0f \x01(\x0b\x32\".opencannabis.products.MerchandiseH\x00\x12-\n\x05plant\x18\x10 \x01(\x0b\x32\x1c.opencannabis.products.PlantH\x00\x12\x31\n\x07preroll\x18\x11 \x01(\x0b\x32\x1e.opencannabis.products.PrerollH\x00\x42\t\n\x07product\"\x98\x01\n\x0bSectionData\x12\r\n\x05\x63ount\x18\x01 \x01(\x05\x12@\n\x07section\x18\x02 \x01(\x0b\x32/.opencannabis.products.menu.section.SectionSpec\x12\x38\n\x07product\x18\x03 \x03(\x0b\x32\'.opencannabis.products.menu.MenuProduct\"X\n\rSectionedMenu\x12\r\n\x05\x63ount\x18\x01 \x01(\x05\x12\x38\n\x07payload\x18\x02 \x03(\x0b\x32\'.opencannabis.products.menu.SectionData\"\xe2\t\n\nStaticMenu\x12J\n\napothecary\x18\x01 \x03(\x0b\x32\x36.opencannabis.products.menu.StaticMenu.ApothecaryEntry\x12J\n\ncartridges\x18\x02 \x03(\x0b\x32\x36.opencannabis.products.menu.StaticMenu.CartridgesEntry\x12\x44\n\x07\x65\x64ibles\x18\x03 \x03(\x0b\x32\x33.opencannabis.products.menu.StaticMenu.EdiblesEntry\x12\x46\n\x08\x65xtracts\x18\x04 \x03(\x0b\x32\x34.opencannabis.products.menu.StaticMenu.ExtractsEntry\x12\x44\n\x07\x66lowers\x18\x05 \x03(\x0b\x32\x33.opencannabis.products.menu.StaticMenu.FlowersEntry\x12L\n\x0bmerchandise\x18\x06 \x03(\x0b\x32\x37.opencannabis.products.menu.StaticMenu.MerchandiseEntry\x12\x42\n\x06plants\x18\x07 \x03(\x0b\x32\x32.opencannabis.products.menu.StaticMenu.PlantsEntry\x12\x46\n\x08prerolls\x18\x08 \x03(\x0b\x32\x34.opencannabis.products.menu.StaticMenu.PrerollsEntry\x1aT\n\x0f\x41pothecaryEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x30\n\x05value\x18\x02 \x01(\x0b\x32!.opencannabis.products.Apothecary:\x02\x38\x01\x1aS\n\x0f\x43\x61rtridgesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12/\n\x05value\x18\x02 \x01(\x0b\x32 .opencannabis.products.Cartridge:\x02\x38\x01\x1aM\n\x0c\x45\x64iblesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12,\n\x05value\x18\x02 \x01(\x0b\x32\x1d.opencannabis.products.Edible:\x02\x38\x01\x1aO\n\rExtractsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12-\n\x05value\x18\x02 \x01(\x0b\x32\x1e.opencannabis.products.Extract:\x02\x38\x01\x1aM\n\x0c\x46lowersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12,\n\x05value\x18\x02 \x01(\x0b\x32\x1d.opencannabis.products.Flower:\x02\x38\x01\x1aV\n\x10MerchandiseEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x31\n\x05value\x18\x02 \x01(\x0b\x32\".opencannabis.products.Merchandise:\x02\x38\x01\x1aK\n\x0bPlantsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12+\n\x05value\x18\x02 \x01(\x0b\x32\x1c.opencannabis.products.Plant:\x02\x38\x01\x1aO\n\rPrerollsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12-\n\x05value\x18\x02 \x01(\x0b\x32\x1e.opencannabis.products.Preroll:\x02\x38\x01\"\xbf\x01\n\x04Menu\x12\x36\n\x08metadata\x18\x01 \x01(\x0b\x32$.opencannabis.products.menu.Metadata\x12<\n\x07payload\x18\x03 \x01(\x0b\x32).opencannabis.products.menu.SectionedMenuH\x00\x12\x36\n\x04menu\x18\x04 \x01(\x0b\x32&.opencannabis.products.menu.StaticMenuH\x00\x42\t\n\x07\x63ontent*#\n\x06Status\x12\x0f\n\x0bUNPUBLISHED\x10\x00\x12\x08\n\x04LIVE\x10\x01*/\n\x04\x46lag\x12\t\n\x05\x44RAFT\x10\x00\x12\x0b\n\x07PRIVATE\x10\x01\x12\x0f\n\x0bOUT_OF_DATE\x10\x02\x42\'\n\x1bio.opencannabis.schema.menuH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x18products/menu/Menu.proto\x12\x1aopencannabis.products.menu\x1a\x15\x62\x61se/ProductKey.proto\x1a\x16temporal/Instant.proto\x1a\x1bproducts/menu/Section.proto\x1a!crypto/primitives/Integrity.proto\x1a\x19products/Apothecary.proto\x1a\x18products/Cartridge.proto\x1a\x15products/Edible.proto\x1a\x16products/Extract.proto\x1a\x15products/Flower.proto\x1a\x1aproducts/Merchandise.proto\x1a\x14products/Plant.proto\x1a\x16products/Preroll.proto\"\xbc\x02\n\x0cMenuSettings\x12\x0c\n\x04\x66ull\x18\x01 \x01(\x08\x12\x11\n\tkeys_only\x18\x02 \x01(\x08\x12@\n\x08snapshot\x18\x03 \x01(\x0b\x32..opencannabis.crypto.primitives.integrity.Hash\x12\x43\n\x0b\x66ingerprint\x18\x04 \x01(\x0b\x32..opencannabis.crypto.primitives.integrity.Hash\x12<\n\x07section\x18\x05 \x03(\x0e\x32+.opencannabis.products.menu.section.Section\x12\x46\n\x11\x61vailable_section\x18\x06 \x03(\x0e\x32+.opencannabis.products.menu.section.Section\"\xfe\x01\n\x08Metadata\x12\r\n\x05scope\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\x04\x12\x32\n\x06status\x18\x03 \x01(\x0e\x32\".opencannabis.products.menu.Status\x12/\n\x05\x66lags\x18\x04 \x03(\x0e\x32 .opencannabis.products.menu.Flag\x12\x31\n\tpublished\x18\x05 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12:\n\x08settings\x18\x06 \x01(\x0b\x32(.opencannabis.products.menu.MenuSettings\"\xe6\x03\n\x0bMenuProduct\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x37\n\napothecary\x18\n \x01(\x0b\x32!.opencannabis.products.ApothecaryH\x00\x12\x35\n\tcartridge\x18\x0b \x01(\x0b\x32 .opencannabis.products.CartridgeH\x00\x12/\n\x06\x65\x64ible\x18\x0c \x01(\x0b\x32\x1d.opencannabis.products.EdibleH\x00\x12\x31\n\x07\x65xtract\x18\r \x01(\x0b\x32\x1e.opencannabis.products.ExtractH\x00\x12/\n\x06\x66lower\x18\x0e \x01(\x0b\x32\x1d.opencannabis.products.FlowerH\x00\x12\x39\n\x0bmerchandise\x18\x0f \x01(\x0b\x32\".opencannabis.products.MerchandiseH\x00\x12-\n\x05plant\x18\x10 \x01(\x0b\x32\x1c.opencannabis.products.PlantH\x00\x12\x31\n\x07preroll\x18\x11 \x01(\x0b\x32\x1e.opencannabis.products.PrerollH\x00\x42\t\n\x07product\"\x98\x01\n\x0bSectionData\x12\r\n\x05\x63ount\x18\x01 \x01(\x05\x12@\n\x07section\x18\x02 \x01(\x0b\x32/.opencannabis.products.menu.section.SectionSpec\x12\x38\n\x07product\x18\x03 \x03(\x0b\x32\'.opencannabis.products.menu.MenuProduct\"X\n\rSectionedMenu\x12\r\n\x05\x63ount\x18\x01 \x01(\x05\x12\x38\n\x07payload\x18\x02 \x03(\x0b\x32\'.opencannabis.products.menu.SectionData\"\xe2\t\n\nStaticMenu\x12J\n\napothecary\x18\x01 \x03(\x0b\x32\x36.opencannabis.products.menu.StaticMenu.ApothecaryEntry\x12J\n\ncartridges\x18\x02 \x03(\x0b\x32\x36.opencannabis.products.menu.StaticMenu.CartridgesEntry\x12\x44\n\x07\x65\x64ibles\x18\x03 \x03(\x0b\x32\x33.opencannabis.products.menu.StaticMenu.EdiblesEntry\x12\x46\n\x08\x65xtracts\x18\x04 \x03(\x0b\x32\x34.opencannabis.products.menu.StaticMenu.ExtractsEntry\x12\x44\n\x07\x66lowers\x18\x05 \x03(\x0b\x32\x33.opencannabis.products.menu.StaticMenu.FlowersEntry\x12L\n\x0bmerchandise\x18\x06 \x03(\x0b\x32\x37.opencannabis.products.menu.StaticMenu.MerchandiseEntry\x12\x42\n\x06plants\x18\x07 \x03(\x0b\x32\x32.opencannabis.products.menu.StaticMenu.PlantsEntry\x12\x46\n\x08prerolls\x18\x08 \x03(\x0b\x32\x34.opencannabis.products.menu.StaticMenu.PrerollsEntry\x1aT\n\x0f\x41pothecaryEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x30\n\x05value\x18\x02 \x01(\x0b\x32!.opencannabis.products.Apothecary:\x02\x38\x01\x1aS\n\x0f\x43\x61rtridgesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12/\n\x05value\x18\x02 \x01(\x0b\x32 .opencannabis.products.Cartridge:\x02\x38\x01\x1aM\n\x0c\x45\x64iblesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12,\n\x05value\x18\x02 \x01(\x0b\x32\x1d.opencannabis.products.Edible:\x02\x38\x01\x1aO\n\rExtractsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12-\n\x05value\x18\x02 \x01(\x0b\x32\x1e.opencannabis.products.Extract:\x02\x38\x01\x1aM\n\x0c\x46lowersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12,\n\x05value\x18\x02 \x01(\x0b\x32\x1d.opencannabis.products.Flower:\x02\x38\x01\x1aV\n\x10MerchandiseEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x31\n\x05value\x18\x02 \x01(\x0b\x32\".opencannabis.products.Merchandise:\x02\x38\x01\x1aK\n\x0bPlantsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12+\n\x05value\x18\x02 \x01(\x0b\x32\x1c.opencannabis.products.Plant:\x02\x38\x01\x1aO\n\rPrerollsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12-\n\x05value\x18\x02 \x01(\x0b\x32\x1e.opencannabis.products.Preroll:\x02\x38\x01\"\xbf\x01\n\x04Menu\x12\x36\n\x08metadata\x18\x01 \x01(\x0b\x32$.opencannabis.products.menu.Metadata\x12<\n\x07payload\x18\x03 \x01(\x0b\x32).opencannabis.products.menu.SectionedMenuH\x00\x12\x36\n\x04menu\x18\x04 \x01(\x0b\x32&.opencannabis.products.menu.StaticMenuH\x00\x42\t\n\x07\x63ontent*#\n\x06Status\x12\x0f\n\x0bUNPUBLISHED\x10\x00\x12\x08\n\x04LIVE\x10\x01*/\n\x04\x46lag\x12\t\n\x05\x44RAFT\x10\x00\x12\x0b\n\x07PRIVATE\x10\x01\x12\x0f\n\x0bOUT_OF_DATE\x10\x02\x42\'\n\x1bio.opencannabis.schema.menuH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[base_dot_ProductKey__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,products_dot_menu_dot_Section__pb2.DESCRIPTOR,crypto_dot_primitives_dot_Integrity__pb2.DESCRIPTOR,products_dot_Apothecary__pb2.DESCRIPTOR,products_dot_Cartridge__pb2.DESCRIPTOR,products_dot_Edible__pb2.DESCRIPTOR,products_dot_Extract__pb2.DESCRIPTOR,products_dot_Flower__pb2.DESCRIPTOR,products_dot_Merchandise__pb2.DESCRIPTOR,products_dot_Plant__pb2.DESCRIPTOR,products_dot_Preroll__pb2.DESCRIPTOR,])
 
@@ -53,8 +53,8 @@ _STATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3049,
-  serialized_end=3084,
+  serialized_start=3121,
+  serialized_end=3156,
 )
 _sym_db.RegisterEnumDescriptor(_STATUS)
 
@@ -80,8 +80,8 @@ _FLAG = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3086,
-  serialized_end=3133,
+  serialized_start=3158,
+  serialized_end=3205,
 )
 _sym_db.RegisterEnumDescriptor(_FLAG)
 
@@ -136,6 +136,13 @@ _MENUSETTINGS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='available_section', full_name='opencannabis.products.menu.MenuSettings.available_section', index=5,
+      number=6, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -149,7 +156,7 @@ _MENUSETTINGS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=365,
-  serialized_end=609,
+  serialized_end=681,
 )
 
 
@@ -214,8 +221,8 @@ _METADATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=612,
-  serialized_end=866,
+  serialized_start=684,
+  serialized_end=938,
 )
 
 
@@ -304,8 +311,8 @@ _MENUPRODUCT = _descriptor.Descriptor(
       name='product', full_name='opencannabis.products.menu.MenuProduct.product',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=869,
-  serialized_end=1355,
+  serialized_start=941,
+  serialized_end=1427,
 )
 
 
@@ -349,8 +356,8 @@ _SECTIONDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1358,
-  serialized_end=1510,
+  serialized_start=1430,
+  serialized_end=1582,
 )
 
 
@@ -387,8 +394,8 @@ _SECTIONEDMENU = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1512,
-  serialized_end=1600,
+  serialized_start=1584,
+  serialized_end=1672,
 )
 
 
@@ -425,8 +432,8 @@ _STATICMENU_APOTHECARYENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2199,
-  serialized_end=2283,
+  serialized_start=2271,
+  serialized_end=2355,
 )
 
 _STATICMENU_CARTRIDGESENTRY = _descriptor.Descriptor(
@@ -462,8 +469,8 @@ _STATICMENU_CARTRIDGESENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2285,
-  serialized_end=2368,
+  serialized_start=2357,
+  serialized_end=2440,
 )
 
 _STATICMENU_EDIBLESENTRY = _descriptor.Descriptor(
@@ -499,8 +506,8 @@ _STATICMENU_EDIBLESENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2370,
-  serialized_end=2447,
+  serialized_start=2442,
+  serialized_end=2519,
 )
 
 _STATICMENU_EXTRACTSENTRY = _descriptor.Descriptor(
@@ -536,8 +543,8 @@ _STATICMENU_EXTRACTSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2449,
-  serialized_end=2528,
+  serialized_start=2521,
+  serialized_end=2600,
 )
 
 _STATICMENU_FLOWERSENTRY = _descriptor.Descriptor(
@@ -573,8 +580,8 @@ _STATICMENU_FLOWERSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2530,
-  serialized_end=2607,
+  serialized_start=2602,
+  serialized_end=2679,
 )
 
 _STATICMENU_MERCHANDISEENTRY = _descriptor.Descriptor(
@@ -610,8 +617,8 @@ _STATICMENU_MERCHANDISEENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2609,
-  serialized_end=2695,
+  serialized_start=2681,
+  serialized_end=2767,
 )
 
 _STATICMENU_PLANTSENTRY = _descriptor.Descriptor(
@@ -647,8 +654,8 @@ _STATICMENU_PLANTSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2697,
-  serialized_end=2772,
+  serialized_start=2769,
+  serialized_end=2844,
 )
 
 _STATICMENU_PREROLLSENTRY = _descriptor.Descriptor(
@@ -684,8 +691,8 @@ _STATICMENU_PREROLLSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2774,
-  serialized_end=2853,
+  serialized_start=2846,
+  serialized_end=2925,
 )
 
 _STATICMENU = _descriptor.Descriptor(
@@ -763,8 +770,8 @@ _STATICMENU = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1603,
-  serialized_end=2853,
+  serialized_start=1675,
+  serialized_end=2925,
 )
 
 
@@ -811,13 +818,14 @@ _MENU = _descriptor.Descriptor(
       name='content', full_name='opencannabis.products.menu.Menu.content',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=2856,
-  serialized_end=3047,
+  serialized_start=2928,
+  serialized_end=3119,
 )
 
 _MENUSETTINGS.fields_by_name['snapshot'].message_type = crypto_dot_primitives_dot_Integrity__pb2._HASH
 _MENUSETTINGS.fields_by_name['fingerprint'].message_type = crypto_dot_primitives_dot_Integrity__pb2._HASH
 _MENUSETTINGS.fields_by_name['section'].enum_type = products_dot_menu_dot_Section__pb2._SECTION
+_MENUSETTINGS.fields_by_name['available_section'].enum_type = products_dot_menu_dot_Section__pb2._SECTION
 _METADATA.fields_by_name['status'].enum_type = _STATUS
 _METADATA.fields_by_name['flags'].enum_type = _FLAG
 _METADATA.fields_by_name['published'].message_type = temporal_dot_Instant__pb2._INSTANT

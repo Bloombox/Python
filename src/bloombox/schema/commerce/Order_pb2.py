@@ -25,7 +25,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='commerce/Order.proto',
   package='opencannabis.commerce',
   syntax='proto3',
-  serialized_pb=_b('\n\x14\x63ommerce/Order.proto\x12\x15opencannabis.commerce\x1a\x0e\x62q_field.proto\x1a\x13\x63ommerce/Item.proto\x1a\x17\x63ommerce/Delivery.proto\x1a\x17\x63ommerce/Customer.proto\x1a\x16temporal/Instant.proto\"\xe3\x01\n\x0fOrderScheduling\x12q\n\nscheduling\x18\x01 \x01(\x0e\x32%.opencannabis.commerce.SchedulingTypeB6\xf0?\x01\x8a@0Scheduling type, either \'ASAP\' or a target time.\x12]\n\x0c\x64\x65sired_time\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\'\x8a@$Desired delivery time, if specified.\"\x85\x01\n\rStatusCheckin\x12\x32\n\x06status\x18\x01 \x01(\x0e\x32\".opencannabis.commerce.OrderStatus\x12/\n\x07instant\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x0f\n\x07message\x18\x03 \x01(\t\"J\n\x08OrderKey\x12>\n\x02id\x18\x01 \x01(\tB2\x8a@/Order ID, assigned by the server upon creation.\"\xc1\x07\n\x05Order\x12\x62\n\x02id\x18\x01 \x01(\tBV\xf0?\x01\x8a@PID assigned to the order by the server, and potentially nominated by the client.\x12j\n\x04type\x18\x02 \x01(\x0e\x32 .opencannabis.commerce.OrderTypeB:\xf0?\x01\x8a@4Type of order requested - either PICKUP or DELIVERY.\x12\x37\n\x06status\x18\x03 \x01(\x0e\x32\".opencannabis.commerce.OrderStatusB\x03\x80@\x01\x12\\\n\x08\x63ustomer\x18\x04 \x01(\x0b\x32\x1f.opencannabis.commerce.CustomerB)\xf0?\x01\x8a@#Customer that submitted this order.\x12\x61\n\nscheduling\x18\x05 \x01(\x0b\x32&.opencannabis.commerce.OrderSchedulingB%\xf0?\x01\x8a@\x1fScheduling spec for this order.\x12i\n\x0b\x64\x65stination\x18\x06 \x01(\x0b\x32*.opencannabis.commerce.DeliveryDestinationB(\x8a@%Location for delivery, if applicable.\x12\x12\n\x05notes\x18\x07 \x01(\tB\x03\x80@\x01\x12.\n\x04item\x18\x08 \x03(\x0b\x32\x1b.opencannabis.commerce.ItemB\x03\x80@\x01\x12=\n\naction_log\x18\t \x03(\x0b\x32$.opencannabis.commerce.StatusCheckinB\x03\x80@\x01\x12V\n\ncreated_at\x18\n \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\"\xf0?\x01\x8a@\x1cWhen this order was created.\x12$\n\x08subtotal\x18\x0b \x01(\x01\x42\x12\x8a@\x0fOrder subtotal.\x12\x37\n\nupdated_at\x18\x0c \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\x03\x80@\x01\x12I\n\x03sid\x18\r \x01(\tB<\x8a@9Session ID that was active when this order was submitted.*%\n\tOrderType\x12\n\n\x06PICKUP\x10\x00\x12\x0c\n\x08\x44\x45LIVERY\x10\x01*%\n\x0eSchedulingType\x12\x08\n\x04\x41SAP\x10\x00\x12\t\n\x05TIMED\x10\x01*a\n\x0bOrderStatus\x12\x0b\n\x07PENDING\x10\x00\x12\x0c\n\x08\x41PPROVED\x10\x01\x12\x0c\n\x08REJECTED\x10\x02\x12\x0c\n\x08\x41SSIGNED\x10\x03\x12\x0c\n\x08\x45N_ROUTE\x10\x04\x12\r\n\tFULFILLED\x10\x05\x42<\n\x1fio.opencannabis.schema.commerceB\x0f\x43ommercialOrderH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x14\x63ommerce/Order.proto\x12\x15opencannabis.commerce\x1a\x0e\x62q_field.proto\x1a\x13\x63ommerce/Item.proto\x1a\x17\x63ommerce/Delivery.proto\x1a\x17\x63ommerce/Customer.proto\x1a\x16temporal/Instant.proto\"\xe3\x01\n\x0fOrderScheduling\x12q\n\nscheduling\x18\x01 \x01(\x0e\x32%.opencannabis.commerce.SchedulingTypeB6\xf0?\x01\x8a@0Scheduling type, either \'ASAP\' or a target time.\x12]\n\x0c\x64\x65sired_time\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\'\x8a@$Desired delivery time, if specified.\"\x85\x01\n\rStatusCheckin\x12\x32\n\x06status\x18\x01 \x01(\x0e\x32\".opencannabis.commerce.OrderStatus\x12/\n\x07instant\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x0f\n\x07message\x18\x03 \x01(\t\"J\n\x08OrderKey\x12>\n\x02id\x18\x01 \x01(\tB2\x8a@/Order ID, assigned by the server upon creation.\"\xc1\x07\n\x05Order\x12\x62\n\x02id\x18\x01 \x01(\tBV\xf0?\x01\x8a@PID assigned to the order by the server, and potentially nominated by the client.\x12j\n\x04type\x18\x02 \x01(\x0e\x32 .opencannabis.commerce.OrderTypeB:\xf0?\x01\x8a@4Type of order requested - either PICKUP or DELIVERY.\x12\x37\n\x06status\x18\x03 \x01(\x0e\x32\".opencannabis.commerce.OrderStatusB\x03\x80@\x01\x12\\\n\x08\x63ustomer\x18\x04 \x01(\x0b\x32\x1f.opencannabis.commerce.CustomerB)\xf0?\x01\x8a@#Customer that submitted this order.\x12\x61\n\nscheduling\x18\x05 \x01(\x0b\x32&.opencannabis.commerce.OrderSchedulingB%\xf0?\x01\x8a@\x1fScheduling spec for this order.\x12i\n\x0b\x64\x65stination\x18\x06 \x01(\x0b\x32*.opencannabis.commerce.DeliveryDestinationB(\x8a@%Location for delivery, if applicable.\x12\x12\n\x05notes\x18\x07 \x01(\tB\x03\x80@\x01\x12.\n\x04item\x18\x08 \x03(\x0b\x32\x1b.opencannabis.commerce.ItemB\x03\x80@\x01\x12=\n\naction_log\x18\t \x03(\x0b\x32$.opencannabis.commerce.StatusCheckinB\x03\x80@\x01\x12V\n\ncreated_at\x18\n \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\"\xf0?\x01\x8a@\x1cWhen this order was created.\x12$\n\x08subtotal\x18\x0b \x01(\x01\x42\x12\x8a@\x0fOrder subtotal.\x12\x37\n\nupdated_at\x18\x0c \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\x03\x80@\x01\x12I\n\x03sid\x18\r \x01(\tB<\x8a@9Session ID that was active when this order was submitted.*=\n\tOrderType\x12\n\n\x06PICKUP\x10\x00\x12\x0c\n\x08\x44\x45LIVERY\x10\x01\x12\n\n\x06ONSITE\x10\x02\x12\n\n\x06REMOTE\x10\x03*%\n\x0eSchedulingType\x12\x08\n\x04\x41SAP\x10\x00\x12\t\n\x05TIMED\x10\x01*a\n\x0bOrderStatus\x12\x0b\n\x07PENDING\x10\x00\x12\x0c\n\x08\x41PPROVED\x10\x01\x12\x0c\n\x08REJECTED\x10\x02\x12\x0c\n\x08\x41SSIGNED\x10\x03\x12\x0c\n\x08\x45N_ROUTE\x10\x04\x12\r\n\tFULFILLED\x10\x05\x42<\n\x1fio.opencannabis.schema.commerceB\x0f\x43ommercialOrderH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,commerce_dot_Item__pb2.DESCRIPTOR,commerce_dot_Delivery__pb2.DESCRIPTOR,commerce_dot_Customer__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,])
 
@@ -43,11 +43,19 @@ _ORDERTYPE = _descriptor.EnumDescriptor(
       name='DELIVERY', index=1, number=1,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ONSITE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='REMOTE', index=3, number=3,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
   serialized_start=1564,
-  serialized_end=1601,
+  serialized_end=1625,
 )
 _sym_db.RegisterEnumDescriptor(_ORDERTYPE)
 
@@ -69,8 +77,8 @@ _SCHEDULINGTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1603,
-  serialized_end=1640,
+  serialized_start=1627,
+  serialized_end=1664,
 )
 _sym_db.RegisterEnumDescriptor(_SCHEDULINGTYPE)
 
@@ -108,14 +116,16 @@ _ORDERSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1642,
-  serialized_end=1739,
+  serialized_start=1666,
+  serialized_end=1763,
 )
 _sym_db.RegisterEnumDescriptor(_ORDERSTATUS)
 
 OrderStatus = enum_type_wrapper.EnumTypeWrapper(_ORDERSTATUS)
 PICKUP = 0
 DELIVERY = 1
+ONSITE = 2
+REMOTE = 3
 ASAP = 0
 TIMED = 1
 PENDING = 0

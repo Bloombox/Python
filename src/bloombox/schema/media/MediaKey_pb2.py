@@ -13,16 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import bq_field_pb2 as bq__field__pb2
+from core import Datamodel_pb2 as core_dot_Datamodel__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='media/MediaKey.proto',
   package='opencannabis.media',
   syntax='proto3',
-  serialized_pb=_b('\n\x14media/MediaKey.proto\x12\x12opencannabis.media\x1a\x0e\x62q_field.proto\"9\n\x08MediaKey\x12-\n\x02id\x18\x01 \x01(\tB!\x8a@\x1eUnique ID for this media item.B6\n\x1cio.opencannabis.schema.mediaB\x0cMediaItemKeyH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x14media/MediaKey.proto\x12\x12opencannabis.media\x1a\x14\x63ore/Datamodel.proto\"<\n\x08MediaKey\x12\x30\n\x02id\x18\x01 \x01(\tB$\xc2\xb5\x03 \x12\x1eUnique ID for this media item.B6\n\x1cio.opencannabis.schema.mediaB\x0cMediaItemKeyH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
-  dependencies=[bq__field__pb2.DESCRIPTOR,])
+  dependencies=[core_dot_Datamodel__pb2.DESCRIPTOR,])
 
 
 
@@ -40,7 +40,7 @@ _MEDIAKEY = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\036Unique ID for this media item.')), file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003 \022\036Unique ID for this media item.')), file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -53,8 +53,8 @@ _MEDIAKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=60,
-  serialized_end=117,
+  serialized_start=66,
+  serialized_end=126,
 )
 
 DESCRIPTOR.message_types_by_name['MediaKey'] = _MEDIAKEY
@@ -71,5 +71,5 @@ _sym_db.RegisterMessage(MediaKey)
 DESCRIPTOR.has_options = True
 DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\034io.opencannabis.schema.mediaB\014MediaItemKeyH\001P\001\242\002\003OCS'))
 _MEDIAKEY.fields_by_name['id'].has_options = True
-_MEDIAKEY.fields_by_name['id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\036Unique ID for this media item.'))
+_MEDIAKEY.fields_by_name['id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003 \022\036Unique ID for this media item.'))
 # @@protoc_insertion_point(module_scope)

@@ -6,9 +6,9 @@
 VERBOSE ?= no
 TESTS ?= yes
 COVERAGE ?= yes
-VERSION ?= 0.0.1-alpha4
+VERSION ?= 0.0.1-alpha5
 STAGING ?= yes
-SERVICES ?= checkin:v1beta1 devices:v1beta1 menu:v1beta1 shop:v1 telemetry:v1beta3
+SERVICES ?= auth:v1beta1 platform:v1 checkin:v1beta1 devices:v1beta1 marketing:v1beta1 menu:v1beta1 media:v1beta1 shop:v1 telemetry:v1beta3
 
 ENV_PATH ?= .env
 BUILDBOT ?= no

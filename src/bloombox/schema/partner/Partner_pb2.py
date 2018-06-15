@@ -15,18 +15,23 @@ _sym_db = _symbol_database.Default()
 
 
 import bq_field_pb2 as bq__field__pb2
+from core import Datamodel_pb2 as core_dot_Datamodel__pb2
 from media import MediaItem_pb2 as media_dot_MediaItem__pb2
 from temporal import Instant_pb2 as temporal_dot_Instant__pb2
 from contact import ContactInfo_pb2 as contact_dot_ContactInfo__pb2
+from partner import PartnerFlags_pb2 as partner_dot_PartnerFlags__pb2
+from partner import PartnerLocation_pb2 as partner_dot_PartnerLocation__pb2
+from partner.settings import PartnerSettings_pb2 as partner_dot_settings_dot_PartnerSettings__pb2
+from security.access import PartnerPermissions_pb2 as security_dot_access_dot_PartnerPermissions__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='partner/Partner.proto',
   package='bloombox.schema.partner',
   syntax='proto3',
-  serialized_pb=_b('\n\x15partner/Partner.proto\x12\x17\x62loombox.schema.partner\x1a\x0e\x62q_field.proto\x1a\x15media/MediaItem.proto\x1a\x16temporal/Instant.proto\x1a\x19\x63ontact/ContactInfo.proto\"\\\n\nPartnerKey\x12N\n\x04\x63ode\x18\x01 \x01(\tB@\x8a@=Short string that uniquely identifies a partner organization.\"\xeb\x06\n\x07Partner\x12Q\n\x04\x63ode\x18\x01 \x01(\tBC\x8a@@Short string that uniquely identifies this partner organization.\x12I\n\x04name\x18\x02 \x01(\tB;\x8a@8Full human-readable label for this partner organization.\x12m\n\x05\x66lags\x18\x03 \x01(\x0b\x32%.bloombox.schema.partner.PartnerFlagsB7\x8a@4Flags for various things about this partner account.\x12>\n\nlegal_name\x18\x04 \x01(\tB*\x8a@\'Legal name of the partner organization.\x12\x61\n\x07\x63ontact\x18\x05 \x01(\x0b\x32!.opencannabis.contact.ContactInfoB-\x8a@*Contact information for this organization.\x12_\n\x08\x62randing\x18\x06 \x01(\x0b\x32\x1d.opencannabis.media.MediaItemB.\x8a@+Branding information for this organization.\x12\x85\x01\n\x07\x63hannel\x18\x07 \x01(\x0e\x32\'.bloombox.schema.partner.PartnerChannelBK\x8a@HChannel through which this partner organization interacts with Bloombox.\x12_\n\x07\x63reated\x18\x64 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB.\x8a@+Timestamp for when this record was created.\x12\x66\n\x08modified\x18\x65 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB4\x8a@1Timestamp for when this record was last modified.\"\xde\x05\n\x0cPartnerFlags\x12\xa2\x01\n\tsuspended\x18\x01 \x01(\x08\x42\x8e\x01\x8a@\x8a\x01Specifies that the subject partner organization is currently suspended, organization wide, and has had access revoked to Bloombox systems.\x12\xb0\x01\n\x07pastdue\x18\x02 \x01(\x08\x42\x9e\x01\x8a@\x9a\x01Specifies that the subject partner organiztaion is currently in a past-due state, where their organization and related access has been heavily restricted.\x12t\n\x04\x62\x65ta\x18\x03 \x01(\x08\x42\x66\x8a@cSpecifies that the subject partner organization has access to beta features, clusters, and systems.\x12`\n\x07sandbox\x18\x04 \x01(\x08\x42O\x8a@LSpecifies that the subject partner organization has internal sandbox access.\x12\x9d\x01\n\x08internal\x18\x05 \x01(\x08\x42\x8a\x01\x8a@\x86\x01Specifies that the subject partner organization is a testing account held and managed internally by Bloombox, or by selected partners.*\x1c\n\x0ePartnerChannel\x12\n\n\x06\x44IRECT\x10\x00\x42&\n\x1aio.bloombox.schema.partnerH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n\x15partner/Partner.proto\x12\x17\x62loombox.schema.partner\x1a\x0e\x62q_field.proto\x1a\x14\x63ore/Datamodel.proto\x1a\x15media/MediaItem.proto\x1a\x16temporal/Instant.proto\x1a\x19\x63ontact/ContactInfo.proto\x1a\x1apartner/PartnerFlags.proto\x1a\x1dpartner/PartnerLocation.proto\x1a&partner/settings/PartnerSettings.proto\x1a(security/access/PartnerPermissions.proto\"\xfd\x08\n\x07Partner\x12W\n\x04\x63ode\x18\x01 \x01(\tBI\xc2\xb5\x03\x02\x08\x02\x8a@@Short string that uniquely identifies this partner organization.\x12I\n\x04name\x18\x02 \x01(\tB;\x8a@8Full human-readable label for this partner organization.\x12s\n\x05\x66lags\x18\x03 \x01(\x0b\x32%.bloombox.schema.partner.PartnerFlagsB=\xc2\xb5\x03\x02\x08\x04\x8a@4Flags for various things about this partner account.\x12>\n\nlegal_name\x18\x04 \x01(\tB*\x8a@\'Legal name of the partner organization.\x12\x61\n\x07\x63ontact\x18\x05 \x01(\x0b\x32!.opencannabis.contact.ContactInfoB-\x8a@*Contact information for this organization.\x12_\n\x08\x62randing\x18\x06 \x01(\x0b\x32\x1d.opencannabis.media.MediaItemB.\x8a@+Branding information for this organization.\x12\x85\x01\n\x07\x63hannel\x18\x07 \x01(\x0e\x32\'.bloombox.schema.partner.PartnerChannelBK\x8a@HChannel through which this partner organization interacts with Bloombox.\x12L\n\x08settings\x18\x08 \x01(\x0b\x32\x31.bloombox.schema.partner.settings.PartnerSettingsB\x07\x80@\x01\xd2\xb5\x03\x00\x12P\n\x08location\x18\t \x03(\x0b\x32(.bloombox.schema.partner.PartnerLocationB\x14\x80@\x01\xd2\xb5\x03\r\x08\x01\x1a\tlocations\x12R\n\x06policy\x18\n \x03(\x0b\x32-.bloombox.schema.security.access.AccessPolicyB\x13\x80@\x01\xd2\xb5\x03\x0c\x08\x01\x1a\x08policies\x12_\n\x07\x63reated\x18\x64 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB.\x8a@+Timestamp for when this record was created.\x12\x66\n\x08modified\x18\x65 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB4\x8a@1Timestamp for when this record was last modified.:\x10\x82\xf7\x02\x0c\x08\x02\x12\x08partners*\x1c\n\x0ePartnerChannel\x12\n\n\x06\x44IRECT\x10\x00\x42\x36\n\x1aio.bloombox.schema.partnerB\x0ePartnerAccountH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
-  dependencies=[bq__field__pb2.DESCRIPTOR,media_dot_MediaItem__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,contact_dot_ContactInfo__pb2.DESCRIPTOR,])
+  dependencies=[bq__field__pb2.DESCRIPTOR,core_dot_Datamodel__pb2.DESCRIPTOR,media_dot_MediaItem__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,contact_dot_ContactInfo__pb2.DESCRIPTOR,partner_dot_PartnerFlags__pb2.DESCRIPTOR,partner_dot_PartnerLocation__pb2.DESCRIPTOR,partner_dot_settings_dot_PartnerSettings__pb2.DESCRIPTOR,security_dot_access_dot_PartnerPermissions__pb2.DESCRIPTOR,])
 
 _PARTNERCHANNEL = _descriptor.EnumDescriptor(
   name='PartnerChannel',
@@ -41,45 +46,14 @@ _PARTNERCHANNEL = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1849,
-  serialized_end=1877,
+  serialized_start=1455,
+  serialized_end=1483,
 )
 _sym_db.RegisterEnumDescriptor(_PARTNERCHANNEL)
 
 PartnerChannel = enum_type_wrapper.EnumTypeWrapper(_PARTNERCHANNEL)
 DIRECT = 0
 
-
-
-_PARTNERKEY = _descriptor.Descriptor(
-  name='PartnerKey',
-  full_name='bloombox.schema.partner.PartnerKey',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='code', full_name='bloombox.schema.partner.PartnerKey.code', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@=Short string that uniquely identifies a partner organization.')), file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=140,
-  serialized_end=232,
-)
 
 
 _PARTNER = _descriptor.Descriptor(
@@ -95,7 +69,7 @@ _PARTNER = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@@Short string that uniquely identifies this partner organization.')), file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\002\212@@Short string that uniquely identifies this partner organization.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='name', full_name='bloombox.schema.partner.Partner.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
@@ -109,7 +83,7 @@ _PARTNER = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@4Flags for various things about this partner account.')), file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\004\212@4Flags for various things about this partner account.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='legal_name', full_name='bloombox.schema.partner.Partner.legal_name', index=3,
       number=4, type=9, cpp_type=9, label=1,
@@ -139,14 +113,35 @@ _PARTNER = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@HChannel through which this partner organization interacts with Bloombox.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='created', full_name='bloombox.schema.partner.Partner.created', index=7,
+      name='settings', full_name='bloombox.schema.partner.Partner.settings', index=7,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001\322\265\003\000')), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='location', full_name='bloombox.schema.partner.Partner.location', index=8,
+      number=9, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001\322\265\003\r\010\001\032\tlocations')), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='policy', full_name='bloombox.schema.partner.Partner.policy', index=9,
+      number=10, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001\322\265\003\014\010\001\032\010policies')), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='created', full_name='bloombox.schema.partner.Partner.created', index=10,
       number=100, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@+Timestamp for when this record was created.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='modified', full_name='bloombox.schema.partner.Partner.modified', index=8,
+      name='modified', full_name='bloombox.schema.partner.Partner.modified', index=11,
       number=101, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -158,93 +153,28 @@ _PARTNER = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\202\367\002\014\010\002\022\010partners')),
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=235,
-  serialized_end=1110,
+  serialized_start=304,
+  serialized_end=1453,
 )
 
-
-_PARTNERFLAGS = _descriptor.Descriptor(
-  name='PartnerFlags',
-  full_name='bloombox.schema.partner.PartnerFlags',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='suspended', full_name='bloombox.schema.partner.PartnerFlags.suspended', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\212\001Specifies that the subject partner organization is currently suspended, organization wide, and has had access revoked to Bloombox systems.')), file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='pastdue', full_name='bloombox.schema.partner.PartnerFlags.pastdue', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\232\001Specifies that the subject partner organiztaion is currently in a past-due state, where their organization and related access has been heavily restricted.')), file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='beta', full_name='bloombox.schema.partner.PartnerFlags.beta', index=2,
-      number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@cSpecifies that the subject partner organization has access to beta features, clusters, and systems.')), file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='sandbox', full_name='bloombox.schema.partner.PartnerFlags.sandbox', index=3,
-      number=4, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@LSpecifies that the subject partner organization has internal sandbox access.')), file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='internal', full_name='bloombox.schema.partner.PartnerFlags.internal', index=4,
-      number=5, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\206\001Specifies that the subject partner organization is a testing account held and managed internally by Bloombox, or by selected partners.')), file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1113,
-  serialized_end=1847,
-)
-
-_PARTNER.fields_by_name['flags'].message_type = _PARTNERFLAGS
+_PARTNER.fields_by_name['flags'].message_type = partner_dot_PartnerFlags__pb2._PARTNERFLAGS
 _PARTNER.fields_by_name['contact'].message_type = contact_dot_ContactInfo__pb2._CONTACTINFO
 _PARTNER.fields_by_name['branding'].message_type = media_dot_MediaItem__pb2._MEDIAITEM
 _PARTNER.fields_by_name['channel'].enum_type = _PARTNERCHANNEL
+_PARTNER.fields_by_name['settings'].message_type = partner_dot_settings_dot_PartnerSettings__pb2._PARTNERSETTINGS
+_PARTNER.fields_by_name['location'].message_type = partner_dot_PartnerLocation__pb2._PARTNERLOCATION
+_PARTNER.fields_by_name['policy'].message_type = security_dot_access_dot_PartnerPermissions__pb2._ACCESSPOLICY
 _PARTNER.fields_by_name['created'].message_type = temporal_dot_Instant__pb2._INSTANT
 _PARTNER.fields_by_name['modified'].message_type = temporal_dot_Instant__pb2._INSTANT
-DESCRIPTOR.message_types_by_name['PartnerKey'] = _PARTNERKEY
 DESCRIPTOR.message_types_by_name['Partner'] = _PARTNER
-DESCRIPTOR.message_types_by_name['PartnerFlags'] = _PARTNERFLAGS
 DESCRIPTOR.enum_types_by_name['PartnerChannel'] = _PARTNERCHANNEL
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
-
-PartnerKey = _reflection.GeneratedProtocolMessageType('PartnerKey', (_message.Message,), dict(
-  DESCRIPTOR = _PARTNERKEY,
-  __module__ = 'partner.Partner_pb2'
-  # @@protoc_insertion_point(class_scope:bloombox.schema.partner.PartnerKey)
-  ))
-_sym_db.RegisterMessage(PartnerKey)
 
 Partner = _reflection.GeneratedProtocolMessageType('Partner', (_message.Message,), dict(
   DESCRIPTOR = _PARTNER,
@@ -253,24 +183,15 @@ Partner = _reflection.GeneratedProtocolMessageType('Partner', (_message.Message,
   ))
 _sym_db.RegisterMessage(Partner)
 
-PartnerFlags = _reflection.GeneratedProtocolMessageType('PartnerFlags', (_message.Message,), dict(
-  DESCRIPTOR = _PARTNERFLAGS,
-  __module__ = 'partner.Partner_pb2'
-  # @@protoc_insertion_point(class_scope:bloombox.schema.partner.PartnerFlags)
-  ))
-_sym_db.RegisterMessage(PartnerFlags)
-
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.bloombox.schema.partnerH\001P\001\242\002\003BBS'))
-_PARTNERKEY.fields_by_name['code'].has_options = True
-_PARTNERKEY.fields_by_name['code']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@=Short string that uniquely identifies a partner organization.'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.bloombox.schema.partnerB\016PartnerAccountH\001P\000\242\002\003BBS'))
 _PARTNER.fields_by_name['code'].has_options = True
-_PARTNER.fields_by_name['code']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@@Short string that uniquely identifies this partner organization.'))
+_PARTNER.fields_by_name['code']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\002\212@@Short string that uniquely identifies this partner organization.'))
 _PARTNER.fields_by_name['name'].has_options = True
 _PARTNER.fields_by_name['name']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@8Full human-readable label for this partner organization.'))
 _PARTNER.fields_by_name['flags'].has_options = True
-_PARTNER.fields_by_name['flags']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@4Flags for various things about this partner account.'))
+_PARTNER.fields_by_name['flags']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\004\212@4Flags for various things about this partner account.'))
 _PARTNER.fields_by_name['legal_name'].has_options = True
 _PARTNER.fields_by_name['legal_name']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\'Legal name of the partner organization.'))
 _PARTNER.fields_by_name['contact'].has_options = True
@@ -279,18 +200,16 @@ _PARTNER.fields_by_name['branding'].has_options = True
 _PARTNER.fields_by_name['branding']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@+Branding information for this organization.'))
 _PARTNER.fields_by_name['channel'].has_options = True
 _PARTNER.fields_by_name['channel']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@HChannel through which this partner organization interacts with Bloombox.'))
+_PARTNER.fields_by_name['settings'].has_options = True
+_PARTNER.fields_by_name['settings']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001\322\265\003\000'))
+_PARTNER.fields_by_name['location'].has_options = True
+_PARTNER.fields_by_name['location']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001\322\265\003\r\010\001\032\tlocations'))
+_PARTNER.fields_by_name['policy'].has_options = True
+_PARTNER.fields_by_name['policy']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001\322\265\003\014\010\001\032\010policies'))
 _PARTNER.fields_by_name['created'].has_options = True
 _PARTNER.fields_by_name['created']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@+Timestamp for when this record was created.'))
 _PARTNER.fields_by_name['modified'].has_options = True
 _PARTNER.fields_by_name['modified']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@1Timestamp for when this record was last modified.'))
-_PARTNERFLAGS.fields_by_name['suspended'].has_options = True
-_PARTNERFLAGS.fields_by_name['suspended']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\212\001Specifies that the subject partner organization is currently suspended, organization wide, and has had access revoked to Bloombox systems.'))
-_PARTNERFLAGS.fields_by_name['pastdue'].has_options = True
-_PARTNERFLAGS.fields_by_name['pastdue']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\232\001Specifies that the subject partner organiztaion is currently in a past-due state, where their organization and related access has been heavily restricted.'))
-_PARTNERFLAGS.fields_by_name['beta'].has_options = True
-_PARTNERFLAGS.fields_by_name['beta']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@cSpecifies that the subject partner organization has access to beta features, clusters, and systems.'))
-_PARTNERFLAGS.fields_by_name['sandbox'].has_options = True
-_PARTNERFLAGS.fields_by_name['sandbox']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@LSpecifies that the subject partner organization has internal sandbox access.'))
-_PARTNERFLAGS.fields_by_name['internal'].has_options = True
-_PARTNERFLAGS.fields_by_name['internal']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\206\001Specifies that the subject partner organization is a testing account held and managed internally by Bloombox, or by selected partners.'))
+_PARTNER.has_options = True
+_PARTNER._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\202\367\002\014\010\002\022\010partners'))
 # @@protoc_insertion_point(module_scope)

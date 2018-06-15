@@ -24,7 +24,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='identity/ID.proto',
   package='bloombox.schema.identity',
   syntax='proto3',
-  serialized_pb=_b('\n\x11identity/ID.proto\x12\x18\x62loombox.schema.identity\x1a\x0e\x62q_field.proto\x1a\x13temporal/Date.proto\x1a\x17identity/ids/USDL.proto\x1a\x1bidentity/ids/Passport.proto\"\x89\x04\n\x02ID\x12O\n\x04type\x18\x01 \x01(\x0e\x32 .bloombox.schema.identity.IDTypeB\x1f\x8a@\x1cType of ID we\'re specifying.\x12\x46\n\x02id\x18\x02 \x01(\tB:\x8a@7ID number or string identifying this identity document.\x12W\n\x0b\x65xpire_date\x18\x03 \x01(\x0b\x32\x1b.opencannabis.temporal.DateB%\x8a@\"Expiration date for this document.\x12W\n\nbirth_date\x18\x04 \x01(\x0b\x32\x1b.opencannabis.temporal.DateB&\x8a@#Birth date listed on this document.\x12Y\n\x07license\x18\x14 \x01(\x0b\x32\".bloombox.schema.identity.ids.USDLB\"\x8a@\x1fUnited States Driver\'s License.H\x00\x12Q\n\x08passport\x18\x15 \x01(\x0b\x32&.bloombox.schema.identity.ids.PassportB\x15\x8a@\x12National passport.H\x00\x42\n\n\x08\x64ocument* \n\x06IDType\x12\x08\n\x04USDL\x10\x00\x12\x0c\n\x08PASSPORT\x10\x01\x42\'\n\x1bio.bloombox.schema.identityH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n\x11identity/ID.proto\x12\x18\x62loombox.schema.identity\x1a\x0e\x62q_field.proto\x1a\x13temporal/Date.proto\x1a\x17identity/ids/USDL.proto\x1a\x1bidentity/ids/Passport.proto\"\x89\x04\n\x02ID\x12O\n\x04type\x18\x01 \x01(\x0e\x32 .bloombox.schema.identity.IDTypeB\x1f\x8a@\x1cType of ID we\'re specifying.\x12\x46\n\x02id\x18\x02 \x01(\tB:\x8a@7ID number or string identifying this identity document.\x12W\n\x0b\x65xpire_date\x18\x03 \x01(\x0b\x32\x1b.opencannabis.temporal.DateB%\x8a@\"Expiration date for this document.\x12W\n\nbirth_date\x18\x04 \x01(\x0b\x32\x1b.opencannabis.temporal.DateB&\x8a@#Birth date listed on this document.\x12Y\n\x07license\x18\x14 \x01(\x0b\x32\".bloombox.schema.identity.ids.USDLB\"\x8a@\x1fUnited States Driver\'s License.H\x00\x12Q\n\x08passport\x18\x15 \x01(\x0b\x32&.bloombox.schema.identity.ids.PassportB\x15\x8a@\x12National passport.H\x00\x42\n\n\x08\x64ocument* \n\x06IDType\x12\x08\n\x04USDL\x10\x00\x12\x0c\n\x08PASSPORT\x10\x01\x42\x33\n\x1bio.bloombox.schema.identityB\nIdentityIDH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,temporal_dot_Date__pb2.DESCRIPTOR,identity_dot_ids_dot_USDL__pb2.DESCRIPTOR,identity_dot_ids_dot_Passport__pb2.DESCRIPTOR,])
 
@@ -148,7 +148,7 @@ _sym_db.RegisterMessage(ID)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\033io.bloombox.schema.identityH\001P\001\242\002\003BBS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\033io.bloombox.schema.identityB\nIdentityIDH\001P\000\242\002\003BBS'))
 _ID.fields_by_name['type'].has_options = True
 _ID.fields_by_name['type']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\034Type of ID we\'re specifying.'))
 _ID.fields_by_name['id'].has_options = True

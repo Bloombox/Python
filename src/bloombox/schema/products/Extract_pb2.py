@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='products/Extract.proto',
   package='opencannabis.products',
   syntax='proto3',
-  serialized_pb=_b('\n\x16products/Extract.proto\x12\x15opencannabis.products\x1a\x15\x62\x61se/ProductKey.proto\x1a\x1b\x63ontent/MaterialsData.proto\x1a\x1c\x63ontent/ProductContent.proto\"\xbc\x02\n\x07\x45xtract\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x30\n\x04type\x18\x02 \x01(\x0e\x32\".opencannabis.products.ExtractType\x12\x30\n\x04\x66lag\x18\x03 \x03(\x0e\x32\".opencannabis.products.ExtractFlag\x12\x33\n\x06\x66lower\x18\x04 \x01(\x0b\x32#.opencannabis.base.ProductReference\x12\x35\n\x07product\x18\x05 \x01(\x0b\x32$.opencannabis.content.ProductContent\x12\x35\n\x08material\x18\x06 \x01(\x0b\x32#.opencannabis.content.MaterialsData*t\n\x0b\x45xtractType\x12\x17\n\x13UNSPECIFIED_EXTRACT\x10\x00\x12\x07\n\x03OIL\x10\x01\x12\x07\n\x03WAX\x10\x02\x12\x0b\n\x07SHATTER\x10\x03\x12\x08\n\x04KIEF\x10\x04\x12\x08\n\x04HASH\x10\x05\x12\x0e\n\nLIVE_RESIN\x10\x06\x12\t\n\x05ROSIN\x10\x07*4\n\x0b\x45xtractFlag\x12\x14\n\x10NO_EXTRACT_FLAGS\x10\x00\x12\x0f\n\x0bSOLVENTLESS\x10\x01\x42:\n\x1eio.opencannabis.schema.productB\x0e\x45xtractProductH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x16products/Extract.proto\x12\x15opencannabis.products\x1a\x15\x62\x61se/ProductKey.proto\x1a\x1b\x63ontent/MaterialsData.proto\x1a\x1c\x63ontent/ProductContent.proto\"\xbc\x02\n\x07\x45xtract\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x30\n\x04type\x18\x02 \x01(\x0e\x32\".opencannabis.products.ExtractType\x12\x30\n\x04\x66lag\x18\x03 \x03(\x0e\x32\".opencannabis.products.ExtractFlag\x12\x33\n\x06\x66lower\x18\x04 \x01(\x0b\x32#.opencannabis.base.ProductReference\x12\x35\n\x07product\x18\x05 \x01(\x0b\x32$.opencannabis.content.ProductContent\x12\x35\n\x08material\x18\x06 \x01(\x0b\x32#.opencannabis.content.MaterialsData*\x97\x01\n\x0b\x45xtractType\x12\x17\n\x13UNSPECIFIED_EXTRACT\x10\x00\x12\x07\n\x03OIL\x10\x01\x12\x07\n\x03WAX\x10\x02\x12\x0b\n\x07SHATTER\x10\x03\x12\x08\n\x04KIEF\x10\x04\x12\x08\n\x04HASH\x10\x05\x12\x0e\n\nLIVE_RESIN\x10\x06\x12\t\n\x05ROSIN\x10\x07\x12\x0b\n\x07\x43RUMBLE\x10\x08\x12\t\n\x05SAUCE\x10\t\x12\t\n\x05SUGAR\x10\n*4\n\x0b\x45xtractFlag\x12\x14\n\x10NO_EXTRACT_FLAGS\x10\x00\x12\x0f\n\x0bSOLVENTLESS\x10\x01\x42:\n\x1eio.opencannabis.schema.productB\x0e\x45xtractProductH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[base_dot_ProductKey__pb2.DESCRIPTOR,content_dot_MaterialsData__pb2.DESCRIPTOR,content_dot_ProductContent__pb2.DESCRIPTOR,])
 
@@ -65,11 +65,23 @@ _EXTRACTTYPE = _descriptor.EnumDescriptor(
       name='ROSIN', index=7, number=7,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CRUMBLE', index=8, number=8,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SAUCE', index=9, number=9,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUGAR', index=10, number=10,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=450,
-  serialized_end=566,
+  serialized_start=451,
+  serialized_end=602,
 )
 _sym_db.RegisterEnumDescriptor(_EXTRACTTYPE)
 
@@ -91,8 +103,8 @@ _EXTRACTFLAG = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=568,
-  serialized_end=620,
+  serialized_start=604,
+  serialized_end=656,
 )
 _sym_db.RegisterEnumDescriptor(_EXTRACTFLAG)
 
@@ -105,6 +117,9 @@ KIEF = 4
 HASH = 5
 LIVE_RESIN = 6
 ROSIN = 7
+CRUMBLE = 8
+SAUCE = 9
+SUGAR = 10
 NO_EXTRACT_FLAGS = 0
 SOLVENTLESS = 1
 

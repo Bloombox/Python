@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='products/Apothecary.proto',
   package='opencannabis.products',
   syntax='proto3',
-  serialized_pb=_b('\n\x19products/Apothecary.proto\x12\x15opencannabis.products\x1a\x15\x62\x61se/ProductKey.proto\x1a\x1b\x63ontent/MaterialsData.proto\x1a\x1c\x63ontent/ProductContent.proto\"\xdb\x01\n\nApothecary\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x33\n\x04type\x18\x02 \x01(\x0e\x32%.opencannabis.products.ApothecaryType\x12\x35\n\x07product\x18\x03 \x01(\x0b\x32$.opencannabis.content.ProductContent\x12\x35\n\x08material\x18\x04 \x01(\x0b\x32#.opencannabis.content.MaterialsData*r\n\x0e\x41pothecaryType\x12\x1a\n\x16UNSPECIFIED_APOTHECARY\x10\x00\x12\x0b\n\x07TOPICAL\x10\x01\x12\x0c\n\x08TINCTURE\x10\x02\x12\x0b\n\x07\x43\x41PSULE\x10\x03\x12\x0c\n\x08INJECTOR\x10\x04\x12\x0e\n\nSUBLINGUAL\x10\x05\x42=\n\x1eio.opencannabis.schema.productB\x11\x41pothecaryProductH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x19products/Apothecary.proto\x12\x15opencannabis.products\x1a\x15\x62\x61se/ProductKey.proto\x1a\x1b\x63ontent/MaterialsData.proto\x1a\x1c\x63ontent/ProductContent.proto\"\xdb\x01\n\nApothecary\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x33\n\x04type\x18\x02 \x01(\x0e\x32%.opencannabis.products.ApothecaryType\x12\x35\n\x07product\x18\x03 \x01(\x0b\x32$.opencannabis.content.ProductContent\x12\x35\n\x08material\x18\x04 \x01(\x0b\x32#.opencannabis.content.MaterialsData*b\n\x0e\x41pothecaryType\x12\x1a\n\x16UNSPECIFIED_APOTHECARY\x10\x00\x12\x0b\n\x07TOPICAL\x10\x01\x12\x0c\n\x08TINCTURE\x10\x02\x12\x0b\n\x07\x43\x41PSULE\x10\x03\x12\x0c\n\x08INJECTOR\x10\x04\x42=\n\x1eio.opencannabis.schema.productB\x11\x41pothecaryProductH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[base_dot_ProductKey__pb2.DESCRIPTOR,content_dot_MaterialsData__pb2.DESCRIPTOR,content_dot_ProductContent__pb2.DESCRIPTOR,])
 
@@ -53,15 +53,11 @@ _APOTHECARYTYPE = _descriptor.EnumDescriptor(
       name='INJECTOR', index=4, number=4,
       options=None,
       type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUBLINGUAL', index=5, number=5,
-      options=None,
-      type=None),
   ],
   containing_type=None,
   options=None,
   serialized_start=356,
-  serialized_end=470,
+  serialized_end=454,
 )
 _sym_db.RegisterEnumDescriptor(_APOTHECARYTYPE)
 
@@ -71,7 +67,6 @@ TOPICAL = 1
 TINCTURE = 2
 CAPSULE = 3
 INJECTOR = 4
-SUBLINGUAL = 5
 
 
 

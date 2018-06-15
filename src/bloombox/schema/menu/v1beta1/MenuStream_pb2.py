@@ -16,7 +16,7 @@ _sym_db = _symbol_database.Default()
 
 import bq_field_pb2 as bq__field__pb2
 import bq_table_pb2 as bq__table__pb2
-from identity import User_pb2 as identity_dot_User__pb2
+from identity import UserKey_pb2 as identity_dot_UserKey__pb2
 from base import ProductKey_pb2 as base_dot_ProductKey__pb2
 
 
@@ -24,9 +24,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='menu/v1beta1/MenuStream.proto',
   package='bloombox.tables.menu.v1beta1',
   syntax='proto3',
-  serialized_pb=_b('\n\x1dmenu/v1beta1/MenuStream.proto\x12\x1c\x62loombox.tables.menu.v1beta1\x1a\x0e\x62q_field.proto\x1a\x0e\x62q_table.proto\x1a\x13identity/User.proto\x1a\x15\x62\x61se/ProductKey.proto\"\xe2\x07\n\nMenuStream\x12l\n\x04uuid\x18\x01 \x01(\tB^\xf0?\x01\x8a@XEvent UUID. Generated when it happens and used to correlate telemetry with menu changes.\x12\x89\x01\n\x06\x61\x63tion\x18\x02 \x01(\x0e\x32(.bloombox.tables.menu.v1beta1.MenuActionBO\xf0?\x01\x8a@ISpecifies the action type that was taken. \'MODIFY\', \'CREATE\' or \'DELETE\'.\x12]\n\x08occurred\x18\x03 \x01(\x04\x42K\xf0?\x01\xfa?\tTIMESTAMP\x8a@9Timestamp describing when this catalog mutation occurred.\x12L\n\x05scope\x18\x04 \x01(\tB=\xf0?\x01\x8a@7Specifies the partnership scope of a given menu change.\x12k\n\x04user\x18\x05 \x01(\x0b\x32!.bloombox.schema.identity.UserKeyB:\xf0?\x01\x8a@4User key that was matched to this checkin operation.\x12\xe0\x01\n\x03key\x18\x06 \x01(\x0b\x32\x1d.opencannabis.base.ProductKeyB\xb3\x01\xf0?\x01\x8a@\xac\x01Product key resulting from a \'CREATE\' operation, deleted during a \'DELETE\' operation, or modified during a \'MODIFY\' operation. Considered the \'subject\' of this transaction.\x12\xd0\x01\n\x07payload\x18\x07 \x01(\tB\xbe\x01\x8a@\xba\x01Raw payload of JSON data describing this product after modifications are applied, if the event is a \'MODIFY\' event, the data saved during a \'CREATE\' event, or empty for a \'DELETE\' event.:\n\xea?\x07\x63\x61talog*0\n\nMenuAction\x12\n\n\x06MODIFY\x10\x00\x12\n\n\x06\x43REATE\x10\x01\x12\n\n\x06\x44\x45LETE\x10\x02\x42;\n&io.bloombox.schema.tables.menu.v1beta1B\nMenuTablesH\x01P\x00\xf8\x01\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1dmenu/v1beta1/MenuStream.proto\x12\x1c\x62loombox.tables.menu.v1beta1\x1a\x0e\x62q_field.proto\x1a\x0e\x62q_table.proto\x1a\x16identity/UserKey.proto\x1a\x15\x62\x61se/ProductKey.proto\"\xe2\x07\n\nMenuStream\x12l\n\x04uuid\x18\x01 \x01(\tB^\xf0?\x01\x8a@XEvent UUID. Generated when it happens and used to correlate telemetry with menu changes.\x12\x89\x01\n\x06\x61\x63tion\x18\x02 \x01(\x0e\x32(.bloombox.tables.menu.v1beta1.MenuActionBO\xf0?\x01\x8a@ISpecifies the action type that was taken. \'MODIFY\', \'CREATE\' or \'DELETE\'.\x12]\n\x08occurred\x18\x03 \x01(\x04\x42K\xf0?\x01\xfa?\tTIMESTAMP\x8a@9Timestamp describing when this catalog mutation occurred.\x12L\n\x05scope\x18\x04 \x01(\tB=\xf0?\x01\x8a@7Specifies the partnership scope of a given menu change.\x12k\n\x04user\x18\x05 \x01(\x0b\x32!.bloombox.schema.identity.UserKeyB:\xf0?\x01\x8a@4User key that was matched to this checkin operation.\x12\xe0\x01\n\x03key\x18\x06 \x01(\x0b\x32\x1d.opencannabis.base.ProductKeyB\xb3\x01\xf0?\x01\x8a@\xac\x01Product key resulting from a \'CREATE\' operation, deleted during a \'DELETE\' operation, or modified during a \'MODIFY\' operation. Considered the \'subject\' of this transaction.\x12\xd0\x01\n\x07payload\x18\x07 \x01(\tB\xbe\x01\x8a@\xba\x01Raw payload of JSON data describing this product after modifications are applied, if the event is a \'MODIFY\' event, the data saved during a \'CREATE\' event, or empty for a \'DELETE\' event.:\n\xea?\x07\x63\x61talog*0\n\nMenuAction\x12\n\n\x06MODIFY\x10\x00\x12\n\n\x06\x43REATE\x10\x01\x12\n\n\x06\x44\x45LETE\x10\x02\x42;\n&io.bloombox.schema.tables.menu.v1beta1B\nMenuTablesH\x01P\x00\xf8\x01\x01\x62\x06proto3')
   ,
-  dependencies=[bq__field__pb2.DESCRIPTOR,bq__table__pb2.DESCRIPTOR,identity_dot_User__pb2.DESCRIPTOR,base_dot_ProductKey__pb2.DESCRIPTOR,])
+  dependencies=[bq__field__pb2.DESCRIPTOR,bq__table__pb2.DESCRIPTOR,identity_dot_UserKey__pb2.DESCRIPTOR,base_dot_ProductKey__pb2.DESCRIPTOR,])
 
 _MENUACTION = _descriptor.EnumDescriptor(
   name='MenuAction',
@@ -49,8 +49,8 @@ _MENUACTION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1136,
-  serialized_end=1184,
+  serialized_start=1139,
+  serialized_end=1187,
 )
 _sym_db.RegisterEnumDescriptor(_MENUACTION)
 
@@ -129,12 +129,12 @@ _MENUSTREAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=140,
-  serialized_end=1134,
+  serialized_start=143,
+  serialized_end=1137,
 )
 
 _MENUSTREAM.fields_by_name['action'].enum_type = _MENUACTION
-_MENUSTREAM.fields_by_name['user'].message_type = identity_dot_User__pb2._USERKEY
+_MENUSTREAM.fields_by_name['user'].message_type = identity_dot_UserKey__pb2._USERKEY
 _MENUSTREAM.fields_by_name['key'].message_type = base_dot_ProductKey__pb2._PRODUCTKEY
 DESCRIPTOR.message_types_by_name['MenuStream'] = _MENUSTREAM
 DESCRIPTOR.enum_types_by_name['MenuAction'] = _MENUACTION

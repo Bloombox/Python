@@ -16,6 +16,7 @@ _sym_db = _symbol_database.Default()
 import bq_field_pb2 as bq__field__pb2
 from geo import Location_pb2 as geo_dot_Location__pb2
 from identity import User_pb2 as identity_dot_User__pb2
+from identity import UserKey_pb2 as identity_dot_UserKey__pb2
 from temporal import Instant_pb2 as temporal_dot_Instant__pb2
 from partner import Partner_pb2 as partner_dot_Partner__pb2
 from partner import PartnerLocation_pb2 as partner_dot_PartnerLocation__pb2
@@ -31,9 +32,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='analytics/Context.proto',
   package='bloombox.schema.analytics',
   syntax='proto3',
-  serialized_pb=_b('\n\x17\x61nalytics/Context.proto\x12\x19\x62loombox.schema.analytics\x1a\x0e\x62q_field.proto\x1a\x12geo/Location.proto\x1a\x13identity/User.proto\x1a\x16temporal/Instant.proto\x1a\x15partner/Partner.proto\x1a\x1dpartner/PartnerLocation.proto\x1a\x15\x61nalytics/Scope.proto\x1a\x1f\x61nalytics/context/Browser.proto\x1a\x1f\x61nalytics/context/Library.proto\x1a\"analytics/context/Collection.proto\x1a#analytics/context/Application.proto\x1a$analytics/context/NativeDevice.proto\"\xd2\x04\n\rEventPosition\x12\x96\x01\n\x06ingest\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantBf\xf0?\x01\xfa?\tTIMESTAMP\x8a@TTimestamp describing when this event was ingested by the backend telemetry pipeline.\x12\xa4\x01\n\x08occurred\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantBr\xf0?\x01\xfa?\tTIMESTAMP\x8a@`Timestamp describing when this event occurred, as reported by the submitting device or endpoint.\x12\x82\x01\n\tprocessed\x18\x04 \x01(\x04\x42o\xfa?\tTIMESTAMP\x8a@`Timestamp describing when this event occurred, as reported by the submitting device or endpoint.\x12|\n\x08\x65nriched\x18\x05 \x01(\x04\x42j\xfa?\tTIMESTAMP\x8a@[Timestamps describing each instance of this event being enriched by the telemetry pipeline.\"\xe0\x02\n\x0b\x45ventActors\x12n\n\x04user\x18\x01 \x01(\x0b\x32\x1e.bloombox.schema.identity.UserB@\x8a@=User account that was logged in when the event was submitted.\x12j\n\x07partner\x18\x02 \x01(\x0b\x32 .bloombox.schema.partner.PartnerB7\x8a@4Partner account under which the event was submitted.\x12u\n\x08location\x18\x03 \x01(\x0b\x32(.bloombox.schema.partner.PartnerLocationB9\x8a@6Location account under which this event was submitted.\"\xd2\x0c\n\x07\x43ontext\x12\x82\x01\n\ncollection\x18\x01 \x01(\x0b\x32-.bloombox.schema.analytics.context.CollectionB?\xf0?\x01\x8a@9Collection information, specifies event type or category.\x12p\n\x08user_key\x18\x02 \x01(\x0b\x32!.bloombox.schema.identity.UserKeyB;\x8a@8Specifies the user associated with this event, if known.\x12M\n\x0b\x66ingerprint\x18\x03 \x01(\tB8\x8a@5Unique device fingerprint for this analytics context.\x12\x97\x01\n\x05group\x18\x04 \x01(\tB\x87\x01\x8a@\x83\x01\x41rbitrary group ID for this event. Gathers events into buckets of variable size, usually used to indicate a user or device session.\x12h\n\x08hostname\x18\x05 \x01(\tBV\x8a@SHostname of the server or client that transmitted this information, if it is known.\x12l\n\nip_address\x18\x06 \x01(\tBX\x8a@UIP address of the server or client that transmitted this information, if is is known.\x12_\n\x05scope\x18\x07 \x01(\x0b\x32 .bloombox.schema.analytics.ScopeB.\x8a@+Partner and commercial scope of this event.\x12\x66\n\x03\x61pp\x18\x08 \x01(\x0b\x32\x34.bloombox.schema.analytics.context.DeviceApplicationB#\x8a@ Application version information.\x12\x62\n\x07library\x18\t \x01(\x0b\x32\x30.bloombox.schema.analytics.context.DeviceLibraryB\x1f\x8a@\x1cLibrary version information.\x12\x86\x02\n\x06native\x18\n \x01(\x0b\x32\x36.bloombox.schema.analytics.context.NativeDeviceContextB\xbd\x01\x8a@\xb9\x01Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code.\x12\xbc\x01\n\x07\x62rowser\x18\x0b \x01(\x0b\x32\x37.bloombox.schema.analytics.context.BrowserDeviceContextBr\x8a@oSpecifies information about a web browser, when the event is being sent from some kind of web browsing context.\x12\x99\x01\n\x08location\x18\x0c \x01(\x0b\x32\x1a.opencannabis.geo.LocationBk\x8a@hOrigin location for this event, as determined by geolocation or explicit inclusion in the event payload.B:\n\x1cio.bloombox.schema.telemetryB\x10\x41nalyticsContextH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n\x17\x61nalytics/Context.proto\x12\x19\x62loombox.schema.analytics\x1a\x0e\x62q_field.proto\x1a\x12geo/Location.proto\x1a\x13identity/User.proto\x1a\x16identity/UserKey.proto\x1a\x16temporal/Instant.proto\x1a\x15partner/Partner.proto\x1a\x1dpartner/PartnerLocation.proto\x1a\x15\x61nalytics/Scope.proto\x1a\x1f\x61nalytics/context/Browser.proto\x1a\x1f\x61nalytics/context/Library.proto\x1a\"analytics/context/Collection.proto\x1a#analytics/context/Application.proto\x1a$analytics/context/NativeDevice.proto\"\xd2\x04\n\rEventPosition\x12\x96\x01\n\x06ingest\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantBf\xf0?\x01\xfa?\tTIMESTAMP\x8a@TTimestamp describing when this event was ingested by the backend telemetry pipeline.\x12\xa4\x01\n\x08occurred\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantBr\xf0?\x01\xfa?\tTIMESTAMP\x8a@`Timestamp describing when this event occurred, as reported by the submitting device or endpoint.\x12\x82\x01\n\tprocessed\x18\x04 \x01(\x04\x42o\xfa?\tTIMESTAMP\x8a@`Timestamp describing when this event occurred, as reported by the submitting device or endpoint.\x12|\n\x08\x65nriched\x18\x05 \x01(\x04\x42j\xfa?\tTIMESTAMP\x8a@[Timestamps describing each instance of this event being enriched by the telemetry pipeline.\"\xe0\x02\n\x0b\x45ventActors\x12n\n\x04user\x18\x01 \x01(\x0b\x32\x1e.bloombox.schema.identity.UserB@\x8a@=User account that was logged in when the event was submitted.\x12j\n\x07partner\x18\x02 \x01(\x0b\x32 .bloombox.schema.partner.PartnerB7\x8a@4Partner account under which the event was submitted.\x12u\n\x08location\x18\x03 \x01(\x0b\x32(.bloombox.schema.partner.PartnerLocationB9\x8a@6Location account under which this event was submitted.\"\xd2\x0c\n\x07\x43ontext\x12\x82\x01\n\ncollection\x18\x01 \x01(\x0b\x32-.bloombox.schema.analytics.context.CollectionB?\xf0?\x01\x8a@9Collection information, specifies event type or category.\x12p\n\x08user_key\x18\x02 \x01(\x0b\x32!.bloombox.schema.identity.UserKeyB;\x8a@8Specifies the user associated with this event, if known.\x12M\n\x0b\x66ingerprint\x18\x03 \x01(\tB8\x8a@5Unique device fingerprint for this analytics context.\x12\x97\x01\n\x05group\x18\x04 \x01(\tB\x87\x01\x8a@\x83\x01\x41rbitrary group ID for this event. Gathers events into buckets of variable size, usually used to indicate a user or device session.\x12h\n\x08hostname\x18\x05 \x01(\tBV\x8a@SHostname of the server or client that transmitted this information, if it is known.\x12l\n\nip_address\x18\x06 \x01(\tBX\x8a@UIP address of the server or client that transmitted this information, if is is known.\x12_\n\x05scope\x18\x07 \x01(\x0b\x32 .bloombox.schema.analytics.ScopeB.\x8a@+Partner and commercial scope of this event.\x12\x66\n\x03\x61pp\x18\x08 \x01(\x0b\x32\x34.bloombox.schema.analytics.context.DeviceApplicationB#\x8a@ Application version information.\x12\x62\n\x07library\x18\t \x01(\x0b\x32\x30.bloombox.schema.analytics.context.DeviceLibraryB\x1f\x8a@\x1cLibrary version information.\x12\x86\x02\n\x06native\x18\n \x01(\x0b\x32\x36.bloombox.schema.analytics.context.NativeDeviceContextB\xbd\x01\x8a@\xb9\x01Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code.\x12\xbc\x01\n\x07\x62rowser\x18\x0b \x01(\x0b\x32\x37.bloombox.schema.analytics.context.BrowserDeviceContextBr\x8a@oSpecifies information about a web browser, when the event is being sent from some kind of web browsing context.\x12\x99\x01\n\x08location\x18\x0c \x01(\x0b\x32\x1a.opencannabis.geo.LocationBk\x8a@hOrigin location for this event, as determined by geolocation or explicit inclusion in the event payload.B:\n\x1cio.bloombox.schema.telemetryB\x10\x41nalyticsContextH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
-  dependencies=[bq__field__pb2.DESCRIPTOR,geo_dot_Location__pb2.DESCRIPTOR,identity_dot_User__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,partner_dot_Partner__pb2.DESCRIPTOR,partner_dot_PartnerLocation__pb2.DESCRIPTOR,analytics_dot_Scope__pb2.DESCRIPTOR,analytics_dot_context_dot_Browser__pb2.DESCRIPTOR,analytics_dot_context_dot_Library__pb2.DESCRIPTOR,analytics_dot_context_dot_Collection__pb2.DESCRIPTOR,analytics_dot_context_dot_Application__pb2.DESCRIPTOR,analytics_dot_context_dot_NativeDevice__pb2.DESCRIPTOR,])
+  dependencies=[bq__field__pb2.DESCRIPTOR,geo_dot_Location__pb2.DESCRIPTOR,identity_dot_User__pb2.DESCRIPTOR,identity_dot_UserKey__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,partner_dot_Partner__pb2.DESCRIPTOR,partner_dot_PartnerLocation__pb2.DESCRIPTOR,analytics_dot_Scope__pb2.DESCRIPTOR,analytics_dot_context_dot_Browser__pb2.DESCRIPTOR,analytics_dot_context_dot_Library__pb2.DESCRIPTOR,analytics_dot_context_dot_Collection__pb2.DESCRIPTOR,analytics_dot_context_dot_Application__pb2.DESCRIPTOR,analytics_dot_context_dot_NativeDevice__pb2.DESCRIPTOR,])
 
 
 
@@ -85,8 +86,8 @@ _EVENTPOSITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=390,
-  serialized_end=984,
+  serialized_start=414,
+  serialized_end=1008,
 )
 
 
@@ -130,8 +131,8 @@ _EVENTACTORS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=987,
-  serialized_end=1339,
+  serialized_start=1011,
+  serialized_end=1363,
 )
 
 
@@ -238,8 +239,8 @@ _CONTEXT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1342,
-  serialized_end=2960,
+  serialized_start=1366,
+  serialized_end=2984,
 )
 
 _EVENTPOSITION.fields_by_name['ingest'].message_type = temporal_dot_Instant__pb2._INSTANT
@@ -248,7 +249,7 @@ _EVENTACTORS.fields_by_name['user'].message_type = identity_dot_User__pb2._USER
 _EVENTACTORS.fields_by_name['partner'].message_type = partner_dot_Partner__pb2._PARTNER
 _EVENTACTORS.fields_by_name['location'].message_type = partner_dot_PartnerLocation__pb2._PARTNERLOCATION
 _CONTEXT.fields_by_name['collection'].message_type = analytics_dot_context_dot_Collection__pb2._COLLECTION
-_CONTEXT.fields_by_name['user_key'].message_type = identity_dot_User__pb2._USERKEY
+_CONTEXT.fields_by_name['user_key'].message_type = identity_dot_UserKey__pb2._USERKEY
 _CONTEXT.fields_by_name['scope'].message_type = analytics_dot_Scope__pb2._SCOPE
 _CONTEXT.fields_by_name['app'].message_type = analytics_dot_context_dot_Application__pb2._DEVICEAPPLICATION
 _CONTEXT.fields_by_name['library'].message_type = analytics_dot_context_dot_Library__pb2._DEVICELIBRARY

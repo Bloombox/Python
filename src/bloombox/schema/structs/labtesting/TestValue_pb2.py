@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='structs/labtesting/TestValue.proto',
   package='opencannabis.structs.labtesting',
   syntax='proto3',
-  serialized_pb=_b('\n\"structs/labtesting/TestValue.proto\x12\x1fopencannabis.structs.labtesting\x1a\x15media/MediaItem.proto\"|\n\tTestValue\x12<\n\x04type\x18\x01 \x01(\x0e\x32..opencannabis.structs.labtesting.TestValueType\x12\x15\n\x0bmeasurement\x18\n \x01(\x01H\x00\x12\x11\n\x07present\x18\x14 \x01(\x08H\x00\x42\x07\n\x05value\"|\n\tTestMedia\x12<\n\x04type\x18\x01 \x01(\x0e\x32..opencannabis.structs.labtesting.TestMediaType\x12\x31\n\nmedia_item\x18\x02 \x01(\x0b\x32\x1d.opencannabis.media.MediaItem*=\n\rTestValueType\x12\x0e\n\nMILLIGRAMS\x10\x00\x12\x0e\n\nPERCENTAGE\x10\x01\x12\x0c\n\x08PRESENCE\x10\x03*@\n\rTestMediaType\x12\x0f\n\x0b\x43\x45RTIFICATE\x10\x00\x12\x0b\n\x07RESULTS\x10\x01\x12\x11\n\rPRODUCT_IMAGE\x10\x02\x42J\n-io.opencannabis.schema.product.struct.testingB\x0f\x42\x61seTestingSpecH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\"structs/labtesting/TestValue.proto\x12\x1fopencannabis.structs.labtesting\x1a\x15media/MediaItem.proto\"\x9b\x02\n\tTestValue\x12<\n\x04type\x18\x01 \x01(\x0e\x32..opencannabis.structs.labtesting.TestValueType\x12\x43\n\x05\x65rror\x18\x02 \x01(\x0b\x32\x34.opencannabis.structs.labtesting.TestValue.TestError\x12\x15\n\x0bmeasurement\x18\n \x01(\x01H\x00\x12\x11\n\x07present\x18\x14 \x01(\x08H\x00\x1aX\n\tTestError\x12<\n\x04type\x18\x01 \x01(\x0e\x32..opencannabis.structs.labtesting.TestErrorType\x12\r\n\x05value\x18\x02 \x01(\x01\x42\x07\n\x05value\"|\n\tTestMedia\x12<\n\x04type\x18\x01 \x01(\x0e\x32..opencannabis.structs.labtesting.TestMediaType\x12\x31\n\nmedia_item\x18\x02 \x01(\x0b\x32\x1d.opencannabis.media.MediaItem*=\n\rTestValueType\x12\x0e\n\nMILLIGRAMS\x10\x00\x12\x0e\n\nPERCENTAGE\x10\x01\x12\x0c\n\x08PRESENCE\x10\x02*8\n\rTestErrorType\x12\x0b\n\x07PERCENT\x10\x00\x12\x0c\n\x08\x41\x42SOLUTE\x10\x01\x12\x0c\n\x08RELATIVE\x10\x02*@\n\rTestMediaType\x12\x0f\n\x0b\x43\x45RTIFICATE\x10\x00\x12\x0b\n\x07RESULTS\x10\x01\x12\x11\n\rPRODUCT_IMAGE\x10\x02\x42J\n-io.opencannabis.schema.product.struct.testingB\x0f\x42\x61seTestingSpecH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[media_dot_MediaItem__pb2.DESCRIPTOR,])
 
@@ -40,18 +40,45 @@ _TESTVALUETYPE = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='PRESENCE', index=2, number=3,
+      name='PRESENCE', index=2, number=2,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=346,
-  serialized_end=407,
+  serialized_start=506,
+  serialized_end=567,
 )
 _sym_db.RegisterEnumDescriptor(_TESTVALUETYPE)
 
 TestValueType = enum_type_wrapper.EnumTypeWrapper(_TESTVALUETYPE)
+_TESTERRORTYPE = _descriptor.EnumDescriptor(
+  name='TestErrorType',
+  full_name='opencannabis.structs.labtesting.TestErrorType',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='PERCENT', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ABSOLUTE', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RELATIVE', index=2, number=2,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=569,
+  serialized_end=625,
+)
+_sym_db.RegisterEnumDescriptor(_TESTERRORTYPE)
+
+TestErrorType = enum_type_wrapper.EnumTypeWrapper(_TESTERRORTYPE)
 _TESTMEDIATYPE = _descriptor.EnumDescriptor(
   name='TestMediaType',
   full_name='opencannabis.structs.labtesting.TestMediaType',
@@ -73,20 +100,60 @@ _TESTMEDIATYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=409,
-  serialized_end=473,
+  serialized_start=627,
+  serialized_end=691,
 )
 _sym_db.RegisterEnumDescriptor(_TESTMEDIATYPE)
 
 TestMediaType = enum_type_wrapper.EnumTypeWrapper(_TESTMEDIATYPE)
 MILLIGRAMS = 0
 PERCENTAGE = 1
-PRESENCE = 3
+PRESENCE = 2
+PERCENT = 0
+ABSOLUTE = 1
+RELATIVE = 2
 CERTIFICATE = 0
 RESULTS = 1
 PRODUCT_IMAGE = 2
 
 
+
+_TESTVALUE_TESTERROR = _descriptor.Descriptor(
+  name='TestError',
+  full_name='opencannabis.structs.labtesting.TestValue.TestError',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='opencannabis.structs.labtesting.TestValue.TestError.type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='opencannabis.structs.labtesting.TestValue.TestError.value', index=1,
+      number=2, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=281,
+  serialized_end=369,
+)
 
 _TESTVALUE = _descriptor.Descriptor(
   name='TestValue',
@@ -103,14 +170,21 @@ _TESTVALUE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='measurement', full_name='opencannabis.structs.labtesting.TestValue.measurement', index=1,
+      name='error', full_name='opencannabis.structs.labtesting.TestValue.error', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='measurement', full_name='opencannabis.structs.labtesting.TestValue.measurement', index=2,
       number=10, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='present', full_name='opencannabis.structs.labtesting.TestValue.present', index=2,
+      name='present', full_name='opencannabis.structs.labtesting.TestValue.present', index=3,
       number=20, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -119,7 +193,7 @@ _TESTVALUE = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[_TESTVALUE_TESTERROR, ],
   enum_types=[
   ],
   options=None,
@@ -131,8 +205,8 @@ _TESTVALUE = _descriptor.Descriptor(
       name='value', full_name='opencannabis.structs.labtesting.TestValue.value',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=94,
-  serialized_end=218,
+  serialized_start=95,
+  serialized_end=378,
 )
 
 
@@ -169,11 +243,14 @@ _TESTMEDIA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=220,
-  serialized_end=344,
+  serialized_start=380,
+  serialized_end=504,
 )
 
+_TESTVALUE_TESTERROR.fields_by_name['type'].enum_type = _TESTERRORTYPE
+_TESTVALUE_TESTERROR.containing_type = _TESTVALUE
 _TESTVALUE.fields_by_name['type'].enum_type = _TESTVALUETYPE
+_TESTVALUE.fields_by_name['error'].message_type = _TESTVALUE_TESTERROR
 _TESTVALUE.oneofs_by_name['value'].fields.append(
   _TESTVALUE.fields_by_name['measurement'])
 _TESTVALUE.fields_by_name['measurement'].containing_oneof = _TESTVALUE.oneofs_by_name['value']
@@ -185,15 +262,24 @@ _TESTMEDIA.fields_by_name['media_item'].message_type = media_dot_MediaItem__pb2.
 DESCRIPTOR.message_types_by_name['TestValue'] = _TESTVALUE
 DESCRIPTOR.message_types_by_name['TestMedia'] = _TESTMEDIA
 DESCRIPTOR.enum_types_by_name['TestValueType'] = _TESTVALUETYPE
+DESCRIPTOR.enum_types_by_name['TestErrorType'] = _TESTERRORTYPE
 DESCRIPTOR.enum_types_by_name['TestMediaType'] = _TESTMEDIATYPE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 TestValue = _reflection.GeneratedProtocolMessageType('TestValue', (_message.Message,), dict(
+
+  TestError = _reflection.GeneratedProtocolMessageType('TestError', (_message.Message,), dict(
+    DESCRIPTOR = _TESTVALUE_TESTERROR,
+    __module__ = 'structs.labtesting.TestValue_pb2'
+    # @@protoc_insertion_point(class_scope:opencannabis.structs.labtesting.TestValue.TestError)
+    ))
+  ,
   DESCRIPTOR = _TESTVALUE,
   __module__ = 'structs.labtesting.TestValue_pb2'
   # @@protoc_insertion_point(class_scope:opencannabis.structs.labtesting.TestValue)
   ))
 _sym_db.RegisterMessage(TestValue)
+_sym_db.RegisterMessage(TestValue.TestError)
 
 TestMedia = _reflection.GeneratedProtocolMessageType('TestMedia', (_message.Message,), dict(
   DESCRIPTOR = _TESTMEDIA,

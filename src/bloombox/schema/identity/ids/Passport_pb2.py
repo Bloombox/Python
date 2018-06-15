@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='identity/ids/Passport.proto',
   package='bloombox.schema.identity.ids',
   syntax='proto3',
-  serialized_pb=_b('\n\x1bidentity/ids/Passport.proto\x12\x1c\x62loombox.schema.identity.ids\x1a\x0e\x62q_field.proto\"\x88\x01\n\x08Passport\x12\x14\n\x07\x62\x61rcode\x18\x01 \x01(\x0c\x42\x03\x80@\x01\x12\x66\n\x06nation\x18\x02 \x01(\tBV\x8a@SNation that issued this passport, as an abbreviated string code, like \"US\" or \"UK\".B+\n\x1fio.bloombox.schema.identity.idsH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n\x1bidentity/ids/Passport.proto\x12\x1c\x62loombox.schema.identity.ids\x1a\x0e\x62q_field.proto\"\x88\x01\n\x08Passport\x12\x14\n\x07\x62\x61rcode\x18\x01 \x01(\x0c\x42\x03\x80@\x01\x12\x66\n\x06nation\x18\x02 \x01(\tBV\x8a@SNation that issued this passport, as an abbreviated string code, like \"US\" or \"UK\".B7\n\x1fio.bloombox.schema.identity.idsB\nPassportIDH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,])
 
@@ -76,7 +76,7 @@ _sym_db.RegisterMessage(Passport)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\037io.bloombox.schema.identity.idsH\001P\001\242\002\003BBS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\037io.bloombox.schema.identity.idsB\nPassportIDH\001P\000\242\002\003BBS'))
 _PASSPORT.fields_by_name['barcode'].has_options = True
 _PASSPORT.fields_by_name['barcode']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001'))
 _PASSPORT.fields_by_name['nation'].has_options = True

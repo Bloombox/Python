@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='partner/integrations/GreenbitsSettings.proto',
   package='bloombox.schema.partner.integrations.greenbits',
   syntax='proto3',
-  serialized_pb=_b('\n,partner/integrations/GreenbitsSettings.proto\x12.bloombox.schema.partner.integrations.greenbits\"B\n\x1cGreenbitsIntegrationFeatures\x12\x11\n\tcustomers\x18\x01 \x01(\x08\x12\x0f\n\x07\x63heckin\x18\x02 \x01(\x08\"\xae\x01\n\x11GreenbitsSettings\x12\x14\n\x0corganization\x18\x01 \x01(\t\x12\x0f\n\x07\x61pi_key\x18\x02 \x01(\t\x12\x12\n\nauth_token\x18\x03 \x01(\t\x12^\n\x08\x66\x65\x61tures\x18\n \x01(\x0b\x32L.bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeaturesB=\n1io.bloombox.schema.partner.integrations.greenbitsH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n,partner/integrations/GreenbitsSettings.proto\x12.bloombox.schema.partner.integrations.greenbits\"B\n\x1cGreenbitsIntegrationFeatures\x12\x11\n\tcustomers\x18\x01 \x01(\x08\x12\x0f\n\x07\x63heckin\x18\x02 \x01(\x08\"\xae\x01\n\x11GreenbitsSettings\x12\x14\n\x0corganization\x18\x01 \x01(\t\x12\x0f\n\x07\x61pi_key\x18\x02 \x01(\t\x12\x12\n\nauth_token\x18\x03 \x01(\t\x12^\n\x08\x66\x65\x61tures\x18\n \x01(\x0b\x32L.bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeaturesB=\n1io.bloombox.schema.partner.integrations.greenbitsH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
 )
 
 
@@ -135,5 +135,5 @@ _sym_db.RegisterMessage(GreenbitsSettings)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n1io.bloombox.schema.partner.integrations.greenbitsH\001P\001\242\002\003BBS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n1io.bloombox.schema.partner.integrations.greenbitsH\001P\000\242\002\003BBS'))
 # @@protoc_insertion_point(module_scope)

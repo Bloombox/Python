@@ -14,6 +14,10 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+from core import Datamodel_pb2 as core_dot_Datamodel__pb2
+from identity import UserKey_pb2 as identity_dot_UserKey__pb2
+from partner import PartnerKey_pb2 as partner_dot_PartnerKey__pb2
+from partner import LocationKey_pb2 as partner_dot_LocationKey__pb2
 from temporal import Instant_pb2 as temporal_dot_Instant__pb2
 
 
@@ -21,18 +25,18 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='security/access/PartnerPermissions.proto',
   package='bloombox.schema.security.access',
   syntax='proto3',
-  serialized_pb=_b('\n(security/access/PartnerPermissions.proto\x12\x1f\x62loombox.schema.security.access\x1a\x16temporal/Instant.proto\"\x99\x02\n\rPartnerAccess\x12\x0e\n\x06\x61\x63tive\x18\x01 \x01(\x08\x12\x12\n\ngranted_by\x18\x02 \x01(\t\x12\x32\n\ngranted_at\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x46\n\nprivileges\x18\x04 \x03(\x0e\x32\x32.bloombox.schema.security.access.PartnerPermission\x12\x42\n\tlocations\x18\x05 \x03(\x0b\x32/.bloombox.schema.security.access.LocationAccess\x12\x15\n\rall_locations\x18\x06 \x01(\x08\x12\r\n\x05\x61\x64min\x18\x64 \x01(\x08\"w\n\x0eLocationAccess\x12\x0e\n\x06\x61\x63tive\x18\x01 \x01(\x08\x12\x12\n\ngranted_by\x18\x02 \x01(\t\x12\x32\n\ngranted_at\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\r\n\x05\x61\x64min\x18\x64 \x01(\x08*T\n\x11PartnerPermission\x12\t\n\x05OWNER\x10\x00\x12\x0e\n\nSUPERVISOR\x10\x01\x12\x0b\n\x07\x42ILLING\x10\x02\x12\t\n\x05\x41UDIT\x10\x03\x12\x0c\n\x08READONLY\x10\x04\x42.\n\"io.bloombox.schema.security.accessH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n(security/access/PartnerPermissions.proto\x12\x1f\x62loombox.schema.security.access\x1a\x14\x63ore/Datamodel.proto\x1a\x16identity/UserKey.proto\x1a\x18partner/PartnerKey.proto\x1a\x19partner/LocationKey.proto\x1a\x16temporal/Instant.proto\"\x8c\x01\n\rAccessSubject\x12\x36\n\x07partner\x18\n \x01(\x0b\x32#.bloombox.schema.partner.PartnerKeyH\x00\x12\x38\n\x08location\x18\x14 \x01(\x0b\x32$.bloombox.schema.partner.LocationKeyH\x00\x42\t\n\x07\x61\x63\x63ount\"\x80\x03\n\x0c\x41\x63\x63\x65ssPolicy\x12\x14\n\x04uuid\x18\x01 \x01(\tB\x06\xc2\xb5\x03\x02\x08\x02\x12?\n\x07subject\x18\x02 \x01(\x0b\x32..bloombox.schema.security.access.AccessSubject\x12?\n\tprivilege\x18\x03 \x03(\x0e\x32,.bloombox.schema.security.access.PartnerRole\x12/\n\x04user\x18\x04 \x01(\x0b\x32!.bloombox.schema.identity.UserKey\x12\x32\n\x07grantor\x18\x05 \x01(\x0b\x32!.bloombox.schema.identity.UserKey\x12\x30\n\x08modified\x18\x62 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12/\n\x07\x63reated\x18\x63 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant:\x10\x82\xf7\x02\x0c\x08\x01\x12\x08policies*k\n\x0bPartnerRole\x12\x0c\n\x08READONLY\x10\x00\x12\x0e\n\nSUPERVISOR\x10\x01\x12\x0b\n\x07\x42ILLING\x10\x02\x12\t\n\x05\x41UDIT\x10\x03\x12\x0c\n\x08\x45MPLOYEE\x10\x04\x12\r\n\tDEVELOPER\x10\x05\x12\t\n\x05\x41\x44MIN\x10\x06\x42\x42\n\"io.bloombox.schema.security.accessB\x12PartnerPermissionsH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
-  dependencies=[temporal_dot_Instant__pb2.DESCRIPTOR,])
+  dependencies=[core_dot_Datamodel__pb2.DESCRIPTOR,identity_dot_UserKey__pb2.DESCRIPTOR,partner_dot_PartnerKey__pb2.DESCRIPTOR,partner_dot_LocationKey__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,])
 
-_PARTNERPERMISSION = _descriptor.EnumDescriptor(
-  name='PartnerPermission',
-  full_name='bloombox.schema.security.access.PartnerPermission',
+_PARTNERROLE = _descriptor.EnumDescriptor(
+  name='PartnerRole',
+  full_name='bloombox.schema.security.access.PartnerRole',
   filename=None,
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='OWNER', index=0, number=0,
+      name='READONLY', index=0, number=0,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
@@ -48,79 +52,54 @@ _PARTNERPERMISSION = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='READONLY', index=4, number=4,
+      name='EMPLOYEE', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DEVELOPER', index=5, number=5,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ADMIN', index=6, number=6,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=506,
-  serialized_end=590,
+  serialized_start=730,
+  serialized_end=837,
 )
-_sym_db.RegisterEnumDescriptor(_PARTNERPERMISSION)
+_sym_db.RegisterEnumDescriptor(_PARTNERROLE)
 
-PartnerPermission = enum_type_wrapper.EnumTypeWrapper(_PARTNERPERMISSION)
-OWNER = 0
+PartnerRole = enum_type_wrapper.EnumTypeWrapper(_PARTNERROLE)
+READONLY = 0
 SUPERVISOR = 1
 BILLING = 2
 AUDIT = 3
-READONLY = 4
+EMPLOYEE = 4
+DEVELOPER = 5
+ADMIN = 6
 
 
 
-_PARTNERACCESS = _descriptor.Descriptor(
-  name='PartnerAccess',
-  full_name='bloombox.schema.security.access.PartnerAccess',
+_ACCESSSUBJECT = _descriptor.Descriptor(
+  name='AccessSubject',
+  full_name='bloombox.schema.security.access.AccessSubject',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='active', full_name='bloombox.schema.security.access.PartnerAccess.active', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='granted_by', full_name='bloombox.schema.security.access.PartnerAccess.granted_by', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='granted_at', full_name='bloombox.schema.security.access.PartnerAccess.granted_at', index=2,
-      number=3, type=11, cpp_type=10, label=1,
+      name='partner', full_name='bloombox.schema.security.access.AccessSubject.partner', index=0,
+      number=10, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='privileges', full_name='bloombox.schema.security.access.PartnerAccess.privileges', index=3,
-      number=4, type=14, cpp_type=8, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='locations', full_name='bloombox.schema.security.access.PartnerAccess.locations', index=4,
-      number=5, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='all_locations', full_name='bloombox.schema.security.access.PartnerAccess.all_locations', index=5,
-      number=6, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='admin', full_name='bloombox.schema.security.access.PartnerAccess.admin', index=6,
-      number=100, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      name='location', full_name='bloombox.schema.security.access.AccessSubject.location', index=1,
+      number=20, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
@@ -135,44 +114,68 @@ _PARTNERACCESS = _descriptor.Descriptor(
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
+    _descriptor.OneofDescriptor(
+      name='account', full_name='bloombox.schema.security.access.AccessSubject.account',
+      index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=102,
-  serialized_end=383,
+  serialized_start=201,
+  serialized_end=341,
 )
 
 
-_LOCATIONACCESS = _descriptor.Descriptor(
-  name='LocationAccess',
-  full_name='bloombox.schema.security.access.LocationAccess',
+_ACCESSPOLICY = _descriptor.Descriptor(
+  name='AccessPolicy',
+  full_name='bloombox.schema.security.access.AccessPolicy',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='active', full_name='bloombox.schema.security.access.LocationAccess.active', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='granted_by', full_name='bloombox.schema.security.access.LocationAccess.granted_by', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      name='uuid', full_name='bloombox.schema.security.access.AccessPolicy.uuid', index=0,
+      number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\002')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='granted_at', full_name='bloombox.schema.security.access.LocationAccess.granted_at', index=2,
-      number=3, type=11, cpp_type=10, label=1,
+      name='subject', full_name='bloombox.schema.security.access.AccessPolicy.subject', index=1,
+      number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='admin', full_name='bloombox.schema.security.access.LocationAccess.admin', index=3,
-      number=100, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      name='privilege', full_name='bloombox.schema.security.access.AccessPolicy.privilege', index=2,
+      number=3, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='user', full_name='bloombox.schema.security.access.AccessPolicy.user', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='grantor', full_name='bloombox.schema.security.access.AccessPolicy.grantor', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='modified', full_name='bloombox.schema.security.access.AccessPolicy.modified', index=5,
+      number=98, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='created', full_name='bloombox.schema.security.access.AccessPolicy.created', index=6,
+      number=99, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
@@ -182,40 +185,54 @@ _LOCATIONACCESS = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\202\367\002\014\010\001\022\010policies')),
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=385,
-  serialized_end=504,
+  serialized_start=344,
+  serialized_end=728,
 )
 
-_PARTNERACCESS.fields_by_name['granted_at'].message_type = temporal_dot_Instant__pb2._INSTANT
-_PARTNERACCESS.fields_by_name['privileges'].enum_type = _PARTNERPERMISSION
-_PARTNERACCESS.fields_by_name['locations'].message_type = _LOCATIONACCESS
-_LOCATIONACCESS.fields_by_name['granted_at'].message_type = temporal_dot_Instant__pb2._INSTANT
-DESCRIPTOR.message_types_by_name['PartnerAccess'] = _PARTNERACCESS
-DESCRIPTOR.message_types_by_name['LocationAccess'] = _LOCATIONACCESS
-DESCRIPTOR.enum_types_by_name['PartnerPermission'] = _PARTNERPERMISSION
+_ACCESSSUBJECT.fields_by_name['partner'].message_type = partner_dot_PartnerKey__pb2._PARTNERKEY
+_ACCESSSUBJECT.fields_by_name['location'].message_type = partner_dot_LocationKey__pb2._LOCATIONKEY
+_ACCESSSUBJECT.oneofs_by_name['account'].fields.append(
+  _ACCESSSUBJECT.fields_by_name['partner'])
+_ACCESSSUBJECT.fields_by_name['partner'].containing_oneof = _ACCESSSUBJECT.oneofs_by_name['account']
+_ACCESSSUBJECT.oneofs_by_name['account'].fields.append(
+  _ACCESSSUBJECT.fields_by_name['location'])
+_ACCESSSUBJECT.fields_by_name['location'].containing_oneof = _ACCESSSUBJECT.oneofs_by_name['account']
+_ACCESSPOLICY.fields_by_name['subject'].message_type = _ACCESSSUBJECT
+_ACCESSPOLICY.fields_by_name['privilege'].enum_type = _PARTNERROLE
+_ACCESSPOLICY.fields_by_name['user'].message_type = identity_dot_UserKey__pb2._USERKEY
+_ACCESSPOLICY.fields_by_name['grantor'].message_type = identity_dot_UserKey__pb2._USERKEY
+_ACCESSPOLICY.fields_by_name['modified'].message_type = temporal_dot_Instant__pb2._INSTANT
+_ACCESSPOLICY.fields_by_name['created'].message_type = temporal_dot_Instant__pb2._INSTANT
+DESCRIPTOR.message_types_by_name['AccessSubject'] = _ACCESSSUBJECT
+DESCRIPTOR.message_types_by_name['AccessPolicy'] = _ACCESSPOLICY
+DESCRIPTOR.enum_types_by_name['PartnerRole'] = _PARTNERROLE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-PartnerAccess = _reflection.GeneratedProtocolMessageType('PartnerAccess', (_message.Message,), dict(
-  DESCRIPTOR = _PARTNERACCESS,
+AccessSubject = _reflection.GeneratedProtocolMessageType('AccessSubject', (_message.Message,), dict(
+  DESCRIPTOR = _ACCESSSUBJECT,
   __module__ = 'security.access.PartnerPermissions_pb2'
-  # @@protoc_insertion_point(class_scope:bloombox.schema.security.access.PartnerAccess)
+  # @@protoc_insertion_point(class_scope:bloombox.schema.security.access.AccessSubject)
   ))
-_sym_db.RegisterMessage(PartnerAccess)
+_sym_db.RegisterMessage(AccessSubject)
 
-LocationAccess = _reflection.GeneratedProtocolMessageType('LocationAccess', (_message.Message,), dict(
-  DESCRIPTOR = _LOCATIONACCESS,
+AccessPolicy = _reflection.GeneratedProtocolMessageType('AccessPolicy', (_message.Message,), dict(
+  DESCRIPTOR = _ACCESSPOLICY,
   __module__ = 'security.access.PartnerPermissions_pb2'
-  # @@protoc_insertion_point(class_scope:bloombox.schema.security.access.LocationAccess)
+  # @@protoc_insertion_point(class_scope:bloombox.schema.security.access.AccessPolicy)
   ))
-_sym_db.RegisterMessage(LocationAccess)
+_sym_db.RegisterMessage(AccessPolicy)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\"io.bloombox.schema.security.accessH\001P\001\242\002\003BBS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\"io.bloombox.schema.security.accessB\022PartnerPermissionsH\001P\000\242\002\003BBS'))
+_ACCESSPOLICY.fields_by_name['uuid'].has_options = True
+_ACCESSPOLICY.fields_by_name['uuid']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\002'))
+_ACCESSPOLICY.has_options = True
+_ACCESSPOLICY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\202\367\002\014\010\001\022\010policies'))
 # @@protoc_insertion_point(module_scope)

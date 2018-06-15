@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='partner/integrations/MailchimpSettings.proto',
   package='bloombox.schema.partner.integrations.mailchimp',
   syntax='proto3',
-  serialized_pb=_b('\n,partner/integrations/MailchimpSettings.proto\x12.bloombox.schema.partner.integrations.mailchimp\"S\n\x1cMailchimpIntegrationFeatures\x12\x0f\n\x07signups\x18\x01 \x01(\x08\x12\x10\n\x08segments\x18\x02 \x01(\x08\x12\x10\n\x08ordering\x18\x03 \x01(\x08\"2\n\x0eMailchimpLists\x12\r\n\x05\x63omms\x18\x01 \x01(\t\x12\x11\n\tmarketing\x18\x02 \x01(\t\"\xd3\x01\n\x11MailchimpSettings\x12\x0f\n\x07\x61pi_key\x18\x01 \x01(\t\x12^\n\x08\x66\x65\x61tures\x18\n \x01(\x0b\x32L.bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures\x12M\n\x05lists\x18\x0b \x01(\x0b\x32>.bloombox.schema.partner.integrations.mailchimp.MailchimpListsB=\n1io.bloombox.schema.partner.integrations.mailchimpH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n,partner/integrations/MailchimpSettings.proto\x12.bloombox.schema.partner.integrations.mailchimp\"S\n\x1cMailchimpIntegrationFeatures\x12\x0f\n\x07signups\x18\x01 \x01(\x08\x12\x10\n\x08segments\x18\x02 \x01(\x08\x12\x10\n\x08ordering\x18\x03 \x01(\x08\"2\n\x0eMailchimpLists\x12\r\n\x05\x63omms\x18\x01 \x01(\t\x12\x11\n\tmarketing\x18\x02 \x01(\t\"\xd3\x01\n\x11MailchimpSettings\x12\x0f\n\x07\x61pi_key\x18\x01 \x01(\t\x12^\n\x08\x66\x65\x61tures\x18\n \x01(\x0b\x32L.bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures\x12M\n\x05lists\x18\x0b \x01(\x0b\x32>.bloombox.schema.partner.integrations.mailchimp.MailchimpListsB=\n1io.bloombox.schema.partner.integrations.mailchimpH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
 )
 
 
@@ -182,5 +182,5 @@ _sym_db.RegisterMessage(MailchimpSettings)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n1io.bloombox.schema.partner.integrations.mailchimpH\001P\001\242\002\003BBS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n1io.bloombox.schema.partner.integrations.mailchimpH\001P\000\242\002\003BBS'))
 # @@protoc_insertion_point(module_scope)

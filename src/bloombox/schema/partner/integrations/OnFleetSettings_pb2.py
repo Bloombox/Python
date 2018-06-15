@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='partner/integrations/OnFleetSettings.proto',
   package='bloombox.schema.partner.integrations.onfleet',
   syntax='proto3',
-  serialized_pb=_b('\n*partner/integrations/OnFleetSettings.proto\x12,bloombox.schema.partner.integrations.onfleet\"\x1c\n\x1aOnFleetIntegrationFeatures\"m\n\x0fOnFleetSettings\x12Z\n\x08\x66\x65\x61tures\x18\n \x01(\x0b\x32H.bloombox.schema.partner.integrations.onfleet.OnFleetIntegrationFeaturesB;\n/io.bloombox.schema.partner.integrations.onfleetH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n*partner/integrations/OnFleetSettings.proto\x12,bloombox.schema.partner.integrations.onfleet\"\x1c\n\x1aOnFleetIntegrationFeatures\"m\n\x0fOnFleetSettings\x12Z\n\x08\x66\x65\x61tures\x18\n \x01(\x0b\x32H.bloombox.schema.partner.integrations.onfleet.OnFleetIntegrationFeaturesB;\n/io.bloombox.schema.partner.integrations.onfleetH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
 )
 
 
@@ -100,5 +100,5 @@ _sym_db.RegisterMessage(OnFleetSettings)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n/io.bloombox.schema.partner.integrations.onfleetH\001P\001\242\002\003BBS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n/io.bloombox.schema.partner.integrations.onfleetH\001P\000\242\002\003BBS'))
 # @@protoc_insertion_point(module_scope)

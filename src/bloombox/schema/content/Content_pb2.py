@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='content/Content.proto',
   package='opencannabis.content',
   syntax='proto3',
-  serialized_pb=_b('\n\x15\x63ontent/Content.proto\x12\x14opencannabis.content\x1a\x0e\x62q_field.proto\x1a\x13\x62\x61se/Language.proto\x1a\x16\x62\x61se/Compression.proto\"\xc2\x02\n\x07\x43ontent\x12\x30\n\x04type\x18\x01 \x01(\x0e\x32\".opencannabis.content.Content.Type\x12\x38\n\x08\x65ncoding\x18\x02 \x01(\x0e\x32&.opencannabis.content.Content.Encoding\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\x12-\n\x08language\x18\x04 \x01(\x0e\x32\x1b.opencannabis.base.Language\x12\x33\n\x0b\x63ompression\x18\x05 \x01(\x0b\x32\x1e.opencannabis.base.Compression\"(\n\x04Type\x12\x08\n\x04TEXT\x10\x00\x12\x0c\n\x08MARKDOWN\x10\x01\x12\x08\n\x04HTML\x10\x02\",\n\x08\x45ncoding\x12\x08\n\x04UTF8\x10\x00\x12\x07\n\x03\x42\x36\x34\x10\x01\x12\r\n\tB64_ASCII\x10\x02\x42:\n\x1eio.opencannabis.schema.contentB\x0eGenericContentH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x15\x63ontent/Content.proto\x12\x14opencannabis.content\x1a\x0e\x62q_field.proto\x1a\x13\x62\x61se/Language.proto\x1a\x16\x62\x61se/Compression.proto\"\xc2\x02\n\x07\x43ontent\x12\x30\n\x04type\x18\x01 \x01(\x0e\x32\".opencannabis.content.Content.Type\x12\x38\n\x08\x65ncoding\x18\x02 \x01(\x0e\x32&.opencannabis.content.Content.Encoding\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\x12-\n\x08language\x18\x04 \x01(\x0e\x32\x1b.opencannabis.base.Language\x12\x33\n\x0b\x63ompression\x18\x05 \x01(\x0b\x32\x1e.opencannabis.base.Compression\"(\n\x04Type\x12\x08\n\x04TEXT\x10\x00\x12\x0c\n\x08MARKDOWN\x10\x01\x12\x08\n\x04HTML\x10\x02\",\n\x08\x45ncoding\x12\x08\n\x04UTF8\x10\x00\x12\x07\n\x03\x42\x36\x34\x10\x01\x12\r\n\tB64_ASCII\x10\x02\x42:\n\x1eio.opencannabis.schema.contentB\x0eGenericContentH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,base_dot_Language__pb2.DESCRIPTOR,base_dot_Compression__pb2.DESCRIPTOR,])
 
@@ -159,5 +159,5 @@ _sym_db.RegisterMessage(Content)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.contentB\016GenericContentH\001P\001\242\002\003OCS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.contentB\016GenericContentH\001P\000\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

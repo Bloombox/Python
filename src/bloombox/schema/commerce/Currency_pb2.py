@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='commerce/Currency.proto',
   package='opencannabis.commerce',
   syntax='proto3',
-  serialized_pb=_b('\n\x17\x63ommerce/Currency.proto\x12\x15opencannabis.commerce\"\xa0\x01\n\rCurrencyValue\x12\r\n\x05value\x18\x01 \x01(\x02\x12\x31\n\x04type\x18\x02 \x01(\x0e\x32#.opencannabis.commerce.CurrencyType\x12\x33\n\x04\x66iat\x18\n \x01(\x0e\x32#.opencannabis.commerce.FiatCurrencyH\x00\x12\x10\n\x06\x63ustom\x18\x64 \x01(\tH\x00\x42\x06\n\x04spec*.\n\x0c\x43urrencyType\x12\x08\n\x04\x46IAT\x10\x00\x12\x08\n\x04REAL\x10\x01\x12\n\n\x06\x43RYPTO\x10\x02*\x17\n\x0c\x46iatCurrency\x12\x07\n\x03USD\x10\x00\x42=\n\x1fio.opencannabis.schema.currencyB\x10\x43ommerceCurrencyH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x17\x63ommerce/Currency.proto\x12\x15opencannabis.commerce\"\xa0\x01\n\rCurrencyValue\x12\r\n\x05value\x18\x01 \x01(\x02\x12\x31\n\x04type\x18\x02 \x01(\x0e\x32#.opencannabis.commerce.CurrencyType\x12\x33\n\x04\x66iat\x18\n \x01(\x0e\x32#.opencannabis.commerce.FiatCurrencyH\x00\x12\x10\n\x06\x63ustom\x18\x64 \x01(\tH\x00\x42\x06\n\x04spec*.\n\x0c\x43urrencyType\x12\x08\n\x04\x46IAT\x10\x00\x12\x08\n\x04REAL\x10\x01\x12\n\n\x06\x43RYPTO\x10\x02*\x17\n\x0c\x46iatCurrency\x12\x07\n\x03USD\x10\x00\x42=\n\x1fio.opencannabis.schema.currencyB\x10\x43ommerceCurrencyH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
 )
 
 _CURRENCYTYPE = _descriptor.EnumDescriptor(
@@ -152,5 +152,5 @@ _sym_db.RegisterMessage(CurrencyValue)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\037io.opencannabis.schema.currencyB\020CommerceCurrencyH\001P\001\242\002\003OCS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\037io.opencannabis.schema.currencyB\020CommerceCurrencyH\001P\000\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

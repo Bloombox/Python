@@ -13,14 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+from core import Datamodel_pb2 as core_dot_Datamodel__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='identity/pass/PassKey.proto',
   package='bloombox.schema.identity.pass',
   syntax='proto3',
-  serialized_pb=_b('\n\x1bidentity/pass/PassKey.proto\x12\x1d\x62loombox.schema.identity.pass\"7\n\x07PassKey\x12\x0f\n\x07\x65ncoded\x18\x01 \x01(\t\x12\x0e\n\x06serial\x18\x02 \x01(\t\x12\x0b\n\x03uid\x18\x03 \x01(\tB#\n\x17io.bloombox.schema.passH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
-)
+  serialized_pb=_b('\n\x1bidentity/pass/PassKey.proto\x12\x1d\x62loombox.schema.identity.pass\x1a\x14\x63ore/Datamodel.proto\"?\n\x07PassKey\x12\x17\n\x07\x65ncoded\x18\x01 \x01(\tB\x06\xc2\xb5\x03\x02\x08\x02\x12\x0e\n\x06serial\x18\x02 \x01(\t\x12\x0b\n\x03uid\x18\x03 \x01(\tB.\n\x17io.bloombox.schema.passB\tPassIDKeyH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
+  ,
+  dependencies=[core_dot_Datamodel__pb2.DESCRIPTOR,])
 
 
 
@@ -38,7 +40,7 @@ _PASSKEY = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\002')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='serial', full_name='bloombox.schema.identity.pass.PassKey.serial', index=1,
       number=2, type=9, cpp_type=9, label=1,
@@ -65,8 +67,8 @@ _PASSKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=62,
-  serialized_end=117,
+  serialized_start=84,
+  serialized_end=147,
 )
 
 DESCRIPTOR.message_types_by_name['PassKey'] = _PASSKEY
@@ -81,5 +83,7 @@ _sym_db.RegisterMessage(PassKey)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\027io.bloombox.schema.passH\001P\001\242\002\003BBS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\027io.bloombox.schema.passB\tPassIDKeyH\001P\000\242\002\003BBS'))
+_PASSKEY.fields_by_name['encoded'].has_options = True
+_PASSKEY.fields_by_name['encoded']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\002'))
 # @@protoc_insertion_point(module_scope)

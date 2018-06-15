@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='products/Edible.proto',
   package='opencannabis.products',
   syntax='proto3',
-  serialized_pb=_b('\n\x15products/Edible.proto\x12\x15opencannabis.products\x1a\x15\x62\x61se/ProductKey.proto\x1a\x1b\x63ontent/MaterialsData.proto\x1a\x1c\x63ontent/ProductContent.proto\"1\n\x10\x45\x64ibleIngredient\x12\r\n\x05label\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\t\"\xc3\x02\n\x06\x45\x64ible\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12/\n\x04type\x18\x02 \x01(\x0e\x32!.opencannabis.products.EdibleType\x12\x30\n\x05\x66lags\x18\x03 \x03(\x0e\x32!.opencannabis.products.EdibleFlag\x12\x35\n\x07product\x18\x04 \x01(\x0b\x32$.opencannabis.content.ProductContent\x12\x35\n\x08material\x18\x05 \x01(\x0b\x32#.opencannabis.content.MaterialsData\x12<\n\x0bingredients\x18\x06 \x03(\x0b\x32\'.opencannabis.products.EdibleIngredient*Y\n\nEdibleType\x12\x16\n\x12UNSPECIFIED_EDIBLE\x10\x00\x12\r\n\tCHOCOLATE\x10\x01\x12\x0e\n\nBAKED_GOOD\x10\x02\x12\t\n\x05\x43\x41NDY\x10\x03\x12\t\n\x05\x44RINK\x10\x04*t\n\nEdibleFlag\x12\x12\n\x0eNO_EDIBLE_FLAG\x10\x00\x12\t\n\x05VEGAN\x10\x01\x12\x0f\n\x0bGLUTEN_FREE\x10\x02\x12\x0e\n\nSUGAR_FREE\x10\x03\x12\x0e\n\nFAIR_TRADE\x10\x04\x12\x0b\n\x07ORGANIC\x10\x05\x12\t\n\x05LOCAL\x10\x06\x42\x39\n\x1eio.opencannabis.schema.productB\rEdibleProductH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x15products/Edible.proto\x12\x15opencannabis.products\x1a\x15\x62\x61se/ProductKey.proto\x1a\x1b\x63ontent/MaterialsData.proto\x1a\x1c\x63ontent/ProductContent.proto\"1\n\x10\x45\x64ibleIngredient\x12\r\n\x05label\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\t\"\xc3\x02\n\x06\x45\x64ible\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12/\n\x04type\x18\x02 \x01(\x0e\x32!.opencannabis.products.EdibleType\x12\x30\n\x05\x66lags\x18\x03 \x03(\x0e\x32!.opencannabis.products.EdibleFlag\x12\x35\n\x07product\x18\x04 \x01(\x0b\x32$.opencannabis.content.ProductContent\x12\x35\n\x08material\x18\x05 \x01(\x0b\x32#.opencannabis.content.MaterialsData\x12<\n\x0bingredients\x18\x06 \x03(\x0b\x32\'.opencannabis.products.EdibleIngredient*\xa6\x01\n\nEdibleType\x12\x16\n\x12UNSPECIFIED_EDIBLE\x10\x00\x12\r\n\tCHOCOLATE\x10\x01\x12\x0e\n\nBAKED_GOOD\x10\x02\x12\t\n\x05\x43\x41NDY\x10\x03\x12\x0c\n\x08\x42\x45VERAGE\x10\x04\x12\x0b\n\x07LOZENGE\x10\x05\x12\x0e\n\nSUBLINGUAL\x10\x06\x12\t\n\x05GUMMY\x10\x07\x12\n\n\x06\x42UTTER\x10\x08\x12\x08\n\x04OILS\x10\t\x12\n\n\x06\x43\x45REAL\x10\n*t\n\nEdibleFlag\x12\x12\n\x0eNO_EDIBLE_FLAG\x10\x00\x12\t\n\x05VEGAN\x10\x01\x12\x0f\n\x0bGLUTEN_FREE\x10\x02\x12\x0e\n\nSUGAR_FREE\x10\x03\x12\x0e\n\nFAIR_TRADE\x10\x04\x12\x0b\n\x07ORGANIC\x10\x05\x12\t\n\x05LOCAL\x10\x06\x42\x39\n\x1eio.opencannabis.schema.productB\rEdibleProductH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[base_dot_ProductKey__pb2.DESCRIPTOR,content_dot_MaterialsData__pb2.DESCRIPTOR,content_dot_ProductContent__pb2.DESCRIPTOR,])
 
@@ -50,14 +50,38 @@ _EDIBLETYPE = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='DRINK', index=4, number=4,
+      name='BEVERAGE', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='LOZENGE', index=5, number=5,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUBLINGUAL', index=6, number=6,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='GUMMY', index=7, number=7,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='BUTTER', index=8, number=8,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='OILS', index=9, number=9,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CEREAL', index=10, number=10,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=507,
-  serialized_end=596,
+  serialized_start=508,
+  serialized_end=674,
 )
 _sym_db.RegisterEnumDescriptor(_EDIBLETYPE)
 
@@ -99,8 +123,8 @@ _EDIBLEFLAG = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=598,
-  serialized_end=714,
+  serialized_start=676,
+  serialized_end=792,
 )
 _sym_db.RegisterEnumDescriptor(_EDIBLEFLAG)
 
@@ -109,7 +133,13 @@ UNSPECIFIED_EDIBLE = 0
 CHOCOLATE = 1
 BAKED_GOOD = 2
 CANDY = 3
-DRINK = 4
+BEVERAGE = 4
+LOZENGE = 5
+SUBLINGUAL = 6
+GUMMY = 7
+BUTTER = 8
+OILS = 9
+CEREAL = 10
 NO_EDIBLE_FLAG = 0
 VEGAN = 1
 GLUTEN_FREE = 2

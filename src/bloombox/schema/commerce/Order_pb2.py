@@ -16,6 +16,7 @@ _sym_db = _symbol_database.Default()
 
 import bq_field_pb2 as bq__field__pb2
 from commerce import Item_pb2 as commerce_dot_Item__pb2
+from commerce import Payment_pb2 as commerce_dot_Payment__pb2
 from commerce import Delivery_pb2 as commerce_dot_Delivery__pb2
 from commerce import Customer_pb2 as commerce_dot_Customer__pb2
 from temporal import Instant_pb2 as temporal_dot_Instant__pb2
@@ -25,9 +26,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='commerce/Order.proto',
   package='opencannabis.commerce',
   syntax='proto3',
-  serialized_pb=_b('\n\x14\x63ommerce/Order.proto\x12\x15opencannabis.commerce\x1a\x0e\x62q_field.proto\x1a\x13\x63ommerce/Item.proto\x1a\x17\x63ommerce/Delivery.proto\x1a\x17\x63ommerce/Customer.proto\x1a\x16temporal/Instant.proto\"\xe3\x01\n\x0fOrderScheduling\x12q\n\nscheduling\x18\x01 \x01(\x0e\x32%.opencannabis.commerce.SchedulingTypeB6\xf0?\x01\x8a@0Scheduling type, either \'ASAP\' or a target time.\x12]\n\x0c\x64\x65sired_time\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\'\x8a@$Desired delivery time, if specified.\"\x85\x01\n\rStatusCheckin\x12\x32\n\x06status\x18\x01 \x01(\x0e\x32\".opencannabis.commerce.OrderStatus\x12/\n\x07instant\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x0f\n\x07message\x18\x03 \x01(\t\"J\n\x08OrderKey\x12>\n\x02id\x18\x01 \x01(\tB2\x8a@/Order ID, assigned by the server upon creation.\"\xc1\x07\n\x05Order\x12\x62\n\x02id\x18\x01 \x01(\tBV\xf0?\x01\x8a@PID assigned to the order by the server, and potentially nominated by the client.\x12j\n\x04type\x18\x02 \x01(\x0e\x32 .opencannabis.commerce.OrderTypeB:\xf0?\x01\x8a@4Type of order requested - either PICKUP or DELIVERY.\x12\x37\n\x06status\x18\x03 \x01(\x0e\x32\".opencannabis.commerce.OrderStatusB\x03\x80@\x01\x12\\\n\x08\x63ustomer\x18\x04 \x01(\x0b\x32\x1f.opencannabis.commerce.CustomerB)\xf0?\x01\x8a@#Customer that submitted this order.\x12\x61\n\nscheduling\x18\x05 \x01(\x0b\x32&.opencannabis.commerce.OrderSchedulingB%\xf0?\x01\x8a@\x1fScheduling spec for this order.\x12i\n\x0b\x64\x65stination\x18\x06 \x01(\x0b\x32*.opencannabis.commerce.DeliveryDestinationB(\x8a@%Location for delivery, if applicable.\x12\x12\n\x05notes\x18\x07 \x01(\tB\x03\x80@\x01\x12.\n\x04item\x18\x08 \x03(\x0b\x32\x1b.opencannabis.commerce.ItemB\x03\x80@\x01\x12=\n\naction_log\x18\t \x03(\x0b\x32$.opencannabis.commerce.StatusCheckinB\x03\x80@\x01\x12V\n\ncreated_at\x18\n \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\"\xf0?\x01\x8a@\x1cWhen this order was created.\x12$\n\x08subtotal\x18\x0b \x01(\x01\x42\x12\x8a@\x0fOrder subtotal.\x12\x37\n\nupdated_at\x18\x0c \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\x03\x80@\x01\x12I\n\x03sid\x18\r \x01(\tB<\x8a@9Session ID that was active when this order was submitted.*%\n\tOrderType\x12\n\n\x06PICKUP\x10\x00\x12\x0c\n\x08\x44\x45LIVERY\x10\x01*%\n\x0eSchedulingType\x12\x08\n\x04\x41SAP\x10\x00\x12\t\n\x05TIMED\x10\x01*a\n\x0bOrderStatus\x12\x0b\n\x07PENDING\x10\x00\x12\x0c\n\x08\x41PPROVED\x10\x01\x12\x0c\n\x08REJECTED\x10\x02\x12\x0c\n\x08\x41SSIGNED\x10\x03\x12\x0c\n\x08\x45N_ROUTE\x10\x04\x12\r\n\tFULFILLED\x10\x05\x42<\n\x1fio.opencannabis.schema.commerceB\x0f\x43ommercialOrderH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x14\x63ommerce/Order.proto\x12\x15opencannabis.commerce\x1a\x0e\x62q_field.proto\x1a\x13\x63ommerce/Item.proto\x1a\x16\x63ommerce/Payment.proto\x1a\x17\x63ommerce/Delivery.proto\x1a\x17\x63ommerce/Customer.proto\x1a\x16temporal/Instant.proto\"\xe3\x01\n\x0fOrderScheduling\x12q\n\nscheduling\x18\x01 \x01(\x0e\x32%.opencannabis.commerce.SchedulingTypeB6\xf0?\x01\x8a@0Scheduling type, either \'ASAP\' or a target time.\x12]\n\x0c\x64\x65sired_time\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\'\x8a@$Desired delivery time, if specified.\"\xc7\x02\n\x0cOrderPayment\x12_\n\x06status\x18\x01 \x01(\x0e\x32).opencannabis.commerce.OrderPaymentStatusB$\x8a@!Status of payment for this order.\x12^\n\x06method\x18\x02 \x01(\x0e\x32$.opencannabis.commerce.PaymentMethodB(\x8a@%Method of payment used on this order.\x12\x34\n\x03tax\x18\x03 \x01(\x01\x42\'\x8a@$Amount of tax added to the subtotal.\x12@\n\x04paid\x18\x04 \x01(\x01\x42\x32\x8a@/Amount the user has paid so far for this order.\"\x85\x01\n\rStatusCheckin\x12\x32\n\x06status\x18\x01 \x01(\x0e\x32\".opencannabis.commerce.OrderStatus\x12/\n\x07instant\x18\x02 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x0f\n\x07message\x18\x03 \x01(\t\"J\n\x08OrderKey\x12>\n\x02id\x18\x01 \x01(\tB2\x8a@/Order ID, assigned by the server upon creation.\"\xb7\x08\n\x05Order\x12\x62\n\x02id\x18\x01 \x01(\tBV\xf0?\x01\x8a@PID assigned to the order by the server, and potentially nominated by the client.\x12j\n\x04type\x18\x02 \x01(\x0e\x32 .opencannabis.commerce.OrderTypeB:\xf0?\x01\x8a@4Type of order requested - either PICKUP or DELIVERY.\x12\x37\n\x06status\x18\x03 \x01(\x0e\x32\".opencannabis.commerce.OrderStatusB\x03\x80@\x01\x12\\\n\x08\x63ustomer\x18\x04 \x01(\x0b\x32\x1f.opencannabis.commerce.CustomerB)\xf0?\x01\x8a@#Customer that submitted this order.\x12\x61\n\nscheduling\x18\x05 \x01(\x0b\x32&.opencannabis.commerce.OrderSchedulingB%\xf0?\x01\x8a@\x1fScheduling spec for this order.\x12i\n\x0b\x64\x65stination\x18\x06 \x01(\x0b\x32*.opencannabis.commerce.DeliveryDestinationB(\x8a@%Location for delivery, if applicable.\x12\x12\n\x05notes\x18\x07 \x01(\tB\x03\x80@\x01\x12.\n\x04item\x18\x08 \x03(\x0b\x32\x1b.opencannabis.commerce.ItemB\x03\x80@\x01\x12=\n\naction_log\x18\t \x03(\x0b\x32$.opencannabis.commerce.StatusCheckinB\x03\x80@\x01\x12V\n\ncreated_at\x18\n \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\"\xf0?\x01\x8a@\x1cWhen this order was created.\x12$\n\x08subtotal\x18\x0b \x01(\x01\x42\x12\x8a@\x0fOrder subtotal.\x12\x37\n\nupdated_at\x18\x0c \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB\x03\x80@\x01\x12I\n\x03sid\x18\r \x01(\tB<\x8a@9Session ID that was active when this order was submitted.\x12t\n\x07payment\x18\x0e \x01(\x0b\x32#.opencannabis.commerce.OrderPaymentB>\x8a@;Payment information/metadata for this order, if applicable.*=\n\tOrderType\x12\n\n\x06PICKUP\x10\x00\x12\x0c\n\x08\x44\x45LIVERY\x10\x01\x12\n\n\x06ONSITE\x10\x02\x12\n\n\x06REMOTE\x10\x03*%\n\x0eSchedulingType\x12\x08\n\x04\x41SAP\x10\x00\x12\t\n\x05TIMED\x10\x01*a\n\x0bOrderStatus\x12\x0b\n\x07PENDING\x10\x00\x12\x0c\n\x08\x41PPROVED\x10\x01\x12\x0c\n\x08REJECTED\x10\x02\x12\x0c\n\x08\x41SSIGNED\x10\x03\x12\x0c\n\x08\x45N_ROUTE\x10\x04\x12\r\n\tFULFILLED\x10\x05*|\n\x12OrderPaymentStatus\x12\x12\n\x0eNOT_APPLICABLE\x10\x00\x12\x0b\n\x07WAITING\x10\x01\x12\x11\n\rPREAUTHORIZED\x10\x02\x12\x0b\n\x07PARTIAL\x10\x03\x12\x0b\n\x07SETTLED\x10\x04\x12\x0b\n\x07\x42OUNCED\x10\x05\x12\x0b\n\x07RETRIED\x10\x06\x42<\n\x1fio.opencannabis.schema.commerceB\x0f\x43ommercialOrderH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
-  dependencies=[bq__field__pb2.DESCRIPTOR,commerce_dot_Item__pb2.DESCRIPTOR,commerce_dot_Delivery__pb2.DESCRIPTOR,commerce_dot_Customer__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,])
+  dependencies=[bq__field__pb2.DESCRIPTOR,commerce_dot_Item__pb2.DESCRIPTOR,commerce_dot_Payment__pb2.DESCRIPTOR,commerce_dot_Delivery__pb2.DESCRIPTOR,commerce_dot_Customer__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,])
 
 _ORDERTYPE = _descriptor.EnumDescriptor(
   name='OrderType',
@@ -43,11 +44,19 @@ _ORDERTYPE = _descriptor.EnumDescriptor(
       name='DELIVERY', index=1, number=1,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ONSITE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='REMOTE', index=3, number=3,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=1564,
-  serialized_end=1601,
+  serialized_start=2036,
+  serialized_end=2097,
 )
 _sym_db.RegisterEnumDescriptor(_ORDERTYPE)
 
@@ -69,8 +78,8 @@ _SCHEDULINGTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1603,
-  serialized_end=1640,
+  serialized_start=2099,
+  serialized_end=2136,
 )
 _sym_db.RegisterEnumDescriptor(_SCHEDULINGTYPE)
 
@@ -108,14 +117,59 @@ _ORDERSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1642,
-  serialized_end=1739,
+  serialized_start=2138,
+  serialized_end=2235,
 )
 _sym_db.RegisterEnumDescriptor(_ORDERSTATUS)
 
 OrderStatus = enum_type_wrapper.EnumTypeWrapper(_ORDERSTATUS)
+_ORDERPAYMENTSTATUS = _descriptor.EnumDescriptor(
+  name='OrderPaymentStatus',
+  full_name='opencannabis.commerce.OrderPaymentStatus',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='NOT_APPLICABLE', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='WAITING', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PREAUTHORIZED', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PARTIAL', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SETTLED', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='BOUNCED', index=5, number=5,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RETRIED', index=6, number=6,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=2237,
+  serialized_end=2361,
+)
+_sym_db.RegisterEnumDescriptor(_ORDERPAYMENTSTATUS)
+
+OrderPaymentStatus = enum_type_wrapper.EnumTypeWrapper(_ORDERPAYMENTSTATUS)
 PICKUP = 0
 DELIVERY = 1
+ONSITE = 2
+REMOTE = 3
 ASAP = 0
 TIMED = 1
 PENDING = 0
@@ -124,6 +178,13 @@ REJECTED = 2
 ASSIGNED = 3
 EN_ROUTE = 4
 FULFILLED = 5
+NOT_APPLICABLE = 0
+WAITING = 1
+PREAUTHORIZED = 2
+PARTIAL = 3
+SETTLED = 4
+BOUNCED = 5
+RETRIED = 6
 
 
 
@@ -160,8 +221,60 @@ _ORDERSCHEDULING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=159,
-  serialized_end=386,
+  serialized_start=183,
+  serialized_end=410,
+)
+
+
+_ORDERPAYMENT = _descriptor.Descriptor(
+  name='OrderPayment',
+  full_name='opencannabis.commerce.OrderPayment',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='status', full_name='opencannabis.commerce.OrderPayment.status', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@!Status of payment for this order.')), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='method', full_name='opencannabis.commerce.OrderPayment.method', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@%Method of payment used on this order.')), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='tax', full_name='opencannabis.commerce.OrderPayment.tax', index=2,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@$Amount of tax added to the subtotal.')), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='paid', full_name='opencannabis.commerce.OrderPayment.paid', index=3,
+      number=4, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@/Amount the user has paid so far for this order.')), file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=413,
+  serialized_end=740,
 )
 
 
@@ -205,8 +318,8 @@ _STATUSCHECKIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=389,
-  serialized_end=522,
+  serialized_start=743,
+  serialized_end=876,
 )
 
 
@@ -236,8 +349,8 @@ _ORDERKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=524,
-  serialized_end=598,
+  serialized_start=878,
+  serialized_end=952,
 )
 
 
@@ -339,6 +452,13 @@ _ORDER = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@9Session ID that was active when this order was submitted.')), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='payment', full_name='opencannabis.commerce.Order.payment', index=13,
+      number=14, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@;Payment information/metadata for this order, if applicable.')), file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -351,12 +471,14 @@ _ORDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=601,
-  serialized_end=1562,
+  serialized_start=955,
+  serialized_end=2034,
 )
 
 _ORDERSCHEDULING.fields_by_name['scheduling'].enum_type = _SCHEDULINGTYPE
 _ORDERSCHEDULING.fields_by_name['desired_time'].message_type = temporal_dot_Instant__pb2._INSTANT
+_ORDERPAYMENT.fields_by_name['status'].enum_type = _ORDERPAYMENTSTATUS
+_ORDERPAYMENT.fields_by_name['method'].enum_type = commerce_dot_Payment__pb2._PAYMENTMETHOD
 _STATUSCHECKIN.fields_by_name['status'].enum_type = _ORDERSTATUS
 _STATUSCHECKIN.fields_by_name['instant'].message_type = temporal_dot_Instant__pb2._INSTANT
 _ORDER.fields_by_name['type'].enum_type = _ORDERTYPE
@@ -368,13 +490,16 @@ _ORDER.fields_by_name['item'].message_type = commerce_dot_Item__pb2._ITEM
 _ORDER.fields_by_name['action_log'].message_type = _STATUSCHECKIN
 _ORDER.fields_by_name['created_at'].message_type = temporal_dot_Instant__pb2._INSTANT
 _ORDER.fields_by_name['updated_at'].message_type = temporal_dot_Instant__pb2._INSTANT
+_ORDER.fields_by_name['payment'].message_type = _ORDERPAYMENT
 DESCRIPTOR.message_types_by_name['OrderScheduling'] = _ORDERSCHEDULING
+DESCRIPTOR.message_types_by_name['OrderPayment'] = _ORDERPAYMENT
 DESCRIPTOR.message_types_by_name['StatusCheckin'] = _STATUSCHECKIN
 DESCRIPTOR.message_types_by_name['OrderKey'] = _ORDERKEY
 DESCRIPTOR.message_types_by_name['Order'] = _ORDER
 DESCRIPTOR.enum_types_by_name['OrderType'] = _ORDERTYPE
 DESCRIPTOR.enum_types_by_name['SchedulingType'] = _SCHEDULINGTYPE
 DESCRIPTOR.enum_types_by_name['OrderStatus'] = _ORDERSTATUS
+DESCRIPTOR.enum_types_by_name['OrderPaymentStatus'] = _ORDERPAYMENTSTATUS
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 OrderScheduling = _reflection.GeneratedProtocolMessageType('OrderScheduling', (_message.Message,), dict(
@@ -383,6 +508,13 @@ OrderScheduling = _reflection.GeneratedProtocolMessageType('OrderScheduling', (_
   # @@protoc_insertion_point(class_scope:opencannabis.commerce.OrderScheduling)
   ))
 _sym_db.RegisterMessage(OrderScheduling)
+
+OrderPayment = _reflection.GeneratedProtocolMessageType('OrderPayment', (_message.Message,), dict(
+  DESCRIPTOR = _ORDERPAYMENT,
+  __module__ = 'commerce.Order_pb2'
+  # @@protoc_insertion_point(class_scope:opencannabis.commerce.OrderPayment)
+  ))
+_sym_db.RegisterMessage(OrderPayment)
 
 StatusCheckin = _reflection.GeneratedProtocolMessageType('StatusCheckin', (_message.Message,), dict(
   DESCRIPTOR = _STATUSCHECKIN,
@@ -412,6 +544,14 @@ _ORDERSCHEDULING.fields_by_name['scheduling'].has_options = True
 _ORDERSCHEDULING.fields_by_name['scheduling']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\360?\001\212@0Scheduling type, either \'ASAP\' or a target time.'))
 _ORDERSCHEDULING.fields_by_name['desired_time'].has_options = True
 _ORDERSCHEDULING.fields_by_name['desired_time']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@$Desired delivery time, if specified.'))
+_ORDERPAYMENT.fields_by_name['status'].has_options = True
+_ORDERPAYMENT.fields_by_name['status']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@!Status of payment for this order.'))
+_ORDERPAYMENT.fields_by_name['method'].has_options = True
+_ORDERPAYMENT.fields_by_name['method']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@%Method of payment used on this order.'))
+_ORDERPAYMENT.fields_by_name['tax'].has_options = True
+_ORDERPAYMENT.fields_by_name['tax']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@$Amount of tax added to the subtotal.'))
+_ORDERPAYMENT.fields_by_name['paid'].has_options = True
+_ORDERPAYMENT.fields_by_name['paid']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@/Amount the user has paid so far for this order.'))
 _ORDERKEY.fields_by_name['id'].has_options = True
 _ORDERKEY.fields_by_name['id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@/Order ID, assigned by the server upon creation.'))
 _ORDER.fields_by_name['id'].has_options = True
@@ -440,4 +580,6 @@ _ORDER.fields_by_name['updated_at'].has_options = True
 _ORDER.fields_by_name['updated_at']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001'))
 _ORDER.fields_by_name['sid'].has_options = True
 _ORDER.fields_by_name['sid']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@9Session ID that was active when this order was submitted.'))
+_ORDER.fields_by_name['payment'].has_options = True
+_ORDER.fields_by_name['payment']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@;Payment information/metadata for this order, if applicable.'))
 # @@protoc_insertion_point(module_scope)

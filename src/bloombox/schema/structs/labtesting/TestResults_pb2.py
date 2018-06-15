@@ -23,10 +23,49 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='structs/labtesting/TestResults.proto',
   package='opencannabis.structs.labtesting',
   syntax='proto3',
-  serialized_pb=_b('\n$structs/labtesting/TestResults.proto\x12\x1fopencannabis.structs.labtesting\x1a\x15\x63ontent/Content.proto\x1a\x16temporal/Instant.proto\x1a\"structs/labtesting/TestValue.proto\"\xc0\x05\n\x0bTestResults\x12\x11\n\tavailable\x18\x01 \x01(\x08\x12\x39\n\x05media\x18\x02 \x03(\x0b\x32*.opencannabis.structs.labtesting.TestMedia\x12\x34\n\x0clast_updated\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12.\n\x06sealed\x18\x04 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x45\n\x0b\x63oordinates\x18\x05 \x01(\x0b\x32\x30.opencannabis.structs.labtesting.TestCoordinates\x12\x43\n\x0c\x63\x61nnabinoids\x18\x1e \x01(\x0b\x32-.opencannabis.structs.labtesting.Cannabinoids\x12;\n\x08terpenes\x18\x1f \x01(\x0b\x32).opencannabis.structs.labtesting.Terpenes\x12?\n\npesticides\x18  \x01(\x0b\x32+.opencannabis.structs.labtesting.Pesticides\x12;\n\x08moisture\x18! \x01(\x0b\x32).opencannabis.structs.labtesting.Moisture\x12?\n\nsubjective\x18\" \x01(\x0b\x32+.opencannabis.structs.labtesting.Subjective\x12\x39\n\x05\x61roma\x18# \x03(\x0e\x32*.opencannabis.structs.labtesting.TasteNote\x12:\n\x04\x64\x61ta\x18$ \x03(\x0b\x32,.opencannabis.structs.labtesting.TestResults\".\n\x0fTestCoordinates\x12\x0c\n\x04zone\x18\x01 \x01(\t\x12\r\n\x05group\x18\x02 \x01(\t\"\x98\x03\n\x0c\x43\x61nnabinoids\x12\x37\n\x03thc\x18\x01 \x01(\x0b\x32*.opencannabis.structs.labtesting.TestValue\x12\x37\n\x03\x63\x62\x64\x18\x02 \x01(\x0b\x32*.opencannabis.structs.labtesting.TestValue\x12\x45\n\x07results\x18\x03 \x03(\x0b\x32\x34.opencannabis.structs.labtesting.Cannabinoids.Result\x1a\xce\x01\n\x06Result\x12\x41\n\x0b\x63\x61nnabinoid\x18\x01 \x01(\x0e\x32,.opencannabis.structs.labtesting.Cannabinoid\x12@\n\x05ratio\x18\x02 \x01(\x0e\x32\x31.opencannabis.structs.labtesting.CannabinoidRatio\x12?\n\x0bmeasurement\x18\x03 \x01(\x0b\x32*.opencannabis.structs.labtesting.TestValue\"\xb4\x02\n\nSubjective\x12\x32\n\x0b\x64\x65scription\x18\x01 \x01(\x0b\x32\x1d.opencannabis.content.Content\x12,\n\x05taste\x18\x02 \x01(\x0b\x32\x1d.opencannabis.content.Content\x12\x41\n\x07potency\x18\x03 \x01(\x0e\x32\x30.opencannabis.structs.labtesting.PotencyEstimate\x12>\n\x0c\x66\x65\x65ling_tags\x18\x04 \x03(\x0e\x32(.opencannabis.structs.labtesting.Feeling\x12\x41\n\rtasting_notes\x18\x05 \x03(\x0e\x32*.opencannabis.structs.labtesting.TasteNote\"\xe7\x01\n\x08Terpenes\x12\x11\n\tavailable\x18\x01 \x01(\x08\x12\x41\n\x07terpene\x18\n \x03(\x0b\x32\x30.opencannabis.structs.labtesting.Terpenes.Result\x1a\x84\x01\n\x06Result\x12\x39\n\x07terpene\x18\x01 \x01(\x0e\x32(.opencannabis.structs.labtesting.Terpene\x12?\n\x0bmeasurement\x18\x02 \x01(\x0b\x32*.opencannabis.structs.labtesting.TestValue\"\xda\x01\n\nPesticides\x12\x16\n\x0epesticide_free\x18\x01 \x01(\x08\x12S\n\x0cmeasurements\x18\x02 \x03(\x0b\x32=.opencannabis.structs.labtesting.Pesticides.MeasurementsEntry\x1a_\n\x11MeasurementsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x39\n\x05value\x18\x02 \x01(\x0b\x32*.opencannabis.structs.labtesting.TestValue:\x02\x38\x01\"K\n\x08Moisture\x12?\n\x0bmeasurement\x18\x01 \x01(\x0b\x32*.opencannabis.structs.labtesting.TestValue*\x91\x01\n\x0b\x43\x61nnabinoid\x12\x07\n\x03THC\x10\x00\x12\t\n\x05THC_A\x10\x01\x12\t\n\x05THC_V\x10\x02\x12\x07\n\x03\x43\x42\x44\x10\n\x12\t\n\x05\x43\x42\x44_A\x10\x0b\x12\t\n\x05\x43\x42\x44_V\x10\x0c\x12\n\n\x06\x43\x42\x44_VA\x10\r\x12\x07\n\x03\x43\x42\x43\x10\x14\x12\x07\n\x03\x43\x42G\x10\x1e\x12\t\n\x05\x43\x42G_A\x10\x1f\x12\x07\n\x03\x43\x42N\x10(\x12\x07\n\x03\x43\x42V\x10\x32\x12\t\n\x05\x43\x42V_A\x10\x33*|\n\x10\x43\x61nnabinoidRatio\x12\x1d\n\x19NO_CANNABINOID_PREFERENCE\x10\x00\x12\x0c\n\x08THC_ONLY\x10\x01\x12\x10\n\x0cTHC_OVER_CBD\x10\x02\x12\t\n\x05\x45QUAL\x10\x03\x12\x10\n\x0c\x43\x42\x44_OVER_THC\x10\x04\x12\x0c\n\x08\x43\x42\x44_ONLY\x10\x05*\x7f\n\x07\x46\x65\x65ling\x12\x19\n\x15NO_FEELING_PREFERENCE\x10\x00\x12\r\n\tGROUNDING\x10\x01\x12\t\n\x05SLEEP\x10\x02\x12\x0b\n\x07\x43\x41LMING\x10\x03\x12\x0f\n\x0bSTIMULATING\x10\x04\x12\t\n\x05\x46UNNY\x10\x05\x12\t\n\x05\x46OCUS\x10\x06\x12\x0b\n\x07PASSION\x10\x07*\x9f\x01\n\tTasteNote\x12\x17\n\x13NO_TASTE_PREFERENCE\x10\x00\x12\t\n\x05SWEET\x10\x01\x12\x08\n\x04SOUR\x10\x02\x12\t\n\x05SPICE\x10\x03\x12\n\n\x06SMOOTH\x10\x04\x12\n\n\x06\x43ITRUS\x10\x05\x12\x08\n\x04PINE\x10\x06\x12\t\n\x05\x46RUIT\x10\x07\x12\x0b\n\x07TROPICS\x10\x08\x12\n\n\x06\x46LORAL\x10\t\x12\x08\n\x04HERB\x10\n\x12\t\n\x05\x45\x41RTH\x10\x0b*>\n\x0fPotencyEstimate\x12\t\n\x05LIGHT\x10\x00\x12\n\n\x06MEDIUM\x10\x01\x12\t\n\x05HEAVY\x10\x02\x12\t\n\x05SUPER\x10\x03*\xde\x02\n\x07Terpene\x12\x0c\n\x08\x43\x41MPHENE\x10\x00\x12\n\n\x06\x43\x41RENE\x10\x01\x12\x16\n\x12\x42\x45TA_CARYOPHYLLENE\x10\x02\x12\x17\n\x13\x43\x41RYOPHYLLENE_OXIDE\x10\x03\x12\x0e\n\nEUCALYPTOL\x10\x04\x12\x0b\n\x07\x46\x45NCHOL\x10\x05\x12\x12\n\x0e\x41LPHA_HUMULENE\x10\x06\x12\x0c\n\x08LIMONENE\x10\x07\x12\x0c\n\x08LINALOOL\x10\x08\x12\x0b\n\x07MYRCENE\x10\t\x12\x11\n\rALPHA_OCIMENE\x10\n\x12\x10\n\x0c\x42\x45TA_OCIMENE\x10\x0b\x12\x16\n\x12\x41LPHA_PHELLANDRENE\x10\x0c\x12\x10\n\x0c\x41LPHA_PINENE\x10\r\x12\x0f\n\x0b\x42\x45TA_PINENE\x10\x0e\x12\x13\n\x0f\x41LPHA_TERPINEOL\x10\x0f\x12\x13\n\x0f\x41LPHA_TERPININE\x10\x10\x12\x13\n\x0fGAMMA_TERPININE\x10\x11\x12\x0f\n\x0bTERPINOLENE\x10\x12\x42\x45\n-io.opencannabis.schema.product.struct.testingB\nLabTestingH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n$structs/labtesting/TestResults.proto\x12\x1fopencannabis.structs.labtesting\x1a\x15\x63ontent/Content.proto\x1a\x16temporal/Instant.proto\x1a\"structs/labtesting/TestValue.proto\"\x9a\x02\n\x0c\x43ontaminants\x12?\n\npesticides\x18\x01 \x01(\x0b\x32+.opencannabis.structs.labtesting.Pesticides\x12\x37\n\x06metals\x18\x02 \x01(\x0b\x32\'.opencannabis.structs.labtesting.Metals\x12@\n\x0bmold_mildew\x18\x03 \x01(\x0b\x32+.opencannabis.structs.labtesting.MoldMildew\x12N\n\x12other_contaminants\x18\x04 \x01(\x0b\x32\x32.opencannabis.structs.labtesting.OtherContaminants\"\x99\x01\n\tTestSuite\x12;\n\x06method\x18\x01 \x01(\x0e\x32+.opencannabis.structs.labtesting.TestMethod\x12=\n\x07results\x18\x02 \x01(\x0b\x32,.opencannabis.structs.labtesting.TestResults\x12\x10\n\x08\x63omments\x18\x03 \x01(\t\"\xc4\x05\n\x0bTestResults\x12\x11\n\tavailable\x18\x01 \x01(\x08\x12\x39\n\x05media\x18\x02 \x03(\x0b\x32*.opencannabis.structs.labtesting.TestMedia\x12\x34\n\x0clast_updated\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12.\n\x06sealed\x18\x04 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x45\n\x0b\x63oordinates\x18\x05 \x01(\x0b\x32\x30.opencannabis.structs.labtesting.TestCoordinates\x12\x43\n\x0c\x63\x61nnabinoids\x18\x1e \x01(\x0b\x32-.opencannabis.structs.labtesting.Cannabinoids\x12;\n\x08terpenes\x18\x1f \x01(\x0b\x32).opencannabis.structs.labtesting.Terpenes\x12\x43\n\x0c\x63ontaminants\x18  \x01(\x0b\x32-.opencannabis.structs.labtesting.Contaminants\x12;\n\x08moisture\x18! \x01(\x0b\x32).opencannabis.structs.labtesting.Moisture\x12?\n\nsubjective\x18\" \x01(\x0b\x32+.opencannabis.structs.labtesting.Subjective\x12\x39\n\x05\x61roma\x18# \x03(\x0e\x32*.opencannabis.structs.labtesting.TasteNote\x12:\n\x04\x64\x61ta\x18$ \x03(\x0b\x32,.opencannabis.structs.labtesting.TestResults\"N\n\x0fTestCoordinates\x12\x0c\n\x04zone\x18\x01 \x01(\t\x12\x0b\n\x03lot\x18\x02 \x01(\t\x12\r\n\x05\x62\x61tch\x18\x03 \x01(\t\x12\x11\n\tsample_id\x18\x04 \x01(\t\"\xdb\x03\n\x0c\x43\x61nnabinoids\x12\x37\n\x03thc\x18\x01 \x01(\x0b\x32*.opencannabis.structs.labtesting.TestValue\x12\x37\n\x03\x63\x62\x64\x18\x02 \x01(\x0b\x32*.opencannabis.structs.labtesting.TestValue\x12\x45\n\x07results\x18\x03 \x03(\x0b\x32\x34.opencannabis.structs.labtesting.Cannabinoids.Result\x12@\n\x05ratio\x18\x04 \x01(\x0e\x32\x31.opencannabis.structs.labtesting.CannabinoidRatio\x12\x41\n\x07potency\x18\x05 \x01(\x0e\x32\x30.opencannabis.structs.labtesting.PotencyEstimate\x1a\x8c\x01\n\x06Result\x12\x41\n\x0b\x63\x61nnabinoid\x18\x01 \x01(\x0e\x32,.opencannabis.structs.labtesting.Cannabinoid\x12?\n\x0bmeasurement\x18\x03 \x01(\x0b\x32*.opencannabis.structs.labtesting.TestValue\"\xa7\x02\n\nSubjective\x12\x32\n\x0b\x64\x65scription\x18\x01 \x01(\x0b\x32\x1d.opencannabis.content.Content\x12,\n\x05taste\x18\x02 \x01(\x0b\x32\x1d.opencannabis.content.Content\x12\x41\n\x07potency\x18\x03 \x01(\x0e\x32\x30.opencannabis.structs.labtesting.PotencyEstimate\x12\x39\n\x07\x66\x65\x65ling\x18\x04 \x03(\x0e\x32(.opencannabis.structs.labtesting.Feeling\x12\x39\n\x05\x61roma\x18\x05 \x03(\x0e\x32*.opencannabis.structs.labtesting.TasteNote\"\xda\x01\n\nPesticides\x12\x16\n\x0epesticide_free\x18\x01 \x01(\x08\x12S\n\x0cmeasurements\x18\x02 \x03(\x0b\x32=.opencannabis.structs.labtesting.Pesticides.MeasurementsEntry\x1a_\n\x11MeasurementsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x39\n\x05value\x18\x02 \x01(\x0b\x32*.opencannabis.structs.labtesting.TestValue:\x02\x38\x01\"\xce\x01\n\x06Metals\x12\x12\n\nmetal_free\x18\x01 \x01(\x08\x12O\n\x0cmeasurements\x18\x02 \x03(\x0b\x32\x39.opencannabis.structs.labtesting.Metals.MeasurementsEntry\x1a_\n\x11MeasurementsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x39\n\x05value\x18\x02 \x01(\x0b\x32*.opencannabis.structs.labtesting.TestValue:\x02\x38\x01\"\xdc\x01\n\nMoldMildew\x12\x18\n\x10mold_mildew_free\x18\x01 \x01(\x08\x12S\n\x0cmeasurements\x18\x02 \x03(\x0b\x32=.opencannabis.structs.labtesting.MoldMildew.MeasurementsEntry\x1a_\n\x11MeasurementsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x39\n\x05value\x18\x02 \x01(\x0b\x32*.opencannabis.structs.labtesting.TestValue:\x02\x38\x01\"\xd0\x01\n\x11OtherContaminants\x12Z\n\x0cmeasurements\x18\x01 \x03(\x0b\x32\x44.opencannabis.structs.labtesting.OtherContaminants.MeasurementsEntry\x1a_\n\x11MeasurementsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x39\n\x05value\x18\x02 \x01(\x0b\x32*.opencannabis.structs.labtesting.TestValue:\x02\x38\x01\"K\n\x08Moisture\x12?\n\x0bmeasurement\x18\x01 \x01(\x0b\x32*.opencannabis.structs.labtesting.TestValue\"\xdd\x02\n\x08Terpenes\x12\x11\n\tavailable\x18\x01 \x01(\x08\x12\x41\n\x07terpene\x18\n \x03(\x0b\x32\x30.opencannabis.structs.labtesting.Terpenes.Result\x12\x39\n\x07\x66\x65\x65ling\x18\x02 \x03(\x0e\x32(.opencannabis.structs.labtesting.Feeling\x12\x39\n\x05\x61roma\x18\x03 \x03(\x0e\x32*.opencannabis.structs.labtesting.TasteNote\x1a\x84\x01\n\x06Result\x12\x39\n\x07terpene\x18\x01 \x01(\x0e\x32(.opencannabis.structs.labtesting.Terpene\x12?\n\x0bmeasurement\x18\x02 \x01(\x0b\x32*.opencannabis.structs.labtesting.TestValue*^\n\nTestMethod\x12\x16\n\x12UNSPECIFIED_METHOD\x10\x00\x12\x08\n\x04GCMS\x10\x01\x12\x08\n\x04LCMS\x10\x02\x12\x0f\n\x0b\x43LASSIC_PCR\x10\x03\x12\x08\n\x04qPCR\x10\x04\x12\t\n\x05\x45LISA\x10\x05*\x91\x01\n\x0b\x43\x61nnabinoid\x12\x07\n\x03THC\x10\x00\x12\t\n\x05THC_A\x10\x01\x12\t\n\x05THC_V\x10\x02\x12\x07\n\x03\x43\x42\x44\x10\n\x12\t\n\x05\x43\x42\x44_A\x10\x0b\x12\t\n\x05\x43\x42\x44_V\x10\x0c\x12\n\n\x06\x43\x42\x44_VA\x10\r\x12\x07\n\x03\x43\x42\x43\x10\x14\x12\x07\n\x03\x43\x42G\x10\x1e\x12\t\n\x05\x43\x42G_A\x10\x1f\x12\x07\n\x03\x43\x42N\x10(\x12\x07\n\x03\x43\x42V\x10\x32\x12\t\n\x05\x43\x42V_A\x10\x33*|\n\x10\x43\x61nnabinoidRatio\x12\x1d\n\x19NO_CANNABINOID_PREFERENCE\x10\x00\x12\x0c\n\x08THC_ONLY\x10\x01\x12\x10\n\x0cTHC_OVER_CBD\x10\x02\x12\t\n\x05\x45QUAL\x10\x03\x12\x10\n\x0c\x43\x42\x44_OVER_THC\x10\x04\x12\x0c\n\x08\x43\x42\x44_ONLY\x10\x05*\x7f\n\x07\x46\x65\x65ling\x12\x19\n\x15NO_FEELING_PREFERENCE\x10\x00\x12\r\n\tGROUNDING\x10\x01\x12\t\n\x05SLEEP\x10\x02\x12\x0b\n\x07\x43\x41LMING\x10\x03\x12\x0f\n\x0bSTIMULATING\x10\x04\x12\t\n\x05\x46UNNY\x10\x05\x12\t\n\x05\x46OCUS\x10\x06\x12\x0b\n\x07PASSION\x10\x07*\x9f\x01\n\tTasteNote\x12\x17\n\x13NO_TASTE_PREFERENCE\x10\x00\x12\t\n\x05SWEET\x10\x01\x12\x08\n\x04SOUR\x10\x02\x12\t\n\x05SPICE\x10\x03\x12\n\n\x06SMOOTH\x10\x04\x12\n\n\x06\x43ITRUS\x10\x05\x12\x08\n\x04PINE\x10\x06\x12\t\n\x05\x46RUIT\x10\x07\x12\x0b\n\x07TROPICS\x10\x08\x12\n\n\x06\x46LORAL\x10\t\x12\x08\n\x04HERB\x10\n\x12\t\n\x05\x45\x41RTH\x10\x0b*>\n\x0fPotencyEstimate\x12\t\n\x05LIGHT\x10\x00\x12\n\n\x06MEDIUM\x10\x01\x12\t\n\x05HEAVY\x10\x02\x12\t\n\x05SUPER\x10\x03*\xae\x05\n\x07Terpene\x12\x0c\n\x08\x43\x41MPHENE\x10\x00\x12\n\n\x06\x43\x41RENE\x10\x01\x12\x16\n\x12\x42\x45TA_CARYOPHYLLENE\x10\x02\x12\x17\n\x13\x43\x41RYOPHYLLENE_OXIDE\x10\x03\x12\x0e\n\nEUCALYPTOL\x10\x04\x12\x0b\n\x07\x46\x45NCHOL\x10\x05\x12\x12\n\x0e\x41LPHA_HUMULENE\x10\x06\x12\x0c\n\x08LIMONENE\x10\x07\x12\x0c\n\x08LINALOOL\x10\x08\x12\x0b\n\x07MYRCENE\x10\t\x12\x11\n\rALPHA_OCIMENE\x10\n\x12\x10\n\x0c\x42\x45TA_OCIMENE\x10\x0b\x12\x16\n\x12\x41LPHA_PHELLANDRENE\x10\x0c\x12\x10\n\x0c\x41LPHA_PINENE\x10\r\x12\x0f\n\x0b\x42\x45TA_PINENE\x10\x0e\x12\x13\n\x0f\x41LPHA_TERPINEOL\x10\x0f\x12\x13\n\x0f\x41LPHA_TERPININE\x10\x10\x12\x13\n\x0fGAMMA_TERPININE\x10\x11\x12\x0f\n\x0bTERPINOLENE\x10\x12\x12\r\n\tVALENCENE\x10\x13\x12\x0c\n\x08GERANIOL\x10\x14\x12\x10\n\x0cPHELLANDRENE\x10\x15\x12\x0b\n\x07\x42ORNEOL\x10\x16\x12\x0e\n\nISOBORNEOL\x10\x17\x12\r\n\tBISABOLOL\x10\x18\x12\n\n\x06PHYTOL\x10\x19\x12\x0c\n\x08SABINENE\x10\x1a\x12\x0b\n\x07\x43\x41MPHOR\x10\x1b\x12\x0b\n\x07MENTHOL\x10\x1c\x12\x0b\n\x07\x43\x45\x44RENE\x10\x1d\x12\t\n\x05NEROL\x10\x1e\x12\r\n\tNEROLIDOL\x10\x1f\x12\n\n\x06GUAIOL\x10 \x12\x0e\n\nISOPULEGOL\x10!\x12\x13\n\x0fGERANYL_ACETATE\x10\"\x12\n\n\x06\x43YMENE\x10#\x12\x0c\n\x08PULEGONE\x10$\x12\x0b\n\x07\x43INEOLE\x10%\x12\x0c\n\x08\x46\x45NCHONE\x10&\x12\r\n\tTERPINENE\x10\'\x12\x0f\n\x0b\x43ITRONELLOL\x10(\x12\x12\n\x0e\x44\x45LTA_3_CARENE\x10)BE\n-io.opencannabis.schema.product.struct.testingB\nLabTestingH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[content_dot_Content__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,structs_dot_labtesting_dot_TestValue__pb2.DESCRIPTOR,])
 
+_TESTMETHOD = _descriptor.EnumDescriptor(
+  name='TestMethod',
+  full_name='opencannabis.structs.labtesting.TestMethod',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSPECIFIED_METHOD', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='GCMS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='LCMS', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CLASSIC_PCR', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='qPCR', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ELISA', index=5, number=5,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=3457,
+  serialized_end=3551,
+)
+_sym_db.RegisterEnumDescriptor(_TESTMETHOD)
+
+TestMethod = enum_type_wrapper.EnumTypeWrapper(_TESTMETHOD)
 _CANNABINOID = _descriptor.EnumDescriptor(
   name='Cannabinoid',
   full_name='opencannabis.structs.labtesting.Cannabinoid',
@@ -88,8 +127,8 @@ _CANNABINOID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2166,
-  serialized_end=2311,
+  serialized_start=3554,
+  serialized_end=3699,
 )
 _sym_db.RegisterEnumDescriptor(_CANNABINOID)
 
@@ -127,8 +166,8 @@ _CANNABINOIDRATIO = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2313,
-  serialized_end=2437,
+  serialized_start=3701,
+  serialized_end=3825,
 )
 _sym_db.RegisterEnumDescriptor(_CANNABINOIDRATIO)
 
@@ -174,8 +213,8 @@ _FEELING = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2439,
-  serialized_end=2566,
+  serialized_start=3827,
+  serialized_end=3954,
 )
 _sym_db.RegisterEnumDescriptor(_FEELING)
 
@@ -237,8 +276,8 @@ _TASTENOTE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2569,
-  serialized_end=2728,
+  serialized_start=3957,
+  serialized_end=4116,
 )
 _sym_db.RegisterEnumDescriptor(_TASTENOTE)
 
@@ -268,8 +307,8 @@ _POTENCYESTIMATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2730,
-  serialized_end=2792,
+  serialized_start=4118,
+  serialized_end=4180,
 )
 _sym_db.RegisterEnumDescriptor(_POTENCYESTIMATE)
 
@@ -356,15 +395,113 @@ _TERPENE = _descriptor.EnumDescriptor(
       name='TERPINOLENE', index=18, number=18,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='VALENCENE', index=19, number=19,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='GERANIOL', index=20, number=20,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PHELLANDRENE', index=21, number=21,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='BORNEOL', index=22, number=22,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ISOBORNEOL', index=23, number=23,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='BISABOLOL', index=24, number=24,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PHYTOL', index=25, number=25,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SABINENE', index=26, number=26,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAMPHOR', index=27, number=27,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MENTHOL', index=28, number=28,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CEDRENE', index=29, number=29,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='NEROL', index=30, number=30,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='NEROLIDOL', index=31, number=31,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='GUAIOL', index=32, number=32,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ISOPULEGOL', index=33, number=33,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='GERANYL_ACETATE', index=34, number=34,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CYMENE', index=35, number=35,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PULEGONE', index=36, number=36,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CINEOLE', index=37, number=37,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FENCHONE', index=38, number=38,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TERPINENE', index=39, number=39,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CITRONELLOL', index=40, number=40,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DELTA_3_CARENE', index=41, number=41,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=2795,
-  serialized_end=3145,
+  serialized_start=4183,
+  serialized_end=4869,
 )
 _sym_db.RegisterEnumDescriptor(_TERPENE)
 
 Terpene = enum_type_wrapper.EnumTypeWrapper(_TERPENE)
+UNSPECIFIED_METHOD = 0
+GCMS = 1
+LCMS = 2
+CLASSIC_PCR = 3
+qPCR = 4
+ELISA = 5
 THC = 0
 THC_A = 1
 THC_V = 2
@@ -427,7 +564,127 @@ ALPHA_TERPINEOL = 15
 ALPHA_TERPININE = 16
 GAMMA_TERPININE = 17
 TERPINOLENE = 18
+VALENCENE = 19
+GERANIOL = 20
+PHELLANDRENE = 21
+BORNEOL = 22
+ISOBORNEOL = 23
+BISABOLOL = 24
+PHYTOL = 25
+SABINENE = 26
+CAMPHOR = 27
+MENTHOL = 28
+CEDRENE = 29
+NEROL = 30
+NEROLIDOL = 31
+GUAIOL = 32
+ISOPULEGOL = 33
+GERANYL_ACETATE = 34
+CYMENE = 35
+PULEGONE = 36
+CINEOLE = 37
+FENCHONE = 38
+TERPINENE = 39
+CITRONELLOL = 40
+DELTA_3_CARENE = 41
 
+
+
+_CONTAMINANTS = _descriptor.Descriptor(
+  name='Contaminants',
+  full_name='opencannabis.structs.labtesting.Contaminants',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='pesticides', full_name='opencannabis.structs.labtesting.Contaminants.pesticides', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='metals', full_name='opencannabis.structs.labtesting.Contaminants.metals', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='mold_mildew', full_name='opencannabis.structs.labtesting.Contaminants.mold_mildew', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='other_contaminants', full_name='opencannabis.structs.labtesting.Contaminants.other_contaminants', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=157,
+  serialized_end=439,
+)
+
+
+_TESTSUITE = _descriptor.Descriptor(
+  name='TestSuite',
+  full_name='opencannabis.structs.labtesting.TestSuite',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='method', full_name='opencannabis.structs.labtesting.TestSuite.method', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='results', full_name='opencannabis.structs.labtesting.TestSuite.results', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='comments', full_name='opencannabis.structs.labtesting.TestSuite.comments', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=442,
+  serialized_end=595,
+)
 
 
 _TESTRESULTS = _descriptor.Descriptor(
@@ -487,7 +744,7 @@ _TESTRESULTS = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='pesticides', full_name='opencannabis.structs.labtesting.TestResults.pesticides', index=7,
+      name='contaminants', full_name='opencannabis.structs.labtesting.TestResults.contaminants', index=7,
       number=32, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -533,8 +790,8 @@ _TESTRESULTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=157,
-  serialized_end=861,
+  serialized_start=598,
+  serialized_end=1306,
 )
 
 
@@ -553,8 +810,22 @@ _TESTCOORDINATES = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='group', full_name='opencannabis.structs.labtesting.TestCoordinates.group', index=1,
+      name='lot', full_name='opencannabis.structs.labtesting.TestCoordinates.lot', index=1,
       number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='batch', full_name='opencannabis.structs.labtesting.TestCoordinates.batch', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sample_id', full_name='opencannabis.structs.labtesting.TestCoordinates.sample_id', index=3,
+      number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -571,8 +842,8 @@ _TESTCOORDINATES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=863,
-  serialized_end=909,
+  serialized_start=1308,
+  serialized_end=1386,
 )
 
 
@@ -591,14 +862,7 @@ _CANNABINOIDS_RESULT = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ratio', full_name='opencannabis.structs.labtesting.Cannabinoids.Result.ratio', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='measurement', full_name='opencannabis.structs.labtesting.Cannabinoids.Result.measurement', index=2,
+      name='measurement', full_name='opencannabis.structs.labtesting.Cannabinoids.Result.measurement', index=1,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -616,8 +880,8 @@ _CANNABINOIDS_RESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1114,
-  serialized_end=1320,
+  serialized_start=1724,
+  serialized_end=1864,
 )
 
 _CANNABINOIDS = _descriptor.Descriptor(
@@ -648,6 +912,20 @@ _CANNABINOIDS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ratio', full_name='opencannabis.structs.labtesting.Cannabinoids.ratio', index=3,
+      number=4, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='potency', full_name='opencannabis.structs.labtesting.Cannabinoids.potency', index=4,
+      number=5, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -660,8 +938,8 @@ _CANNABINOIDS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=912,
-  serialized_end=1320,
+  serialized_start=1389,
+  serialized_end=1864,
 )
 
 
@@ -694,14 +972,14 @@ _SUBJECTIVE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='feeling_tags', full_name='opencannabis.structs.labtesting.Subjective.feeling_tags', index=3,
+      name='feeling', full_name='opencannabis.structs.labtesting.Subjective.feeling', index=3,
       number=4, type=14, cpp_type=8, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='tasting_notes', full_name='opencannabis.structs.labtesting.Subjective.tasting_notes', index=4,
+      name='aroma', full_name='opencannabis.structs.labtesting.Subjective.aroma', index=4,
       number=5, type=14, cpp_type=8, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -719,83 +997,8 @@ _SUBJECTIVE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1323,
-  serialized_end=1631,
-)
-
-
-_TERPENES_RESULT = _descriptor.Descriptor(
-  name='Result',
-  full_name='opencannabis.structs.labtesting.Terpenes.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='terpene', full_name='opencannabis.structs.labtesting.Terpenes.Result.terpene', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='measurement', full_name='opencannabis.structs.labtesting.Terpenes.Result.measurement', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1733,
-  serialized_end=1865,
-)
-
-_TERPENES = _descriptor.Descriptor(
-  name='Terpenes',
-  full_name='opencannabis.structs.labtesting.Terpenes',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='available', full_name='opencannabis.structs.labtesting.Terpenes.available', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='terpene', full_name='opencannabis.structs.labtesting.Terpenes.terpene', index=1,
-      number=10, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[_TERPENES_RESULT, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1634,
-  serialized_end=1865,
+  serialized_start=1867,
+  serialized_end=2162,
 )
 
 
@@ -832,8 +1035,8 @@ _PESTICIDES_MEASUREMENTSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1991,
-  serialized_end=2086,
+  serialized_start=2288,
+  serialized_end=2383,
 )
 
 _PESTICIDES = _descriptor.Descriptor(
@@ -869,8 +1072,226 @@ _PESTICIDES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1868,
-  serialized_end=2086,
+  serialized_start=2165,
+  serialized_end=2383,
+)
+
+
+_METALS_MEASUREMENTSENTRY = _descriptor.Descriptor(
+  name='MeasurementsEntry',
+  full_name='opencannabis.structs.labtesting.Metals.MeasurementsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='opencannabis.structs.labtesting.Metals.MeasurementsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='opencannabis.structs.labtesting.Metals.MeasurementsEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2288,
+  serialized_end=2383,
+)
+
+_METALS = _descriptor.Descriptor(
+  name='Metals',
+  full_name='opencannabis.structs.labtesting.Metals',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='metal_free', full_name='opencannabis.structs.labtesting.Metals.metal_free', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='measurements', full_name='opencannabis.structs.labtesting.Metals.measurements', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_METALS_MEASUREMENTSENTRY, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2386,
+  serialized_end=2592,
+)
+
+
+_MOLDMILDEW_MEASUREMENTSENTRY = _descriptor.Descriptor(
+  name='MeasurementsEntry',
+  full_name='opencannabis.structs.labtesting.MoldMildew.MeasurementsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='opencannabis.structs.labtesting.MoldMildew.MeasurementsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='opencannabis.structs.labtesting.MoldMildew.MeasurementsEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2288,
+  serialized_end=2383,
+)
+
+_MOLDMILDEW = _descriptor.Descriptor(
+  name='MoldMildew',
+  full_name='opencannabis.structs.labtesting.MoldMildew',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='mold_mildew_free', full_name='opencannabis.structs.labtesting.MoldMildew.mold_mildew_free', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='measurements', full_name='opencannabis.structs.labtesting.MoldMildew.measurements', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_MOLDMILDEW_MEASUREMENTSENTRY, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2595,
+  serialized_end=2815,
+)
+
+
+_OTHERCONTAMINANTS_MEASUREMENTSENTRY = _descriptor.Descriptor(
+  name='MeasurementsEntry',
+  full_name='opencannabis.structs.labtesting.OtherContaminants.MeasurementsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='opencannabis.structs.labtesting.OtherContaminants.MeasurementsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='opencannabis.structs.labtesting.OtherContaminants.MeasurementsEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2288,
+  serialized_end=2383,
+)
+
+_OTHERCONTAMINANTS = _descriptor.Descriptor(
+  name='OtherContaminants',
+  full_name='opencannabis.structs.labtesting.OtherContaminants',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='measurements', full_name='opencannabis.structs.labtesting.OtherContaminants.measurements', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_OTHERCONTAMINANTS_MEASUREMENTSENTRY, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2818,
+  serialized_end=3026,
 )
 
 
@@ -900,48 +1321,161 @@ _MOISTURE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2088,
-  serialized_end=2163,
+  serialized_start=3028,
+  serialized_end=3103,
 )
 
+
+_TERPENES_RESULT = _descriptor.Descriptor(
+  name='Result',
+  full_name='opencannabis.structs.labtesting.Terpenes.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='terpene', full_name='opencannabis.structs.labtesting.Terpenes.Result.terpene', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='measurement', full_name='opencannabis.structs.labtesting.Terpenes.Result.measurement', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3323,
+  serialized_end=3455,
+)
+
+_TERPENES = _descriptor.Descriptor(
+  name='Terpenes',
+  full_name='opencannabis.structs.labtesting.Terpenes',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='available', full_name='opencannabis.structs.labtesting.Terpenes.available', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='terpene', full_name='opencannabis.structs.labtesting.Terpenes.terpene', index=1,
+      number=10, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='feeling', full_name='opencannabis.structs.labtesting.Terpenes.feeling', index=2,
+      number=2, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='aroma', full_name='opencannabis.structs.labtesting.Terpenes.aroma', index=3,
+      number=3, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_TERPENES_RESULT, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3106,
+  serialized_end=3455,
+)
+
+_CONTAMINANTS.fields_by_name['pesticides'].message_type = _PESTICIDES
+_CONTAMINANTS.fields_by_name['metals'].message_type = _METALS
+_CONTAMINANTS.fields_by_name['mold_mildew'].message_type = _MOLDMILDEW
+_CONTAMINANTS.fields_by_name['other_contaminants'].message_type = _OTHERCONTAMINANTS
+_TESTSUITE.fields_by_name['method'].enum_type = _TESTMETHOD
+_TESTSUITE.fields_by_name['results'].message_type = _TESTRESULTS
 _TESTRESULTS.fields_by_name['media'].message_type = structs_dot_labtesting_dot_TestValue__pb2._TESTMEDIA
 _TESTRESULTS.fields_by_name['last_updated'].message_type = temporal_dot_Instant__pb2._INSTANT
 _TESTRESULTS.fields_by_name['sealed'].message_type = temporal_dot_Instant__pb2._INSTANT
 _TESTRESULTS.fields_by_name['coordinates'].message_type = _TESTCOORDINATES
 _TESTRESULTS.fields_by_name['cannabinoids'].message_type = _CANNABINOIDS
 _TESTRESULTS.fields_by_name['terpenes'].message_type = _TERPENES
-_TESTRESULTS.fields_by_name['pesticides'].message_type = _PESTICIDES
+_TESTRESULTS.fields_by_name['contaminants'].message_type = _CONTAMINANTS
 _TESTRESULTS.fields_by_name['moisture'].message_type = _MOISTURE
 _TESTRESULTS.fields_by_name['subjective'].message_type = _SUBJECTIVE
 _TESTRESULTS.fields_by_name['aroma'].enum_type = _TASTENOTE
 _TESTRESULTS.fields_by_name['data'].message_type = _TESTRESULTS
 _CANNABINOIDS_RESULT.fields_by_name['cannabinoid'].enum_type = _CANNABINOID
-_CANNABINOIDS_RESULT.fields_by_name['ratio'].enum_type = _CANNABINOIDRATIO
 _CANNABINOIDS_RESULT.fields_by_name['measurement'].message_type = structs_dot_labtesting_dot_TestValue__pb2._TESTVALUE
 _CANNABINOIDS_RESULT.containing_type = _CANNABINOIDS
 _CANNABINOIDS.fields_by_name['thc'].message_type = structs_dot_labtesting_dot_TestValue__pb2._TESTVALUE
 _CANNABINOIDS.fields_by_name['cbd'].message_type = structs_dot_labtesting_dot_TestValue__pb2._TESTVALUE
 _CANNABINOIDS.fields_by_name['results'].message_type = _CANNABINOIDS_RESULT
+_CANNABINOIDS.fields_by_name['ratio'].enum_type = _CANNABINOIDRATIO
+_CANNABINOIDS.fields_by_name['potency'].enum_type = _POTENCYESTIMATE
 _SUBJECTIVE.fields_by_name['description'].message_type = content_dot_Content__pb2._CONTENT
 _SUBJECTIVE.fields_by_name['taste'].message_type = content_dot_Content__pb2._CONTENT
 _SUBJECTIVE.fields_by_name['potency'].enum_type = _POTENCYESTIMATE
-_SUBJECTIVE.fields_by_name['feeling_tags'].enum_type = _FEELING
-_SUBJECTIVE.fields_by_name['tasting_notes'].enum_type = _TASTENOTE
+_SUBJECTIVE.fields_by_name['feeling'].enum_type = _FEELING
+_SUBJECTIVE.fields_by_name['aroma'].enum_type = _TASTENOTE
+_PESTICIDES_MEASUREMENTSENTRY.fields_by_name['value'].message_type = structs_dot_labtesting_dot_TestValue__pb2._TESTVALUE
+_PESTICIDES_MEASUREMENTSENTRY.containing_type = _PESTICIDES
+_PESTICIDES.fields_by_name['measurements'].message_type = _PESTICIDES_MEASUREMENTSENTRY
+_METALS_MEASUREMENTSENTRY.fields_by_name['value'].message_type = structs_dot_labtesting_dot_TestValue__pb2._TESTVALUE
+_METALS_MEASUREMENTSENTRY.containing_type = _METALS
+_METALS.fields_by_name['measurements'].message_type = _METALS_MEASUREMENTSENTRY
+_MOLDMILDEW_MEASUREMENTSENTRY.fields_by_name['value'].message_type = structs_dot_labtesting_dot_TestValue__pb2._TESTVALUE
+_MOLDMILDEW_MEASUREMENTSENTRY.containing_type = _MOLDMILDEW
+_MOLDMILDEW.fields_by_name['measurements'].message_type = _MOLDMILDEW_MEASUREMENTSENTRY
+_OTHERCONTAMINANTS_MEASUREMENTSENTRY.fields_by_name['value'].message_type = structs_dot_labtesting_dot_TestValue__pb2._TESTVALUE
+_OTHERCONTAMINANTS_MEASUREMENTSENTRY.containing_type = _OTHERCONTAMINANTS
+_OTHERCONTAMINANTS.fields_by_name['measurements'].message_type = _OTHERCONTAMINANTS_MEASUREMENTSENTRY
+_MOISTURE.fields_by_name['measurement'].message_type = structs_dot_labtesting_dot_TestValue__pb2._TESTVALUE
 _TERPENES_RESULT.fields_by_name['terpene'].enum_type = _TERPENE
 _TERPENES_RESULT.fields_by_name['measurement'].message_type = structs_dot_labtesting_dot_TestValue__pb2._TESTVALUE
 _TERPENES_RESULT.containing_type = _TERPENES
 _TERPENES.fields_by_name['terpene'].message_type = _TERPENES_RESULT
-_PESTICIDES_MEASUREMENTSENTRY.fields_by_name['value'].message_type = structs_dot_labtesting_dot_TestValue__pb2._TESTVALUE
-_PESTICIDES_MEASUREMENTSENTRY.containing_type = _PESTICIDES
-_PESTICIDES.fields_by_name['measurements'].message_type = _PESTICIDES_MEASUREMENTSENTRY
-_MOISTURE.fields_by_name['measurement'].message_type = structs_dot_labtesting_dot_TestValue__pb2._TESTVALUE
+_TERPENES.fields_by_name['feeling'].enum_type = _FEELING
+_TERPENES.fields_by_name['aroma'].enum_type = _TASTENOTE
+DESCRIPTOR.message_types_by_name['Contaminants'] = _CONTAMINANTS
+DESCRIPTOR.message_types_by_name['TestSuite'] = _TESTSUITE
 DESCRIPTOR.message_types_by_name['TestResults'] = _TESTRESULTS
 DESCRIPTOR.message_types_by_name['TestCoordinates'] = _TESTCOORDINATES
 DESCRIPTOR.message_types_by_name['Cannabinoids'] = _CANNABINOIDS
 DESCRIPTOR.message_types_by_name['Subjective'] = _SUBJECTIVE
-DESCRIPTOR.message_types_by_name['Terpenes'] = _TERPENES
 DESCRIPTOR.message_types_by_name['Pesticides'] = _PESTICIDES
+DESCRIPTOR.message_types_by_name['Metals'] = _METALS
+DESCRIPTOR.message_types_by_name['MoldMildew'] = _MOLDMILDEW
+DESCRIPTOR.message_types_by_name['OtherContaminants'] = _OTHERCONTAMINANTS
 DESCRIPTOR.message_types_by_name['Moisture'] = _MOISTURE
+DESCRIPTOR.message_types_by_name['Terpenes'] = _TERPENES
+DESCRIPTOR.enum_types_by_name['TestMethod'] = _TESTMETHOD
 DESCRIPTOR.enum_types_by_name['Cannabinoid'] = _CANNABINOID
 DESCRIPTOR.enum_types_by_name['CannabinoidRatio'] = _CANNABINOIDRATIO
 DESCRIPTOR.enum_types_by_name['Feeling'] = _FEELING
@@ -949,6 +1483,20 @@ DESCRIPTOR.enum_types_by_name['TasteNote'] = _TASTENOTE
 DESCRIPTOR.enum_types_by_name['PotencyEstimate'] = _POTENCYESTIMATE
 DESCRIPTOR.enum_types_by_name['Terpene'] = _TERPENE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+Contaminants = _reflection.GeneratedProtocolMessageType('Contaminants', (_message.Message,), dict(
+  DESCRIPTOR = _CONTAMINANTS,
+  __module__ = 'structs.labtesting.TestResults_pb2'
+  # @@protoc_insertion_point(class_scope:opencannabis.structs.labtesting.Contaminants)
+  ))
+_sym_db.RegisterMessage(Contaminants)
+
+TestSuite = _reflection.GeneratedProtocolMessageType('TestSuite', (_message.Message,), dict(
+  DESCRIPTOR = _TESTSUITE,
+  __module__ = 'structs.labtesting.TestResults_pb2'
+  # @@protoc_insertion_point(class_scope:opencannabis.structs.labtesting.TestSuite)
+  ))
+_sym_db.RegisterMessage(TestSuite)
 
 TestResults = _reflection.GeneratedProtocolMessageType('TestResults', (_message.Message,), dict(
   DESCRIPTOR = _TESTRESULTS,
@@ -986,21 +1534,6 @@ Subjective = _reflection.GeneratedProtocolMessageType('Subjective', (_message.Me
   ))
 _sym_db.RegisterMessage(Subjective)
 
-Terpenes = _reflection.GeneratedProtocolMessageType('Terpenes', (_message.Message,), dict(
-
-  Result = _reflection.GeneratedProtocolMessageType('Result', (_message.Message,), dict(
-    DESCRIPTOR = _TERPENES_RESULT,
-    __module__ = 'structs.labtesting.TestResults_pb2'
-    # @@protoc_insertion_point(class_scope:opencannabis.structs.labtesting.Terpenes.Result)
-    ))
-  ,
-  DESCRIPTOR = _TERPENES,
-  __module__ = 'structs.labtesting.TestResults_pb2'
-  # @@protoc_insertion_point(class_scope:opencannabis.structs.labtesting.Terpenes)
-  ))
-_sym_db.RegisterMessage(Terpenes)
-_sym_db.RegisterMessage(Terpenes.Result)
-
 Pesticides = _reflection.GeneratedProtocolMessageType('Pesticides', (_message.Message,), dict(
 
   MeasurementsEntry = _reflection.GeneratedProtocolMessageType('MeasurementsEntry', (_message.Message,), dict(
@@ -1016,6 +1549,51 @@ Pesticides = _reflection.GeneratedProtocolMessageType('Pesticides', (_message.Me
 _sym_db.RegisterMessage(Pesticides)
 _sym_db.RegisterMessage(Pesticides.MeasurementsEntry)
 
+Metals = _reflection.GeneratedProtocolMessageType('Metals', (_message.Message,), dict(
+
+  MeasurementsEntry = _reflection.GeneratedProtocolMessageType('MeasurementsEntry', (_message.Message,), dict(
+    DESCRIPTOR = _METALS_MEASUREMENTSENTRY,
+    __module__ = 'structs.labtesting.TestResults_pb2'
+    # @@protoc_insertion_point(class_scope:opencannabis.structs.labtesting.Metals.MeasurementsEntry)
+    ))
+  ,
+  DESCRIPTOR = _METALS,
+  __module__ = 'structs.labtesting.TestResults_pb2'
+  # @@protoc_insertion_point(class_scope:opencannabis.structs.labtesting.Metals)
+  ))
+_sym_db.RegisterMessage(Metals)
+_sym_db.RegisterMessage(Metals.MeasurementsEntry)
+
+MoldMildew = _reflection.GeneratedProtocolMessageType('MoldMildew', (_message.Message,), dict(
+
+  MeasurementsEntry = _reflection.GeneratedProtocolMessageType('MeasurementsEntry', (_message.Message,), dict(
+    DESCRIPTOR = _MOLDMILDEW_MEASUREMENTSENTRY,
+    __module__ = 'structs.labtesting.TestResults_pb2'
+    # @@protoc_insertion_point(class_scope:opencannabis.structs.labtesting.MoldMildew.MeasurementsEntry)
+    ))
+  ,
+  DESCRIPTOR = _MOLDMILDEW,
+  __module__ = 'structs.labtesting.TestResults_pb2'
+  # @@protoc_insertion_point(class_scope:opencannabis.structs.labtesting.MoldMildew)
+  ))
+_sym_db.RegisterMessage(MoldMildew)
+_sym_db.RegisterMessage(MoldMildew.MeasurementsEntry)
+
+OtherContaminants = _reflection.GeneratedProtocolMessageType('OtherContaminants', (_message.Message,), dict(
+
+  MeasurementsEntry = _reflection.GeneratedProtocolMessageType('MeasurementsEntry', (_message.Message,), dict(
+    DESCRIPTOR = _OTHERCONTAMINANTS_MEASUREMENTSENTRY,
+    __module__ = 'structs.labtesting.TestResults_pb2'
+    # @@protoc_insertion_point(class_scope:opencannabis.structs.labtesting.OtherContaminants.MeasurementsEntry)
+    ))
+  ,
+  DESCRIPTOR = _OTHERCONTAMINANTS,
+  __module__ = 'structs.labtesting.TestResults_pb2'
+  # @@protoc_insertion_point(class_scope:opencannabis.structs.labtesting.OtherContaminants)
+  ))
+_sym_db.RegisterMessage(OtherContaminants)
+_sym_db.RegisterMessage(OtherContaminants.MeasurementsEntry)
+
 Moisture = _reflection.GeneratedProtocolMessageType('Moisture', (_message.Message,), dict(
   DESCRIPTOR = _MOISTURE,
   __module__ = 'structs.labtesting.TestResults_pb2'
@@ -1023,9 +1601,30 @@ Moisture = _reflection.GeneratedProtocolMessageType('Moisture', (_message.Messag
   ))
 _sym_db.RegisterMessage(Moisture)
 
+Terpenes = _reflection.GeneratedProtocolMessageType('Terpenes', (_message.Message,), dict(
+
+  Result = _reflection.GeneratedProtocolMessageType('Result', (_message.Message,), dict(
+    DESCRIPTOR = _TERPENES_RESULT,
+    __module__ = 'structs.labtesting.TestResults_pb2'
+    # @@protoc_insertion_point(class_scope:opencannabis.structs.labtesting.Terpenes.Result)
+    ))
+  ,
+  DESCRIPTOR = _TERPENES,
+  __module__ = 'structs.labtesting.TestResults_pb2'
+  # @@protoc_insertion_point(class_scope:opencannabis.structs.labtesting.Terpenes)
+  ))
+_sym_db.RegisterMessage(Terpenes)
+_sym_db.RegisterMessage(Terpenes.Result)
+
 
 DESCRIPTOR.has_options = True
 DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n-io.opencannabis.schema.product.struct.testingB\nLabTestingH\001P\001\242\002\003OCS'))
 _PESTICIDES_MEASUREMENTSENTRY.has_options = True
 _PESTICIDES_MEASUREMENTSENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
+_METALS_MEASUREMENTSENTRY.has_options = True
+_METALS_MEASUREMENTSENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
+_MOLDMILDEW_MEASUREMENTSENTRY.has_options = True
+_MOLDMILDEW_MEASUREMENTSENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
+_OTHERCONTAMINANTS_MEASUREMENTSENTRY.has_options = True
+_OTHERCONTAMINANTS_MEASUREMENTSENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
 # @@protoc_insertion_point(module_scope)

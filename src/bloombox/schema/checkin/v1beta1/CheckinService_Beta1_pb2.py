@@ -15,6 +15,7 @@ _sym_db = _symbol_database.Default()
 
 
 from identity import User_pb2 as identity_dot_User__pb2
+from identity import UserKey_pb2 as identity_dot_UserKey__pb2
 from services import ServiceStatus_pb2 as services_dot_ServiceStatus__pb2
 from person import PersonName_pb2 as person_dot_PersonName__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
@@ -24,9 +25,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='checkin/v1beta1/CheckinService_Beta1.proto',
   package='bloombox.schema.services.checkin.v1beta1',
   syntax='proto3',
-  serialized_pb=_b('\n*checkin/v1beta1/CheckinService_Beta1.proto\x12(bloombox.schema.services.checkin.v1beta1\x1a\x13identity/User.proto\x1a\x1cservices/ServiceStatus.proto\x1a\x17person/PersonName.proto\x1a\x1cgoogle/api/annotations.proto\"\xf8\x01\n\x04Ping\x1a\t\n\x07Request\x1a\x43\n\x08Response\x12\x37\n\x06status\x18\x01 \x01(\x0e\x32\'.bloombox.schema.services.ServiceStatus\x1a\x9f\x01\n\tOperation\x12G\n\x07request\x18\x01 \x01(\x0b\x32\x36.bloombox.schema.services.checkin.v1beta1.Ping.Request\x12I\n\x08response\x18\x02 \x01(\x0b\x32\x37.bloombox.schema.services.checkin.v1beta1.Ping.Response\"\x9a\x01\n\x0b\x43heckinUser\x12.\n\x03key\x18\x01 \x01(\x0b\x32!.bloombox.schema.identity.UserKey\x12\x32\n\x05\x66lags\x18\x02 \x01(\x0b\x32#.bloombox.schema.identity.UserFlags\x12\'\n\x04name\x18\x03 \x01(\x0b\x32\x19.opencannabis.person.Name\"!\n\x11\x43heckinEnrollment\x12\x0c\n\x04\x63ode\x18\x01 \x01(\t\"\x94\x02\n\x0f\x43heckinResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x13\n\x0bmust_enroll\x18\x02 \x01(\x08\x12\x45\n\x05\x65rror\x18\x03 \x01(\x0e\x32\x36.bloombox.schema.services.checkin.v1beta1.CheckinError\x12\x43\n\x04user\x18\x04 \x01(\x0b\x32\x35.bloombox.schema.services.checkin.v1beta1.CheckinUser\x12O\n\nenrollment\x18\x05 \x01(\x0b\x32;.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment\"\x87\x02\n\tIDCheckin\x1aQ\n\x07Request\x12\x0b\n\x03raw\x18\x01 \x01(\t\x12\r\n\x05scope\x18\x02 \x01(\t\x12\x15\n\rserial_number\x18\x03 \x01(\t\x12\x13\n\x0b\x66ingerprint\x18\x04 \x01(\t\x1a\xa6\x01\n\tOperation\x12L\n\x07request\x18\x01 \x01(\x0b\x32;.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request\x12K\n\x08response\x18\x02 \x01(\x0b\x32\x39.bloombox.schema.services.checkin.v1beta1.CheckinResponse\"\x98\x02\n\x0b\x43\x61rdCheckin\x1a^\n\x07Request\x12\x11\n\tcard_type\x18\x01 \x01(\t\x12\x0f\n\x07payload\x18\x02 \x01(\t\x12\x11\n\tsignature\x18\x03 \x01(\t\x12\r\n\x05\x61gent\x18\x04 \x01(\t\x12\r\n\x05scope\x18\x05 \x01(\t\x1a\xa8\x01\n\tOperation\x12N\n\x07request\x18\x01 \x01(\x0b\x32=.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request\x12K\n\x08response\x18\x02 \x01(\x0b\x32\x39.bloombox.schema.services.checkin.v1beta1.CheckinResponse*\xc5\x02\n\x0c\x43heckinError\x12\x0c\n\x08NO_ERROR\x10\x00\x12\x10\n\x0cID_NOT_FOUND\x10\x01\x12\x0e\n\nID_EXPIRED\x10\x02\x12\x0e\n\nID_INVALID\x10\x03\x12\x17\n\x13ID_TYPE_UNSUPPORTED\x10\x04\x12\x15\n\x11\x43\x41RD_TYPE_INVALID\x10\x05\x12\x10\n\x0c\x43\x41RD_EXPIRED\x10\x06\x12\x12\n\x0e\x43\x41RD_SUSPENDED\x10\x07\x12\x12\n\x0eUSER_SUSPENDED\x10\x08\x12\x15\n\x11PARTNER_SUSPENDED\x10\t\x12\x13\n\x0fPARTNER_INVALID\x10\n\x12\x14\n\x10LOCATION_INVALID\x10\x0b\x12\x18\n\x14JURISDICTION_INVALID\x10\x0c\x12\x1c\n\x18JURISDICTION_UNSUPPORTED\x10\r\x12\x11\n\rUSER_UNDERAGE\x10\x0e\x32\xc0\x04\n\x07\x43heckin\x12\x96\x01\n\x04Ping\x12\x36.bloombox.schema.services.checkin.v1beta1.Ping.Request\x1a\x37.bloombox.schema.services.checkin.v1beta1.Ping.Response\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/checkin/v1beta1/ping\x12\xef\x01\n\x0eIdentification\x12;.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request\x1a\x39.bloombox.schema.services.checkin.v1beta1.CheckinResponse\"e\x82\xd3\xe4\x93\x02_\"9/checkin/v1beta1/{scope=partners/*/locations/*}/global:id:\x01*Z\x1f\"\x1a/checkin/v1beta1/global:id:\x01*\x12\xa9\x01\n\x04\x43\x61rd\x12=.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request\x1a\x39.bloombox.schema.services.checkin.v1beta1.CheckinResponse\"\'\x82\xd3\xe4\x93\x02!\"\x1c/checkin/v1beta1/global:card:\x01*B7\n+io.bloombox.schema.services.checkin.v1beta1H\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n*checkin/v1beta1/CheckinService_Beta1.proto\x12(bloombox.schema.services.checkin.v1beta1\x1a\x13identity/User.proto\x1a\x16identity/UserKey.proto\x1a\x1cservices/ServiceStatus.proto\x1a\x17person/PersonName.proto\x1a\x1cgoogle/api/annotations.proto\"\xf8\x01\n\x04Ping\x1a\t\n\x07Request\x1a\x43\n\x08Response\x12\x37\n\x06status\x18\x01 \x01(\x0e\x32\'.bloombox.schema.services.ServiceStatus\x1a\x9f\x01\n\tOperation\x12G\n\x07request\x18\x01 \x01(\x0b\x32\x36.bloombox.schema.services.checkin.v1beta1.Ping.Request\x12I\n\x08response\x18\x02 \x01(\x0b\x32\x37.bloombox.schema.services.checkin.v1beta1.Ping.Response\"\x9a\x01\n\x0b\x43heckinUser\x12.\n\x03key\x18\x01 \x01(\x0b\x32!.bloombox.schema.identity.UserKey\x12\x32\n\x05\x66lags\x18\x02 \x01(\x0b\x32#.bloombox.schema.identity.UserFlags\x12\'\n\x04name\x18\x03 \x01(\x0b\x32\x19.opencannabis.person.Name\"!\n\x11\x43heckinEnrollment\x12\x0c\n\x04\x63ode\x18\x01 \x01(\t\"\x94\x02\n\x0f\x43heckinResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x13\n\x0bmust_enroll\x18\x02 \x01(\x08\x12\x45\n\x05\x65rror\x18\x03 \x01(\x0e\x32\x36.bloombox.schema.services.checkin.v1beta1.CheckinError\x12\x43\n\x04user\x18\x04 \x01(\x0b\x32\x35.bloombox.schema.services.checkin.v1beta1.CheckinUser\x12O\n\nenrollment\x18\x05 \x01(\x0b\x32;.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment\"\x87\x02\n\tIDCheckin\x1aQ\n\x07Request\x12\x0b\n\x03raw\x18\x01 \x01(\t\x12\r\n\x05scope\x18\x02 \x01(\t\x12\x15\n\rserial_number\x18\x03 \x01(\t\x12\x13\n\x0b\x66ingerprint\x18\x04 \x01(\t\x1a\xa6\x01\n\tOperation\x12L\n\x07request\x18\x01 \x01(\x0b\x32;.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request\x12K\n\x08response\x18\x02 \x01(\x0b\x32\x39.bloombox.schema.services.checkin.v1beta1.CheckinResponse\"\x98\x02\n\x0b\x43\x61rdCheckin\x1a^\n\x07Request\x12\x11\n\tcard_type\x18\x01 \x01(\t\x12\x0f\n\x07payload\x18\x02 \x01(\t\x12\x11\n\tsignature\x18\x03 \x01(\t\x12\r\n\x05\x61gent\x18\x04 \x01(\t\x12\r\n\x05scope\x18\x05 \x01(\t\x1a\xa8\x01\n\tOperation\x12N\n\x07request\x18\x01 \x01(\x0b\x32=.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request\x12K\n\x08response\x18\x02 \x01(\x0b\x32\x39.bloombox.schema.services.checkin.v1beta1.CheckinResponse*\xc5\x02\n\x0c\x43heckinError\x12\x0c\n\x08NO_ERROR\x10\x00\x12\x10\n\x0cID_NOT_FOUND\x10\x01\x12\x0e\n\nID_EXPIRED\x10\x02\x12\x0e\n\nID_INVALID\x10\x03\x12\x17\n\x13ID_TYPE_UNSUPPORTED\x10\x04\x12\x15\n\x11\x43\x41RD_TYPE_INVALID\x10\x05\x12\x10\n\x0c\x43\x41RD_EXPIRED\x10\x06\x12\x12\n\x0e\x43\x41RD_SUSPENDED\x10\x07\x12\x12\n\x0eUSER_SUSPENDED\x10\x08\x12\x15\n\x11PARTNER_SUSPENDED\x10\t\x12\x13\n\x0fPARTNER_INVALID\x10\n\x12\x14\n\x10LOCATION_INVALID\x10\x0b\x12\x18\n\x14JURISDICTION_INVALID\x10\x0c\x12\x1c\n\x18JURISDICTION_UNSUPPORTED\x10\r\x12\x11\n\rUSER_UNDERAGE\x10\x0e\x32\xc0\x04\n\x07\x43heckin\x12\x96\x01\n\x04Ping\x12\x36.bloombox.schema.services.checkin.v1beta1.Ping.Request\x1a\x37.bloombox.schema.services.checkin.v1beta1.Ping.Response\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/checkin/v1beta1/ping\x12\xef\x01\n\x0eIdentification\x12;.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request\x1a\x39.bloombox.schema.services.checkin.v1beta1.CheckinResponse\"e\x82\xd3\xe4\x93\x02_\"9/checkin/v1beta1/{scope=partners/*/locations/*}/global:id:\x01*Z\x1f\"\x1a/checkin/v1beta1/global:id:\x01*\x12\xa9\x01\n\x04\x43\x61rd\x12=.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request\x1a\x39.bloombox.schema.services.checkin.v1beta1.CheckinResponse\"\'\x82\xd3\xe4\x93\x02!\"\x1c/checkin/v1beta1/global:card:\x01*B7\n+io.bloombox.schema.services.checkin.v1beta1H\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
-  dependencies=[identity_dot_User__pb2.DESCRIPTOR,services_dot_ServiceStatus__pb2.DESCRIPTOR,person_dot_PersonName__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
+  dependencies=[identity_dot_User__pb2.DESCRIPTOR,identity_dot_UserKey__pb2.DESCRIPTOR,services_dot_ServiceStatus__pb2.DESCRIPTOR,person_dot_PersonName__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
 _CHECKINERROR = _descriptor.EnumDescriptor(
   name='CheckinError',
@@ -97,8 +98,8 @@ _CHECKINERROR = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1466,
-  serialized_end=1791,
+  serialized_start=1490,
+  serialized_end=1815,
 )
 _sym_db.RegisterEnumDescriptor(_CHECKINERROR)
 
@@ -140,8 +141,8 @@ _PING_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=203,
-  serialized_end=212,
+  serialized_start=227,
+  serialized_end=236,
 )
 
 _PING_RESPONSE = _descriptor.Descriptor(
@@ -170,8 +171,8 @@ _PING_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=214,
-  serialized_end=281,
+  serialized_start=238,
+  serialized_end=305,
 )
 
 _PING_OPERATION = _descriptor.Descriptor(
@@ -207,8 +208,8 @@ _PING_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=284,
-  serialized_end=443,
+  serialized_start=308,
+  serialized_end=467,
 )
 
 _PING = _descriptor.Descriptor(
@@ -230,8 +231,8 @@ _PING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=195,
-  serialized_end=443,
+  serialized_start=219,
+  serialized_end=467,
 )
 
 
@@ -275,8 +276,8 @@ _CHECKINUSER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=446,
-  serialized_end=600,
+  serialized_start=470,
+  serialized_end=624,
 )
 
 
@@ -306,8 +307,8 @@ _CHECKINENROLLMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=602,
-  serialized_end=635,
+  serialized_start=626,
+  serialized_end=659,
 )
 
 
@@ -365,8 +366,8 @@ _CHECKINRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=638,
-  serialized_end=914,
+  serialized_start=662,
+  serialized_end=938,
 )
 
 
@@ -417,8 +418,8 @@ _IDCHECKIN_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=930,
-  serialized_end=1011,
+  serialized_start=954,
+  serialized_end=1035,
 )
 
 _IDCHECKIN_OPERATION = _descriptor.Descriptor(
@@ -454,8 +455,8 @@ _IDCHECKIN_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1014,
-  serialized_end=1180,
+  serialized_start=1038,
+  serialized_end=1204,
 )
 
 _IDCHECKIN = _descriptor.Descriptor(
@@ -477,8 +478,8 @@ _IDCHECKIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=917,
-  serialized_end=1180,
+  serialized_start=941,
+  serialized_end=1204,
 )
 
 
@@ -536,8 +537,8 @@ _CARDCHECKIN_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1198,
-  serialized_end=1292,
+  serialized_start=1222,
+  serialized_end=1316,
 )
 
 _CARDCHECKIN_OPERATION = _descriptor.Descriptor(
@@ -573,8 +574,8 @@ _CARDCHECKIN_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1295,
-  serialized_end=1463,
+  serialized_start=1319,
+  serialized_end=1487,
 )
 
 _CARDCHECKIN = _descriptor.Descriptor(
@@ -596,8 +597,8 @@ _CARDCHECKIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1183,
-  serialized_end=1463,
+  serialized_start=1207,
+  serialized_end=1487,
 )
 
 _PING_REQUEST.containing_type = _PING
@@ -606,7 +607,7 @@ _PING_RESPONSE.containing_type = _PING
 _PING_OPERATION.fields_by_name['request'].message_type = _PING_REQUEST
 _PING_OPERATION.fields_by_name['response'].message_type = _PING_RESPONSE
 _PING_OPERATION.containing_type = _PING
-_CHECKINUSER.fields_by_name['key'].message_type = identity_dot_User__pb2._USERKEY
+_CHECKINUSER.fields_by_name['key'].message_type = identity_dot_UserKey__pb2._USERKEY
 _CHECKINUSER.fields_by_name['flags'].message_type = identity_dot_User__pb2._USERFLAGS
 _CHECKINUSER.fields_by_name['name'].message_type = person_dot_PersonName__pb2._NAME
 _CHECKINRESPONSE.fields_by_name['error'].enum_type = _CHECKINERROR
@@ -737,8 +738,8 @@ _CHECKIN = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=1794,
-  serialized_end=2370,
+  serialized_start=1818,
+  serialized_end=2394,
   methods=[
   _descriptor.MethodDescriptor(
     name='Ping',

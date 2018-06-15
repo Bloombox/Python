@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='commerce/Item.proto',
   package='opencannabis.commerce',
   syntax='proto3',
-  serialized_pb=_b('\n\x13\x63ommerce/Item.proto\x12\x15opencannabis.commerce\x1a\x15\x62\x61se/ProductKey.proto\x1a\'structs/pricing/PricingDescriptor.proto\"\xb1\x01\n\x0bVariantSpec\x12\x36\n\x07variant\x18\x01 \x01(\x0e\x32%.opencannabis.commerce.ProductVariant\x12\x41\n\x06weight\x18\x02 \x01(\x0e\x32/.opencannabis.structs.pricing.PricingWeightTierH\x00\x12\x0e\n\x04size\x18\x03 \x01(\tH\x00\x12\x0f\n\x05\x63olor\x18\x04 \x01(\tH\x00\x42\x06\n\x04spec\"v\n\x04Item\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x33\n\x07variant\x18\x02 \x03(\x0b\x32\".opencannabis.commerce.VariantSpec\x12\r\n\x05\x63ount\x18\x03 \x01(\r*1\n\x0eProductVariant\x12\n\n\x06WEIGHT\x10\x00\x12\t\n\x05\x43OLOR\x10\x01\x12\x08\n\x04SIZE\x10\x02\x42\x36\n\x1fio.opencannabis.schema.commerceB\tOrderItemH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x13\x63ommerce/Item.proto\x12\x15opencannabis.commerce\x1a\x15\x62\x61se/ProductKey.proto\x1a\'structs/pricing/PricingDescriptor.proto\"\xb1\x01\n\x0bVariantSpec\x12\x36\n\x07variant\x18\x01 \x01(\x0e\x32%.opencannabis.commerce.ProductVariant\x12\x41\n\x06weight\x18\x02 \x01(\x0e\x32/.opencannabis.structs.pricing.PricingWeightTierH\x00\x12\x0e\n\x04size\x18\x03 \x01(\tH\x00\x12\x0f\n\x05\x63olor\x18\x04 \x01(\tH\x00\x42\x06\n\x04spec\"\x96\x01\n\x04Item\x12*\n\x03key\x18\x01 \x01(\x0b\x32\x1d.opencannabis.base.ProductKey\x12\x33\n\x07variant\x18\x02 \x03(\x0b\x32\".opencannabis.commerce.VariantSpec\x12\r\n\x05\x63ount\x18\x03 \x01(\r\x12\x0b\n\x03uri\x18\x04 \x01(\t\x12\x11\n\timage_uri\x18\x05 \x01(\t*1\n\x0eProductVariant\x12\n\n\x06WEIGHT\x10\x00\x12\t\n\x05\x43OLOR\x10\x01\x12\x08\n\x04SIZE\x10\x02\x42\x36\n\x1fio.opencannabis.schema.commerceB\tOrderItemH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[base_dot_ProductKey__pb2.DESCRIPTOR,structs_dot_pricing_dot_PricingDescriptor__pb2.DESCRIPTOR,])
 
@@ -47,8 +47,8 @@ _PRODUCTVARIANT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=410,
-  serialized_end=459,
+  serialized_start=443,
+  serialized_end=492,
 )
 _sym_db.RegisterEnumDescriptor(_PRODUCTVARIANT)
 
@@ -142,6 +142,20 @@ _ITEM = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='uri', full_name='opencannabis.commerce.Item.uri', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='image_uri', full_name='opencannabis.commerce.Item.image_uri', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -154,8 +168,8 @@ _ITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=290,
-  serialized_end=408,
+  serialized_start=291,
+  serialized_end=441,
 )
 
 _VARIANTSPEC.fields_by_name['variant'].enum_type = _PRODUCTVARIANT

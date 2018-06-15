@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='identity/IDMedia.proto',
   package='bloombox.schema.identity',
   syntax='proto3',
-  serialized_pb=_b('\n\x16identity/IDMedia.proto\x12\x18\x62loombox.schema.identity\x1a\x1cmedia/MediaOrientation.proto\"\xb2\x01\n\x11IDMediaAttachment\x12/\n\x04type\x18\x01 \x01(\x0e\x32!.bloombox.schema.identity.IDMedia\x12\x39\n\x0borientation\x18\x02 \x01(\x0e\x32$.opencannabis.media.MediaOrientation\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\x0c\x12\x12\n\nimage_type\x18\x04 \x01(\r\x12\x0f\n\x07quality\x18\x05 \x01(\x01*>\n\x07IDMedia\x12\x12\n\x0e\x44OCUMENT_FRONT\x10\x00\x12\x11\n\rDOCUMENT_REAR\x10\x01\x12\x0c\n\x08PORTRAIT\x10\x02\x42\'\n\x1bio.bloombox.schema.identityH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n\x16identity/IDMedia.proto\x12\x18\x62loombox.schema.identity\x1a\x1cmedia/MediaOrientation.proto\"\xb2\x01\n\x11IDMediaAttachment\x12/\n\x04type\x18\x01 \x01(\x0e\x32!.bloombox.schema.identity.IDMedia\x12\x39\n\x0borientation\x18\x02 \x01(\x0e\x32$.opencannabis.media.MediaOrientation\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\x0c\x12\x12\n\nimage_type\x18\x04 \x01(\r\x12\x0f\n\x07quality\x18\x05 \x01(\x01*>\n\x07IDMedia\x12\x12\n\x0e\x44OCUMENT_FRONT\x10\x00\x12\x11\n\rDOCUMENT_REAR\x10\x01\x12\x0c\n\x08PORTRAIT\x10\x02\x42\x36\n\x1bio.bloombox.schema.identityB\rIdentityMediaH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
   dependencies=[media_dot_MediaOrientation__pb2.DESCRIPTOR,])
 
@@ -131,5 +131,5 @@ _sym_db.RegisterMessage(IDMediaAttachment)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\033io.bloombox.schema.identityH\001P\001\242\002\003BBS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\033io.bloombox.schema.identityB\rIdentityMediaH\001P\000\242\002\003BBS'))
 # @@protoc_insertion_point(module_scope)

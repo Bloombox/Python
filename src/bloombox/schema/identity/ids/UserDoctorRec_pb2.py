@@ -14,6 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 import bq_field_pb2 as bq__field__pb2
+from core import Datamodel_pb2 as core_dot_Datamodel__pb2
 from geo import USState_pb2 as geo_dot_USState__pb2
 from person import Person_pb2 as person_dot_Person__pb2
 from temporal import Date_pb2 as temporal_dot_Date__pb2
@@ -23,9 +24,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='identity/ids/UserDoctorRec.proto',
   package='bloombox.schema.identity.ids',
   syntax='proto3',
-  serialized_pb=_b('\n identity/ids/UserDoctorRec.proto\x12\x1c\x62loombox.schema.identity.ids\x1a\x0e\x62q_field.proto\x1a\x11geo/USState.proto\x1a\x13person/Person.proto\x1a\x13temporal/Date.proto\"\xd9\x03\n\rUserDoctorRec\x12%\n\x02id\x18\x01 \x01(\tB\x19\x8a@\x16ID number/unique code.\x12`\n\x0f\x65xpiration_date\x18\x02 \x01(\x0b\x32\x1b.opencannabis.temporal.DateB*\x8a@\'Expiration date for the recommendation.\x12&\n\x07\x62\x61rcode\x18\x03 \x01(\tB\x15\x8a@\x12Raw barcode value.\x12\\\n\x05state\x18\x04 \x01(\x0e\x32\x1d.opencannabis.geo.usa.USStateB.\x8a@+US state where the recommendation is valid.\x12\x33\n\x07\x63ountry\x18\x05 \x01(\tB\"\x8a@\x1f\x43ountry for the recommendation.\x12)\n\tdoctor_id\x18\x06 \x01(\tB\x16\x8a@\x13\x44octor\'s unique ID.\x12Y\n\x06\x64octor\x18\x07 \x01(\x0b\x32\x1b.opencannabis.person.PersonB,\x8a@)Personal information about the physician.B+\n\x1fio.bloombox.schema.identity.idsH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n identity/ids/UserDoctorRec.proto\x12\x1c\x62loombox.schema.identity.ids\x1a\x0e\x62q_field.proto\x1a\x14\x63ore/Datamodel.proto\x1a\x11geo/USState.proto\x1a\x13person/Person.proto\x1a\x13temporal/Date.proto\"\xdf\x03\n\rUserDoctorRec\x12+\n\x02id\x18\x01 \x01(\tB\x1f\xc2\xb5\x03\x02\x08\x02\x8a@\x16ID number/unique code.\x12`\n\x0f\x65xpiration_date\x18\x02 \x01(\x0b\x32\x1b.opencannabis.temporal.DateB*\x8a@\'Expiration date for the recommendation.\x12&\n\x07\x62\x61rcode\x18\x03 \x01(\tB\x15\x8a@\x12Raw barcode value.\x12\\\n\x05state\x18\x04 \x01(\x0e\x32\x1d.opencannabis.geo.usa.USStateB.\x8a@+US state where the recommendation is valid.\x12\x33\n\x07\x63ountry\x18\x05 \x01(\tB\"\x8a@\x1f\x43ountry for the recommendation.\x12)\n\tdoctor_id\x18\x06 \x01(\tB\x16\x8a@\x13\x44octor\'s unique ID.\x12Y\n\x06\x64octor\x18\x07 \x01(\x0b\x32\x1b.opencannabis.person.PersonB,\x8a@)Personal information about the physician.B;\n\x1fio.bloombox.schema.identity.idsB\x0ePrescriptionIDH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
-  dependencies=[bq__field__pb2.DESCRIPTOR,geo_dot_USState__pb2.DESCRIPTOR,person_dot_Person__pb2.DESCRIPTOR,temporal_dot_Date__pb2.DESCRIPTOR,])
+  dependencies=[bq__field__pb2.DESCRIPTOR,core_dot_Datamodel__pb2.DESCRIPTOR,geo_dot_USState__pb2.DESCRIPTOR,person_dot_Person__pb2.DESCRIPTOR,temporal_dot_Date__pb2.DESCRIPTOR,])
 
 
 
@@ -43,7 +44,7 @@ _USERDOCTORREC = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\026ID number/unique code.')), file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\002\212@\026ID number/unique code.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='expiration_date', full_name='bloombox.schema.identity.ids.UserDoctorRec.expiration_date', index=1,
       number=2, type=11, cpp_type=10, label=1,
@@ -98,8 +99,8 @@ _USERDOCTORREC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=144,
-  serialized_end=617,
+  serialized_start=166,
+  serialized_end=645,
 )
 
 _USERDOCTORREC.fields_by_name['expiration_date'].message_type = temporal_dot_Date__pb2._DATE
@@ -117,9 +118,9 @@ _sym_db.RegisterMessage(UserDoctorRec)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\037io.bloombox.schema.identity.idsH\001P\001\242\002\003BBS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\037io.bloombox.schema.identity.idsB\016PrescriptionIDH\001P\000\242\002\003BBS'))
 _USERDOCTORREC.fields_by_name['id'].has_options = True
-_USERDOCTORREC.fields_by_name['id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\026ID number/unique code.'))
+_USERDOCTORREC.fields_by_name['id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\002\212@\026ID number/unique code.'))
 _USERDOCTORREC.fields_by_name['expiration_date'].has_options = True
 _USERDOCTORREC.fields_by_name['expiration_date']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\'Expiration date for the recommendation.'))
 _USERDOCTORREC.fields_by_name['barcode'].has_options = True

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='temporal/Date.proto',
   package='opencannabis.temporal',
   syntax='proto3',
-  serialized_pb=_b('\n\x13temporal/Date.proto\x12\x15opencannabis.temporal\x1a\x0e\x62q_field.proto\"]\n\x04\x44\x61te\x12M\n\x07iso8601\x18\x01 \x01(\tB:\x8a@7ISO8601-formatted calendar date value, like YYYY-MM-DD.H\x00\x42\x06\n\x04specB+\n\x1fio.opencannabis.schema.temporalH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x13temporal/Date.proto\x12\x15opencannabis.temporal\x1a\x0e\x62q_field.proto\"]\n\x04\x44\x61te\x12M\n\x07iso8601\x18\x01 \x01(\tB:\x8a@7ISO8601-formatted calendar date value, like YYYY-MM-DD.H\x00\x42\x06\n\x04specB9\n\x1fio.opencannabis.schema.temporalB\x0cTemporalDateH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,])
 
@@ -75,7 +75,7 @@ _sym_db.RegisterMessage(Date)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\037io.opencannabis.schema.temporalH\001P\001\242\002\003OCS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\037io.opencannabis.schema.temporalB\014TemporalDateH\001P\000\242\002\003OCS'))
 _DATE.fields_by_name['iso8601'].has_options = True
 _DATE.fields_by_name['iso8601']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@7ISO8601-formatted calendar date value, like YYYY-MM-DD.'))
 # @@protoc_insertion_point(module_scope)

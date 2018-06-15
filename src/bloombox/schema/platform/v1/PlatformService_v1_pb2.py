@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='platform/v1/PlatformService_v1.proto',
   package='bloombox.schema.services.platform.v1',
   syntax='proto3',
-  serialized_pb=_b('\n$platform/v1/PlatformService_v1.proto\x12$bloombox.schema.services.platform.v1\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1cgoogle/api/annotations.proto\x1a(protoc-gen-swagger/options/swagger.proto\"j\n\x04Ping\x1a\t\n\x07Request\x1aW\n\x08Response\x12K\n\x06status\x18\x01 \x01(\x0e\x32;.bloombox.schema.services.platform.v1.PlatformServiceStatus\"\'\n\x0bHealthcheck\x1a\x18\n\x07Request\x12\r\n\x05probe\x18\x01 \x01(\t\"|\n\rDomainResolve\x1a\x19\n\x07Request\x12\x0e\n\x06origin\x18\x01 \x01(\t\x1aP\n\x08Response\x12\x0f\n\x07partner\x18\x01 \x01(\t\x12\x10\n\x08location\x18\x02 \x01(\t\x12\x0e\n\x06\x61pikey\x18\x03 \x01(\t\x12\x11\n\tclient_id\x18\x04 \x01(\t*a\n\rPlatformError\x12\x0c\n\x08NO_ERROR\x10\x00\x12\x18\n\x14SEARCH_NOT_AVAILABLE\x10\x01\x12\x12\n\x0eORIGIN_INVALID\x10\x02\x12\x14\n\x10ORIGIN_NOT_FOUND\x10\x03*G\n\x15PlatformServiceStatus\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x06\n\x02UP\x10\x01\x12\x08\n\x04\x44OWN\x10\x02\x12\x0f\n\x0bMAINTENANCE\x10\x03\x32\xd8\x05\n\x08Platform\x12\xcf\x01\n\x04Ping\x12\x32.bloombox.schema.services.platform.v1.Ping.Request\x1a\x33.bloombox.schema.services.platform.v1.Ping.Response\"^\x82\xd3\xe4\x93\x02\x13\x12\x11/platform/v1/ping\x92\x41\x42\x12\x0cService Ping\x1a,Query for service uptime/maintenance status.*\x04Ping\x12\xcb\x01\n\x06Health\x12\x16.google.protobuf.Empty\x1a\x16.google.protobuf.Empty\"\x90\x01\x82\xd3\xe4\x93\x02\x15\x12\x13/platform/v1/health\x92\x41r\x12\x13Service Healthcheck\x1aNIf the service is running correctly, always responds with an empty HTTP200/OK.*\x0bHealthcheck\x12\xab\x02\n\x07Resolve\x12;.bloombox.schema.services.platform.v1.DomainResolve.Request\x1a<.bloombox.schema.services.platform.v1.DomainResolve.Response\"\xa4\x01\x82\xd3\xe4\x93\x02\x1e\x12\x1c/platform/v1/domain/{origin}\x92\x41}\x12\x0eResolve Domain\x1a\x62\x46or custom-hosting endpoints, given a web origin, resolve the owning partner and location account.*\x07ResolveB\xeb\x08\n\'io.bloombox.schema.services.platform.v1H\x01P\x01\xa2\x02\x03\x42\x42S\x92\x41\xb4\x08\x12\x66\n\x0cPlatform API\x1a\x19https://bloombox.io/terms\"7\n\x08\x42loombox\x12\x13https://bloombox.io\x1a\x16\x64\x65velopers@bloombox.io2\x02v1\x1a\x12\x61pi.bloombox.cloud*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonZ\xb8\x06\nd\n\x0b\x41piKeyParam\x12U\x08\x02\x12JParameter for identifying API key owned by the invoking project or system.\x1a\x03key \x01\nh\n\x0c\x41piKeyHeader\x12X\x08\x02\x12GHeader for identifying API key owned by the invoking project or system.\x1a\tX-API-Key \x01\n\xe5\x04\n\x06OAuth2\x12\xda\x04\x08\x03\x12]Bloombox Identity-powered OAuth2 access, authorized on behalf of an end-user or organization.(\x04\x32,https://authorize.bloombox.cloud/oauth2/auth:-https://authorize.bloombox.cloud/oauth2/tokenB\x97\x03\n1\n\x07offline\x12&Offline access to authorized user data\n9\n\x06openid\x12/OIDC (OpenID Connect) access for seamless logon\nE\n\x0cpartner:read\x12\x35Read access to a partner\'s profile and basic settings\nG\n\rpartner:write\x12\x36Write access to a partner\'s profile and basic settings\nV\n\rpartner:admin\x12\x45\x46ull administrative access rights to a partner\'s profile and settings\n?\n\x0eplatform:admin\x12-Platform-level internal administrative accessb#\n\x0f\n\x0b\x41piKeyParam\x12\x00\n\x10\n\x0c\x41piKeyHeader\x12\x00r/\n\rBloombox APIs\x12\x1ehttps://apidocs.bloombox.cloudb\x06proto3')
+  serialized_pb=_b('\n$platform/v1/PlatformService_v1.proto\x12$bloombox.schema.services.platform.v1\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1cgoogle/api/annotations.proto\x1a(protoc-gen-swagger/options/swagger.proto\"j\n\x04Ping\x1a\t\n\x07Request\x1aW\n\x08Response\x12K\n\x06status\x18\x01 \x01(\x0e\x32;.bloombox.schema.services.platform.v1.PlatformServiceStatus\"\'\n\x0bHealthcheck\x1a\x18\n\x07Request\x12\r\n\x05probe\x18\x01 \x01(\t\"|\n\rDomainResolve\x1a\x19\n\x07Request\x12\x0e\n\x06origin\x18\x01 \x01(\t\x1aP\n\x08Response\x12\x0f\n\x07partner\x18\x01 \x01(\t\x12\x10\n\x08location\x18\x02 \x01(\t\x12\x0e\n\x06\x61pikey\x18\x03 \x01(\t\x12\x11\n\tclient_id\x18\x04 \x01(\t\"\x95\x01\n\nDomainInfo\x1a\x32\n\x07Request\x12\x12\n\npartner_id\x18\x01 \x01(\t\x12\x13\n\x0blocation_id\x18\x02 \x01(\t\x1aS\n\x08Response\x12\x0c\n\x04shop\x18\x01 \x01(\t\x12\x0c\n\x04menu\x18\x02 \x01(\t\x12\x11\n\tdashboard\x18\x03 \x01(\t\x12\n\n\x02tv\x18\x04 \x01(\t\x12\x0c\n\x04link\x18\x05 \x01(\t*a\n\rPlatformError\x12\x0c\n\x08NO_ERROR\x10\x00\x12\x18\n\x14SEARCH_NOT_AVAILABLE\x10\x01\x12\x12\n\x0eORIGIN_INVALID\x10\x02\x12\x14\n\x10ORIGIN_NOT_FOUND\x10\x03*G\n\x15PlatformServiceStatus\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x06\n\x02UP\x10\x01\x12\x08\n\x04\x44OWN\x10\x02\x12\x0f\n\x0bMAINTENANCE\x10\x03\x32\xf2\x07\n\x08Platform\x12\xcf\x01\n\x04Ping\x12\x32.bloombox.schema.services.platform.v1.Ping.Request\x1a\x33.bloombox.schema.services.platform.v1.Ping.Response\"^\x82\xd3\xe4\x93\x02\x13\x12\x11/platform/v1/ping\x92\x41\x42\x12\x0cService Ping\x1a,Query for service uptime/maintenance status.*\x04Ping\x12\xcb\x01\n\x06Health\x12\x16.google.protobuf.Empty\x1a\x16.google.protobuf.Empty\"\x90\x01\x82\xd3\xe4\x93\x02\x15\x12\x13/platform/v1/health\x92\x41r\x12\x13Service Healthcheck\x1aNIf the service is running correctly, always responds with an empty HTTP200/OK.*\x0bHealthcheck\x12\xab\x02\n\x07Resolve\x12;.bloombox.schema.services.platform.v1.DomainResolve.Request\x1a<.bloombox.schema.services.platform.v1.DomainResolve.Response\"\xa4\x01\x82\xd3\xe4\x93\x02\x1e\x12\x1c/platform/v1/domain/{origin}\x92\x41}\x12\x0eResolve Domain\x1a\x62\x46or custom-hosting endpoints, given a web origin, resolve the owning partner and location account.*\x07Resolve\x12\x97\x02\n\x07\x44omains\x12\x38.bloombox.schema.services.platform.v1.DomainInfo.Request\x1a\x39.bloombox.schema.services.platform.v1.DomainInfo.Response\"\x96\x01\x82\xd3\xe4\x93\x02\x44\x12\x42/platform/v1/partners/{partner_id}/locations/{location_id}/domains\x92\x41I\x12\x07\x44omains\x1a\x32Retreive domain info for a given partner/location.*\nDomainInfoB\xeb\x08\n\'io.bloombox.schema.services.platform.v1H\x01P\x01\xa2\x02\x03\x42\x42S\x92\x41\xb4\x08\x12\x66\n\x0cPlatform API\x1a\x19https://bloombox.io/terms\"7\n\x08\x42loombox\x12\x13https://bloombox.io\x1a\x16\x64\x65velopers@bloombox.io2\x02v1\x1a\x12\x61pi.bloombox.cloud*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonZ\xb8\x06\nd\n\x0b\x41piKeyParam\x12U\x08\x02\x12JParameter for identifying API key owned by the invoking project or system.\x1a\x03key \x01\nh\n\x0c\x41piKeyHeader\x12X\x08\x02\x12GHeader for identifying API key owned by the invoking project or system.\x1a\tX-API-Key \x01\n\xe5\x04\n\x06OAuth2\x12\xda\x04\x08\x03\x12]Bloombox Identity-powered OAuth2 access, authorized on behalf of an end-user or organization.(\x04\x32,https://authorize.bloombox.cloud/oauth2/auth:-https://authorize.bloombox.cloud/oauth2/tokenB\x97\x03\n1\n\x07offline\x12&Offline access to authorized user data\n9\n\x06openid\x12/OIDC (OpenID Connect) access for seamless logon\nE\n\x0cpartner:read\x12\x35Read access to a partner\'s profile and basic settings\nG\n\rpartner:write\x12\x36Write access to a partner\'s profile and basic settings\nV\n\rpartner:admin\x12\x45\x46ull administrative access rights to a partner\'s profile and settings\n?\n\x0eplatform:admin\x12-Platform-level internal administrative accessb#\n\x0f\n\x0b\x41piKeyParam\x12\x00\n\x10\n\x0c\x41piKeyHeader\x12\x00r/\n\rBloombox APIs\x12\x1ehttps://apidocs.bloombox.cloudb\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,protoc__gen__swagger_dot_options_dot_swagger__pb2.DESCRIPTOR,])
 
@@ -52,8 +52,8 @@ _PLATFORMERROR = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=454,
-  serialized_end=551,
+  serialized_start=606,
+  serialized_end=703,
 )
 _sym_db.RegisterEnumDescriptor(_PLATFORMERROR)
 
@@ -83,8 +83,8 @@ _PLATFORMSERVICESTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=553,
-  serialized_end=624,
+  serialized_start=705,
+  serialized_end=776,
 )
 _sym_db.RegisterEnumDescriptor(_PLATFORMSERVICESTATUS)
 
@@ -335,15 +335,137 @@ _DOMAINRESOLVE = _descriptor.Descriptor(
   serialized_end=452,
 )
 
+
+_DOMAININFO_REQUEST = _descriptor.Descriptor(
+  name='Request',
+  full_name='bloombox.schema.services.platform.v1.DomainInfo.Request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='partner_id', full_name='bloombox.schema.services.platform.v1.DomainInfo.Request.partner_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='location_id', full_name='bloombox.schema.services.platform.v1.DomainInfo.Request.location_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=469,
+  serialized_end=519,
+)
+
+_DOMAININFO_RESPONSE = _descriptor.Descriptor(
+  name='Response',
+  full_name='bloombox.schema.services.platform.v1.DomainInfo.Response',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='shop', full_name='bloombox.schema.services.platform.v1.DomainInfo.Response.shop', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='menu', full_name='bloombox.schema.services.platform.v1.DomainInfo.Response.menu', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='dashboard', full_name='bloombox.schema.services.platform.v1.DomainInfo.Response.dashboard', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='tv', full_name='bloombox.schema.services.platform.v1.DomainInfo.Response.tv', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='link', full_name='bloombox.schema.services.platform.v1.DomainInfo.Response.link', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=521,
+  serialized_end=604,
+)
+
+_DOMAININFO = _descriptor.Descriptor(
+  name='DomainInfo',
+  full_name='bloombox.schema.services.platform.v1.DomainInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[_DOMAININFO_REQUEST, _DOMAININFO_RESPONSE, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=455,
+  serialized_end=604,
+)
+
 _PING_REQUEST.containing_type = _PING
 _PING_RESPONSE.fields_by_name['status'].enum_type = _PLATFORMSERVICESTATUS
 _PING_RESPONSE.containing_type = _PING
 _HEALTHCHECK_REQUEST.containing_type = _HEALTHCHECK
 _DOMAINRESOLVE_REQUEST.containing_type = _DOMAINRESOLVE
 _DOMAINRESOLVE_RESPONSE.containing_type = _DOMAINRESOLVE
+_DOMAININFO_REQUEST.containing_type = _DOMAININFO
+_DOMAININFO_RESPONSE.containing_type = _DOMAININFO
 DESCRIPTOR.message_types_by_name['Ping'] = _PING
 DESCRIPTOR.message_types_by_name['Healthcheck'] = _HEALTHCHECK
 DESCRIPTOR.message_types_by_name['DomainResolve'] = _DOMAINRESOLVE
+DESCRIPTOR.message_types_by_name['DomainInfo'] = _DOMAININFO
 DESCRIPTOR.enum_types_by_name['PlatformError'] = _PLATFORMERROR
 DESCRIPTOR.enum_types_by_name['PlatformServiceStatus'] = _PLATFORMSERVICESTATUS
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -409,6 +531,29 @@ _sym_db.RegisterMessage(DomainResolve)
 _sym_db.RegisterMessage(DomainResolve.Request)
 _sym_db.RegisterMessage(DomainResolve.Response)
 
+DomainInfo = _reflection.GeneratedProtocolMessageType('DomainInfo', (_message.Message,), dict(
+
+  Request = _reflection.GeneratedProtocolMessageType('Request', (_message.Message,), dict(
+    DESCRIPTOR = _DOMAININFO_REQUEST,
+    __module__ = 'platform.v1.PlatformService_v1_pb2'
+    # @@protoc_insertion_point(class_scope:bloombox.schema.services.platform.v1.DomainInfo.Request)
+    ))
+  ,
+
+  Response = _reflection.GeneratedProtocolMessageType('Response', (_message.Message,), dict(
+    DESCRIPTOR = _DOMAININFO_RESPONSE,
+    __module__ = 'platform.v1.PlatformService_v1_pb2'
+    # @@protoc_insertion_point(class_scope:bloombox.schema.services.platform.v1.DomainInfo.Response)
+    ))
+  ,
+  DESCRIPTOR = _DOMAININFO,
+  __module__ = 'platform.v1.PlatformService_v1_pb2'
+  # @@protoc_insertion_point(class_scope:bloombox.schema.services.platform.v1.DomainInfo)
+  ))
+_sym_db.RegisterMessage(DomainInfo)
+_sym_db.RegisterMessage(DomainInfo.Request)
+_sym_db.RegisterMessage(DomainInfo.Response)
+
 
 DESCRIPTOR.has_options = True
 DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\'io.bloombox.schema.services.platform.v1H\001P\001\242\002\003BBS\222A\264\010\022f\n\014Platform API\032\031https://bloombox.io/terms\"7\n\010Bloombox\022\023https://bloombox.io\032\026developers@bloombox.io2\002v1\032\022api.bloombox.cloud*\001\0022\020application/json:\020application/jsonZ\270\006\nd\n\013ApiKeyParam\022U\010\002\022JParameter for identifying API key owned by the invoking project or system.\032\003key \001\nh\n\014ApiKeyHeader\022X\010\002\022GHeader for identifying API key owned by the invoking project or system.\032\tX-API-Key \001\n\345\004\n\006OAuth2\022\332\004\010\003\022]Bloombox Identity-powered OAuth2 access, authorized on behalf of an end-user or organization.(\0042,https://authorize.bloombox.cloud/oauth2/auth:-https://authorize.bloombox.cloud/oauth2/tokenB\227\003\n1\n\007offline\022&Offline access to authorized user data\n9\n\006openid\022/OIDC (OpenID Connect) access for seamless logon\nE\n\014partner:read\0225Read access to a partner\'s profile and basic settings\nG\n\rpartner:write\0226Write access to a partner\'s profile and basic settings\nV\n\rpartner:admin\022EFull administrative access rights to a partner\'s profile and settings\n?\n\016platform:admin\022-Platform-level internal administrative accessb#\n\017\n\013ApiKeyParam\022\000\n\020\n\014ApiKeyHeader\022\000r/\n\rBloombox APIs\022\036https://apidocs.bloombox.cloud'))
@@ -419,8 +564,8 @@ _PLATFORM = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=627,
-  serialized_end=1355,
+  serialized_start=779,
+  serialized_end=1789,
   methods=[
   _descriptor.MethodDescriptor(
     name='Ping',
@@ -448,6 +593,15 @@ _PLATFORM = _descriptor.ServiceDescriptor(
     input_type=_DOMAINRESOLVE_REQUEST,
     output_type=_DOMAINRESOLVE_RESPONSE,
     options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002\036\022\034/platform/v1/domain/{origin}\222A}\022\016Resolve Domain\032bFor custom-hosting endpoints, given a web origin, resolve the owning partner and location account.*\007Resolve')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='Domains',
+    full_name='bloombox.schema.services.platform.v1.Platform.Domains',
+    index=3,
+    containing_service=None,
+    input_type=_DOMAININFO_REQUEST,
+    output_type=_DOMAININFO_RESPONSE,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002D\022B/platform/v1/partners/{partner_id}/locations/{location_id}/domains\222AI\022\007Domains\0322Retreive domain info for a given partner/location.*\nDomainInfo')),
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_PLATFORM)

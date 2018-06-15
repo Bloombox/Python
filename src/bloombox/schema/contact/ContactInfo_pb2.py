@@ -24,7 +24,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='contact/ContactInfo.proto',
   package='opencannabis.contact',
   syntax='proto3',
-  serialized_pb=_b('\n\x19\x63ontact/ContactInfo.proto\x12\x14opencannabis.contact\x1a\x0e\x62q_field.proto\x1a\x12geo/Location.proto\x1a\x19\x63ontact/PhoneNumber.proto\x1a\x1a\x63ontact/EmailAddress.proto\x1a\x15\x63ontact/Website.proto\"\xfc\x02\n\x0b\x43ontactInfo\x12k\n\x08location\x18\x01 \x01(\x0b\x32\x1a.opencannabis.geo.LocationB=\x8a@:Geographic location and physical mail contact information.\x12S\n\x05phone\x18\x02 \x01(\x0b\x32!.opencannabis.contact.PhoneNumberB!\x8a@\x1eTelephone contact information.\x12Z\n\x05\x65mail\x18\x03 \x01(\x0b\x32\".opencannabis.contact.EmailAddressB\'\x8a@$Electronic mail contact information.\x12O\n\x07website\x18\x04 \x01(\x0b\x32\x1d.opencannabis.contact.WebsiteB\x1f\x8a@\x1cWebsite contact information.B*\n\x1eio.opencannabis.schema.contactH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x19\x63ontact/ContactInfo.proto\x12\x14opencannabis.contact\x1a\x0e\x62q_field.proto\x1a\x12geo/Location.proto\x1a\x19\x63ontact/PhoneNumber.proto\x1a\x1a\x63ontact/EmailAddress.proto\x1a\x15\x63ontact/Website.proto\"\xfc\x02\n\x0b\x43ontactInfo\x12k\n\x08location\x18\x01 \x01(\x0b\x32\x1a.opencannabis.geo.LocationB=\x8a@:Geographic location and physical mail contact information.\x12S\n\x05phone\x18\x02 \x01(\x0b\x32!.opencannabis.contact.PhoneNumberB!\x8a@\x1eTelephone contact information.\x12Z\n\x05\x65mail\x18\x03 \x01(\x0b\x32\".opencannabis.contact.EmailAddressB\'\x8a@$Electronic mail contact information.\x12O\n\x07website\x18\x04 \x01(\x0b\x32\x1d.opencannabis.contact.WebsiteB\x1f\x8a@\x1cWebsite contact information.B:\n\x1eio.opencannabis.schema.contactB\x0eGenericContactH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,geo_dot_Location__pb2.DESCRIPTOR,contact_dot_PhoneNumber__pb2.DESCRIPTOR,contact_dot_EmailAddress__pb2.DESCRIPTOR,contact_dot_Website__pb2.DESCRIPTOR,])
 
@@ -98,7 +98,7 @@ _sym_db.RegisterMessage(ContactInfo)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.contactH\001P\001\242\002\003OCS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.contactB\016GenericContactH\001P\000\242\002\003OCS'))
 _CONTACTINFO.fields_by_name['location'].has_options = True
 _CONTACTINFO.fields_by_name['location']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@:Geographic location and physical mail contact information.'))
 _CONTACTINFO.fields_by_name['phone'].has_options = True

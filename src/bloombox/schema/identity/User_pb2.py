@@ -15,6 +15,7 @@ _sym_db = _symbol_database.Default()
 
 
 import bq_field_pb2 as bq__field__pb2
+from core import Datamodel_pb2 as core_dot_Datamodel__pb2
 from media import MediaItem_pb2 as media_dot_MediaItem__pb2
 from temporal import Instant_pb2 as temporal_dot_Instant__pb2
 from person import Person_pb2 as person_dot_Person__pb2
@@ -31,9 +32,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='identity/User.proto',
   package='bloombox.schema.identity',
   syntax='proto3',
-  serialized_pb=_b('\n\x13identity/User.proto\x12\x18\x62loombox.schema.identity\x1a\x0e\x62q_field.proto\x1a\x15media/MediaItem.proto\x1a\x16temporal/Instant.proto\x1a\x13person/Person.proto\x1a\x11identity/ID.proto\x1a identity/ids/UserDoctorRec.proto\x1a\x1bproducts/menu/Section.proto\x1a\x12structs/Grow.proto\x1a\x15structs/Species.proto\x1a$structs/labtesting/TestResults.proto\x1a(security/access/PartnerPermissions.proto\"g\n\x07UserKey\x12\'\n\x03uid\x18\x01 \x01(\tB\x1a\x8a@\x17Unique ID for the user.\x12\x33\n\x08identity\x18\x02 \x01(\tB!\x8a@\x1eSpecific user identity in use.\"\xcc\t\n\x04User\x12\'\n\x03uid\x18\x01 \x01(\tB\x1a\x8a@\x17Unique ID for the user.\x12S\n\x05\x66lags\x18\x02 \x01(\x0b\x32#.bloombox.schema.identity.UserFlagsB\x1f\x8a@\x1c\x42oolean flags for this user.\x12Z\n\x06person\x18\x03 \x01(\x0b\x32\x1b.opencannabis.person.PersonB-\x8a@*Person\'s information that backs this user.\x12\x64\n\x0eidentification\x18\x14 \x03(\x0b\x32\x1c.bloombox.schema.identity.IDB.\x80@\x01\x8a@(Government ID associated with this user.\x12z\n\ndoctor_rec\x18\x15 \x03(\x0b\x32+.bloombox.schema.identity.ids.UserDoctorRecB9\x80@\x01\x8a@3Doctor\'s recommendations associated with this user.\x12m\n\x04seen\x18\x1e \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB?\x8a@<Last time this user was seen, via auth/login/enrollment etc.\x12\\\n\x06signup\x18\x1f \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB,\x8a@)Timestamp for when this user was created.\x12o\n\nidentities\x18( \x03(\x0b\x32..bloombox.schema.identity.User.IdentitiesEntryB+\x80@\x01\x8a@%Identities associated with this user.\x12`\n\x05media\x18) \x03(\x0b\x32).bloombox.schema.identity.User.MediaEntryB&\x80@\x01\x8a@ Media associated with this user.\x12_\n\x08\x63onsumer\x18\x64 \x01(\x0b\x32).bloombox.schema.identity.ConsumerProfileB\"\x8a@\x1f\x43onsumer profile for this user.\x12_\n\x08industry\x18\x65 \x01(\x0b\x32).bloombox.schema.identity.IndustryProfileB\"\x8a@\x1fIndustry profile for this user.\x1aY\n\x0fIdentitiesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x35\n\x05value\x18\x02 \x01(\x0b\x32&.bloombox.schema.identity.UserIdentity:\x02\x38\x01\x1aK\n\nMediaEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12,\n\x05value\x18\x02 \x01(\x0b\x32\x1d.opencannabis.media.MediaItem:\x02\x38\x01\"\xf7\x02\n\tUserFlags\x12\x44\n\tvalidated\x18\x01 \x01(\x08\x42\x31\x8a@.Indicates that the account has been validated.\x12H\n\tsuspended\x18\x02 \x01(\x08\x42\x35\x8a@2Indicates that the account is currently suspended.\x12\x42\n\x05\x61\x64min\x18\x03 \x01(\x08\x42\x33\x8a@0Indicates that the account has admin privileges.\x12G\n\x04\x62\x65ta\x18\x04 \x01(\x08\x42\x39\x8a@6Indicates that the account has access to beta systems.\x12M\n\x07sandbox\x18\x05 \x01(\x08\x42<\x8a@9Indicates that the account has access to sandbox systems.\"\xcb\x02\n\x0cUserIdentity\x12l\n\x08provider\x18\x01 \x01(\x0e\x32*.bloombox.schema.identity.IdentityProviderB.\x8a@+Provider for this external/foreign account.\x12\x46\n\x02id\x18\x02 \x01(\tB:\x8a@7Unique ID for this account with the specified provider.\x12\x84\x01\n\x04seen\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantBV\x8a@STimestamp for when this identity was last user to authenticate the underlying user.\"\x90\x06\n\x0f\x43onsumerProfile\x12\x30\n\x06\x61\x63tive\x18\x01 \x01(\x08\x42 \x8a@\x1dProfile active/inactive flag.\x12N\n\x15\x66\x61vorite_dispensaries\x18\x02 \x03(\tB/\x8a@,Enumerates favorite dispensaries for a user.\x12~\n\x11\x65nrollment_source\x18\x03 \x01(\x0e\x32*.bloombox.schema.identity.EnrollmentSourceB7\x8a@4Specifies enrollment source attribution information.\x12\x61\n\x12\x65nrollment_channel\x18\x04 \x01(\tBE\x8a@BArbitrary string for the channel through which this user enrolled.\x12r\n\x0bpreferences\x18\x05 \x01(\x0b\x32-.bloombox.schema.identity.ConsumerPreferencesB.\x8a@+Preferences attached to a consumer account.\x12n\n\x04type\x18\x06 \x01(\x0e\x32&.bloombox.schema.identity.ConsumerTypeB8\x8a@5Specifies the primary consumer type for this account.\x12x\n\x0freferral_source\x18\x07 \x01(\x0e\x32(.bloombox.schema.identity.ReferralSourceB5\x8a@2Specifies referral source attribution information.\x12:\n\x0freferral_detail\x18\x08 \x01(\tB!\x8a@\x1eSpecifies the referrer\'s name.\"\xa8\x05\n\x0fMenuPreferences\x12j\n\x07section\x18\x01 \x03(\x0e\x32+.opencannabis.products.menu.section.SectionB,\x8a@)Preferred menu sections or product types.\x12h\n\x07\x66\x65\x65ling\x18\x02 \x03(\x0e\x32(.opencannabis.structs.labtesting.FeelingB-\x8a@*Preferred feelings or experiential states.\x12[\n\ntaste_note\x18\x03 \x03(\x0e\x32*.opencannabis.structs.labtesting.TasteNoteB\x1b\x8a@\x18Preferred tasting notes.\x12\x64\n\x0f\x64\x65sired_potency\x18\x04 \x01(\x0e\x32\x30.opencannabis.structs.labtesting.PotencyEstimateB\x19\x8a@\x16\x44\x65sired potency level.\x12k\n\x11\x63\x61nnabinoid_ratio\x18\x05 \x01(\x0e\x32\x31.opencannabis.structs.labtesting.CannabinoidRatioB\x1d\x8a@\x1a\x44\x65sired cannabinoid ratio.\x12K\n\x07species\x18\x06 \x03(\x0e\x32\x1d.opencannabis.structs.SpeciesB\x1b\x8a@\x18Preferred species types.\x12\x42\n\x04grow\x18\x07 \x03(\x0e\x32\x1a.opencannabis.structs.GrowB\x18\x8a@\x15Preferred grow types.\"\x84\x01\n\x13\x43onsumerPreferences\x12m\n\x04menu\x18\n \x01(\x0b\x32).bloombox.schema.identity.MenuPreferencesB4\x8a@1Preferred menu sections/product types, and so on.\"\x8b\x04\n\x12\x43onsumerMembership\x12l\n\x0freferral_source\x18\x01 \x01(\x0e\x32*.bloombox.schema.identity.EnrollmentSourceB\'\x8a@$Referral source for this enrollment.\x12^\n\x10referral_channel\x18\x02 \x01(\tBD\x8a@AReferral channel token - an artbirary, end-system provided value.\x12\x62\n\x0csigned_up_at\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB,\x8a@)Timestamp for when this profile enrolled.\x12_\n\x04seen\x18\x04 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB1\x8a@.Timestamp for when this profile was last seen.\x12\x62\n\nforeign_id\x18\x05 \x01(\tBN\x8a@KForeign ID for this membership, in the partner-colocated membership system.\"\xa6\x02\n\x0fIndustryProfile\x12\x32\n\x06\x61\x63tive\x18\x01 \x01(\x08\x42\"\x8a@\x1fProfile inactive/active status.\x12~\n\x08partners\x18\x02 \x03(\x0b\x32\x37.bloombox.schema.identity.IndustryProfile.PartnersEntryB3\x8a@0Map of partner accesses levels to partner codes.\x1a_\n\rPartnersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12=\n\x05value\x18\x02 \x01(\x0b\x32..bloombox.schema.security.access.PartnerAccess:\x02\x38\x01*A\n\rUserMediaType\x12\x0b\n\x07PICTURE\x10\x00\x12\x13\n\x0f\x44RIVERS_LICENSE\x10\x01\x12\x0e\n\nDOCTOR_REC\x10\x02*D\n\x10IdentityProvider\x12\t\n\x05\x45MAIL\x10\x00\x12\n\n\x06GOOGLE\x10\x01\x12\x0c\n\x08\x46\x41\x43\x45\x42OOK\x10\x02\x12\x0b\n\x07TWITTER\x10\x03*l\n\x10\x45nrollmentSource\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\n\n\x06ONLINE\x10\x01\x12\x10\n\x0cINTERNAL_APP\x10\x02\x12\x0f\n\x0bPARTNER_APP\x10\x03\x12\x0c\n\x08IN_STORE\x10\x04\x12\n\n\x06IMPORT\x10\x05*U\n\x0eReferralSource\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07OUTDOOR\x10\x01\x12\x0b\n\x07\x44IGITAL\x10\x02\x12\x10\n\x0cSOCIAL_MEDIA\x10\x03\x12\n\n\x06\x46RIEND\x10\x04*>\n\x0c\x43onsumerType\x12\x0f\n\x0bUNVALIDATED\x10\x00\x12\x10\n\x0cRECREATIONAL\x10\x01\x12\x0b\n\x07MEDICAL\x10\x02\x42\'\n\x1bio.bloombox.schema.identityH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n\x13identity/User.proto\x12\x18\x62loombox.schema.identity\x1a\x0e\x62q_field.proto\x1a\x14\x63ore/Datamodel.proto\x1a\x15media/MediaItem.proto\x1a\x16temporal/Instant.proto\x1a\x13person/Person.proto\x1a\x11identity/ID.proto\x1a identity/ids/UserDoctorRec.proto\x1a\x1bproducts/menu/Section.proto\x1a\x12structs/Grow.proto\x1a\x15structs/Species.proto\x1a$structs/labtesting/TestResults.proto\x1a(security/access/PartnerPermissions.proto\"\x93\n\n\x04User\x12-\n\x03uid\x18\x01 \x01(\tB \xc2\xb5\x03\x02\x08\x02\x8a@\x17Unique ID for the user.\x12Y\n\x05\x66lags\x18\x02 \x01(\x0b\x32#.bloombox.schema.identity.UserFlagsB%\xc2\xb5\x03\x02\x08\x04\x8a@\x1c\x42oolean flags for this user.\x12Z\n\x06person\x18\x03 \x01(\x0b\x32\x1b.opencannabis.person.PersonB-\x8a@*Person\'s information that backs this user.\x12z\n\x0eidentification\x18\x14 \x03(\x0b\x32\x1c.bloombox.schema.identity.IDBD\x80@\x01\x8a@(Government ID associated with this user.\xd2\xb5\x03\x12\x08\x01\x1a\x0eidentification\x12\x8f\x01\n\ndoctor_rec\x18\x15 \x03(\x0b\x32+.bloombox.schema.identity.ids.UserDoctorRecBN\x80@\x01\x8a@3Doctor\'s recommendations associated with this user.\xd2\xb5\x03\x11\x08\x01\x1a\rprescriptions\x12m\n\x04seen\x18\x1e \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB?\x8a@<Last time this user was seen, via auth/login/enrollment etc.\x12\\\n\x06signup\x18\x1f \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB,\x8a@)Timestamp for when this user was created.\x12o\n\nidentities\x18( \x03(\x0b\x32..bloombox.schema.identity.User.IdentitiesEntryB+\x80@\x01\x8a@%Identities associated with this user.\x12`\n\x05media\x18) \x03(\x0b\x32).bloombox.schema.identity.User.MediaEntryB&\x80@\x01\x8a@ Media associated with this user.\x12_\n\x08\x63onsumer\x18\x64 \x01(\x0b\x32).bloombox.schema.identity.ConsumerProfileB\"\x8a@\x1f\x43onsumer profile for this user.\x12_\n\x08industry\x18\x65 \x01(\x0b\x32).bloombox.schema.identity.IndustryProfileB\"\x8a@\x1fIndustry profile for this user.\x1aY\n\x0fIdentitiesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x35\n\x05value\x18\x02 \x01(\x0b\x32&.bloombox.schema.identity.UserIdentity:\x02\x38\x01\x1aK\n\nMediaEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12,\n\x05value\x18\x02 \x01(\x0b\x32\x1d.opencannabis.media.MediaItem:\x02\x38\x01:\r\x82\xf7\x02\t\x08\x02\x12\x05users\"\xf7\x02\n\tUserFlags\x12\x44\n\tvalidated\x18\x01 \x01(\x08\x42\x31\x8a@.Indicates that the account has been validated.\x12H\n\tsuspended\x18\x02 \x01(\x08\x42\x35\x8a@2Indicates that the account is currently suspended.\x12\x42\n\x05\x61\x64min\x18\x03 \x01(\x08\x42\x33\x8a@0Indicates that the account has admin privileges.\x12G\n\x04\x62\x65ta\x18\x04 \x01(\x08\x42\x39\x8a@6Indicates that the account has access to beta systems.\x12M\n\x07sandbox\x18\x05 \x01(\x08\x42<\x8a@9Indicates that the account has access to sandbox systems.\"\xe5\x02\n\x0cUserIdentity\x12l\n\x08provider\x18\x01 \x01(\x0e\x32*.bloombox.schema.identity.IdentityProviderB.\x8a@+Provider for this external/foreign account.\x12L\n\x02id\x18\x02 \x01(\tB@\xc2\xb5\x03\x02\x08\x02\x8a@7Unique ID for this account with the specified provider.\x12\x84\x01\n\x04seen\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantBV\x8a@STimestamp for when this identity was last user to authenticate the underlying user.:\x12\x82\xf7\x02\x0e\x08\x02\x12\nidentities\"\x90\x06\n\x0f\x43onsumerProfile\x12\x30\n\x06\x61\x63tive\x18\x01 \x01(\x08\x42 \x8a@\x1dProfile active/inactive flag.\x12N\n\x15\x66\x61vorite_dispensaries\x18\x02 \x03(\tB/\x8a@,Enumerates favorite dispensaries for a user.\x12~\n\x11\x65nrollment_source\x18\x03 \x01(\x0e\x32*.bloombox.schema.identity.EnrollmentSourceB7\x8a@4Specifies enrollment source attribution information.\x12\x61\n\x12\x65nrollment_channel\x18\x04 \x01(\tBE\x8a@BArbitrary string for the channel through which this user enrolled.\x12r\n\x0bpreferences\x18\x05 \x01(\x0b\x32-.bloombox.schema.identity.ConsumerPreferencesB.\x8a@+Preferences attached to a consumer account.\x12n\n\x04type\x18\x06 \x01(\x0e\x32&.bloombox.schema.identity.ConsumerTypeB8\x8a@5Specifies the primary consumer type for this account.\x12x\n\x0freferral_source\x18\x07 \x01(\x0e\x32(.bloombox.schema.identity.ReferralSourceB5\x8a@2Specifies referral source attribution information.\x12:\n\x0freferral_detail\x18\x08 \x01(\tB!\x8a@\x1eSpecifies the referrer\'s name.\"\xa8\x05\n\x0fMenuPreferences\x12j\n\x07section\x18\x01 \x03(\x0e\x32+.opencannabis.products.menu.section.SectionB,\x8a@)Preferred menu sections or product types.\x12h\n\x07\x66\x65\x65ling\x18\x02 \x03(\x0e\x32(.opencannabis.structs.labtesting.FeelingB-\x8a@*Preferred feelings or experiential states.\x12[\n\ntaste_note\x18\x03 \x03(\x0e\x32*.opencannabis.structs.labtesting.TasteNoteB\x1b\x8a@\x18Preferred tasting notes.\x12\x64\n\x0f\x64\x65sired_potency\x18\x04 \x01(\x0e\x32\x30.opencannabis.structs.labtesting.PotencyEstimateB\x19\x8a@\x16\x44\x65sired potency level.\x12k\n\x11\x63\x61nnabinoid_ratio\x18\x05 \x01(\x0e\x32\x31.opencannabis.structs.labtesting.CannabinoidRatioB\x1d\x8a@\x1a\x44\x65sired cannabinoid ratio.\x12K\n\x07species\x18\x06 \x03(\x0e\x32\x1d.opencannabis.structs.SpeciesB\x1b\x8a@\x18Preferred species types.\x12\x42\n\x04grow\x18\x07 \x03(\x0e\x32\x1a.opencannabis.structs.GrowB\x18\x8a@\x15Preferred grow types.\"\x84\x01\n\x13\x43onsumerPreferences\x12m\n\x04menu\x18\n \x01(\x0b\x32).bloombox.schema.identity.MenuPreferencesB4\x8a@1Preferred menu sections/product types, and so on.\"\x8b\x04\n\x12\x43onsumerMembership\x12l\n\x0freferral_source\x18\x01 \x01(\x0e\x32*.bloombox.schema.identity.EnrollmentSourceB\'\x8a@$Referral source for this enrollment.\x12^\n\x10referral_channel\x18\x02 \x01(\tBD\x8a@AReferral channel token - an artbirary, end-system provided value.\x12\x62\n\x0csigned_up_at\x18\x03 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB,\x8a@)Timestamp for when this profile enrolled.\x12_\n\x04seen\x18\x04 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB1\x8a@.Timestamp for when this profile was last seen.\x12\x62\n\nforeign_id\x18\x05 \x01(\tBN\x8a@KForeign ID for this membership, in the partner-colocated membership system.\"\xa5\x02\n\x0fIndustryProfile\x12\x32\n\x06\x61\x63tive\x18\x01 \x01(\x08\x42\"\x8a@\x1fProfile inactive/active status.\x12~\n\x08partners\x18\x02 \x03(\x0b\x32\x37.bloombox.schema.identity.IndustryProfile.PartnersEntryB3\x8a@0Map of partner accesses levels to partner codes.\x1a^\n\rPartnersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12<\n\x05value\x18\x02 \x01(\x0b\x32-.bloombox.schema.security.access.AccessPolicy:\x02\x38\x01*A\n\rUserMediaType\x12\x0b\n\x07PICTURE\x10\x00\x12\x13\n\x0f\x44RIVERS_LICENSE\x10\x01\x12\x0e\n\nDOCTOR_REC\x10\x02*D\n\x10IdentityProvider\x12\t\n\x05\x45MAIL\x10\x00\x12\n\n\x06GOOGLE\x10\x01\x12\x0c\n\x08\x46\x41\x43\x45\x42OOK\x10\x02\x12\x0b\n\x07TWITTER\x10\x03*l\n\x10\x45nrollmentSource\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\n\n\x06ONLINE\x10\x01\x12\x10\n\x0cINTERNAL_APP\x10\x02\x12\x0f\n\x0bPARTNER_APP\x10\x03\x12\x0c\n\x08IN_STORE\x10\x04\x12\n\n\x06IMPORT\x10\x05*U\n\x0eReferralSource\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07OUTDOOR\x10\x01\x12\x0b\n\x07\x44IGITAL\x10\x02\x12\x10\n\x0cSOCIAL_MEDIA\x10\x03\x12\n\n\x06\x46RIEND\x10\x04*>\n\x0c\x43onsumerType\x12\x0f\n\x0bUNVALIDATED\x10\x00\x12\x10\n\x0cRECREATIONAL\x10\x01\x12\x0b\n\x07MEDICAL\x10\x02\x42\x30\n\x1bio.bloombox.schema.identityB\x07\x41ppUserH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
-  dependencies=[bq__field__pb2.DESCRIPTOR,media_dot_MediaItem__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,person_dot_Person__pb2.DESCRIPTOR,identity_dot_ID__pb2.DESCRIPTOR,identity_dot_ids_dot_UserDoctorRec__pb2.DESCRIPTOR,products_dot_menu_dot_Section__pb2.DESCRIPTOR,structs_dot_Grow__pb2.DESCRIPTOR,structs_dot_Species__pb2.DESCRIPTOR,structs_dot_labtesting_dot_TestResults__pb2.DESCRIPTOR,security_dot_access_dot_PartnerPermissions__pb2.DESCRIPTOR,])
+  dependencies=[bq__field__pb2.DESCRIPTOR,core_dot_Datamodel__pb2.DESCRIPTOR,media_dot_MediaItem__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,person_dot_Person__pb2.DESCRIPTOR,identity_dot_ID__pb2.DESCRIPTOR,identity_dot_ids_dot_UserDoctorRec__pb2.DESCRIPTOR,products_dot_menu_dot_Section__pb2.DESCRIPTOR,structs_dot_Grow__pb2.DESCRIPTOR,structs_dot_Species__pb2.DESCRIPTOR,structs_dot_labtesting_dot_TestResults__pb2.DESCRIPTOR,security_dot_access_dot_PartnerPermissions__pb2.DESCRIPTOR,])
 
 _USERMEDIATYPE = _descriptor.EnumDescriptor(
   name='UserMediaType',
@@ -56,8 +57,8 @@ _USERMEDIATYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4814,
-  serialized_end=4879,
+  serialized_start=4827,
+  serialized_end=4892,
 )
 _sym_db.RegisterEnumDescriptor(_USERMEDIATYPE)
 
@@ -87,8 +88,8 @@ _IDENTITYPROVIDER = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4881,
-  serialized_end=4949,
+  serialized_start=4894,
+  serialized_end=4962,
 )
 _sym_db.RegisterEnumDescriptor(_IDENTITYPROVIDER)
 
@@ -126,8 +127,8 @@ _ENROLLMENTSOURCE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4951,
-  serialized_end=5059,
+  serialized_start=4964,
+  serialized_end=5072,
 )
 _sym_db.RegisterEnumDescriptor(_ENROLLMENTSOURCE)
 
@@ -161,8 +162,8 @@ _REFERRALSOURCE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5061,
-  serialized_end=5146,
+  serialized_start=5074,
+  serialized_end=5159,
 )
 _sym_db.RegisterEnumDescriptor(_REFERRALSOURCE)
 
@@ -188,8 +189,8 @@ _CONSUMERTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5148,
-  serialized_end=5210,
+  serialized_start=5161,
+  serialized_end=5223,
 )
 _sym_db.RegisterEnumDescriptor(_CONSUMERTYPE)
 
@@ -216,44 +217,6 @@ UNVALIDATED = 0
 RECREATIONAL = 1
 MEDICAL = 2
 
-
-
-_USERKEY = _descriptor.Descriptor(
-  name='UserKey',
-  full_name='bloombox.schema.identity.UserKey',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='uid', full_name='bloombox.schema.identity.UserKey.uid', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\027Unique ID for the user.')), file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='identity', full_name='bloombox.schema.identity.UserKey.identity', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\036Specific user identity in use.')), file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=338,
-  serialized_end=441,
-)
 
 
 _USER_IDENTITIESENTRY = _descriptor.Descriptor(
@@ -289,8 +252,8 @@ _USER_IDENTITIESENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1506,
-  serialized_end=1595,
+  serialized_start=1479,
+  serialized_end=1568,
 )
 
 _USER_MEDIAENTRY = _descriptor.Descriptor(
@@ -326,8 +289,8 @@ _USER_MEDIAENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1597,
-  serialized_end=1672,
+  serialized_start=1570,
+  serialized_end=1645,
 )
 
 _USER = _descriptor.Descriptor(
@@ -343,14 +306,14 @@ _USER = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\027Unique ID for the user.')), file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\002\212@\027Unique ID for the user.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='flags', full_name='bloombox.schema.identity.User.flags', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\034Boolean flags for this user.')), file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\004\212@\034Boolean flags for this user.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='person', full_name='bloombox.schema.identity.User.person', index=2,
       number=3, type=11, cpp_type=10, label=1,
@@ -364,14 +327,14 @@ _USER = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001\212@(Government ID associated with this user.')), file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001\212@(Government ID associated with this user.\322\265\003\022\010\001\032\016identification')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='doctor_rec', full_name='bloombox.schema.identity.User.doctor_rec', index=4,
       number=21, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001\212@3Doctor\'s recommendations associated with this user.')), file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001\212@3Doctor\'s recommendations associated with this user.\322\265\003\021\010\001\032\rprescriptions')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='seen', full_name='bloombox.schema.identity.User.seen', index=5,
       number=30, type=11, cpp_type=10, label=1,
@@ -420,14 +383,14 @@ _USER = _descriptor.Descriptor(
   nested_types=[_USER_IDENTITIESENTRY, _USER_MEDIAENTRY, ],
   enum_types=[
   ],
-  options=None,
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\202\367\002\t\010\002\022\005users')),
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=444,
-  serialized_end=1672,
+  serialized_start=361,
+  serialized_end=1660,
 )
 
 
@@ -485,8 +448,8 @@ _USERFLAGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1675,
-  serialized_end=2050,
+  serialized_start=1663,
+  serialized_end=2038,
 )
 
 
@@ -510,7 +473,7 @@ _USERIDENTITY = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@7Unique ID for this account with the specified provider.')), file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\002\212@7Unique ID for this account with the specified provider.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='seen', full_name='bloombox.schema.identity.UserIdentity.seen', index=2,
       number=3, type=11, cpp_type=10, label=1,
@@ -524,14 +487,14 @@ _USERIDENTITY = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\202\367\002\016\010\002\022\nidentities')),
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2053,
-  serialized_end=2384,
+  serialized_start=2041,
+  serialized_end=2398,
 )
 
 
@@ -610,8 +573,8 @@ _CONSUMERPROFILE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2387,
-  serialized_end=3171,
+  serialized_start=2401,
+  serialized_end=3185,
 )
 
 
@@ -683,8 +646,8 @@ _MENUPREFERENCES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3174,
-  serialized_end=3854,
+  serialized_start=3188,
+  serialized_end=3868,
 )
 
 
@@ -714,8 +677,8 @@ _CONSUMERPREFERENCES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3857,
-  serialized_end=3989,
+  serialized_start=3871,
+  serialized_end=4003,
 )
 
 
@@ -773,8 +736,8 @@ _CONSUMERMEMBERSHIP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3992,
-  serialized_end=4515,
+  serialized_start=4006,
+  serialized_end=4529,
 )
 
 
@@ -811,8 +774,8 @@ _INDUSTRYPROFILE_PARTNERSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4717,
-  serialized_end=4812,
+  serialized_start=4731,
+  serialized_end=4825,
 )
 
 _INDUSTRYPROFILE = _descriptor.Descriptor(
@@ -848,8 +811,8 @@ _INDUSTRYPROFILE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4518,
-  serialized_end=4812,
+  serialized_start=4532,
+  serialized_end=4825,
 )
 
 _USER_IDENTITIESENTRY.fields_by_name['value'].message_type = _USERIDENTITY
@@ -883,10 +846,9 @@ _CONSUMERPREFERENCES.fields_by_name['menu'].message_type = _MENUPREFERENCES
 _CONSUMERMEMBERSHIP.fields_by_name['referral_source'].enum_type = _ENROLLMENTSOURCE
 _CONSUMERMEMBERSHIP.fields_by_name['signed_up_at'].message_type = temporal_dot_Instant__pb2._INSTANT
 _CONSUMERMEMBERSHIP.fields_by_name['seen'].message_type = temporal_dot_Instant__pb2._INSTANT
-_INDUSTRYPROFILE_PARTNERSENTRY.fields_by_name['value'].message_type = security_dot_access_dot_PartnerPermissions__pb2._PARTNERACCESS
+_INDUSTRYPROFILE_PARTNERSENTRY.fields_by_name['value'].message_type = security_dot_access_dot_PartnerPermissions__pb2._ACCESSPOLICY
 _INDUSTRYPROFILE_PARTNERSENTRY.containing_type = _INDUSTRYPROFILE
 _INDUSTRYPROFILE.fields_by_name['partners'].message_type = _INDUSTRYPROFILE_PARTNERSENTRY
-DESCRIPTOR.message_types_by_name['UserKey'] = _USERKEY
 DESCRIPTOR.message_types_by_name['User'] = _USER
 DESCRIPTOR.message_types_by_name['UserFlags'] = _USERFLAGS
 DESCRIPTOR.message_types_by_name['UserIdentity'] = _USERIDENTITY
@@ -901,13 +863,6 @@ DESCRIPTOR.enum_types_by_name['EnrollmentSource'] = _ENROLLMENTSOURCE
 DESCRIPTOR.enum_types_by_name['ReferralSource'] = _REFERRALSOURCE
 DESCRIPTOR.enum_types_by_name['ConsumerType'] = _CONSUMERTYPE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
-
-UserKey = _reflection.GeneratedProtocolMessageType('UserKey', (_message.Message,), dict(
-  DESCRIPTOR = _USERKEY,
-  __module__ = 'identity.User_pb2'
-  # @@protoc_insertion_point(class_scope:bloombox.schema.identity.UserKey)
-  ))
-_sym_db.RegisterMessage(UserKey)
 
 User = _reflection.GeneratedProtocolMessageType('User', (_message.Message,), dict(
 
@@ -991,25 +946,21 @@ _sym_db.RegisterMessage(IndustryProfile.PartnersEntry)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\033io.bloombox.schema.identityH\001P\001\242\002\003BBS'))
-_USERKEY.fields_by_name['uid'].has_options = True
-_USERKEY.fields_by_name['uid']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\027Unique ID for the user.'))
-_USERKEY.fields_by_name['identity'].has_options = True
-_USERKEY.fields_by_name['identity']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\036Specific user identity in use.'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\033io.bloombox.schema.identityB\007AppUserH\001P\000\242\002\003BBS'))
 _USER_IDENTITIESENTRY.has_options = True
 _USER_IDENTITIESENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
 _USER_MEDIAENTRY.has_options = True
 _USER_MEDIAENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
 _USER.fields_by_name['uid'].has_options = True
-_USER.fields_by_name['uid']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\027Unique ID for the user.'))
+_USER.fields_by_name['uid']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\002\212@\027Unique ID for the user.'))
 _USER.fields_by_name['flags'].has_options = True
-_USER.fields_by_name['flags']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\034Boolean flags for this user.'))
+_USER.fields_by_name['flags']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\004\212@\034Boolean flags for this user.'))
 _USER.fields_by_name['person'].has_options = True
 _USER.fields_by_name['person']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@*Person\'s information that backs this user.'))
 _USER.fields_by_name['identification'].has_options = True
-_USER.fields_by_name['identification']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001\212@(Government ID associated with this user.'))
+_USER.fields_by_name['identification']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001\212@(Government ID associated with this user.\322\265\003\022\010\001\032\016identification'))
 _USER.fields_by_name['doctor_rec'].has_options = True
-_USER.fields_by_name['doctor_rec']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001\212@3Doctor\'s recommendations associated with this user.'))
+_USER.fields_by_name['doctor_rec']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200@\001\212@3Doctor\'s recommendations associated with this user.\322\265\003\021\010\001\032\rprescriptions'))
 _USER.fields_by_name['seen'].has_options = True
 _USER.fields_by_name['seen']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@<Last time this user was seen, via auth/login/enrollment etc.'))
 _USER.fields_by_name['signup'].has_options = True
@@ -1022,6 +973,8 @@ _USER.fields_by_name['consumer'].has_options = True
 _USER.fields_by_name['consumer']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\037Consumer profile for this user.'))
 _USER.fields_by_name['industry'].has_options = True
 _USER.fields_by_name['industry']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\037Industry profile for this user.'))
+_USER.has_options = True
+_USER._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\202\367\002\t\010\002\022\005users'))
 _USERFLAGS.fields_by_name['validated'].has_options = True
 _USERFLAGS.fields_by_name['validated']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@.Indicates that the account has been validated.'))
 _USERFLAGS.fields_by_name['suspended'].has_options = True
@@ -1035,9 +988,11 @@ _USERFLAGS.fields_by_name['sandbox']._options = _descriptor._ParseOptions(descri
 _USERIDENTITY.fields_by_name['provider'].has_options = True
 _USERIDENTITY.fields_by_name['provider']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@+Provider for this external/foreign account.'))
 _USERIDENTITY.fields_by_name['id'].has_options = True
-_USERIDENTITY.fields_by_name['id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@7Unique ID for this account with the specified provider.'))
+_USERIDENTITY.fields_by_name['id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\002\212@7Unique ID for this account with the specified provider.'))
 _USERIDENTITY.fields_by_name['seen'].has_options = True
 _USERIDENTITY.fields_by_name['seen']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@STimestamp for when this identity was last user to authenticate the underlying user.'))
+_USERIDENTITY.has_options = True
+_USERIDENTITY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\202\367\002\016\010\002\022\nidentities'))
 _CONSUMERPROFILE.fields_by_name['active'].has_options = True
 _CONSUMERPROFILE.fields_by_name['active']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\035Profile active/inactive flag.'))
 _CONSUMERPROFILE.fields_by_name['favorite_dispensaries'].has_options = True

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='base/Compression.proto',
   package='opencannabis.base',
   syntax='proto3',
-  serialized_pb=_b('\n\x16\x62\x61se/Compression.proto\x12\x11opencannabis.base\"\x8f\x01\n\x0b\x43ompression\x12\x0f\n\x07\x65nabled\x18\x01 \x01(\x08\x12\x31\n\x04type\x18\x02 \x01(\x0e\x32#.opencannabis.base.Compression.Type\"<\n\x04Type\x12\x12\n\x0eNO_COMPRESSION\x10\x00\x12\x08\n\x04GZIP\x10\x01\x12\n\n\x06\x42ROTLI\x10\x02\x12\n\n\x06SNAPPY\x10\x03\x42\x38\n\x1bio.opencannabis.schema.baseB\x0f\x42\x61seCompressionH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x16\x62\x61se/Compression.proto\x12\x11opencannabis.base\"\x8f\x01\n\x0b\x43ompression\x12\x0f\n\x07\x65nabled\x18\x01 \x01(\x08\x12\x31\n\x04type\x18\x02 \x01(\x0e\x32#.opencannabis.base.Compression.Type\"<\n\x04Type\x12\x12\n\x0eNO_COMPRESSION\x10\x00\x12\x08\n\x04GZIP\x10\x01\x12\n\n\x06\x42ROTLI\x10\x02\x12\n\n\x06SNAPPY\x10\x03\x42\x38\n\x1bio.opencannabis.schema.baseB\x0f\x42\x61seCompressionH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
 )
 
 
@@ -107,5 +107,5 @@ _sym_db.RegisterMessage(Compression)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\033io.opencannabis.schema.baseB\017BaseCompressionH\001P\001\242\002\003OCS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\033io.opencannabis.schema.baseB\017BaseCompressionH\001P\000\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

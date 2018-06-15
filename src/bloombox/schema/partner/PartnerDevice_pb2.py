@@ -14,19 +14,20 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from device import Device_pb2 as device_dot_Device__pb2
-from partner import Partner_pb2 as partner_dot_Partner__pb2
-from partner import PartnerLocation_pb2 as partner_dot_PartnerLocation__pb2
+from core import Datamodel_pb2 as core_dot_Datamodel__pb2
 from temporal import Instant_pb2 as temporal_dot_Instant__pb2
+from device import Device_pb2 as device_dot_Device__pb2
+from partner import PartnerKey_pb2 as partner_dot_PartnerKey__pb2
+from partner import LocationKey_pb2 as partner_dot_LocationKey__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='partner/PartnerDevice.proto',
   package='bloombox.schema.partner',
   syntax='proto3',
-  serialized_pb=_b('\n\x1bpartner/PartnerDevice.proto\x12\x17\x62loombox.schema.partner\x1a\x13\x64\x65vice/Device.proto\x1a\x15partner/Partner.proto\x1a\x1dpartner/PartnerLocation.proto\x1a\x16temporal/Instant.proto\"_\n\x10PartnerDeviceKey\x12=\n\x08location\x18\x01 \x01(\x0b\x32+.bloombox.schema.partner.PartnerLocationKey\x12\x0c\n\x04uuid\x18\x02 \x01(\t\"\x91\x03\n\rPartnerDevice\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x31\n\x07partner\x18\x02 \x01(\x0b\x32 .bloombox.schema.partner.Partner\x12:\n\x08location\x18\x03 \x01(\x0b\x32(.bloombox.schema.partner.PartnerLocation\x12\x38\n\x04type\x18\x04 \x01(\x0e\x32*.bloombox.schema.partner.PartnerDeviceType\x12:\n\x05\x66lags\x18\x05 \x01(\x0b\x32+.bloombox.schema.partner.PartnerDeviceFlags\x12+\n\x06\x64\x65vice\x18\x06 \x01(\x0b\x32\x1b.opencannabis.device.Device\x12,\n\x04seen\x18\x07 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x32\n\nregistered\x18\x08 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\"V\n\x12PartnerDeviceFlags\x12\x0e\n\x06\x61\x63tive\x18\x01 \x01(\x08\x12\x11\n\tsuspended\x18\x02 \x01(\x08\x12\x0c\n\x04\x62\x65ta\x18\x03 \x01(\x08\x12\x0f\n\x07sandbox\x18\x04 \x01(\x08*\x93\x01\n\x11PartnerDeviceType\x12\x1b\n\x17UNSPECIFIED_DEVICE_TYPE\x10\x00\x12\x0c\n\x08INTERNAL\x10\x01\x12\x0f\n\x0bMENU_TABLET\x10\n\x12\x0b\n\x07MENU_TV\x10\x0b\x12\x13\n\x0f\x43HECKIN_STATION\x10\x14\x12\x0e\n\nCHECKIN_TV\x10\x15\x12\x10\n\x0cPOS_REGISTER\x10\x1e\x42&\n\x1aio.bloombox.schema.partnerH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n\x1bpartner/PartnerDevice.proto\x12\x17\x62loombox.schema.partner\x1a\x14\x63ore/Datamodel.proto\x1a\x16temporal/Instant.proto\x1a\x13\x64\x65vice/Device.proto\x1a\x18partner/PartnerKey.proto\x1a\x19partner/LocationKey.proto\"`\n\x10PartnerDeviceKey\x12\x36\n\x08location\x18\x01 \x01(\x0b\x32$.bloombox.schema.partner.LocationKey\x12\x14\n\x04uuid\x18\x02 \x01(\tB\x06\xc2\xb5\x03\x02\x08\x02\"\xe2\x02\n\rPartnerDevice\x12\x14\n\x04uuid\x18\x01 \x01(\tB\x06\xc2\xb5\x03\x02\x08\x02\x12\x36\n\x08location\x18\x02 \x01(\x0b\x32$.bloombox.schema.partner.LocationKey\x12\x38\n\x04type\x18\x03 \x01(\x0e\x32*.bloombox.schema.partner.PartnerDeviceType\x12:\n\x05\x66lags\x18\x04 \x01(\x0b\x32+.bloombox.schema.partner.PartnerDeviceFlags\x12+\n\x06\x64\x65vice\x18\x05 \x01(\x0b\x32\x1b.opencannabis.device.Device\x12,\n\x04seen\x18\x06 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x32\n\nregistered\x18\x07 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\"V\n\x12PartnerDeviceFlags\x12\x0e\n\x06\x61\x63tive\x18\x01 \x01(\x08\x12\x11\n\tsuspended\x18\x02 \x01(\x08\x12\x0c\n\x04\x62\x65ta\x18\x03 \x01(\x08\x12\x0f\n\x07sandbox\x18\x04 \x01(\x08*\x93\x01\n\x11PartnerDeviceType\x12\x1b\n\x17UNSPECIFIED_DEVICE_TYPE\x10\x00\x12\x0c\n\x08INTERNAL\x10\x01\x12\x0f\n\x0bMENU_TABLET\x10\n\x12\x0b\n\x07MENU_TV\x10\x0b\x12\x13\n\x0f\x43HECKIN_STATION\x10\x14\x12\x0e\n\nCHECKIN_TV\x10\x15\x12\x10\n\x0cPOS_REGISTER\x10\x1e\x42\x36\n\x1aio.bloombox.schema.partnerB\x0ePartnerDevicesH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
-  dependencies=[device_dot_Device__pb2.DESCRIPTOR,partner_dot_Partner__pb2.DESCRIPTOR,partner_dot_PartnerLocation__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,])
+  dependencies=[core_dot_Datamodel__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,device_dot_Device__pb2.DESCRIPTOR,partner_dot_PartnerKey__pb2.DESCRIPTOR,partner_dot_LocationKey__pb2.DESCRIPTOR,])
 
 _PARTNERDEVICETYPE = _descriptor.EnumDescriptor(
   name='PartnerDeviceType',
@@ -65,8 +66,8 @@ _PARTNERDEVICETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=745,
-  serialized_end=892,
+  serialized_start=720,
+  serialized_end=867,
 )
 _sym_db.RegisterEnumDescriptor(_PARTNERDEVICETYPE)
 
@@ -101,7 +102,7 @@ _PARTNERDEVICEKEY = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\002')), file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -114,8 +115,8 @@ _PARTNERDEVICEKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=155,
-  serialized_end=250,
+  serialized_start=176,
+  serialized_end=272,
 )
 
 
@@ -132,52 +133,45 @@ _PARTNERDEVICE = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\002')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='partner', full_name='bloombox.schema.partner.PartnerDevice.partner', index=1,
+      name='location', full_name='bloombox.schema.partner.PartnerDevice.location', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='location', full_name='bloombox.schema.partner.PartnerDevice.location', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='type', full_name='bloombox.schema.partner.PartnerDevice.type', index=3,
-      number=4, type=14, cpp_type=8, label=1,
+      name='type', full_name='bloombox.schema.partner.PartnerDevice.type', index=2,
+      number=3, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='flags', full_name='bloombox.schema.partner.PartnerDevice.flags', index=4,
+      name='flags', full_name='bloombox.schema.partner.PartnerDevice.flags', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='device', full_name='bloombox.schema.partner.PartnerDevice.device', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='device', full_name='bloombox.schema.partner.PartnerDevice.device', index=5,
+      name='seen', full_name='bloombox.schema.partner.PartnerDevice.seen', index=5,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='seen', full_name='bloombox.schema.partner.PartnerDevice.seen', index=6,
+      name='registered', full_name='bloombox.schema.partner.PartnerDevice.registered', index=6,
       number=7, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='registered', full_name='bloombox.schema.partner.PartnerDevice.registered', index=7,
-      number=8, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -194,8 +188,8 @@ _PARTNERDEVICE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=253,
-  serialized_end=654,
+  serialized_start=275,
+  serialized_end=629,
 )
 
 
@@ -246,13 +240,12 @@ _PARTNERDEVICEFLAGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=656,
-  serialized_end=742,
+  serialized_start=631,
+  serialized_end=717,
 )
 
-_PARTNERDEVICEKEY.fields_by_name['location'].message_type = partner_dot_PartnerLocation__pb2._PARTNERLOCATIONKEY
-_PARTNERDEVICE.fields_by_name['partner'].message_type = partner_dot_Partner__pb2._PARTNER
-_PARTNERDEVICE.fields_by_name['location'].message_type = partner_dot_PartnerLocation__pb2._PARTNERLOCATION
+_PARTNERDEVICEKEY.fields_by_name['location'].message_type = partner_dot_LocationKey__pb2._LOCATIONKEY
+_PARTNERDEVICE.fields_by_name['location'].message_type = partner_dot_LocationKey__pb2._LOCATIONKEY
 _PARTNERDEVICE.fields_by_name['type'].enum_type = _PARTNERDEVICETYPE
 _PARTNERDEVICE.fields_by_name['flags'].message_type = _PARTNERDEVICEFLAGS
 _PARTNERDEVICE.fields_by_name['device'].message_type = device_dot_Device__pb2._DEVICE
@@ -287,5 +280,9 @@ _sym_db.RegisterMessage(PartnerDeviceFlags)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.bloombox.schema.partnerH\001P\001\242\002\003BBS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.bloombox.schema.partnerB\016PartnerDevicesH\001P\000\242\002\003BBS'))
+_PARTNERDEVICEKEY.fields_by_name['uuid'].has_options = True
+_PARTNERDEVICEKEY.fields_by_name['uuid']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\002'))
+_PARTNERDEVICE.fields_by_name['uuid'].has_options = True
+_PARTNERDEVICE.fields_by_name['uuid']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\002'))
 # @@protoc_insertion_point(module_scope)

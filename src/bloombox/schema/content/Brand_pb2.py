@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='content/Brand.proto',
   package='opencannabis.content',
   syntax='proto3',
-  serialized_pb=_b('\n\x13\x63ontent/Brand.proto\x12\x14opencannabis.content\x1a\x12\x63ontent/Name.proto\x1a\x15\x63ontent/Content.proto\x1a\x15media/MediaItem.proto\"\xbc\x01\n\x05\x42rand\x12(\n\x04name\x18\x01 \x01(\x0b\x32\x1a.opencannabis.content.Name\x12+\n\x06parent\x18\x02 \x01(\x0b\x32\x1b.opencannabis.content.Brand\x12.\n\x07summary\x18\x03 \x01(\x0b\x32\x1d.opencannabis.content.Content\x12,\n\x05media\x18\x14 \x03(\x0b\x32\x1d.opencannabis.media.MediaItemB8\n\x1eio.opencannabis.schema.contentB\x0c\x42randContentH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x13\x63ontent/Brand.proto\x12\x14opencannabis.content\x1a\x12\x63ontent/Name.proto\x1a\x15\x63ontent/Content.proto\x1a\x15media/MediaItem.proto\"\xbc\x01\n\x05\x42rand\x12(\n\x04name\x18\x01 \x01(\x0b\x32\x1a.opencannabis.content.Name\x12+\n\x06parent\x18\x02 \x01(\x0b\x32\x1b.opencannabis.content.Brand\x12.\n\x07summary\x18\x03 \x01(\x0b\x32\x1d.opencannabis.content.Content\x12,\n\x05media\x18\x14 \x03(\x0b\x32\x1d.opencannabis.media.MediaItemB8\n\x1eio.opencannabis.schema.contentB\x0c\x42randContentH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[content_dot_Name__pb2.DESCRIPTOR,content_dot_Content__pb2.DESCRIPTOR,media_dot_MediaItem__pb2.DESCRIPTOR,])
 
@@ -96,5 +96,5 @@ _sym_db.RegisterMessage(Brand)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.contentB\014BrandContentH\001P\001\242\002\003OCS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.contentB\014BrandContentH\001P\000\242\002\003OCS'))
 # @@protoc_insertion_point(module_scope)

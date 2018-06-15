@@ -3,6 +3,7 @@
 
 import sys
 _b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
@@ -23,10 +24,45 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='person/Person.proto',
   package='opencannabis.person',
   syntax='proto3',
-  serialized_pb=_b('\n\x13person/Person.proto\x12\x13opencannabis.person\x1a\x0e\x62q_field.proto\x1a\x13temporal/Date.proto\x1a\x19\x63ontact/ContactInfo.proto\x1a\x17person/PersonName.proto\"\xbd\x03\n\x06Person\x12N\n\x04name\x18\x01 \x01(\x0b\x32\x19.opencannabis.person.NameB%\x8a@\"Person\'s primary name information.\x12m\n\nlegal_name\x18\x02 \x01(\x0b\x32\x19.opencannabis.person.NameB>\x8a@;Person\'s legal name, if it differs from their primary name.\x12W\n\x0e\x61lternate_name\x18\x03 \x01(\x0b\x32\x19.opencannabis.person.NameB$\x8a@!Person\'s optional alternate name.\x12T\n\x07\x63ontact\x18\x04 \x01(\x0b\x32!.opencannabis.contact.ContactInfoB \x8a@\x1dPerson\'s contact information.\x12\x45\n\rdate_of_birth\x18\x05 \x01(\x0b\x32\x1b.opencannabis.temporal.DateB\x11\x8a@\x0e\x44\x61te of birth.B)\n\x1dio.opencannabis.schema.personH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x13person/Person.proto\x12\x13opencannabis.person\x1a\x0e\x62q_field.proto\x1a\x13temporal/Date.proto\x1a\x19\x63ontact/ContactInfo.proto\x1a\x17person/PersonName.proto\"\xf6\x03\n\x06Person\x12N\n\x04name\x18\x01 \x01(\x0b\x32\x19.opencannabis.person.NameB%\x8a@\"Person\'s primary name information.\x12m\n\nlegal_name\x18\x02 \x01(\x0b\x32\x19.opencannabis.person.NameB>\x8a@;Person\'s legal name, if it differs from their primary name.\x12W\n\x0e\x61lternate_name\x18\x03 \x01(\x0b\x32\x19.opencannabis.person.NameB$\x8a@!Person\'s optional alternate name.\x12T\n\x07\x63ontact\x18\x04 \x01(\x0b\x32!.opencannabis.contact.ContactInfoB \x8a@\x1dPerson\'s contact information.\x12\x45\n\rdate_of_birth\x18\x05 \x01(\x0b\x32\x1b.opencannabis.temporal.DateB\x11\x8a@\x0e\x44\x61te of birth.\x12\x37\n\x06gender\x18\x06 \x01(\x0e\x32\x1b.opencannabis.person.GenderB\n\x8a@\x07Gender.*:\n\x06Gender\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\x08\n\x04MALE\x10\x01\x12\n\n\x06\x46\x45MALE\x10\x02\x12\t\n\x05OTHER\x10\x03\x42)\n\x1dio.opencannabis.schema.personH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,temporal_dot_Date__pb2.DESCRIPTOR,contact_dot_ContactInfo__pb2.DESCRIPTOR,person_dot_PersonName__pb2.DESCRIPTOR,])
 
+_GENDER = _descriptor.EnumDescriptor(
+  name='Gender',
+  full_name='opencannabis.person.Gender',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSPECIFIED', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MALE', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FEMALE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='OTHER', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=638,
+  serialized_end=696,
+)
+_sym_db.RegisterEnumDescriptor(_GENDER)
+
+Gender = enum_type_wrapper.EnumTypeWrapper(_GENDER)
+UNSPECIFIED = 0
+MALE = 1
+FEMALE = 2
+OTHER = 3
 
 
 
@@ -72,6 +108,13 @@ _PERSON = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\016Date of birth.')), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='gender', full_name='opencannabis.person.Person.gender', index=5,
+      number=6, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\007Gender.')), file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -85,7 +128,7 @@ _PERSON = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=134,
-  serialized_end=579,
+  serialized_end=636,
 )
 
 _PERSON.fields_by_name['name'].message_type = person_dot_PersonName__pb2._NAME
@@ -93,7 +136,9 @@ _PERSON.fields_by_name['legal_name'].message_type = person_dot_PersonName__pb2._
 _PERSON.fields_by_name['alternate_name'].message_type = person_dot_PersonName__pb2._NAME
 _PERSON.fields_by_name['contact'].message_type = contact_dot_ContactInfo__pb2._CONTACTINFO
 _PERSON.fields_by_name['date_of_birth'].message_type = temporal_dot_Date__pb2._DATE
+_PERSON.fields_by_name['gender'].enum_type = _GENDER
 DESCRIPTOR.message_types_by_name['Person'] = _PERSON
+DESCRIPTOR.enum_types_by_name['Gender'] = _GENDER
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Person = _reflection.GeneratedProtocolMessageType('Person', (_message.Message,), dict(
@@ -116,4 +161,6 @@ _PERSON.fields_by_name['contact'].has_options = True
 _PERSON.fields_by_name['contact']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\035Person\'s contact information.'))
 _PERSON.fields_by_name['date_of_birth'].has_options = True
 _PERSON.fields_by_name['date_of_birth']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\016Date of birth.'))
+_PERSON.fields_by_name['gender'].has_options = True
+_PERSON.fields_by_name['gender']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\007Gender.'))
 # @@protoc_insertion_point(module_scope)

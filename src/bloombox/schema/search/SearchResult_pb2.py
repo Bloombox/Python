@@ -14,6 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 from identity import User_pb2 as identity_dot_User__pb2
+from identity import UserKey_pb2 as identity_dot_UserKey__pb2
 from base import ProductKey_pb2 as base_dot_ProductKey__pb2
 from products.menu import Menu_pb2 as products_dot_menu_dot_Menu__pb2
 from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
@@ -23,9 +24,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='search/SearchResult.proto',
   package='bloombox.schema.search',
   syntax='proto3',
-  serialized_pb=_b('\n\x19search/SearchResult.proto\x12\x16\x62loombox.schema.search\x1a\x13identity/User.proto\x1a\x15\x62\x61se/ProductKey.proto\x1a\x18products/menu/Menu.proto\x1a google/protobuf/field_mask.proto\"L\n\x13ProductSearchResult\x12\x35\n\x04item\x18\x01 \x01(\x0b\x32\'.opencannabis.products.menu.MenuProduct\"p\n\x10UserSearchResult\x12.\n\x03key\x18\x01 \x01(\x0b\x32!.bloombox.schema.identity.UserKey\x12,\n\x04user\x18\x02 \x01(\x0b\x32\x1e.bloombox.schema.identity.User\"$\n\x13PartnerSearchResult\x12\r\n\x05scope\x18\x01 \x01(\t\"\xa2\x02\n\x0cSearchResult\x12\x0c\n\x04rank\x18\x01 \x01(\r\x12\x11\n\trelevance\x18\x02 \x01(\x01\x12*\n\x06\x66ields\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\x12>\n\x07product\x18\n \x01(\x0b\x32+.bloombox.schema.search.ProductSearchResultH\x00\x12;\n\x07profile\x18\x0b \x01(\x0b\x32(.bloombox.schema.search.UserSearchResultH\x00\x12>\n\x07partner\x18\x0c \x01(\x0b\x32+.bloombox.schema.search.PartnerSearchResultH\x00\x42\x08\n\x06resultB%\n\x19io.bloombox.schema.searchH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n\x19search/SearchResult.proto\x12\x16\x62loombox.schema.search\x1a\x13identity/User.proto\x1a\x16identity/UserKey.proto\x1a\x15\x62\x61se/ProductKey.proto\x1a\x18products/menu/Menu.proto\x1a google/protobuf/field_mask.proto\"L\n\x13ProductSearchResult\x12\x35\n\x04item\x18\x01 \x01(\x0b\x32\'.opencannabis.products.menu.MenuProduct\"p\n\x10UserSearchResult\x12.\n\x03key\x18\x01 \x01(\x0b\x32!.bloombox.schema.identity.UserKey\x12,\n\x04user\x18\x02 \x01(\x0b\x32\x1e.bloombox.schema.identity.User\"$\n\x13PartnerSearchResult\x12\r\n\x05scope\x18\x01 \x01(\t\"\xa2\x02\n\x0cSearchResult\x12\x0c\n\x04rank\x18\x01 \x01(\r\x12\x11\n\trelevance\x18\x02 \x01(\x01\x12*\n\x06\x66ields\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\x12>\n\x07product\x18\n \x01(\x0b\x32+.bloombox.schema.search.ProductSearchResultH\x00\x12;\n\x07profile\x18\x0b \x01(\x0b\x32(.bloombox.schema.search.UserSearchResultH\x00\x12>\n\x07partner\x18\x0c \x01(\x0b\x32+.bloombox.schema.search.PartnerSearchResultH\x00\x42\x08\n\x06resultB4\n\x19io.bloombox.schema.searchB\rSearchResultsH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
-  dependencies=[identity_dot_User__pb2.DESCRIPTOR,base_dot_ProductKey__pb2.DESCRIPTOR,products_dot_menu_dot_Menu__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,])
+  dependencies=[identity_dot_User__pb2.DESCRIPTOR,identity_dot_UserKey__pb2.DESCRIPTOR,base_dot_ProductKey__pb2.DESCRIPTOR,products_dot_menu_dot_Menu__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,])
 
 
 
@@ -56,8 +57,8 @@ _PRODUCTSEARCHRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=157,
-  serialized_end=233,
+  serialized_start=181,
+  serialized_end=257,
 )
 
 
@@ -94,8 +95,8 @@ _USERSEARCHRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=235,
-  serialized_end=347,
+  serialized_start=259,
+  serialized_end=371,
 )
 
 
@@ -125,8 +126,8 @@ _PARTNERSEARCHRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=349,
-  serialized_end=385,
+  serialized_start=373,
+  serialized_end=409,
 )
 
 
@@ -194,12 +195,12 @@ _SEARCHRESULT = _descriptor.Descriptor(
       name='result', full_name='bloombox.schema.search.SearchResult.result',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=388,
-  serialized_end=678,
+  serialized_start=412,
+  serialized_end=702,
 )
 
 _PRODUCTSEARCHRESULT.fields_by_name['item'].message_type = products_dot_menu_dot_Menu__pb2._MENUPRODUCT
-_USERSEARCHRESULT.fields_by_name['key'].message_type = identity_dot_User__pb2._USERKEY
+_USERSEARCHRESULT.fields_by_name['key'].message_type = identity_dot_UserKey__pb2._USERKEY
 _USERSEARCHRESULT.fields_by_name['user'].message_type = identity_dot_User__pb2._USER
 _SEARCHRESULT.fields_by_name['fields'].message_type = google_dot_protobuf_dot_field__mask__pb2._FIELDMASK
 _SEARCHRESULT.fields_by_name['product'].message_type = _PRODUCTSEARCHRESULT
@@ -250,5 +251,5 @@ _sym_db.RegisterMessage(SearchResult)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\031io.bloombox.schema.searchH\001P\001\242\002\003BBS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\031io.bloombox.schema.searchB\rSearchResultsH\001P\000\242\002\003BBS'))
 # @@protoc_insertion_point(module_scope)

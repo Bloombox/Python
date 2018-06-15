@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='contact/Website.proto',
   package='opencannabis.contact',
   syntax='proto3',
-  serialized_pb=_b('\n\x15\x63ontact/Website.proto\x12\x14opencannabis.contact\x1a\x0e\x62q_field.proto\"v\n\x07Website\x12$\n\x03uri\x18\x01 \x01(\tB\x17\x8a@\x14URI for the website.\x12\x32\n\x05title\x18\x02 \x01(\tB#\x8a@ Title from the HTML page at URI.\x12\x11\n\x04icon\x18\x03 \x01(\x0c\x42\x03\x80@\x01\x42*\n\x1eio.opencannabis.schema.contactH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x15\x63ontact/Website.proto\x12\x14opencannabis.contact\x1a\x0e\x62q_field.proto\"v\n\x07Website\x12$\n\x03uri\x18\x01 \x01(\tB\x17\x8a@\x14URI for the website.\x12\x32\n\x05title\x18\x02 \x01(\tB#\x8a@ Title from the HTML page at URI.\x12\x11\n\x04icon\x18\x03 \x01(\x0c\x42\x03\x80@\x01\x42:\n\x1eio.opencannabis.schema.contactB\x0e\x43ontactWebsiteH\x01P\x00\xa2\x02\x03OCSb\x06proto3')
   ,
   dependencies=[bq__field__pb2.DESCRIPTOR,])
 
@@ -83,7 +83,7 @@ _sym_db.RegisterMessage(Website)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.contactH\001P\001\242\002\003OCS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036io.opencannabis.schema.contactB\016ContactWebsiteH\001P\000\242\002\003OCS'))
 _WEBSITE.fields_by_name['uri'].has_options = True
 _WEBSITE.fields_by_name['uri']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\024URI for the website.'))
 _WEBSITE.fields_by_name['title'].has_options = True

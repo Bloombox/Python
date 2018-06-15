@@ -13,6 +13,7 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+from core import Datamodel_pb2 as core_dot_Datamodel__pb2
 import importlib
 identity_dot_pass_dot_PassKey__pb2 = importlib.import_module('identity.pass.PassKey_pb2')
 from temporal import Instant_pb2 as temporal_dot_Instant__pb2
@@ -22,9 +23,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='identity/pass/Pass.proto',
   package='bloombox.schema.identity.pass',
   syntax='proto3',
-  serialized_pb=_b('\n\x18identity/pass/Pass.proto\x12\x1d\x62loombox.schema.identity.pass\x1a\x1bidentity/pass/PassKey.proto\x1a\x16temporal/Instant.proto\"\xca\x01\n\x04Pass\x12\x33\n\x03key\x18\x01 \x01(\x0b\x32&.bloombox.schema.identity.pass.PassKey\x12\r\n\x05token\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0e\n\x06\x61\x63tive\x18\x04 \x01(\x08\x12.\n\x06issued\x18\x05 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x31\n\tsuspended\x18\x06 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB#\n\x17io.bloombox.schema.passH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n\x18identity/pass/Pass.proto\x12\x1d\x62loombox.schema.identity.pass\x1a\x14\x63ore/Datamodel.proto\x1a\x1bidentity/pass/PassKey.proto\x1a\x16temporal/Instant.proto\"\xd2\x01\n\x04Pass\x12;\n\x03key\x18\x01 \x01(\x0b\x32&.bloombox.schema.identity.pass.PassKeyB\x06\xc2\xb5\x03\x02\x08\x01\x12\r\n\x05token\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0e\n\x06\x61\x63tive\x18\x04 \x01(\x08\x12.\n\x06issued\x18\x05 \x01(\x0b\x32\x1e.opencannabis.temporal.Instant\x12\x31\n\tsuspended\x18\x06 \x01(\x0b\x32\x1e.opencannabis.temporal.InstantB+\n\x17io.bloombox.schema.passB\x06PassIDH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
-  dependencies=[identity_dot_pass_dot_PassKey__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,])
+  dependencies=[core_dot_Datamodel__pb2.DESCRIPTOR,identity_dot_pass_dot_PassKey__pb2.DESCRIPTOR,temporal_dot_Instant__pb2.DESCRIPTOR,])
 
 
 
@@ -42,7 +43,7 @@ _PASS = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\001')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='token', full_name='bloombox.schema.identity.pass.Pass.token', index=1,
       number=2, type=9, cpp_type=9, label=1,
@@ -90,8 +91,8 @@ _PASS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=113,
-  serialized_end=315,
+  serialized_start=135,
+  serialized_end=345,
 )
 
 _PASS.fields_by_name['key'].message_type = identity_dot_pass_dot_PassKey__pb2._PASSKEY
@@ -109,5 +110,7 @@ _sym_db.RegisterMessage(Pass)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\027io.bloombox.schema.passH\001P\001\242\002\003BBS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\027io.bloombox.schema.passB\006PassIDH\001P\000\242\002\003BBS'))
+_PASS.fields_by_name['key'].has_options = True
+_PASS.fields_by_name['key']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\001'))
 # @@protoc_insertion_point(module_scope)

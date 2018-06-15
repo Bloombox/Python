@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='partner/settings/PartnerSettings.proto',
   package='bloombox.schema.partner.settings',
   syntax='proto3',
-  serialized_pb=_b('\n&partner/settings/PartnerSettings.proto\x12 bloombox.schema.partner.settings\x1a\x19\x63ontact/PhoneNumber.proto\x1a\x1a\x63ontact/EmailAddress.proto\x1a.partner/integrations/IntegrationSettings.proto\"\xa1\x01\n\x19PartnerNotificationTarget\x12\x10\n\x08\x64isabled\x18\x01 \x01(\x08\x12\x32\n\x05phone\x18\n \x01(\x0b\x32!.opencannabis.contact.PhoneNumberH\x00\x12\x33\n\x05\x65mail\x18\x0b \x01(\x0b\x32\".opencannabis.contact.EmailAddressH\x00\x42\t\n\x07\x63ontact\"O\n\x1cPartnerEventAlertingSettings\x12\r\n\x05promo\x18\x01 \x01(\x08\x12\x10\n\x08security\x18\x02 \x01(\x08\x12\x0e\n\x06volume\x18\x03 \x01(\x08\"\xb7\x01\n\x14PartnerAlertSettings\x12N\n\x06\x65vents\x18\x01 \x01(\x0b\x32>.bloombox.schema.partner.settings.PartnerEventAlertingSettings\x12O\n\nrecipients\x18\x02 \x03(\x0b\x32;.bloombox.schema.partner.settings.PartnerNotificationTarget\"/\n\x0c\x42\x65taSettings\x12\x0e\n\x06\x65nable\x18\x01 \x01(\x08\x12\x0f\n\x07sandbox\x18\x02 \x01(\x08\"`\n\rFeatureStatus\x12\x11\n\tanalytics\x18\x01 \x01(\x08\x12\x0c\n\x04\x62\x65ta\x18\x02 \x01(\x08\x12\x0f\n\x07offline\x18\x03 \x01(\x08\x12\x0c\n\x04shop\x18\x04 \x01(\x08\x12\x0f\n\x07\x63heckin\x18\x05 \x01(\x08\"0\n\x0eSearchSettings\x12\x0f\n\x07\x65nabled\x18\x01 \x01(\x08\x12\r\n\x05media\x18\x02 \x01(\x08\"\xf0\x02\n\x0fPartnerSettings\x12\x46\n\x06\x61lerts\x18\x01 \x01(\x0b\x32\x36.bloombox.schema.partner.settings.PartnerAlertSettings\x12<\n\x04\x62\x65ta\x18\x02 \x01(\x0b\x32..bloombox.schema.partner.settings.BetaSettings\x12\x41\n\x08\x66\x65\x61tures\x18\x03 \x01(\x0b\x32/.bloombox.schema.partner.settings.FeatureStatus\x12@\n\x06search\x18\x04 \x01(\x0b\x32\x30.bloombox.schema.partner.settings.SearchSettings\x12R\n\x08partners\x18\x07 \x01(\x0b\x32@.bloombox.schema.partner.integrations.PartnerIntegrationSettingsB/\n#io.bloombox.schema.partner.settingsH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n&partner/settings/PartnerSettings.proto\x12 bloombox.schema.partner.settings\x1a\x19\x63ontact/PhoneNumber.proto\x1a\x1a\x63ontact/EmailAddress.proto\x1a.partner/integrations/IntegrationSettings.proto\"\xa1\x01\n\x19PartnerNotificationTarget\x12\x10\n\x08\x64isabled\x18\x01 \x01(\x08\x12\x32\n\x05phone\x18\n \x01(\x0b\x32!.opencannabis.contact.PhoneNumberH\x00\x12\x33\n\x05\x65mail\x18\x0b \x01(\x0b\x32\".opencannabis.contact.EmailAddressH\x00\x42\t\n\x07\x63ontact\"O\n\x1cPartnerEventAlertingSettings\x12\r\n\x05promo\x18\x01 \x01(\x08\x12\x10\n\x08security\x18\x02 \x01(\x08\x12\x0e\n\x06volume\x18\x03 \x01(\x08\"\xb7\x01\n\x14PartnerAlertSettings\x12N\n\x06\x65vents\x18\x01 \x01(\x0b\x32>.bloombox.schema.partner.settings.PartnerEventAlertingSettings\x12O\n\nrecipients\x18\x02 \x03(\x0b\x32;.bloombox.schema.partner.settings.PartnerNotificationTarget\"/\n\x0c\x42\x65taSettings\x12\x0e\n\x06\x65nable\x18\x01 \x01(\x08\x12\x0f\n\x07sandbox\x18\x02 \x01(\x08\"`\n\rFeatureStatus\x12\x11\n\tanalytics\x18\x01 \x01(\x08\x12\x0c\n\x04\x62\x65ta\x18\x02 \x01(\x08\x12\x0f\n\x07offline\x18\x03 \x01(\x08\x12\x0c\n\x04shop\x18\x04 \x01(\x08\x12\x0f\n\x07\x63heckin\x18\x05 \x01(\x08\"0\n\x0eSearchSettings\x12\x0f\n\x07\x65nabled\x18\x01 \x01(\x08\x12\r\n\x05media\x18\x02 \x01(\x08\"\xf3\x02\n\x0fPartnerSettings\x12\x46\n\x06\x61lerts\x18\x01 \x01(\x0b\x32\x36.bloombox.schema.partner.settings.PartnerAlertSettings\x12<\n\x04\x62\x65ta\x18\x02 \x01(\x0b\x32..bloombox.schema.partner.settings.BetaSettings\x12\x41\n\x08\x66\x65\x61tures\x18\x03 \x01(\x0b\x32/.bloombox.schema.partner.settings.FeatureStatus\x12@\n\x06search\x18\x04 \x01(\x0b\x32\x30.bloombox.schema.partner.settings.SearchSettings\x12U\n\x0bintegration\x18\x07 \x01(\x0b\x32@.bloombox.schema.partner.integrations.PartnerIntegrationSettingsB/\n#io.bloombox.schema.partner.settingsH\x01P\x00\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
   dependencies=[contact_dot_PhoneNumber__pb2.DESCRIPTOR,contact_dot_EmailAddress__pb2.DESCRIPTOR,partner_dot_integrations_dot_IntegrationSettings__pb2.DESCRIPTOR,])
 
@@ -331,7 +331,7 @@ _PARTNERSETTINGS = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='partners', full_name='bloombox.schema.partner.settings.PartnerSettings.partners', index=4,
+      name='integration', full_name='bloombox.schema.partner.settings.PartnerSettings.integration', index=4,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -350,7 +350,7 @@ _PARTNERSETTINGS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=808,
-  serialized_end=1176,
+  serialized_end=1179,
 )
 
 _PARTNERNOTIFICATIONTARGET.fields_by_name['phone'].message_type = contact_dot_PhoneNumber__pb2._PHONENUMBER
@@ -367,7 +367,7 @@ _PARTNERSETTINGS.fields_by_name['alerts'].message_type = _PARTNERALERTSETTINGS
 _PARTNERSETTINGS.fields_by_name['beta'].message_type = _BETASETTINGS
 _PARTNERSETTINGS.fields_by_name['features'].message_type = _FEATURESTATUS
 _PARTNERSETTINGS.fields_by_name['search'].message_type = _SEARCHSETTINGS
-_PARTNERSETTINGS.fields_by_name['partners'].message_type = partner_dot_integrations_dot_IntegrationSettings__pb2._PARTNERINTEGRATIONSETTINGS
+_PARTNERSETTINGS.fields_by_name['integration'].message_type = partner_dot_integrations_dot_IntegrationSettings__pb2._PARTNERINTEGRATIONSETTINGS
 DESCRIPTOR.message_types_by_name['PartnerNotificationTarget'] = _PARTNERNOTIFICATIONTARGET
 DESCRIPTOR.message_types_by_name['PartnerEventAlertingSettings'] = _PARTNEREVENTALERTINGSETTINGS
 DESCRIPTOR.message_types_by_name['PartnerAlertSettings'] = _PARTNERALERTSETTINGS
@@ -428,5 +428,5 @@ _sym_db.RegisterMessage(PartnerSettings)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n#io.bloombox.schema.partner.settingsH\001P\001\242\002\003BBS'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n#io.bloombox.schema.partner.settingsH\001P\000\242\002\003BBS'))
 # @@protoc_insertion_point(module_scope)

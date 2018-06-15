@@ -16,6 +16,7 @@ _sym_db = _symbol_database.Default()
 
 from geo import Location_pb2 as geo_dot_Location__pb2
 from temporal import Date_pb2 as temporal_dot_Date__pb2
+from commerce import Order_pb2 as commerce_dot_Order__pb2
 from contact import PhoneNumber_pb2 as contact_dot_PhoneNumber__pb2
 from contact import EmailAddress_pb2 as contact_dot_EmailAddress__pb2
 from partner.integrations import IntegrationSettings_pb2 as partner_dot_integrations_dot_IntegrationSettings__pb2
@@ -25,9 +26,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='partner/settings/PartnerLocationSettings.proto',
   package='bloombox.schema.partner.settings',
   syntax='proto3',
-  serialized_pb=_b('\n.partner/settings/PartnerLocationSettings.proto\x12 bloombox.schema.partner.settings\x1a\x12geo/Location.proto\x1a\x13temporal/Date.proto\x1a\x19\x63ontact/PhoneNumber.proto\x1a\x1a\x63ontact/EmailAddress.proto\x1a.partner/integrations/IntegrationSettings.proto\"\x1c\n\x0b\x41PISettings\x12\r\n\x05\x65mbed\x18\x01 \x01(\t\",\n\x0cInHouseBrand\x12\r\n\x05label\x18\x01 \x01(\t\x12\r\n\x05\x62rand\x18\x02 \x03(\t\"W\n\x14ProductBrandSettings\x12?\n\x07inhouse\x18\x01 \x03(\x0b\x32..bloombox.schema.partner.settings.InHouseBrand\"0\n\x0fPublishSettings\x12\x0c\n\x04menu\x18\x01 \x01(\x08\x12\x0f\n\x07profile\x18\x02 \x01(\x08\"z\n\x15\x43ustomSectionSettings\x12\x0c\n\x04spec\x18\x01 \x01(\t\x12G\n\x06\x66ilter\x18\x02 \x01(\x0e\x32\x35.bloombox.schema.partner.settings.FilteredSectionTypeH\x00\x42\n\n\x08settings\"\xec\x01\n\x16SectionSettingsPayload\x12\x0c\n\x04hide\x18\x01 \x01(\x08\x12\r\n\x05label\x18\x02 \x01(\x08\x12\r\n\x05media\x18\x03 \x01(\t\x12\x0c\n\x04text\x18\x04 \x01(\t\x12\x45\n\x04type\x18\x05 \x01(\x0e\x32\x35.bloombox.schema.partner.settings.SectionSettingsTypeH\x00\x12I\n\x06\x63ustom\x18\x06 \x01(\x0b\x32\x37.bloombox.schema.partner.settings.CustomSectionSettingsH\x00\x42\x06\n\x04kind\"\xd2\x06\n\x0fSectionSettings\x12L\n\napothecary\x18\x01 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12L\n\ncartridges\x18\x02 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12N\n\x0c\x63oncentrates\x18\x03 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12I\n\x07\x65\x64ibles\x18\x04 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12I\n\x07\x66lowers\x18\x05 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12J\n\x08prerolls\x18\x06 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12M\n\x0bmerchandise\x18\x07 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12H\n\x06plants\x18\x08 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12\x45\n\x03\x63\x62\x64\x18\x14 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12G\n\x05house\x18\x15 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12H\n\x06onsale\x18\x16 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\"6\n\x10TVBannerSettings\x12\x13\n\x0b\x62\x61nner_text\x18\x01 \x01(\t\x12\r\n\x05image\x18\x02 \x01(\t\"F\n\x18TVSectionSettingsPayload\x12\x0c\n\x04sort\x18\x01 \x01(\r\x12\r\n\x05title\x18\x02 \x01(\t\x12\r\n\x05image\x18\x03 \x01(\t\"\x87\x05\n\x0eTVMenuSettings\x12N\n\napothecary\x18\x01 \x01(\x0b\x32:.bloombox.schema.partner.settings.TVSectionSettingsPayload\x12N\n\ncartridges\x18\x02 \x01(\x0b\x32:.bloombox.schema.partner.settings.TVSectionSettingsPayload\x12P\n\x0c\x63oncentrates\x18\x03 \x01(\x0b\x32:.bloombox.schema.partner.settings.TVSectionSettingsPayload\x12K\n\x07\x65\x64ibles\x18\x04 \x01(\x0b\x32:.bloombox.schema.partner.settings.TVSectionSettingsPayload\x12K\n\x07\x66lowers\x18\x05 \x01(\x0b\x32:.bloombox.schema.partner.settings.TVSectionSettingsPayload\x12L\n\x08prerolls\x18\x06 \x01(\x0b\x32:.bloombox.schema.partner.settings.TVSectionSettingsPayload\x12O\n\x0bmerchandise\x18\x07 \x01(\x0b\x32:.bloombox.schema.partner.settings.TVSectionSettingsPayload\x12J\n\x06plants\x18\x08 \x01(\x0b\x32:.bloombox.schema.partner.settings.TVSectionSettingsPayload\"\x94\x01\n\nTVSettings\x12\x42\n\x06\x62\x61nner\x18\x01 \x01(\x0b\x32\x32.bloombox.schema.partner.settings.TVBannerSettings\x12\x42\n\x08settings\x18\x02 \x01(\x0b\x32\x30.bloombox.schema.partner.settings.TVMenuSettings\")\n\tHoursSpec\x12\x0c\n\x04hour\x18\x01 \x01(\r\x12\x0e\n\x06minute\x18\x02 \x01(\r\"\xc0\x01\n\rHoursBoundary\x12:\n\x05\x62\x65gin\x18\x01 \x01(\x0b\x32+.bloombox.schema.partner.settings.HoursSpec\x12\x38\n\x03\x65nd\x18\x02 \x01(\x0b\x32+.bloombox.schema.partner.settings.HoursSpec\x12\x39\n\x04span\x18\x03 \x01(\x0e\x32+.bloombox.schema.partner.settings.HoursSpan\"\x93\x01\n\x14RegularHoursSettings\x12?\n\x06\x62ounds\x18\x01 \x01(\x0b\x32/.bloombox.schema.partner.settings.HoursBoundary\x12:\n\x04mode\x18\x02 \x01(\x0e\x32,.bloombox.schema.partner.settings.ShopStatus\"\xbe\x01\n\x14SpecialHoursSettings\x12?\n\x06\x62ounds\x18\x01 \x01(\x0b\x32/.bloombox.schema.partner.settings.HoursBoundary\x12:\n\x04mode\x18\x02 \x01(\x0e\x32,.bloombox.schema.partner.settings.ShopStatus\x12)\n\x04\x64\x61te\x18\x03 \x01(\x0b\x32\x1b.opencannabis.temporal.Date\"\x97\x02\n\x11ShopHoursSettings\x12G\n\x07regular\x18\x01 \x03(\x0b\x32\x36.bloombox.schema.partner.settings.RegularHoursSettings\x12Q\n\x07special\x18\x02 \x03(\x0b\x32@.bloombox.schema.partner.settings.ShopHoursSettings.SpecialEntry\x1a\x66\n\x0cSpecialEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x45\n\x05value\x18\x02 \x01(\x0b\x32\x36.bloombox.schema.partner.settings.SpecialHoursSettings:\x02\x38\x01\"\\\n\x13ShopServiceSettings\x12\x10\n\x08\x64\x65livery\x18\x01 \x01(\x08\x12\x0f\n\x07\x65xpress\x18\x02 \x01(\x08\x12\x0e\n\x06pickup\x18\x03 \x01(\x08\x12\x12\n\nstorefront\x18\x04 \x01(\x08\"U\n\x17\x44\x65liveryZipcodeSettings\x12\x0f\n\x07zipcode\x18\x01 \x01(\t\x12\x0f\n\x07\x65nabled\x18\x02 \x01(\x08\x12\x18\n\x10\x64\x65livery_minimum\x18\x03 \x01(\r\"\xea\x01\n\x10\x44\x65liverySettings\x12\x16\n\x0eglobal_minimum\x18\x01 \x01(\r\x12R\n\x08zipcodes\x18\x02 \x03(\x0b\x32@.bloombox.schema.partner.settings.DeliverySettings.ZipcodesEntry\x1aj\n\rZipcodesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12H\n\x05value\x18\x02 \x01(\x0b\x32\x39.bloombox.schema.partner.settings.DeliveryZipcodeSettings:\x02\x38\x01\"8\n\x1aShopContactChannelSettings\x12\r\n\x05\x65mail\x18\x01 \x01(\x08\x12\x0b\n\x03sms\x18\x02 \x01(\x08\"\xb5\x01\n\x13ShopChannelSettings\x12L\n\x06orders\x18\x01 \x01(\x0b\x32<.bloombox.schema.partner.settings.ShopContactChannelSettings\x12P\n\nenrollment\x18\x02 \x01(\x0b\x32<.bloombox.schema.partner.settings.ShopContactChannelSettings\"\xdf\x01\n\x11ShopContactTarget\x12\r\n\x05label\x18\x01 \x01(\t\x12\r\n\x05\x64\x65\x62ug\x18\x02 \x01(\x08\x12\x31\n\x05\x65mail\x18\x03 \x01(\x0b\x32\".opencannabis.contact.EmailAddress\x12\x30\n\x05phone\x18\x04 \x01(\x0b\x32!.opencannabis.contact.PhoneNumber\x12G\n\x08\x63hannels\x18\x05 \x01(\x0b\x32\x35.bloombox.schema.partner.settings.ShopChannelSettings\"z\n\x13\x43ommsSenderSettings\x12\x31\n\x05\x65mail\x18\x01 \x01(\x0b\x32\".opencannabis.contact.EmailAddress\x12\x30\n\x05phone\x18\x02 \x01(\x0b\x32!.opencannabis.contact.PhoneNumber\"\xe3\x01\n\x14\x43ommsSettingsPayload\x12=\n\x04type\x18\x01 \x01(\x0e\x32/.bloombox.schema.partner.settings.ShopCommsType\x12\x45\n\x08\x63ontacts\x18\x02 \x03(\x0b\x32\x33.bloombox.schema.partner.settings.ShopContactTarget\x12\x45\n\x06sender\x18\x03 \x01(\x0b\x32\x35.bloombox.schema.partner.settings.CommsSenderSettings\"\xa7\x01\n\x11ShopCommsSettings\x12H\n\x08internal\x18\x01 \x01(\x0b\x32\x36.bloombox.schema.partner.settings.CommsSettingsPayload\x12H\n\x08\x65xternal\x18\x02 \x01(\x0b\x32\x36.bloombox.schema.partner.settings.CommsSettingsPayload\"h\n\x12OnlineShopSettings\x12\x0e\n\x06origin\x18\x01 \x01(\t\x12\x42\n\x05\x63omms\x18\x02 \x01(\x0b\x32\x33.bloombox.schema.partner.settings.ShopCommsSettings\"J\n\x1aPhysicalStorefrontSettings\x12,\n\x08location\x18\x01 \x01(\x0b\x32\x1a.opencannabis.geo.Location\"\xf0\x01\n\x12StorefrontSettings\x12\x44\n\x08\x64\x65livery\x18\x01 \x01(\x0b\x32\x32.bloombox.schema.partner.settings.DeliverySettings\x12\x44\n\x06online\x18\x02 \x01(\x0b\x32\x34.bloombox.schema.partner.settings.OnlineShopSettings\x12N\n\x08physical\x18\x03 \x01(\x0b\x32<.bloombox.schema.partner.settings.PhysicalStorefrontSettings\"\xe5\x01\n\x0cShopSettings\x12\x42\n\x05hours\x18\x01 \x01(\x0b\x32\x33.bloombox.schema.partner.settings.ShopHoursSettings\x12G\n\x08services\x18\x02 \x01(\x0b\x32\x35.bloombox.schema.partner.settings.ShopServiceSettings\x12H\n\nstorefront\x18\x03 \x01(\x0b\x32\x34.bloombox.schema.partner.settings.StorefrontSettings\"\xf3\x03\n\x17PartnerLocationSettings\x12:\n\x03\x61pi\x18\x01 \x01(\x0b\x32-.bloombox.schema.partner.settings.APISettings\x12\x46\n\x06\x62rands\x18\x02 \x01(\x0b\x32\x36.bloombox.schema.partner.settings.ProductBrandSettings\x12\x42\n\x07publish\x18\x03 \x01(\x0b\x32\x31.bloombox.schema.partner.settings.PublishSettings\x12\x43\n\x08sections\x18\x04 \x01(\x0b\x32\x31.bloombox.schema.partner.settings.SectionSettings\x12<\n\x04shop\x18\x05 \x01(\x0b\x32..bloombox.schema.partner.settings.ShopSettings\x12\x38\n\x02tv\x18\x06 \x01(\x0b\x32,.bloombox.schema.partner.settings.TVSettings\x12S\n\x08partners\x18\x07 \x01(\x0b\x32\x41.bloombox.schema.partner.integrations.LocationIntegrationSettings*1\n\x13SectionSettingsType\x12\x0c\n\x08STANDARD\x10\x00\x12\x0c\n\x08\x46ILTERED\x10\x01*5\n\x13\x46ilteredSectionType\x12\x07\n\x03\x43\x42\x44\x10\x00\x12\t\n\x05HOUSE\x10\x01\x12\n\n\x06ONSALE\x10\x02* \n\x12\x43ustomSettingsType\x12\n\n\x06\x46ILTER\x10\x00*\x91\x01\n\tHoursSpan\x12\x0c\n\x08\x45VERYDAY\x10\x00\x12\x0c\n\x08WEEKDAYS\x10\x01\x12\x0c\n\x08WEEKENDS\x10\x02\x12\n\n\x06MONDAY\x10\x03\x12\x0b\n\x07TUESDAY\x10\x04\x12\r\n\tWEDNESDAY\x10\x05\x12\x0c\n\x08THURSDAY\x10\x06\x12\n\n\x06\x46RIDAY\x10\x07\x12\x0c\n\x08SATURDAY\x10\x08\x12\n\n\x06SUNDAY\x10\t*F\n\nShopStatus\x12\x08\n\x04OPEN\x10\x00\x12\n\n\x06\x43LOSED\x10\x01\x12\x11\n\rDELIVERY_ONLY\x10\x02\x12\x0f\n\x0bPICKUP_ONLY\x10\x03*+\n\rShopCommsType\x12\x0c\n\x08INTERNAL\x10\x00\x12\x0c\n\x08\x45XTERNAL\x10\x01*2\n\x12ShopContactChannel\x12\x0c\n\x08ORDERING\x10\x00\x12\x0e\n\nENROLLMENT\x10\x01\x42/\n#io.bloombox.schema.partner.settingsH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
+  serialized_pb=_b('\n.partner/settings/PartnerLocationSettings.proto\x12 bloombox.schema.partner.settings\x1a\x12geo/Location.proto\x1a\x13temporal/Date.proto\x1a\x14\x63ommerce/Order.proto\x1a\x19\x63ontact/PhoneNumber.proto\x1a\x1a\x63ontact/EmailAddress.proto\x1a.partner/integrations/IntegrationSettings.proto\"\x1c\n\x0b\x41PISettings\x12\r\n\x05\x65mbed\x18\x01 \x01(\t\",\n\x0cInHouseBrand\x12\r\n\x05label\x18\x01 \x01(\t\x12\r\n\x05\x62rand\x18\x02 \x03(\t\"W\n\x14ProductBrandSettings\x12?\n\x07inhouse\x18\x01 \x03(\x0b\x32..bloombox.schema.partner.settings.InHouseBrand\"0\n\x0fPublishSettings\x12\x0c\n\x04menu\x18\x01 \x01(\x08\x12\x0f\n\x07profile\x18\x02 \x01(\x08\"z\n\x15\x43ustomSectionSettings\x12\x0c\n\x04spec\x18\x01 \x01(\t\x12G\n\x06\x66ilter\x18\x02 \x01(\x0e\x32\x35.bloombox.schema.partner.settings.FilteredSectionTypeH\x00\x42\n\n\x08settings\"\xec\x01\n\x16SectionSettingsPayload\x12\x0c\n\x04hide\x18\x01 \x01(\x08\x12\r\n\x05label\x18\x02 \x01(\x08\x12\r\n\x05media\x18\x03 \x01(\t\x12\x0c\n\x04text\x18\x04 \x01(\t\x12\x45\n\x04type\x18\x05 \x01(\x0e\x32\x35.bloombox.schema.partner.settings.SectionSettingsTypeH\x00\x12I\n\x06\x63ustom\x18\x06 \x01(\x0b\x32\x37.bloombox.schema.partner.settings.CustomSectionSettingsH\x00\x42\x06\n\x04kind\"\xd2\x06\n\x0fSectionSettings\x12L\n\napothecary\x18\x01 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12L\n\ncartridges\x18\x02 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12N\n\x0c\x63oncentrates\x18\x03 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12I\n\x07\x65\x64ibles\x18\x04 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12I\n\x07\x66lowers\x18\x05 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12J\n\x08prerolls\x18\x06 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12M\n\x0bmerchandise\x18\x07 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12H\n\x06plants\x18\x08 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12\x45\n\x03\x63\x62\x64\x18\x14 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12G\n\x05house\x18\x15 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\x12H\n\x06onsale\x18\x16 \x01(\x0b\x32\x38.bloombox.schema.partner.settings.SectionSettingsPayload\"6\n\x10TVBannerSettings\x12\x13\n\x0b\x62\x61nner_text\x18\x01 \x01(\t\x12\r\n\x05image\x18\x02 \x01(\t\"F\n\x18TVSectionSettingsPayload\x12\x0c\n\x04sort\x18\x01 \x01(\r\x12\r\n\x05title\x18\x02 \x01(\t\x12\r\n\x05image\x18\x03 \x01(\t\"\x87\x05\n\x0eTVMenuSettings\x12N\n\napothecary\x18\x01 \x01(\x0b\x32:.bloombox.schema.partner.settings.TVSectionSettingsPayload\x12N\n\ncartridges\x18\x02 \x01(\x0b\x32:.bloombox.schema.partner.settings.TVSectionSettingsPayload\x12P\n\x0c\x63oncentrates\x18\x03 \x01(\x0b\x32:.bloombox.schema.partner.settings.TVSectionSettingsPayload\x12K\n\x07\x65\x64ibles\x18\x04 \x01(\x0b\x32:.bloombox.schema.partner.settings.TVSectionSettingsPayload\x12K\n\x07\x66lowers\x18\x05 \x01(\x0b\x32:.bloombox.schema.partner.settings.TVSectionSettingsPayload\x12L\n\x08prerolls\x18\x06 \x01(\x0b\x32:.bloombox.schema.partner.settings.TVSectionSettingsPayload\x12O\n\x0bmerchandise\x18\x07 \x01(\x0b\x32:.bloombox.schema.partner.settings.TVSectionSettingsPayload\x12J\n\x06plants\x18\x08 \x01(\x0b\x32:.bloombox.schema.partner.settings.TVSectionSettingsPayload\"\x94\x01\n\nTVSettings\x12\x42\n\x06\x62\x61nner\x18\x01 \x01(\x0b\x32\x32.bloombox.schema.partner.settings.TVBannerSettings\x12\x42\n\x08settings\x18\x02 \x01(\x0b\x32\x30.bloombox.schema.partner.settings.TVMenuSettings\")\n\tHoursSpec\x12\x0c\n\x04hour\x18\x01 \x01(\r\x12\x0e\n\x06minute\x18\x02 \x01(\r\"\xc0\x01\n\rHoursBoundary\x12:\n\x05\x62\x65gin\x18\x01 \x01(\x0b\x32+.bloombox.schema.partner.settings.HoursSpec\x12\x38\n\x03\x65nd\x18\x02 \x01(\x0b\x32+.bloombox.schema.partner.settings.HoursSpec\x12\x39\n\x04span\x18\x03 \x01(\x0e\x32+.bloombox.schema.partner.settings.HoursSpan\"\x93\x01\n\x14RegularHoursSettings\x12?\n\x06\x62ounds\x18\x01 \x01(\x0b\x32/.bloombox.schema.partner.settings.HoursBoundary\x12:\n\x04mode\x18\x02 \x01(\x0e\x32,.bloombox.schema.partner.settings.ShopStatus\"\xbe\x01\n\x14SpecialHoursSettings\x12?\n\x06\x62ounds\x18\x01 \x01(\x0b\x32/.bloombox.schema.partner.settings.HoursBoundary\x12:\n\x04mode\x18\x02 \x01(\x0e\x32,.bloombox.schema.partner.settings.ShopStatus\x12)\n\x04\x64\x61te\x18\x03 \x01(\x0b\x32\x1b.opencannabis.temporal.Date\"\x97\x02\n\x11ShopHoursSettings\x12G\n\x07regular\x18\x01 \x03(\x0b\x32\x36.bloombox.schema.partner.settings.RegularHoursSettings\x12Q\n\x07special\x18\x02 \x03(\x0b\x32@.bloombox.schema.partner.settings.ShopHoursSettings.SpecialEntry\x1a\x66\n\x0cSpecialEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x45\n\x05value\x18\x02 \x01(\x0b\x32\x36.bloombox.schema.partner.settings.SpecialHoursSettings:\x02\x38\x01\"\\\n\x13ShopServiceSettings\x12\x10\n\x08\x64\x65livery\x18\x01 \x01(\x08\x12\x0f\n\x07\x65xpress\x18\x02 \x01(\x08\x12\x0e\n\x06pickup\x18\x03 \x01(\x08\x12\x12\n\nstorefront\x18\x04 \x01(\x08\"U\n\x17\x44\x65liveryZipcodeSettings\x12\x0f\n\x07zipcode\x18\x01 \x01(\t\x12\x0f\n\x07\x65nabled\x18\x02 \x01(\x08\x12\x18\n\x10\x64\x65livery_minimum\x18\x03 \x01(\r\"\xea\x01\n\x10\x44\x65liverySettings\x12\x16\n\x0eglobal_minimum\x18\x01 \x01(\r\x12R\n\x08zipcodes\x18\x02 \x03(\x0b\x32@.bloombox.schema.partner.settings.DeliverySettings.ZipcodesEntry\x1aj\n\rZipcodesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12H\n\x05value\x18\x02 \x01(\x0b\x32\x39.bloombox.schema.partner.settings.DeliveryZipcodeSettings:\x02\x38\x01\"8\n\x1aShopContactChannelSettings\x12\r\n\x05\x65mail\x18\x01 \x01(\x08\x12\x0b\n\x03sms\x18\x02 \x01(\x08\"\xb5\x01\n\x13ShopChannelSettings\x12L\n\x06orders\x18\x01 \x01(\x0b\x32<.bloombox.schema.partner.settings.ShopContactChannelSettings\x12P\n\nenrollment\x18\x02 \x01(\x0b\x32<.bloombox.schema.partner.settings.ShopContactChannelSettings\"\xdf\x01\n\x11ShopContactTarget\x12\r\n\x05label\x18\x01 \x01(\t\x12\r\n\x05\x64\x65\x62ug\x18\x02 \x01(\x08\x12\x31\n\x05\x65mail\x18\x03 \x01(\x0b\x32\".opencannabis.contact.EmailAddress\x12\x30\n\x05phone\x18\x04 \x01(\x0b\x32!.opencannabis.contact.PhoneNumber\x12G\n\x08\x63hannels\x18\x05 \x01(\x0b\x32\x35.bloombox.schema.partner.settings.ShopChannelSettings\"z\n\x13\x43ommsSenderSettings\x12\x31\n\x05\x65mail\x18\x01 \x01(\x0b\x32\".opencannabis.contact.EmailAddress\x12\x30\n\x05phone\x18\x02 \x01(\x0b\x32!.opencannabis.contact.PhoneNumber\"\xe3\x01\n\x14\x43ommsSettingsPayload\x12=\n\x04type\x18\x01 \x01(\x0e\x32/.bloombox.schema.partner.settings.ShopCommsType\x12\x45\n\x08\x63ontacts\x18\x02 \x03(\x0b\x32\x33.bloombox.schema.partner.settings.ShopContactTarget\x12\x45\n\x06sender\x18\x03 \x01(\x0b\x32\x35.bloombox.schema.partner.settings.CommsSenderSettings\"\xa7\x01\n\x11ShopCommsSettings\x12H\n\x08internal\x18\x01 \x01(\x0b\x32\x36.bloombox.schema.partner.settings.CommsSettingsPayload\x12H\n\x08\x65xternal\x18\x02 \x01(\x0b\x32\x36.bloombox.schema.partner.settings.CommsSettingsPayload\"h\n\x12OnlineShopSettings\x12\x0e\n\x06origin\x18\x01 \x01(\t\x12\x42\n\x05\x63omms\x18\x02 \x01(\x0b\x32\x33.bloombox.schema.partner.settings.ShopCommsSettings\"J\n\x1aPhysicalStorefrontSettings\x12,\n\x08location\x18\x01 \x01(\x0b\x32\x1a.opencannabis.geo.Location\"\xf0\x01\n\x12StorefrontSettings\x12\x44\n\x08\x64\x65livery\x18\x01 \x01(\x0b\x32\x32.bloombox.schema.partner.settings.DeliverySettings\x12\x44\n\x06online\x18\x02 \x01(\x0b\x32\x34.bloombox.schema.partner.settings.OnlineShopSettings\x12N\n\x08physical\x18\x03 \x01(\x0b\x32<.bloombox.schema.partner.settings.PhysicalStorefrontSettings\"\xe5\x01\n\x0cShopSettings\x12\x42\n\x05hours\x18\x01 \x01(\x0b\x32\x33.bloombox.schema.partner.settings.ShopHoursSettings\x12G\n\x08services\x18\x02 \x01(\x0b\x32\x35.bloombox.schema.partner.settings.ShopServiceSettings\x12H\n\nstorefront\x18\x03 \x01(\x0b\x32\x34.bloombox.schema.partner.settings.StorefrontSettings\"~\n\x0c\x43\x61rtSettings\x12\x38\n\x04mode\x18\x01 \x01(\x0e\x32*.bloombox.schema.partner.settings.CartMode\x12\x34\n\norder_type\x18\x02 \x01(\x0e\x32 .opencannabis.commerce.OrderType\"N\n\x0eTabletSettings\x12<\n\x04\x63\x61rt\x18\x01 \x01(\x0b\x32..bloombox.schema.partner.settings.CartSettings\"\xb8\x04\n\x17PartnerLocationSettings\x12:\n\x03\x61pi\x18\x01 \x01(\x0b\x32-.bloombox.schema.partner.settings.APISettings\x12\x46\n\x06\x62rands\x18\x02 \x01(\x0b\x32\x36.bloombox.schema.partner.settings.ProductBrandSettings\x12\x42\n\x07publish\x18\x03 \x01(\x0b\x32\x31.bloombox.schema.partner.settings.PublishSettings\x12\x43\n\x08sections\x18\x04 \x01(\x0b\x32\x31.bloombox.schema.partner.settings.SectionSettings\x12<\n\x04shop\x18\x05 \x01(\x0b\x32..bloombox.schema.partner.settings.ShopSettings\x12\x38\n\x02tv\x18\x06 \x01(\x0b\x32,.bloombox.schema.partner.settings.TVSettings\x12@\n\x06tablet\x18\x07 \x01(\x0b\x32\x30.bloombox.schema.partner.settings.TabletSettings\x12V\n\x0bintegration\x18\x14 \x01(\x0b\x32\x41.bloombox.schema.partner.integrations.LocationIntegrationSettings*1\n\x13SectionSettingsType\x12\x0c\n\x08STANDARD\x10\x00\x12\x0c\n\x08\x46ILTERED\x10\x01*5\n\x13\x46ilteredSectionType\x12\x07\n\x03\x43\x42\x44\x10\x00\x12\t\n\x05HOUSE\x10\x01\x12\n\n\x06ONSALE\x10\x02* \n\x12\x43ustomSettingsType\x12\n\n\x06\x46ILTER\x10\x00*\x91\x01\n\tHoursSpan\x12\x0c\n\x08\x45VERYDAY\x10\x00\x12\x0c\n\x08WEEKDAYS\x10\x01\x12\x0c\n\x08WEEKENDS\x10\x02\x12\n\n\x06MONDAY\x10\x03\x12\x0b\n\x07TUESDAY\x10\x04\x12\r\n\tWEDNESDAY\x10\x05\x12\x0c\n\x08THURSDAY\x10\x06\x12\n\n\x06\x46RIDAY\x10\x07\x12\x0c\n\x08SATURDAY\x10\x08\x12\n\n\x06SUNDAY\x10\t*F\n\nShopStatus\x12\x08\n\x04OPEN\x10\x00\x12\n\n\x06\x43LOSED\x10\x01\x12\x11\n\rDELIVERY_ONLY\x10\x02\x12\x0f\n\x0bPICKUP_ONLY\x10\x03*+\n\rShopCommsType\x12\x0c\n\x08INTERNAL\x10\x00\x12\x0c\n\x08\x45XTERNAL\x10\x01*2\n\x12ShopContactChannel\x12\x0c\n\x08ORDERING\x10\x00\x12\x0e\n\nENROLLMENT\x10\x01*&\n\x08\x43\x61rtMode\x12\x07\n\x03OFF\x10\x00\x12\x07\n\x03\x42\x41G\x10\x01\x12\x08\n\x04\x43\x41RT\x10\x02\x42/\n#io.bloombox.schema.partner.settingsH\x01P\x01\xa2\x02\x03\x42\x42Sb\x06proto3')
   ,
-  dependencies=[geo_dot_Location__pb2.DESCRIPTOR,temporal_dot_Date__pb2.DESCRIPTOR,contact_dot_PhoneNumber__pb2.DESCRIPTOR,contact_dot_EmailAddress__pb2.DESCRIPTOR,partner_dot_integrations_dot_IntegrationSettings__pb2.DESCRIPTOR,])
+  dependencies=[geo_dot_Location__pb2.DESCRIPTOR,temporal_dot_Date__pb2.DESCRIPTOR,commerce_dot_Order__pb2.DESCRIPTOR,contact_dot_PhoneNumber__pb2.DESCRIPTOR,contact_dot_EmailAddress__pb2.DESCRIPTOR,partner_dot_integrations_dot_IntegrationSettings__pb2.DESCRIPTOR,])
 
 _SECTIONSETTINGSTYPE = _descriptor.EnumDescriptor(
   name='SectionSettingsType',
@@ -46,8 +47,8 @@ _SECTIONSETTINGSTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6020,
-  serialized_end=6069,
+  serialized_start=6319,
+  serialized_end=6368,
 )
 _sym_db.RegisterEnumDescriptor(_SECTIONSETTINGSTYPE)
 
@@ -73,8 +74,8 @@ _FILTEREDSECTIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6071,
-  serialized_end=6124,
+  serialized_start=6370,
+  serialized_end=6423,
 )
 _sym_db.RegisterEnumDescriptor(_FILTEREDSECTIONTYPE)
 
@@ -92,8 +93,8 @@ _CUSTOMSETTINGSTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6126,
-  serialized_end=6158,
+  serialized_start=6425,
+  serialized_end=6457,
 )
 _sym_db.RegisterEnumDescriptor(_CUSTOMSETTINGSTYPE)
 
@@ -147,8 +148,8 @@ _HOURSSPAN = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6161,
-  serialized_end=6306,
+  serialized_start=6460,
+  serialized_end=6605,
 )
 _sym_db.RegisterEnumDescriptor(_HOURSSPAN)
 
@@ -178,8 +179,8 @@ _SHOPSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6308,
-  serialized_end=6378,
+  serialized_start=6607,
+  serialized_end=6677,
 )
 _sym_db.RegisterEnumDescriptor(_SHOPSTATUS)
 
@@ -201,8 +202,8 @@ _SHOPCOMMSTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6380,
-  serialized_end=6423,
+  serialized_start=6679,
+  serialized_end=6722,
 )
 _sym_db.RegisterEnumDescriptor(_SHOPCOMMSTYPE)
 
@@ -224,12 +225,39 @@ _SHOPCONTACTCHANNEL = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6425,
-  serialized_end=6475,
+  serialized_start=6724,
+  serialized_end=6774,
 )
 _sym_db.RegisterEnumDescriptor(_SHOPCONTACTCHANNEL)
 
 ShopContactChannel = enum_type_wrapper.EnumTypeWrapper(_SHOPCONTACTCHANNEL)
+_CARTMODE = _descriptor.EnumDescriptor(
+  name='CartMode',
+  full_name='bloombox.schema.partner.settings.CartMode',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='OFF', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='BAG', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CART', index=2, number=2,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=6776,
+  serialized_end=6814,
+)
+_sym_db.RegisterEnumDescriptor(_CARTMODE)
+
+CartMode = enum_type_wrapper.EnumTypeWrapper(_CARTMODE)
 STANDARD = 0
 FILTERED = 1
 CBD = 0
@@ -254,6 +282,9 @@ INTERNAL = 0
 EXTERNAL = 1
 ORDERING = 0
 ENROLLMENT = 1
+OFF = 0
+BAG = 1
+CART = 2
 
 
 
@@ -283,8 +314,8 @@ _APISETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=228,
-  serialized_end=256,
+  serialized_start=250,
+  serialized_end=278,
 )
 
 
@@ -321,8 +352,8 @@ _INHOUSEBRAND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=258,
-  serialized_end=302,
+  serialized_start=280,
+  serialized_end=324,
 )
 
 
@@ -352,8 +383,8 @@ _PRODUCTBRANDSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=304,
-  serialized_end=391,
+  serialized_start=326,
+  serialized_end=413,
 )
 
 
@@ -390,8 +421,8 @@ _PUBLISHSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=393,
-  serialized_end=441,
+  serialized_start=415,
+  serialized_end=463,
 )
 
 
@@ -431,8 +462,8 @@ _CUSTOMSECTIONSETTINGS = _descriptor.Descriptor(
       name='settings', full_name='bloombox.schema.partner.settings.CustomSectionSettings.settings',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=443,
-  serialized_end=565,
+  serialized_start=465,
+  serialized_end=587,
 )
 
 
@@ -500,8 +531,8 @@ _SECTIONSETTINGSPAYLOAD = _descriptor.Descriptor(
       name='kind', full_name='bloombox.schema.partner.settings.SectionSettingsPayload.kind',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=568,
-  serialized_end=804,
+  serialized_start=590,
+  serialized_end=826,
 )
 
 
@@ -601,8 +632,8 @@ _SECTIONSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=807,
-  serialized_end=1657,
+  serialized_start=829,
+  serialized_end=1679,
 )
 
 
@@ -639,8 +670,8 @@ _TVBANNERSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1659,
-  serialized_end=1713,
+  serialized_start=1681,
+  serialized_end=1735,
 )
 
 
@@ -684,8 +715,8 @@ _TVSECTIONSETTINGSPAYLOAD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1715,
-  serialized_end=1785,
+  serialized_start=1737,
+  serialized_end=1807,
 )
 
 
@@ -764,8 +795,8 @@ _TVMENUSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1788,
-  serialized_end=2435,
+  serialized_start=1810,
+  serialized_end=2457,
 )
 
 
@@ -802,8 +833,8 @@ _TVSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2438,
-  serialized_end=2586,
+  serialized_start=2460,
+  serialized_end=2608,
 )
 
 
@@ -840,8 +871,8 @@ _HOURSSPEC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2588,
-  serialized_end=2629,
+  serialized_start=2610,
+  serialized_end=2651,
 )
 
 
@@ -885,8 +916,8 @@ _HOURSBOUNDARY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2632,
-  serialized_end=2824,
+  serialized_start=2654,
+  serialized_end=2846,
 )
 
 
@@ -923,8 +954,8 @@ _REGULARHOURSSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2827,
-  serialized_end=2974,
+  serialized_start=2849,
+  serialized_end=2996,
 )
 
 
@@ -968,8 +999,8 @@ _SPECIALHOURSSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2977,
-  serialized_end=3167,
+  serialized_start=2999,
+  serialized_end=3189,
 )
 
 
@@ -1006,8 +1037,8 @@ _SHOPHOURSSETTINGS_SPECIALENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3347,
-  serialized_end=3449,
+  serialized_start=3369,
+  serialized_end=3471,
 )
 
 _SHOPHOURSSETTINGS = _descriptor.Descriptor(
@@ -1043,8 +1074,8 @@ _SHOPHOURSSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3170,
-  serialized_end=3449,
+  serialized_start=3192,
+  serialized_end=3471,
 )
 
 
@@ -1095,8 +1126,8 @@ _SHOPSERVICESETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3451,
-  serialized_end=3543,
+  serialized_start=3473,
+  serialized_end=3565,
 )
 
 
@@ -1140,8 +1171,8 @@ _DELIVERYZIPCODESETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3545,
-  serialized_end=3630,
+  serialized_start=3567,
+  serialized_end=3652,
 )
 
 
@@ -1178,8 +1209,8 @@ _DELIVERYSETTINGS_ZIPCODESENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3761,
-  serialized_end=3867,
+  serialized_start=3783,
+  serialized_end=3889,
 )
 
 _DELIVERYSETTINGS = _descriptor.Descriptor(
@@ -1215,8 +1246,8 @@ _DELIVERYSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3633,
-  serialized_end=3867,
+  serialized_start=3655,
+  serialized_end=3889,
 )
 
 
@@ -1253,8 +1284,8 @@ _SHOPCONTACTCHANNELSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3869,
-  serialized_end=3925,
+  serialized_start=3891,
+  serialized_end=3947,
 )
 
 
@@ -1291,8 +1322,8 @@ _SHOPCHANNELSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3928,
-  serialized_end=4109,
+  serialized_start=3950,
+  serialized_end=4131,
 )
 
 
@@ -1350,8 +1381,8 @@ _SHOPCONTACTTARGET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4112,
-  serialized_end=4335,
+  serialized_start=4134,
+  serialized_end=4357,
 )
 
 
@@ -1388,8 +1419,8 @@ _COMMSSENDERSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4337,
-  serialized_end=4459,
+  serialized_start=4359,
+  serialized_end=4481,
 )
 
 
@@ -1433,8 +1464,8 @@ _COMMSSETTINGSPAYLOAD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4462,
-  serialized_end=4689,
+  serialized_start=4484,
+  serialized_end=4711,
 )
 
 
@@ -1471,8 +1502,8 @@ _SHOPCOMMSSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4692,
-  serialized_end=4859,
+  serialized_start=4714,
+  serialized_end=4881,
 )
 
 
@@ -1509,8 +1540,8 @@ _ONLINESHOPSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4861,
-  serialized_end=4965,
+  serialized_start=4883,
+  serialized_end=4987,
 )
 
 
@@ -1540,8 +1571,8 @@ _PHYSICALSTOREFRONTSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4967,
-  serialized_end=5041,
+  serialized_start=4989,
+  serialized_end=5063,
 )
 
 
@@ -1585,8 +1616,8 @@ _STOREFRONTSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5044,
-  serialized_end=5284,
+  serialized_start=5066,
+  serialized_end=5306,
 )
 
 
@@ -1630,8 +1661,77 @@ _SHOPSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5287,
-  serialized_end=5516,
+  serialized_start=5309,
+  serialized_end=5538,
+)
+
+
+_CARTSETTINGS = _descriptor.Descriptor(
+  name='CartSettings',
+  full_name='bloombox.schema.partner.settings.CartSettings',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='mode', full_name='bloombox.schema.partner.settings.CartSettings.mode', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='order_type', full_name='bloombox.schema.partner.settings.CartSettings.order_type', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5540,
+  serialized_end=5666,
+)
+
+
+_TABLETSETTINGS = _descriptor.Descriptor(
+  name='TabletSettings',
+  full_name='bloombox.schema.partner.settings.TabletSettings',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='cart', full_name='bloombox.schema.partner.settings.TabletSettings.cart', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5668,
+  serialized_end=5746,
 )
 
 
@@ -1685,8 +1785,15 @@ _PARTNERLOCATIONSETTINGS = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='partners', full_name='bloombox.schema.partner.settings.PartnerLocationSettings.partners', index=6,
+      name='tablet', full_name='bloombox.schema.partner.settings.PartnerLocationSettings.tablet', index=6,
       number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='integration', full_name='bloombox.schema.partner.settings.PartnerLocationSettings.integration', index=7,
+      number=20, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1703,8 +1810,8 @@ _PARTNERLOCATIONSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5519,
-  serialized_end=6018,
+  serialized_start=5749,
+  serialized_end=6317,
 )
 
 _PRODUCTBRANDSETTINGS.fields_by_name['inhouse'].message_type = _INHOUSEBRAND
@@ -1776,13 +1883,17 @@ _STOREFRONTSETTINGS.fields_by_name['physical'].message_type = _PHYSICALSTOREFRON
 _SHOPSETTINGS.fields_by_name['hours'].message_type = _SHOPHOURSSETTINGS
 _SHOPSETTINGS.fields_by_name['services'].message_type = _SHOPSERVICESETTINGS
 _SHOPSETTINGS.fields_by_name['storefront'].message_type = _STOREFRONTSETTINGS
+_CARTSETTINGS.fields_by_name['mode'].enum_type = _CARTMODE
+_CARTSETTINGS.fields_by_name['order_type'].enum_type = commerce_dot_Order__pb2._ORDERTYPE
+_TABLETSETTINGS.fields_by_name['cart'].message_type = _CARTSETTINGS
 _PARTNERLOCATIONSETTINGS.fields_by_name['api'].message_type = _APISETTINGS
 _PARTNERLOCATIONSETTINGS.fields_by_name['brands'].message_type = _PRODUCTBRANDSETTINGS
 _PARTNERLOCATIONSETTINGS.fields_by_name['publish'].message_type = _PUBLISHSETTINGS
 _PARTNERLOCATIONSETTINGS.fields_by_name['sections'].message_type = _SECTIONSETTINGS
 _PARTNERLOCATIONSETTINGS.fields_by_name['shop'].message_type = _SHOPSETTINGS
 _PARTNERLOCATIONSETTINGS.fields_by_name['tv'].message_type = _TVSETTINGS
-_PARTNERLOCATIONSETTINGS.fields_by_name['partners'].message_type = partner_dot_integrations_dot_IntegrationSettings__pb2._LOCATIONINTEGRATIONSETTINGS
+_PARTNERLOCATIONSETTINGS.fields_by_name['tablet'].message_type = _TABLETSETTINGS
+_PARTNERLOCATIONSETTINGS.fields_by_name['integration'].message_type = partner_dot_integrations_dot_IntegrationSettings__pb2._LOCATIONINTEGRATIONSETTINGS
 DESCRIPTOR.message_types_by_name['APISettings'] = _APISETTINGS
 DESCRIPTOR.message_types_by_name['InHouseBrand'] = _INHOUSEBRAND
 DESCRIPTOR.message_types_by_name['ProductBrandSettings'] = _PRODUCTBRANDSETTINGS
@@ -1812,6 +1923,8 @@ DESCRIPTOR.message_types_by_name['OnlineShopSettings'] = _ONLINESHOPSETTINGS
 DESCRIPTOR.message_types_by_name['PhysicalStorefrontSettings'] = _PHYSICALSTOREFRONTSETTINGS
 DESCRIPTOR.message_types_by_name['StorefrontSettings'] = _STOREFRONTSETTINGS
 DESCRIPTOR.message_types_by_name['ShopSettings'] = _SHOPSETTINGS
+DESCRIPTOR.message_types_by_name['CartSettings'] = _CARTSETTINGS
+DESCRIPTOR.message_types_by_name['TabletSettings'] = _TABLETSETTINGS
 DESCRIPTOR.message_types_by_name['PartnerLocationSettings'] = _PARTNERLOCATIONSETTINGS
 DESCRIPTOR.enum_types_by_name['SectionSettingsType'] = _SECTIONSETTINGSTYPE
 DESCRIPTOR.enum_types_by_name['FilteredSectionType'] = _FILTEREDSECTIONTYPE
@@ -1820,6 +1933,7 @@ DESCRIPTOR.enum_types_by_name['HoursSpan'] = _HOURSSPAN
 DESCRIPTOR.enum_types_by_name['ShopStatus'] = _SHOPSTATUS
 DESCRIPTOR.enum_types_by_name['ShopCommsType'] = _SHOPCOMMSTYPE
 DESCRIPTOR.enum_types_by_name['ShopContactChannel'] = _SHOPCONTACTCHANNEL
+DESCRIPTOR.enum_types_by_name['CartMode'] = _CARTMODE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 APISettings = _reflection.GeneratedProtocolMessageType('APISettings', (_message.Message,), dict(
@@ -2040,6 +2154,20 @@ ShopSettings = _reflection.GeneratedProtocolMessageType('ShopSettings', (_messag
   # @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.ShopSettings)
   ))
 _sym_db.RegisterMessage(ShopSettings)
+
+CartSettings = _reflection.GeneratedProtocolMessageType('CartSettings', (_message.Message,), dict(
+  DESCRIPTOR = _CARTSETTINGS,
+  __module__ = 'partner.settings.PartnerLocationSettings_pb2'
+  # @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.CartSettings)
+  ))
+_sym_db.RegisterMessage(CartSettings)
+
+TabletSettings = _reflection.GeneratedProtocolMessageType('TabletSettings', (_message.Message,), dict(
+  DESCRIPTOR = _TABLETSETTINGS,
+  __module__ = 'partner.settings.PartnerLocationSettings_pb2'
+  # @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.TabletSettings)
+  ))
+_sym_db.RegisterMessage(TabletSettings)
 
 PartnerLocationSettings = _reflection.GeneratedProtocolMessageType('PartnerLocationSettings', (_message.Message,), dict(
   DESCRIPTOR = _PARTNERLOCATIONSETTINGS,

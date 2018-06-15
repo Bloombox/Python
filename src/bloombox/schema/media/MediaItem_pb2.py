@@ -13,7 +13,7 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import bq_field_pb2 as bq__field__pb2
+from core import Datamodel_pb2 as core_dot_Datamodel__pb2
 from media import MediaKey_pb2 as media_dot_MediaKey__pb2
 from media import MediaType_pb2 as media_dot_MediaType__pb2
 
@@ -22,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='media/MediaItem.proto',
   package='opencannabis.media',
   syntax='proto3',
-  serialized_pb=_b('\n\x15media/MediaItem.proto\x12\x12opencannabis.media\x1a\x0e\x62q_field.proto\x1a\x14media/MediaKey.proto\x1a\x15media/MediaType.proto\"\x94\x02\n\tMediaItem\x12W\n\x03key\x18\x01 \x01(\x0b\x32\x1c.opencannabis.media.MediaKeyB,\x8a@)Key uniquely identifying this media item.\x12Q\n\x04type\x18\x02 \x01(\x0b\x32\x1d.opencannabis.media.MediaTypeB$\x8a@!Type of media this is describing.\x12.\n\x04name\x18\x03 \x01(\tB \x8a@\x1d\x46riendly name for this media.\x12+\n\x03uri\x18\x04 \x01(\tB\x1e\x8a@\x1b\x41\x62solute URI to this media.B7\n\x1cio.opencannabis.schema.mediaB\rAttachedMediaH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
+  serialized_pb=_b('\n\x15media/MediaItem.proto\x12\x12opencannabis.media\x1a\x14\x63ore/Datamodel.proto\x1a\x14media/MediaKey.proto\x1a\x15media/MediaType.proto\"\x8f\x03\n\tMediaItem\x12`\n\x03key\x18\x01 \x01(\x0b\x32\x1c.opencannabis.media.MediaKeyB5\xc2\xb5\x03\x02\x08\x01\xc2\xb5\x03+\x12)Key uniquely identifying this media item.\x12T\n\x04type\x18\x02 \x01(\x0b\x32\x1d.opencannabis.media.MediaTypeB\'\xc2\xb5\x03#\x12!Type of media this is describing.\x12\x31\n\x04name\x18\x03 \x01(\tB#\xc2\xb5\x03\x1f\x12\x1d\x46riendly name for this media.\x12.\n\x03uri\x18\x04 \x01(\tB!\xc2\xb5\x03\x1d\x12\x1b\x41\x62solute URI to this media.\x12X\n\x0bserving_uri\x18\x05 \x01(\tBC\xc2\xb5\x03?\x12=erving URI for this media, if it differs from the origin URI.:\r\x82\xf7\x02\t\x08\x02\x12\x05mediaB7\n\x1cio.opencannabis.schema.mediaB\rAttachedMediaH\x01P\x01\xa2\x02\x03OCSb\x06proto3')
   ,
-  dependencies=[bq__field__pb2.DESCRIPTOR,media_dot_MediaKey__pb2.DESCRIPTOR,media_dot_MediaType__pb2.DESCRIPTOR,])
+  dependencies=[core_dot_Datamodel__pb2.DESCRIPTOR,media_dot_MediaKey__pb2.DESCRIPTOR,media_dot_MediaType__pb2.DESCRIPTOR,])
 
 
 
@@ -42,42 +42,49 @@ _MEDIAITEM = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@)Key uniquely identifying this media item.')), file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\001\302\265\003+\022)Key uniquely identifying this media item.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='type', full_name='opencannabis.media.MediaItem.type', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@!Type of media this is describing.')), file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003#\022!Type of media this is describing.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='name', full_name='opencannabis.media.MediaItem.name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\035Friendly name for this media.')), file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\037\022\035Friendly name for this media.')), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='uri', full_name='opencannabis.media.MediaItem.uri', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\033Absolute URI to this media.')), file=DESCRIPTOR),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\035\022\033Absolute URI to this media.')), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='serving_uri', full_name='opencannabis.media.MediaItem.serving_uri', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003?\022=erving URI for this media, if it differs from the origin URI.')), file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\202\367\002\t\010\002\022\005media')),
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=107,
-  serialized_end=383,
+  serialized_start=113,
+  serialized_end=512,
 )
 
 _MEDIAITEM.fields_by_name['key'].message_type = media_dot_MediaKey__pb2._MEDIAKEY
@@ -96,11 +103,15 @@ _sym_db.RegisterMessage(MediaItem)
 DESCRIPTOR.has_options = True
 DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\034io.opencannabis.schema.mediaB\rAttachedMediaH\001P\001\242\002\003OCS'))
 _MEDIAITEM.fields_by_name['key'].has_options = True
-_MEDIAITEM.fields_by_name['key']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@)Key uniquely identifying this media item.'))
+_MEDIAITEM.fields_by_name['key']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\002\010\001\302\265\003+\022)Key uniquely identifying this media item.'))
 _MEDIAITEM.fields_by_name['type'].has_options = True
-_MEDIAITEM.fields_by_name['type']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@!Type of media this is describing.'))
+_MEDIAITEM.fields_by_name['type']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003#\022!Type of media this is describing.'))
 _MEDIAITEM.fields_by_name['name'].has_options = True
-_MEDIAITEM.fields_by_name['name']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\035Friendly name for this media.'))
+_MEDIAITEM.fields_by_name['name']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\037\022\035Friendly name for this media.'))
 _MEDIAITEM.fields_by_name['uri'].has_options = True
-_MEDIAITEM.fields_by_name['uri']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\212@\033Absolute URI to this media.'))
+_MEDIAITEM.fields_by_name['uri']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003\035\022\033Absolute URI to this media.'))
+_MEDIAITEM.fields_by_name['serving_uri'].has_options = True
+_MEDIAITEM.fields_by_name['serving_uri']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\302\265\003?\022=erving URI for this media, if it differs from the origin URI.'))
+_MEDIAITEM.has_options = True
+_MEDIAITEM._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\202\367\002\t\010\002\022\005media'))
 # @@protoc_insertion_point(module_scope)

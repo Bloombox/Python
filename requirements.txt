@@ -1,4 +1,4 @@
-coverage==4.5.1
+coverage==5.2.1
 enum34==1.1.6
 futures==3.2.0; python_version < '3.0'
 googleapis-common-protos==1.5.3
